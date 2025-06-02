@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Página Dividida</title>
+    <link rel="stylesheet" href="./assets/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -54,14 +55,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 coluna-cinza d-flex flex-column justify-content-center align-items-center">
-
-
+                <div id="map"></div>
             </div>
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center vh-100"
                 style="background-color: #f8f9fa;">
-                <h1>Título da Coluna 1</h1>
-                <p>Conteúdo da coluna 1.</p>
-                <button class="btn btn-primary">Clique aqui</button>
+                <!-- Crie uma area scrollavel-->
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center"
+                    style="height: 1500px; overflow-y: scroll;">
+                    <h1>Título da Coluna 1</h1>
+                    <p>Conteúdo da coluna 1.</p>
+                    <button class="btn btn-primary">Clique aqui</button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -78,12 +83,28 @@
 
 
             </div>
-            
+
         </div>
     </div>
 
+    
+    <script src="./assets/js/leaflet.js"></script>
+    <script src="./assets/js/papaparse.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Inicializa o mapa focado no sul do Brasil
+        const map = L.map('map').setView([-30.0, -52.0], 6);
+
+        // Camada de tiles (mapa base)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        loadCsv().then(data => {
+            console.log(data);
+        });
+    </script>
 
 </body>
 
 </html>
-
