@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Date Storytelling</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Página Dividida</title>
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"> Meu Site</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -41,66 +40,86 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 d-flex flex-column justify-content-center align-items-center vh-100">
-                <img src="assets/img/bg.jpg" alt="Background" class="img-fluid"
+                <img src="assets/images/bg.jpg" alt="Background" class="img-fluid"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; z-index: -1;">
-                <h1>Visualização de Dados Climáticos</h1>
+                <h1 class="text-center">Visualização de Dados Climáticos</h1>
                 <p>Explore os dados climáticos de forma interativa e intuitiva.</p>
-                <button class="btn btn-primary">Começar agora</button>
+                <a href="#estacoes-meteorologicas">
+                    <button class="btn btn-primary">Começar agora</button>
+                </a>
             </div>
         </div>
     </div>
 
 
-    <!-- Seção Secundária -->
-    <div class="container-fluid">
+    <!-- Seção Estações Meteorológicas -->
+    <div class="container-fluid" id="estacoes-meteorologicas">
         <div class="row">
-            <div class="col-md-6 coluna-cinza d-flex flex-column justify-content-center align-items-center">
+
+            <!-- Mapa -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
                 <div id="map"></div>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center vh-100"
+
+            <!-- Storytelling -->
+            <div class="col-md-6 d-flex flex-column vh-100"
                 style="background-color: #f8f9fa;">
-                <!-- Crie uma area scrollavel-->
-                <div class="col-12 d-flex flex-column justify-content-center align-items-center"
-                    style="height: 1500px; overflow-y: scroll;">
-                    <h1>Título da Coluna 1</h1>
-                    <p>Conteúdo da coluna 1.</p>
-                    <button class="btn btn-primary">Clique aqui</button>
+                <div class="col-12 d-flex flex-column" style="overflow-y: scroll;">
+                    <h1 class="sticky-top bg-light" style="padding: 50px 0px 50px 0px; background-color: #f8f9fa;">Estações Meteorológicas</h1>
+                    
+                    <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
+                        <h1 style="padding: 30px 0px 30px 0px; background-color: #f8f9fa;">Estações Meteorológicas</h1>
+                        <p>Conteúdo da coluna 1.</p>
+                        <button class="btn btn-primary">Clique aqui</button>
+                    </div>
+
+
+
+                    <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
+                        <h2>2000</h2>
+                        <p>Conteúdo da coluna 1.</p>
+                        <button class="btn btn-primary">Clique aqui</button>
+                    </div>
+
+                    <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
+                        <h2>2025</h2>
+                        <p>Conteúdo da coluna 1.</p>
+                        <button class="btn btn-primary">Clique aqui</button>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center vh-100"
-                style="background-color: #f8f9fa;">
-                <h1>Título da Coluna 1</h1>
-                <p>Conteúdo da coluna 1.</p>
-                <button class="btn btn-primary">Clique aqui</button>
-            </div>
-            <div class="col-md-6 coluna-cinza d-flex flex-column justify-content-center align-items-center">
-
-
-            </div>
-
+    <!-- Rodapé -->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-4" style="background-color: #f8f9fa;">
+            2025 © Todos os direitos reservados.
         </div>
-    </div>
 
-    
+
+
+
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/leaflet.js"></script>
     <script src="./assets/js/papaparse.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         // Inicializa o mapa focado no sul do Brasil
-        const map = L.map('map').setView([-30.0, -52.0], 6);
+        const map = L.map('map').setView([-30.3, -53.0], 7);
+
+        L.marker([-30.3, -53.0]).addTo(map)
+        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+        .openPopup();
 
         // Camada de tiles (mapa base)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 7, minZoom: 7// Define o zoom máximo e mínimo para não "bagunçar" durante o scroll
         }).addTo(map);
 
-        loadCsv().then(data => {
+        loadJson().then(data => {
             console.log(data);
         });
     </script>
