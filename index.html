@@ -13,11 +13,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"> Meu Site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Início</a>
@@ -31,7 +31,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contato</a>
                 </li>
-
             </ul>
         </div>
     </nav>
@@ -79,13 +78,13 @@
                     <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
                         <h2>2000</h2>
                         <p>Conteúdo da coluna 1.</p>
-                        <button class="btn btn-primary">Clique aqui</button>
+                        <button class="btn btn-primary" onclick="addMarkers(-32.3, -54.0)">Clique aqui</button>
                     </div>
 
                     <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
                         <h2>2025</h2>
                         <p>Conteúdo da coluna 1.</p>
-                        <button class="btn btn-primary">Clique aqui</button>
+                        <button class="btn btn-primary" onclick="addMarkers(-32.3, -53.0)">Clique aqui</button>
                     </div>
                 </div>
             </div>
@@ -102,11 +101,14 @@
 
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/leaflet.js"></script>
     <script src="./assets/js/papaparse.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
-        // Inicializa o mapa focado no sul do Brasil
+        const dados = [];
         const map = L.map('map').setView([-30.3, -53.0], 7);
 
         L.marker([-30.3, -53.0]).addTo(map)
@@ -119,9 +121,12 @@
             maxZoom: 7, minZoom: 7// Define o zoom máximo e mínimo para não "bagunçar" durante o scroll
         }).addTo(map);
 
-        loadJson().then(data => {
-            console.log(data);
+        loadJson().then(data => {           
+            // Pegar os dados do JSON e mandar para a variavel dados
+            dados.push(...data);
+            console.log(dados);
         });
+
     </script>
 
 </body>

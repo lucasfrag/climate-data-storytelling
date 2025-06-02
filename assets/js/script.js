@@ -7,6 +7,12 @@ const arquivosJSON = [
     './dataset/2025.json'
 ];
 
+function addMarkers(lat, lon) {
+    L.marker([lat, lon]).addTo(map)
+    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+    .openPopup();  
+}
+
 async function loadJson() {
     const promises = arquivosJSON.map(arquivo => {
         return fetch(arquivo)
