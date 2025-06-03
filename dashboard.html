@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Climático (2000–2025)</title>
@@ -12,7 +11,7 @@
       padding: 20px;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
     }
 
@@ -34,29 +33,88 @@
       width: 100% !important;
       height: 300px !important;
     }
+
+    .descricao {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .destaques {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .destaques table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .destaques th, .destaques td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .destaques th {
+      background-color: #eee;
+    }
   </style>
 </head>
 
 <body>
   <h1>Dashboard Climático: 2000–2025</h1>
+
+  <div class="destaques">
+    <h2>Destaques por Ano</h2>
+    <table id="tabelaDestaques">
+      <thead>
+        <tr>
+          <th>Ano</th>
+          <th>Temp. Máx (Cidade)</th>
+          <th>Temp. Mín (Cidade)</th>
+          <th>Radiação Máx (Cidade)</th>
+          <th>Rajada Máx Vento (Cidade)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
   <div class="grid">
     <div class="grafico-container">
-      <h3>Temperatura Extrema Anual</h3><canvas id="tempExtrema"></canvas>
+      <h3>Temperatura Extrema Anual</h3>
+      <canvas id="tempExtrema"></canvas>
+      <p class="descricao">Temperaturas acima de 35°C ou abaixo de 5°C podem ser perigosas para a saúde. A linha amarela representa a temperatura média.</p>
     </div>
     <div class="grafico-container">
-      <h3>Umidade Média Anual</h3><canvas id="umidadeMedia"></canvas>
+      <h3>Umidade Média Anual</h3>
+      <canvas id="umidadeMedia"></canvas>
+      <p class="descricao">Umidade ideal para conforto está entre 40% e 60%. Acima disso pode causar sensação de abafamento.</p>
     </div>
     <div class="grafico-container">
-      <h3>Precipitação Total por Ano</h3><canvas id="precipitacaoTotal"></canvas>
+      <h3>Precipitação Total por Ano</h3>
+      <canvas id="precipitacaoTotal"></canvas>
+      <p class="descricao">Chuvas intensas e fora da média podem indicar risco de enchentes.</p>
     </div>
     <div class="grafico-container">
-      <h3>Radiação Global Máxima</h3><canvas id="radiacaoMax"></canvas>
+      <h3>Radiação Global Máxima</h3>
+      <canvas id="radiacaoMax"></canvas>
+      <p class="descricao">Radiação acima de 2500 KJ/m² indica exposição solar intensa, exigindo proteção UV.</p>
     </div>
     <div class="grafico-container">
-      <h3>Rajada Máxima de Vento</h3><canvas id="ventoRajada"></canvas>
+      <h3>Rajada Máxima de Vento</h3>
+      <canvas id="ventoRajada"></canvas>
+      <p class="descricao">Rajadas acima de 15 m/s podem causar transtornos e danos estruturais leves.</p>
     </div>
     <div class="grafico-container">
-      <h3>Temperatura vs Umidade (Média Anual)</h3><canvas id="scatterTempUmidade"></canvas>
+      <h3>Temperatura vs Umidade (Média Anual)</h3>
+      <canvas id="scatterTempUmidade"></canvas>
+      <p class="descricao">Mostra a relação entre calor e umidade ao longo dos anos.</p>
     </div>
   </div>
 
@@ -68,17 +126,31 @@
 
     function gerarGraficos(dadosPorAno) {
       const anos = Object.keys(dadosPorAno).sort();
-      const tempMin = [], tempMax = [], umiMed = [], precTotal = [], radMax = [], ventoMax = [], scatter = [];
+      const tempMin = [], tempMax = [], tempMedia = [], umiMed = [], precTotal = [], radMax = [], ventoMax = [], scatter = [];
+
+      const tabela = document.querySelector("#tabelaDestaques tbody");
 
       for (const ano of anos) {
         const d = dadosPorAno[ano];
+
         tempMin.push(d.tempMin);
         tempMax.push(d.tempMax);
+        tempMedia.push(d.tempMedia);
         umiMed.push(d.umiMedia);
         precTotal.push(d.precipitacaoTotal);
         radMax.push(d.radiacaoMax ?? null);
         ventoMax.push(d.ventoRajadaMax ?? null);
         scatter.push({ x: d.tempMedia, y: d.umiMedia, ano });
+
+        const row = `
+          <tr>
+            <td>${ano}</td>
+            <td>${d.tempMax}°C (${d.cidadeTempMax ?? "?"})</td>
+            <td>${d.tempMin}°C (${d.cidadeTempMin ?? "?"})</td>
+            <td>${d.radiacaoMax ?? "–"} (${d.cidadeRadiacaoMax ?? "?"})</td>
+            <td>${d.ventoRajadaMax ?? "–"} m/s (${d.cidadeVentoRajadaMax ?? "?"})</td>
+          </tr>`;
+        tabela.innerHTML += row;
       }
 
       new Chart(tempExtrema, {
@@ -87,8 +159,17 @@
           labels: anos,
           datasets: [
             { label: 'Mínima', data: tempMin, borderColor: 'blue', fill: false },
-            { label: 'Máxima', data: tempMax, borderColor: 'red', fill: false }
+            { label: 'Máxima', data: tempMax, borderColor: 'red', fill: false },
+            { label: 'Média',  data: tempMedia, borderColor: 'gold', fill: false }
           ]
+        },
+        options: {
+          plugins: {
+            legend: { position: 'top' }
+          },
+          scales: {
+            y: { title: { display: true, text: 'Temperatura (°C)' } }
+          }
         }
       });
 
@@ -143,5 +224,4 @@
     carregarResumo().then(gerarGraficos);
   </script>
 </body>
-
 </html>
