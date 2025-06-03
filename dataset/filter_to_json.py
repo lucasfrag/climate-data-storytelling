@@ -21,6 +21,10 @@ def resumir_ano(ano, pasta_base="./"):
     rad = []
     vento = []
 
+    meta_temp = []
+    meta_vento = []
+    meta_rad = []
+
     for arquivo in os.listdir(pasta_ano):
         if not arquivo.endswith(".json"):
             continue
@@ -36,29 +40,49 @@ def resumir_ano(ano, pasta_base="./"):
             if not dados:
                 continue
 
+            nome_estacao = estacao.get("estacao", "Desconhecida")
+
             t = parse_val(dados.get("TEMPERATURA DO AR - BULBO SECO, HORARIA (°C)"))
             u = parse_val(dados.get("UMIDADE RELATIVA DO AR, HORARIA (%)"))
             p = parse_val(dados.get("PRECIPITAÇÃO TOTAL, HORÁRIO (mm)"))
             r = parse_val(dados.get("RADIACAO GLOBAL (KJ/m²)"))
             v = parse_val(dados.get("VENTO, RAJADA MAXIMA (m/s)"))
 
-            if t is not None: temp.append(t)
-            if u is not None: umi.append(u)
-            if p is not None: prec.append(p)
-            if r is not None: rad.append(r)
-            if v is not None: vento.append(v)
+            if t is not None:
+                temp.append(t)
+                meta_temp.append((t, nome_estacao))
+            if u is not None:
+                umi.append(u)
+            if p is not None:
+                prec.append(p)
+            if r is not None:
+                rad.append(r)
+                meta_rad.append((r, nome_estacao))
+            if v is not None:
+                vento.append(v)
+                meta_vento.append((v, nome_estacao))
 
     if not temp or not umi:
         return None
 
+    # Valores extremos com cidade
+    temp_max, cidade_temp_max = max(meta_temp, default=(None, None))
+    temp_min, cidade_temp_min = min(meta_temp, default=(None, None))
+    rad_max, cidade_rad_max = max(meta_rad, default=(None, None))
+    vento_max, cidade_vento_max = max(meta_vento, default=(None, None))
+
     return {
-        "tempMin": min(temp),
-        "tempMax": max(temp),
+        "tempMin": temp_min,
+        "cidadeTempMin": cidade_temp_min,
+        "tempMax": temp_max,
+        "cidadeTempMax": cidade_temp_max,
         "tempMedia": sum(temp) / len(temp),
         "umiMedia": sum(umi) / len(umi),
         "precipitacaoTotal": sum(prec),
-        "radiacaoMax": max(rad) if rad else None,
-        "ventoRajadaMax": max(vento) if vento else None
+        "radiacaoMax": rad_max,
+        "cidadeRadiacaoMax": cidade_rad_max,
+        "ventoRajadaMax": vento_max,
+        "cidadeVentoRajadaMax": cidade_vento_max
     }
 
 # Agregação de todos os anos
