@@ -3,3 +3,13 @@
     width: 100%;
     margin: 0px;
 }
+
+.hide-scrollbar {
+overflow: auto; /* or overflow-y: auto for vertical only */
+scrollbar-width: none; /* For Firefox */
+-ms-overflow-style: none; /* For IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+display: none; /* For Chrome, Safari, and Opera */
+}
