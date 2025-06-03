@@ -3,8 +3,6 @@ import pandas as pd
 import json
 
 base_dir = "./"
-output_dir = "./"
-os.makedirs(output_dir, exist_ok=True)
 
 def extrair_metadados(caminho_csv):
     with open(caminho_csv, 'r', encoding='latin1') as f:
@@ -65,7 +63,8 @@ for ano in os.listdir(base_dir):
             except Exception as e:
                 print(f"Erro ao processar {caminho_csv}: {e}")
 
-    json_path = os.path.join(output_dir, f"{ano}.json")
+    # Aqui a mudança: salva o JSON dentro da pasta do ano
+    json_path = os.path.join(ano_dir, f"{ano}.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(dados_ano, f, ensure_ascii=False, indent=2)
 
