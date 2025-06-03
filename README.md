@@ -1,23 +1,31 @@
 ## Dataset
 
-- Data;
-- Hora UTC;
-- PRECIPITA��O TOTAL, HOR�RIO (mm);
-- PRESSAO ATMOSFERICA AO NIVEL DA ESTACAO, HORARIA (mB);
-- PRESS�O ATMOSFERICA MAX.NA HORA ANT. (AUT) (mB);
-- PRESS�O ATMOSFERICA MIN. NA HORA ANT. (AUT) (mB);
-- RADIACAO GLOBAL (Kj/m�);TEMPERATURA DO AR - BULBO SECO, HORARIA (�C);
-- TEMPERATURA DO PONTO DE ORVALHO (�C);
-- TEMPERATURA M�XIMA NA HORA ANT. (AUT) (�C);
-- TEMPERATURA M�NIMA NA HORA ANT. (AUT) (�C);
-- TEMPERATURA ORVALHO MAX. NA HORA ANT. (AUT) (�C);
-- TEMPERATURA ORVALHO MIN. NA HORA ANT. (AUT) (�C);
-- UMIDADE REL. MAX. NA HORA ANT. (AUT) (%);
-- UMIDADE REL. MIN. NA HORA ANT. (AUT) (%);
-- UMIDADE RELATIVA DO AR, HORARIA (%);
-- VENTO, DIRE��O HORARIA (gr) (� (gr));
-- VENTO, RAJADA MAXIMA (m/s);
-- VENTO, VELOCIDADE HORARIA (m/s);
+- Date (YYYY-MM-DD)
+- Time (HH:00)
+- Amount of precipitation in millimetres (last hour)
+- Atmospheric pressure at station level (mb)
+- Maximum air pressure for the last hour (mb)
+- Minimum air pressure for the last hour (mb)
+- Solar radiation (KJ/m2)
+- Air temperature (instant) (°c)
+- Dew point temperature (instant) (°c)
+- Maximum temperature for the last hour (°c)
+- Minimum temperature for the last hour (°c)
+- Maximum dew point temperature for the last hour (°c)
+- Minimum dew point temperature for the last hour (°c)
+- Maximum relative humid temperature for the last hour (%)
+- Minimum relative humid temperature for the last hour (%)
+- Relative humid (% instant)
+- Wind direction (radius degrees (0-360))
+- Wind gust in metres per second
+- Wind speed in metres per second
+- Brazilian geopolitical regions
+- State (Province)
+- Station Name (usually city location or nickname)
+- Station code (INMET number)
+- Latitude
+- Longitude
+- Elevation
 
 ## Source data
 - [INMET: Instituto Nacional de Meteorologia](https://portal.inmet.gov.br/dadoshistoricos)
@@ -27,4 +35,5 @@
 
 ## Build with
 - [Bootstrap](https://getbootstrap.com/)
+- [Chart.js](https://www.chartjs.org/)
 - [Leaflet](https://leafletjs.com/)
