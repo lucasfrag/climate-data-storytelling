@@ -1,0 +1,236 @@
+{
+  "2000": {
+    "tempMin": 7.1,
+    "tempMax": 35.5,
+    "tempMedia": 20.856788566624633,
+    "umiMedia": 73.48970155527533,
+    "precipitacaoTotal": 401.8,
+    "radiacaoMax": 3959.0,
+    "ventoRajadaMax": 20.1
+  },
+  "2001": {
+    "tempMin": 2.7,
+    "tempMax": 35.8,
+    "tempMedia": 21.134472674099797,
+    "umiMedia": 74.36547249131786,
+    "precipitacaoTotal": 1594.6,
+    "radiacaoMax": 4257.0,
+    "ventoRajadaMax": 23.7
+  },
+  "2002": {
+    "tempMin": -1.2,
+    "tempMax": 37.3,
+    "tempMedia": 19.452500589452725,
+    "umiMedia": 76.54934632817208,
+    "precipitacaoTotal": 7908.4,
+    "radiacaoMax": 4246.0,
+    "ventoRajadaMax": 39.6
+  },
+  "2003": {
+    "tempMin": -0.3,
+    "tempMax": 38.3,
+    "tempMedia": 18.732559952313267,
+    "umiMedia": 75.03253467843632,
+    "precipitacaoTotal": 7332.0,
+    "radiacaoMax": 4338.0,
+    "ventoRajadaMax": 21.7
+  },
+  "2004": {
+    "tempMin": -1.4,
+    "tempMax": 36.5,
+    "tempMedia": 19.478805020328796,
+    "umiMedia": 73.29477282102658,
+    "precipitacaoTotal": 4503.8,
+    "radiacaoMax": 4165.0,
+    "ventoRajadaMax": 22.2
+  },
+  "2005": {
+    "tempMin": 0.0,
+    "tempMax": 39.0,
+    "tempMedia": 18.575694107312113,
+    "umiMedia": 73.4912317620651,
+    "precipitacaoTotal": 7477.0,
+    "radiacaoMax": 4113.0,
+    "ventoRajadaMax": 24.7
+  },
+  "2006": {
+    "tempMin": -2.1,
+    "tempMax": 38.3,
+    "tempMedia": 19.478416165453204,
+    "umiMedia": 74.56336365086963,
+    "precipitacaoTotal": 15043.2,
+    "radiacaoMax": 4378.3,
+    "ventoRajadaMax": 26.1
+  },
+  "2007": {
+    "tempMin": -5.3,
+    "tempMax": 38.7,
+    "tempMedia": 18.900082036316473,
+    "umiMedia": 76.16977425974787,
+    "precipitacaoTotal": 55636.8,
+    "radiacaoMax": 4606.2,
+    "ventoRajadaMax": 34.1
+  },
+  "2008": {
+    "tempMin": -5.3,
+    "tempMax": 39.1,
+    "tempMedia": 18.28982058790822,
+    "umiMedia": 76.16537342204154,
+    "precipitacaoTotal": 95690.2,
+    "radiacaoMax": 8124.4,
+    "ventoRajadaMax": 33.0
+  },
+  "2009": {
+    "tempMin": -6.0,
+    "tempMax": 42.4,
+    "tempMedia": 18.7053471115618,
+    "umiMedia": 78.20534305215813,
+    "precipitacaoTotal": 130873.8,
+    "radiacaoMax": 8259.1,
+    "ventoRajadaMax": 48.8
+  },
+  "2010": {
+    "tempMin": -5.3,
+    "tempMax": 39.6,
+    "tempMedia": 18.527300683334257,
+    "umiMedia": 77.34671116967155,
+    "precipitacaoTotal": 117051.2,
+    "radiacaoMax": 5152.9,
+    "ventoRajadaMax": 35.1
+  },
+  "2011": {
+    "tempMin": -9.6,
+    "tempMax": 44.2,
+    "tempMedia": 18.352782429403298,
+    "umiMedia": 77.08776003855253,
+    "precipitacaoTotal": 122550.0,
+    "radiacaoMax": 5035.6,
+    "ventoRajadaMax": 43.3
+  },
+  "2012": {
+    "tempMin": -5.8,
+    "tempMax": 42.0,
+    "tempMedia": 19.23746547269338,
+    "umiMedia": 75.20917560713082,
+    "precipitacaoTotal": 106031.2,
+    "radiacaoMax": 7085.0,
+    "ventoRajadaMax": 39.5
+  },
+  "2013": {
+    "tempMin": -7.7,
+    "tempMax": 39.8,
+    "tempMedia": 18.39085044318954,
+    "umiMedia": 77.07760047493973,
+    "precipitacaoTotal": 128506.6,
+    "radiacaoMax": 6771.0,
+    "ventoRajadaMax": 42.6
+  },
+  "2014": {
+    "tempMin": -7.7,
+    "tempMax": 40.4,
+    "tempMedia": 19.499647479759098,
+    "umiMedia": 77.75487557876936,
+    "precipitacaoTotal": 136724.2,
+    "radiacaoMax": 7275.5,
+    "ventoRajadaMax": 44.4
+  },
+  "2015": {
+    "tempMin": -4.1,
+    "tempMax": 39.0,
+    "tempMedia": 19.35286794096625,
+    "umiMedia": 79.95605827588834,
+    "precipitacaoTotal": 143881.6,
+    "radiacaoMax": 6443.6,
+    "ventoRajadaMax": 44.3
+  },
+  "2016": {
+    "tempMin": -6.9,
+    "tempMax": 39.4,
+    "tempMedia": 18.487103637720512,
+    "umiMedia": 77.56128132285124,
+    "precipitacaoTotal": 125944.6,
+    "radiacaoMax": 5263.7,
+    "ventoRajadaMax": 44.2
+  },
+  "2017": {
+    "tempMin": -8.0,
+    "tempMax": 38.9,
+    "tempMedia": 19.313312758071177,
+    "umiMedia": 77.01280220812845,
+    "precipitacaoTotal": 151326.2,
+    "radiacaoMax": 6208.5,
+    "ventoRajadaMax": 44.8
+  },
+  "2018": {
+    "tempMin": -3.5,
+    "tempMax": 39.2,
+    "tempMedia": 18.86808352650672,
+    "umiMedia": 77.71614980535688,
+    "precipitacaoTotal": 131764.4,
+    "radiacaoMax": 6889.9,
+    "ventoRajadaMax": 44.4
+  },
+  "2019": {
+    "tempMin": -6.8,
+    "tempMax": 44.4,
+    "tempMedia": 19.396903907329122,
+    "umiMedia": 76.85906352237973,
+    "precipitacaoTotal": 138950.8,
+    "radiacaoMax": 6758.2,
+    "ventoRajadaMax": 40.8
+  },
+  "2020": {
+    "tempMin": -8.4,
+    "tempMax": 41.9,
+    "tempMedia": 19.020714535456598,
+    "umiMedia": 73.41780456913271,
+    "precipitacaoTotal": 102863.8,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 49.8
+  },
+  "2021": {
+    "tempMin": -8.5,
+    "tempMax": 39.7,
+    "tempMedia": 18.395731458792273,
+    "umiMedia": 75.82989523706664,
+    "precipitacaoTotal": 89090.2,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 42.8
+  },
+  "2022": {
+    "tempMin": -6.1,
+    "tempMax": 42.4,
+    "tempMedia": 18.456014668711923,
+    "umiMedia": 75.97831067309068,
+    "precipitacaoTotal": 116083.0,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 38.1
+  },
+  "2023": {
+    "tempMin": -2.7,
+    "tempMax": 40.3,
+    "tempMedia": 19.3795977367421,
+    "umiMedia": 77.97485933751014,
+    "precipitacaoTotal": 176812.2,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 40.8
+  },
+  "2024": {
+    "tempMin": -5.5,
+    "tempMax": 40.1,
+    "tempMedia": 19.549044028230334,
+    "umiMedia": 77.70467106436085,
+    "precipitacaoTotal": 157911.8,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 39.4
+  },
+  "2025": {
+    "tempMin": 0.3,
+    "tempMax": 41.8,
+    "tempMedia": 22.403364291389277,
+    "umiMedia": 75.75990550948596,
+    "precipitacaoTotal": 30839.6,
+    "radiacaoMax": null,
+    "ventoRajadaMax": 35.6
+  }
+}

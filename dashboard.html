@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Climático (2000–2025)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .grafico-container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 300px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Dashboard Climático: 2000–2025</h1>
+  <div class="grid">
+    <div class="grafico-container">
+      <h3>Temperatura Extrema Anual</h3><canvas id="tempExtrema"></canvas>
+    </div>
+    <div class="grafico-container">
+      <h3>Umidade Média Anual</h3><canvas id="umidadeMedia"></canvas>
+    </div>
+    <div class="grafico-container">
+      <h3>Precipitação Total por Ano</h3><canvas id="precipitacaoTotal"></canvas>
+    </div>
+    <div class="grafico-container">
+      <h3>Radiação Global Máxima</h3><canvas id="radiacaoMax"></canvas>
+    </div>
+    <div class="grafico-container">
+      <h3>Rajada Máxima de Vento</h3><canvas id="ventoRajada"></canvas>
+    </div>
+    <div class="grafico-container">
+      <h3>Temperatura vs Umidade (Média Anual)</h3><canvas id="scatterTempUmidade"></canvas>
+    </div>
+  </div>
+
+  <script>
+    async function carregarResumo() {
+      const response = await fetch('./dataset/resumo_anual.json');
+      return await response.json();
+    }
+
+    function gerarGraficos(dadosPorAno) {
+      const anos = Object.keys(dadosPorAno).sort();
+      const tempMin = [], tempMax = [], umiMed = [], precTotal = [], radMax = [], ventoMax = [], scatter = [];
+
+      for (const ano of anos) {
+        const d = dadosPorAno[ano];
+        tempMin.push(d.tempMin);
+        tempMax.push(d.tempMax);
+        umiMed.push(d.umiMedia);
+        precTotal.push(d.precipitacaoTotal);
+        radMax.push(d.radiacaoMax ?? null);
+        ventoMax.push(d.ventoRajadaMax ?? null);
+        scatter.push({ x: d.tempMedia, y: d.umiMedia, ano });
+      }
+
+      new Chart(tempExtrema, {
+        type: 'line',
+        data: {
+          labels: anos,
+          datasets: [
+            { label: 'Mínima', data: tempMin, borderColor: 'blue', fill: false },
+            { label: 'Máxima', data: tempMax, borderColor: 'red', fill: false }
+          ]
+        }
+      });
+
+      new Chart(umidadeMedia, {
+        type: 'bar',
+        data: { labels: anos, datasets: [{ label: 'Umidade Média (%)', data: umiMed, backgroundColor: 'skyblue' }] }
+      });
+
+      new Chart(precipitacaoTotal, {
+        type: 'bar',
+        data: { labels: anos, datasets: [{ label: 'Precipitação Total (mm)', data: precTotal, backgroundColor: 'teal' }] }
+      });
+
+      new Chart(radiacaoMax, {
+        type: 'line',
+        data: { labels: anos, datasets: [{ label: 'Radiação Global Máxima (KJ/m²)', data: radMax, borderColor: 'orange', fill: true }] }
+      });
+
+      new Chart(ventoRajada, {
+        type: 'bar',
+        data: { labels: anos, datasets: [{ label: 'Rajada Máxima de Vento (m/s)', data: ventoMax, backgroundColor: 'gray' }] }
+      });
+
+      new Chart(scatterTempUmidade, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Temp vs Umidade Média',
+            data: scatter,
+            backgroundColor: 'green'
+          }]
+        },
+        options: {
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  const d = context.raw;
+                  return `Ano ${d.ano}: Temp ${d.x.toFixed(1)}°C, Umidade ${d.y.toFixed(1)}%`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { title: { display: true, text: 'Temperatura Média (°C)' } },
+            y: { title: { display: true, text: 'Umidade Média (%)' } }
+          }
+        }
+      });
+    }
+
+    carregarResumo().then(gerarGraficos);
+  </script>
+</body>
+
+</html>
