@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Histórico Climático Porto Alegre</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-y: scroll;
+      background-color: #fafafa;
+      scroll-snap-type: y mandatory;
+    }
+
+    .slide {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ddd;
+      scroll-snap-align: start;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 18px;
+      max-width: 700px;
+    }
+
+    svg {
+      background: white;
+      box-shadow: 0 0 10px #ccc;
+      border-radius: 8px;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <!-- Slide 1: Introdução -->
+  <div class="slide">
+    <div class="title">🌎 Introdução</div>
+    <div class="description">
+      Explore as mudanças climáticas em Porto Alegre de 2000 a 2025. Role para baixo para ver dados anuais, eventos
+      extremos e padrões meteorológicos revelados por nossos sensores ao longo dos anos.
+    </div>
+  </div>
+
+  <!-- Slide 2: Temperatura Média Anual -->
+  <div class="slide" id="slide-linha">
+    <div class="title">📈 Temperatura Média Anual</div>
+    <svg id="grafico-linha" width="800" height="400"></svg>
+  </div>
+
+  <!-- Slide 3: Precipitação Anual -->
+  <div class="slide" id="slide-area">
+    <div class="title">🌧️ Precipitação Acumulada por Ano</div>
+    <svg id="grafico-area" width="800" height="400"></svg>
+  </div>
+
+  <!-- Slide 4: Eventos Extremos -->
+  <div class="slide">
+    <div class="title">🚨 Eventos Climáticos Extremos</div>
+    <div class="description">
+      <ul>
+        <li><strong>2005</strong>: Chuva recorde em setembro (352 mm)</li>
+        <li><strong>2010</strong>: Onda de calor em janeiro (até 42°C)</li>
+        <li><strong>2023</strong>: Enchentes históricas em maio no RS</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 5: Mapa Climático -->
+  <div class="slide" id="slide-mapa">
+    <div class="title">🗺️ Mapa de Temperaturas Anuais</div>
+    <div class="description">Passe o mouse sobre os círculos para ver a temperatura média anual em diferentes locais da
+      região.</div>
+    <svg id="mapa-climatico" width="800" height="400"></svg>
+  </div>
+
+  <div id="tooltip" class="tooltip"
+    style="position:absolute; opacity:0; background:#fff; padding:8px; border:1px solid #ccc; border-radius:4px; pointer-events:none; font-size:14px; box-shadow:0 0 5px rgba(0,0,0,0.2);">
+  </div>
+
+    <!-- Slide 6: Umidade Relativa -->
+  <div class="slide" id="slide-umidade">
+    <div class="title">💧 Umidade Relativa Média Anual</div>
+    <div class="description">Explore a variação da umidade relativa ao longo dos anos. Passe o mouse sobre os pontos para ver os valores.</div>
+    <svg id="grafico-umidade" width="800" height="400"></svg>
+  </div>
+
+  <script>
+    const dados = [
+      { ano: 2000, temp: 21.3, chuva: 1200 },
+      { ano: 2005, temp: 21.7, chuva: 1580 },
+      { ano: 2010, temp: 22.4, chuva: 1420 },
+      { ano: 2015, temp: 22.9, chuva: 1350 },
+      { ano: 2020, temp: 23.5, chuva: 1480 },
+      { ano: 2025, temp: 24.1, chuva: 1600 }
+    ];
+
+    const tooltip = d3.select("#tooltip");
+    let linhaAnimada = false;
+    let areaAnimada = false;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === 'slide-linha' && !linhaAnimada) {
+            animarLinha();
+            linhaAnimada = true;
+          }
+          if (entry.target.id === 'slide-area' && !areaAnimada) {
+            animarArea();
+            areaAnimada = true;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.getElementById('slide-linha'));
+    observer.observe(document.getElementById('slide-area'));
+
+    function animarLinha() {
+      const svg = d3.select("#grafico-linha"),
+        margin = { top: 20, right: 30, bottom: 30, left: 50 },
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom,
+        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleLinear().domain(d3.extent(dados, d => d.ano)).range([0, width]);
+      const y = d3.scaleLinear().domain([20, d3.max(dados, d => d.temp)]).nice().range([height, 0]);
+      const line = d3.line().x(d => x(d.ano)).y(d => y(d.temp));
+
+      g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).tickFormat(d3.format("d")));
+      g.append("g").call(d3.axisLeft(y));
+
+      const path = g.append("path")
+        .datum(dados)
+        .attr("fill", "none")
+        .attr("stroke", "tomato")
+        .attr("stroke-width", 2)
+        .attr("d", line);
+
+      const totalLength = path.node().getTotalLength();
+      path.attr("stroke-dasharray", totalLength).attr("stroke-dashoffset", totalLength)
+        .transition().duration(2000).attr("stroke-dashoffset", 0);
+
+      g.selectAll("circle")
+        .data(dados)
+        .enter().append("circle")
+        .attr("cx", d => x(d.ano))
+        .attr("cy", d => y(d.temp))
+        .attr("r", 5)
+        .attr("fill", "tomato")
+        .on("mouseover", (event, d) => {
+          tooltip.style("opacity", 1)
+            .html(`<strong>${d.ano}</strong><br>Temperatura: ${d.temp}°C`)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY - 28}px`);
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0));
+    }
+
+    function animarArea() {
+      const svg = d3.select("#grafico-area"),
+        margin = { top: 20, right: 30, bottom: 30, left: 50 },
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom,
+        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleLinear().domain(d3.extent(dados, d => d.ano)).range([0, width]);
+      const y = d3.scaleLinear().domain([1000, d3.max(dados, d => d.chuva)]).nice().range([height, 0]);
+      const area = d3.area().x(d => x(d.ano)).y0(height).y1(d => y(d.chuva));
+
+      g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).tickFormat(d3.format("d")));
+      g.append("g").call(d3.axisLeft(y));
+
+      g.append("path")
+        .datum(dados)
+        .attr("fill", "steelblue")
+        .attr("opacity", 0)
+        .attr("d", area)
+        .transition().duration(2000).attr("opacity", 1);
+
+      g.selectAll("circle")
+        .data(dados)
+        .enter().append("circle")
+        .attr("cx", d => x(d.ano))
+        .attr("cy", d => y(d.chuva))
+        .attr("r", 5)
+        .attr("fill", "steelblue")
+        .on("mouseover", (event, d) => {
+          tooltip.style("opacity", 1)
+            .html(`<strong>${d.ano}</strong><br>Precipitação: ${d.chuva} mm`)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY - 28}px`);
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0));
+    }
+
+    d3.select("#mapa-climatico")
+      .append("text")
+      .attr("x", 100)
+      .attr("y", 200)
+      .text("Mapa Climático animado aqui")
+      .style("font-size", "24px");
+
+    observer.observe(document.getElementById('slide-mapa'));
+
+    function animarMapa() {
+      const svg = d3.select("#mapa-climatico"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+      const regioes = [
+        { nome: "Zona Norte", x: 150, y: 100, temp: 22.4 },
+        { nome: "Centro", x: 300, y: 200, temp: 23.1 },
+        { nome: "Zona Sul", x: 500, y: 300, temp: 24.0 }
+      ];
+
+      svg.selectAll("circle")
+        .data(regioes)
+        .enter().append("circle")
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
+        .attr("r", 0)
+        .attr("fill", "orange")
+        .attr("opacity", 0.8)
+        .on("mouseover", (event, d) => {
+          tooltip.style("opacity", 1)
+            .html(`<strong>${d.nome}</strong><br>Temperatura média: ${d.temp}°C`)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY - 28}px`);
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0))
+        .transition()
+        .duration(1000)
+        .delay((_, i) => i * 300)
+        .attr("r", 20);
+
+      svg.selectAll("text.label")
+        .data(regioes)
+        .enter().append("text")
+        .attr("class", "label")
+        .attr("x", d => d.x)
+        .attr("y", d => d.y - 30)
+        .attr("text-anchor", "middle")
+        .attr("fill", "#333")
+        .text(d => d.nome);
+    }
+
+    observer.observe(document.getElementById('slide-mapa'));
+
+    observer.disconnect();
+    const newObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.id === 'slide-linha' && !linhaAnimada) {
+            animarLinha();
+            linhaAnimada = true;
+          }
+          if (entry.target.id === 'slide-area' && !areaAnimada) {
+            animarArea();
+            areaAnimada = true;
+          }
+          if (entry.target.id === 'slide-mapa' && !mapaAnimado) {
+            animarMapa();
+            mapaAnimado = true;
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    newObserver.observe(document.getElementById('slide-linha'));
+    newObserver.observe(document.getElementById('slide-area'));
+    newObserver.observe(document.getElementById('slide-mapa'));      
+  </script>
+</body>
+
+</html>
