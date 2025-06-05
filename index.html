@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
 </head>
 
 <body>
@@ -29,9 +33,9 @@
                 </li>
             </ul>
         </div>
-        
+
     </nav>
-    
+
 
     <!-- Seção Principal -->
     <div class="container-fluid">
@@ -42,10 +46,16 @@
                 <h1 class="text-center">Visualização de Dados Climáticos</h1>
                 <h2></h2>
                 <center>
-                    <p>Porto Alegre, capital do Rio Grande do Sul, é uma cidade marcada por contrastes climáticos. Seus verões são quentes e úmidos, enquanto os invernos, embora amenos, trazem consigo variações acentuadas de temperatura.</p>
-                    <p>Entre 2000 e 2025, a cidade experimentou não apenas o passar das estações, mas também as marcas visíveis das mudanças climáticas globais. Enchentes históricas, ondas de calor sem precedentes e padrões de vento alterados desenham um novo panorama climático urbano.</p>
-                    <p>Nesta plataforma, revisitamos os dados de mais de duas décadas de observações meteorológicas detalhadas. O que essas informações podem nos contar sobre o passado — e nos alertar sobre o futuro?</p>
-                </center>             
+                    <p>Porto Alegre, capital do Rio Grande do Sul, é uma cidade marcada por contrastes climáticos. Seus
+                        verões são quentes e úmidos, enquanto os invernos, embora amenos, trazem consigo variações
+                        acentuadas de temperatura.</p>
+                    <p>Entre 2000 e 2025, a cidade experimentou não apenas o passar das estações, mas também as marcas
+                        visíveis das mudanças climáticas globais. Enchentes históricas, ondas de calor sem precedentes e
+                        padrões de vento alterados desenham um novo panorama climático urbano.</p>
+                    <p>Nesta plataforma, revisitamos os dados de mais de duas décadas de observações meteorológicas
+                        detalhadas. O que essas informações podem nos contar sobre o passado — e nos alertar sobre o
+                        futuro?</p>
+                </center>
 
                 <a href="#estacoes-meteorologicas">
                     <button class="btn btn-primary">Começar agora</button>
@@ -54,13 +64,248 @@
         </div>
     </div>
 
+    <div class="tooltip" id="tooltip"></div>
+
+    <div class="container-fluid" id="temperatura-media-anual">
+        <div class="row" style="min-height: 800px;">
+
+            <!-- Mapa -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map"></div>
+            </div>
+
+            <!-- Storytelling -->
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        📈 Temperatura Média Anual</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <!--<h2 style="padding: 30px 0px 30px 0px; background-color: #f8f9fa;"></h2>-->
+                        <p>Entre 2000 e 2025, Porto Alegre experimentou uma tendência crescente na temperatura média
+                            anual, refletindo as mudanças climáticas globais. A análise dos dados meteorológicos revela
+                            um aumento gradual, com picos notáveis em anos específicos.</p>
+                        <p>Em 2000, a temperatura média anual foi de 18,5°C, enquanto em 2025, essa média subiu para
+                            20,2°C. Este aumento de 1,7°C em apenas 25 anos destaca a urgência de ações climáticas e a
+                            necessidade de adaptação às novas realidades climáticas.</p>
+
+                        <div class="slide" id="slide-linha">
+                            <svg id="grafico-linha" width="700" height="400"></svg>
+                        </div>
+                        
+                        <p>O gráfico acima ilustra a evolução da temperatura média anual em Porto Alegre, destacando
+                            os anos com temperaturas mais altas e mais baixas. A linha ascendente indica uma tendência
+                            preocupante, reforçando a necessidade de monitoramento contínuo e ações para mitigar os
+                            impactos das mudanças climáticas.</p>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid" id="">
+        <div class="row" style="min-height: 800px;">
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        🌧️ Precipitação Acumulada por Ano</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Entre 2000 e 2025, Porto Alegre experimentou variações significativas na precipitação
+                            acumulada
+                            anual, refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos
+                            dados pluviométricos revela um aumento gradual, com picos notáveis em anos específicos.</p>
+                        <p>Em 2000, a precipitação acumulada anual foi de 1.200 mm, enquanto em 2025, essa média subiu
+                            para
+                            1.400 mm. Este aumento de 200 mm em apenas 25 anos destaca a urgência de ações climáticas e
+                            a
+                            necessidade de adaptação às novas realidades climáticas.</p>
+
+                        <div class="slide" id="slide-area">
+                            <svg id="grafico-area" width="800" height="400"></svg>
+                        </div>
+                        <p>O gráfico acima ilustra a evolução da precipitação acumulada anual em Porto Alegre,
+                            destacando
+                            os anos com precipitações mais altas e mais baixas. A linha ascendente indica uma tendência
+                            preocupante, reforçando a necessidade de monitoramento contínuo e ações para mitigar os
+                            impactos das mudanças climáticas.</p>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="">
+        <div class="row" style="min-height: 800px;">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+            </div>
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        💧 Umidade Relativa Média Anual</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Entre 2000 e 2025, Porto Alegre experimentou uma variação na umidade relativa média anual,
+                            refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos dados
+                            de umidade revela uma tendência de aumento, com picos notáveis em anos específicos.</p>
+                        <p>Em 2000, a umidade relativa média anual foi de 70%, enquanto em 2025, essa média subiu para
+                            80%. Este aumento de 10% em apenas 25 anos destaca a
+                            urgência de ações climáticas e a necessidade de adaptação às novas realidades climáticas.
+                        </p>
+
+                        <div class="slide" id="slide-umidade">
+                            <svg id="grafico-umidade" width="800" height="400"></svg>
+                        </div>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="">
+        <div class="row" style="min-height: 800px;">
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        🌬️ Velocidade Média do Vento</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Entre 2000 e 2025, Porto Alegre experimentou uma variação na velocidade média do vento,
+                            refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos dados
+                            de vento revela uma tendência de aumento, com picos notáveis em anos específicos.</p>
+                        <p>Em 2000, a velocidade média do vento foi de 2.4 m/s, enquanto em 2025, essa média subiu para
+                            3.3 m/s. Este aumento de 0.9 m/s em apenas 25 anos destaca a urgência de ações climáticas e
+                            a
+                            necessidade de adaptação às novas realidades climáticas.</p>
+
+
+                        <div class="slide" id="slide-vento">
+                            <svg id="grafico-vento" width="800" height="400"></svg>
+                        </div>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="">
+        <div class="row" style="min-height: 800px;">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+            </div>
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        🔥 Eventos de Temperatura Extrema</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <div class="slide" id="slide-extremos">
+                            <svg id="grafico-extremos" width="800" height="400"></svg>
+                        </div>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid" id="">
+        <div class="row" style="min-height: 800px;">
+            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
+                        ❄️ Dias de Calor/Frio Intensos</h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <div class="slide" id="slide-intensos">
+                            <svg id="grafico-intensos" width="800" height="400"></svg>
+                        </div>
+
+                        <div class="end-content">
+                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
+                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <!-- Seção Estações Meteorológicas -->
     <div class="container-fluid" id="estacoes-meteorologicas">
         <div class="row">
 
             <!-- Mapa -->
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="background-color: #f8f9fa;">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
                 <div id="map"></div>
             </div>
 
@@ -194,15 +439,142 @@
             2025 © Todos os direitos reservados.
         </div>
 
-        <script src="./assets/js/script.js"></script>
-        <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-        <script src="./assets/js/leaflet.js"></script>
-        <script src="./assets/js/papaparse.min.js"></script>
 
         <script>
-            const dados = [];
+            // Dados de exemplo
+            const dados = [
+                { ano: 2000, temp: 21.3, chuva: 1200 },
+                { ano: 2005, temp: 21.7, chuva: 1580 },
+                { ano: 2010, temp: 22.4, chuva: 1420 },
+                { ano: 2015, temp: 22.9, chuva: 1350 },
+                { ano: 2020, temp: 23.5, chuva: 1480 },
+                { ano: 2025, temp: 24.1, chuva: 1600 }
+            ];
+
+            const regioes = [
+                { nome: "Zona Norte", x: 150, y: 100, temp: 22.4 },
+                { nome: "Centro", x: 300, y: 200, temp: 23.1 },
+                { nome: "Zona Sul", x: 500, y: 300, temp: 24.0 }
+            ];
+
+            const dadosVento = [
+                { ano: 2000, vento: 2.4 },
+                { ano: 2005, vento: 2.8 },
+                { ano: 2010, vento: 3.1 },
+                { ano: 2015, vento: 2.7 },
+                { ano: 2020, vento: 3.3 }
+            ];
+
+            const dadosExtremos = [
+                { ano: 2000, max: 39, min: 3 },
+                { ano: 2005, max: 41, min: 2 },
+                { ano: 2010, max: 43, min: 1 },
+                { ano: 2015, max: 40, min: 4 },
+                { ano: 2020, max: 42, min: 3 }
+            ];
+
+            const dadosIntensos = [
+                { ano: 2000, calor: 18, frio: 10 },
+                { ano: 2005, calor: 22, frio: 8 },
+                { ano: 2010, calor: 26, frio: 6 },
+                { ano: 2015, calor: 20, frio: 9 },
+                { ano: 2020, calor: 25, frio: 7 }
+            ];
+
+            const direcoes = [
+                { dir: "N", freq: 12 },
+                { dir: "NE", freq: 18 },
+                { dir: "E", freq: 22 },
+                { dir: "SE", freq: 14 },
+                { dir: "S", freq: 10 },
+                { dir: "SO", freq: 8 },
+                { dir: "O", freq: 6 },
+                { dir: "NO", freq: 10 }
+            ];
+
+            // Seleção do tooltip
+            const tooltip = d3.select("#tooltip");
+
+            // Variáveis para controle de animação
+            const animacoes = {
+                linha: false,
+                area: false,
+                mapa: false,
+                umidade: false,
+                vento: false,
+                extremos: false,
+                intensos: false,
+                ventoDirecao: false
+            };
+
+            // Configuração do IntersectionObserver para animação dos slides
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        switch (entry.target.id) {
+                            case 'slide-linha':
+                                if (!animacoes.linha) {
+                                    animarLinha();
+                                    animacoes.linha = true;
+                                }
+                                break;
+                            case 'slide-area':
+                                if (!animacoes.area) {
+                                    animarArea();
+                                    animacoes.area = true;
+                                }
+                                break;
+                            case 'slide-mapa':
+                                if (!animacoes.mapa) {
+                                    animarMapa();
+                                    animacoes.mapa = true;
+                                }
+                                break;
+                            case 'slide-umidade':
+                                if (!animacoes.umidade) {
+                                    animarUmidade();
+                                    animacoes.umidade = true;
+                                }
+                                break;
+                            case 'slide-vento':
+                                if (!animacoes.vento) {
+                                    animarVento();
+                                    animacoes.vento = true;
+                                }
+                                break;
+                            case 'slide-extremos':
+                                if (!animacoes.extremos) {
+                                    animarExtremos();
+                                    animacoes.extremos = true;
+                                }
+                                break;
+                            case 'slide-intensos':
+                                if (!animacoes.intensos) {
+                                    animarIntensos();
+                                    animacoes.intensos = true;
+                                }
+                                break;
+                            case 'slide-vento-direcao':
+                                if (!animacoes.ventoDirecao) {
+                                    desenharGraficoVentoDirecao();
+                                    animacoes.ventoDirecao = true;
+                                }
+                                break;
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observa todos os slides que precisam de animação
+            document.querySelectorAll('.slide[id]').forEach(slide => {
+                observer.observe(slide);
+            });
+        </script>
+
+
+
+        <script>
+            //const dados = [];
             const map = L.map('map').setView([-30.3, -53.0], 7);
 
             L.marker([-30.3, -53.0]).addTo(map)
@@ -222,7 +594,15 @@
             });
 
         </script>
-
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/d3-charts.js"></script>
+        <script src="./assets/js/chart.js"></script>
+        <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/papaparse.min.js"></script>
 </body>
 
 </html>
+
+</body>

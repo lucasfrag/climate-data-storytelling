@@ -1,10 +1,10 @@
 const arquivosCSV = [
     //'./dataset/2021/INMET_S_RS_A801_PORTO ALEGRE_01-01-2021_A_31-12-2021.csv',
-    './dataset/2025.csv'
+    //'./dataset/2025.csv'
 ];
 
 const arquivosJSON = [
-    './dataset/2025.json'
+    //'./dataset/2025.json'
 ];
 
 function addMarkers(lat, lon) {
