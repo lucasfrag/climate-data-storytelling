@@ -3,132 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard Climático (2000–2025)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/leaflet.css" />
   <link rel="stylesheet" href="./assets/css/styles.css">  
-  <script src="./assets/js/chart.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      padding: 20px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      padding: 0;
+      margin: 0;
+      min-height: 100vh;
     }
-
-    h1, h2 {
-      text-align: center;
+    header {
+      background: #0d6efd;
+      color: #fff;
+      padding: 32px 0 18px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      margin-bottom: 32px;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
+    header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
     }
-
-    .grafico-container {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    header p {
+      font-size: 1.15rem;
+      color: #e3eafc;
+      margin-bottom: 0;
     }
-
-    canvas {
-      width: 100% !important;
-      height: 300px !important;
+    .container-main {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 24px 40px 24px;
     }
-
-    .descricao {
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 12px;
-      line-height: 1.4;
-    }
-
     .destaques {
-      max-width: 1500px;
-      margin: 0 auto 40px;
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      background: #fff;
+      padding: 28px 24px 18px 24px;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      margin-bottom: 40px;
+      transition: box-shadow 0.2s;
     }
-
+    .destaques:hover {
+      box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+    }
+    .destaques h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #0d6efd;
+      letter-spacing: 0.5px;
+    }
     .destaques table {
       width: 100%;
       border-collapse: collapse;
+      background: #f8fafc;
+      border-radius: 8px;
+      overflow: hidden;
     }
-
     .destaques th, .destaques td {
-      border: 1px solid #ddd;
-      padding: 10px;
+      border: 1px solid #e3eafc;
+      padding: 10px 8px;
       text-align: left;
-      font-size: 0.95em;
+      font-size: 1em;
     }
-
     .destaques th {
-      background-color: #f1f5f9;
-      font-weight: 600;
+      background-color: #e7f1ff;
+      font-weight: 700;
+      color: #0d6efd;
     }
-
+    .destaques tr:nth-child(even) td {
+      background: #f4f8fb;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 32px;
+      margin-top: 0;
+    }
+    .grafico-container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 18px 18px 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.2s;
+      min-width: 0;
+    }
+    .grafico-container:hover {
+      box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+    }
+    .grafico-container h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0d6efd;
+      margin-bottom: 10px;
+      margin-top: 0;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+    .grafico-container .descricao {
+      font-size: 0.97em;
+      color: #555;
+      margin-top: 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .d3-tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #fff;
+      border: 1px solid #0d6efd;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 1em;
+      color: #222;
+      box-shadow: 0 2px 12px rgba(13,110,253,0.08);
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-weight: 500;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .container-main {
+        padding: 0 8px 32px 8px;
+      }
+      .destaques {
+        padding: 18px 6px 10px 6px;
+      }
+      .grafico-container {
+        padding: 14px 4px 10px 4px;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <h1>Dashboard Climático: 2000–2025</h1>
-
-  <div class="destaques">
-    <h2>Destaques por Ano</h2>
-    <table id="tabelaDestaques">
-      <thead>
-        <tr>
-          <th>Ano</th>
-          <th>Temp. Máx (Cidade)</th>
-          <th>Temp. Mín (Cidade)</th>
-          <th>Radiação Máx (Cidade)</th>
-          <th>Rajada Máx Vento (Cidade)</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+  <header>
+    <div class="container-main">
+      <h1>Dashboard Climático: 2000–2025</h1>
+      <p>Visualize tendências anuais de temperatura, umidade, precipitação, radiação e vento no Brasil.</p>
+    </div>
+  </header>
+  <div class="container-main">
+    <div class="destaques">
+      <h2>Destaques por Ano</h2>
+      <table id="tabelaDestaques">
+        <thead>
+          <tr>
+            <th>Ano</th>
+            <th>Temp. Máx (Cidade)</th>
+            <th>Temp. Mín (Cidade)</th>
+            <th>Radiação Máx (Cidade)</th>
+            <th>Rajada Máx Vento (Cidade)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="grid">
+      <div class="grafico-container">
+        <h3>Temperatura Extrema Anual</h3>
+        <div id="tempExtrema"></div>
+        <p class="descricao">Temperaturas acima de 35°C ou abaixo de 5°C podem ser perigosas para a saúde. A linha amarela representa a temperatura média.</p>
+      </div>
+      <div class="grafico-container">
+        <h3>Umidade Média Anual</h3>
+        <div id="umidadeMedia"></div>
+        <p class="descricao">Umidade ideal para conforto está entre 40% e 60%. Acima disso pode causar sensação de abafamento.</p>
+      </div>
+      <div class="grafico-container">
+        <h3>Precipitação Total por Ano</h3>
+        <div id="precipitacaoTotal"></div>
+        <p class="descricao">Chuvas intensas e fora da média podem indicar risco de enchentes.</p>
+      </div>
+      <div class="grafico-container">
+        <h3>Radiação Global Máxima</h3>
+        <div id="radiacaoMax"></div>
+        <p class="descricao">Radiação acima de 2500 KJ/m² indica exposição solar intensa, exigindo proteção UV.</p>
+      </div>
+      <div class="grafico-container">
+        <h3>Rajada Máxima de Vento</h3>
+        <div id="ventoRajada"></div>
+        <p class="descricao">Rajadas acima de 15 m/s podem causar transtornos e danos estruturais leves.</p>
+      </div>
+      <div class="grafico-container">
+        <h3>Temperatura vs Umidade (Média Anual)</h3>
+        <div id="scatterTempUmidade"></div>
+        <p class="descricao">Mostra a relação entre calor e umidade ao longo dos anos.</p>
+      </div>
+    </div>
   </div>
-
-  <div class="grid">
-    <div class="grafico-container">
-      <h3>Temperatura Extrema Anual</h3>
-      <canvas id="tempExtrema"></canvas>
-      <p class="descricao">Temperaturas acima de 35°C ou abaixo de 5°C podem ser perigosas para a saúde. A linha amarela representa a temperatura média.</p>
-    </div>
-    <div class="grafico-container">
-      <h3>Umidade Média Anual</h3>
-      <canvas id="umidadeMedia"></canvas>
-      <p class="descricao">Umidade ideal para conforto está entre 40% e 60%. Acima disso pode causar sensação de abafamento.</p>
-    </div>
-    <div class="grafico-container">
-      <h3>Precipitação Total por Ano</h3>
-      <canvas id="precipitacaoTotal"></canvas>
-      <p class="descricao">Chuvas intensas e fora da média podem indicar risco de enchentes.</p>
-    </div>
-    <div class="grafico-container">
-      <h3>Radiação Global Máxima</h3>
-      <canvas id="radiacaoMax"></canvas>
-      <p class="descricao">Radiação acima de 2500 KJ/m² indica exposição solar intensa, exigindo proteção UV.</p>
-    </div>
-    <div class="grafico-container">
-      <h3>Rajada Máxima de Vento</h3>
-      <canvas id="ventoRajada"></canvas>
-      <p class="descricao">Rajadas acima de 15 m/s podem causar transtornos e danos estruturais leves.</p>
-    </div>
-    <div class="grafico-container">
-      <h3>Temperatura vs Umidade (Média Anual)</h3>
-      <canvas id="scatterTempUmidade"></canvas>
-      <p class="descricao">Mostra a relação entre calor e umidade ao longo dos anos.</p>
-    </div>
-  </div>
-
+  <div class="d3-tooltip" id="d3-tooltip"></div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
     async function carregarResumo() {
       const response = await fetch('./dataset/resumo_anual.json');
       return await response.json();
+    }
+
+    function showTooltip(html, event) {
+      const tooltip = document.getElementById('d3-tooltip');
+      tooltip.innerHTML = html;
+      tooltip.style.left = (event.pageX + 10) + 'px';
+      tooltip.style.top = (event.pageY - 28) + 'px';
+      tooltip.style.opacity = 1;
+    }
+    function hideTooltip() {
+      document.getElementById('d3-tooltip').style.opacity = 0;
     }
 
     function gerarGraficos(dadosPorAno) {
@@ -136,10 +227,9 @@
       const tempMin = [], tempMax = [], tempMedia = [], umiMed = [], precTotal = [], radMax = [], ventoMax = [], scatter = [];
 
       const tabela = document.querySelector("#tabelaDestaques tbody");
-
+      tabela.innerHTML = '';
       for (const ano of anos) {
         const d = dadosPorAno[ano];
-
         tempMin.push(d.tempMin);
         tempMax.push(d.tempMax);
         tempMedia.push(d.tempMedia);
@@ -160,78 +250,296 @@
         tabela.innerHTML += row;
       }
 
-      new Chart(tempExtrema, {
-        type: 'line',
-        data: {
-          labels: anos,
-          datasets: [
-            { label: 'Mínima', data: tempMin, borderColor: 'blue', fill: false },
-            { label: 'Máxima', data: tempMax, borderColor: 'red', fill: false },
-            { label: 'Média',  data: tempMedia, borderColor: 'gold', fill: false }
-          ]
-        },
-        options: {
-          plugins: {
-            legend: { position: 'top' }
-          },
-          scales: {
-            y: { title: { display: true, text: 'Temperatura (°C)' } }
-          }
+      // Configurações gerais
+      const width = 420, height = 260, margin = {top: 30, right: 30, bottom: 40, left: 50};
+
+      // Temperatura Extrema Anual (Line chart)
+      {
+        const svg = d3.select("#tempExtrema").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scalePoint().domain(anos).range([margin.left, width - margin.right]);
+        const y = d3.scaleLinear()
+          .domain([d3.min(tempMin)-2, d3.max(tempMax)+2]).nice()
+          .range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x).tickValues(anos.filter((d,i) => i%2===0)));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        function drawLine(data, color) {
+          svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", color)
+            .attr("stroke-width", 2)
+            .attr("d", d3.line()
+              .x((d,i) => x(anos[i]))
+              .y(d => y(d))
+            )
+            .attr("stroke-dasharray", function() { return this.getTotalLength(); })
+            .attr("stroke-dashoffset", function() { return this.getTotalLength(); })
+            .transition().duration(1200)
+            .attr("stroke-dashoffset", 0);
         }
-      });
+        drawLine(tempMin, "#0d6efd");
+        drawLine(tempMax, "#dc3545");
+        drawLine(tempMedia, "#ffc107");
 
-      new Chart(umidadeMedia, {
-        type: 'bar',
-        data: { labels: anos, datasets: [{ label: 'Umidade Média (%)', data: umiMed, backgroundColor: 'skyblue' }] }
-      });
-
-      new Chart(precipitacaoTotal, {
-        type: 'bar',
-        data: { labels: anos, datasets: [{ label: 'Precipitação Total (mm)', data: precTotal, backgroundColor: 'teal' }] }
-      });
-
-      new Chart(radiacaoMax, {
-        type: 'line',
-        data: { labels: anos, datasets: [{ label: 'Radiação Global Máxima (KJ/m²)', data: radMax, borderColor: 'orange', fill: true }] }
-      });
-
-      new Chart(ventoRajada, {
-        type: 'bar',
-        data: { labels: anos, datasets: [{ label: 'Rajada Máxima de Vento (m/s)', data: ventoMax, backgroundColor: 'gray' }] }
-      });
-
-      new Chart(scatterTempUmidade, {
-        type: 'scatter',
-        data: {
-          datasets: [{
-            label: 'Temp vs Umidade Média',
-            data: scatter,
-            backgroundColor: 'green'
-          }]
-        },
-        options: {
-          plugins: {
-            tooltip: {
-              callbacks: {
-                label: function (context) {
-                  const d = context.raw;
-                  return `Ano ${d.ano}: Temp ${d.x.toFixed(1)}°C, Umidade ${d.y.toFixed(1)}%`;
-                }
-              }
-            }
-          },
-          scales: {
-            x: { title: { display: true, text: 'Temperatura Média (°C)' } },
-            y: { title: { display: true, text: 'Umidade Média (%)' } }
-          }
+        function drawPoints(data, color, label) {
+          svg.selectAll(`.dot-${label}`)
+            .data(data)
+            .enter().append("circle")
+            .attr("class", `dot-${label}`)
+            .attr("cx", (d,i) => x(anos[i]))
+            .attr("cy", d => y(d))
+            .attr("r", 0)
+            .attr("fill", color)
+            .on("mousemove", (event, d, i) => {
+              showTooltip(`${label}: ${d}°C`, event);
+            })
+            .on("mouseout", hideTooltip)
+            .transition().delay((d,i) => i*30).duration(500)
+            .attr("r", 5);
         }
-      });
+        drawPoints(tempMin, "#0d6efd", "Mínima");
+        drawPoints(tempMax, "#dc3545", "Máxima");
+        drawPoints(tempMedia, "#ffc107", "Média");
+
+        // Legenda
+        const legend = [
+          {label: "Mínima", color: "#0d6efd"},
+          {label: "Máxima", color: "#dc3545"},
+          {label: "Média", color: "#ffc107"}
+        ];
+        svg.selectAll(".legend")
+          .data(legend)
+          .enter().append("circle")
+          .attr("cx", (d,i) => margin.left + i*80)
+          .attr("cy", margin.top-15)
+          .attr("r", 6)
+          .attr("fill", d=>d.color);
+        svg.selectAll(".legend-label")
+          .data(legend)
+          .enter().append("text")
+          .attr("x", (d,i) => margin.left + i*80 + 12)
+          .attr("y", margin.top-11)
+          .text(d=>d.label)
+          .attr("font-size", "12px");
+      }
+
+      // Umidade Média Anual (Bar chart)
+      {
+        const svg = d3.select("#umidadeMedia").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scaleBand().domain(anos).range([margin.left, width - margin.right]).padding(0.15);
+        const y = d3.scaleLinear().domain([0, d3.max(umiMed)*1.1]).nice().range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x).tickValues(anos.filter((d,i) => i%2===0)));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        svg.selectAll(".bar")
+          .data(umiMed)
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", (d,i) => x(anos[i]))
+          .attr("y", y(0))
+          .attr("width", x.bandwidth())
+          .attr("height", 0)
+          .attr("fill", "#0dcaf0")
+          .on("mousemove", (event, d, i) => {
+            showTooltip(`Ano: ${anos[i]}<br>Umidade: ${d}%`, event);
+          })
+          .on("mouseout", hideTooltip)
+          .transition()
+          .duration(900)
+          .delay((d,i) => i*30)
+          .attr("y", d => y(d))
+          .attr("height", d => y(0) - y(d));
+      }
+
+      // Precipitação Total por Ano (Bar chart)
+      {
+        const svg = d3.select("#precipitacaoTotal").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scaleBand().domain(anos).range([margin.left, width - margin.right]).padding(0.15);
+        const y = d3.scaleLinear().domain([0, d3.max(precTotal)*1.1]).nice().range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x).tickValues(anos.filter((d,i) => i%2===0)));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        svg.selectAll(".bar")
+          .data(precTotal)
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", (d,i) => x(anos[i]))
+          .attr("y", y(0))
+          .attr("width", x.bandwidth())
+          .attr("height", 0)
+          .attr("fill", "#198754")
+          .on("mousemove", (event, d, i) => {
+            showTooltip(`Ano: ${anos[i]}<br>Precipitação: ${d} mm`, event);
+          })
+          .on("mouseout", hideTooltip)
+          .transition()
+          .duration(900)
+          .delay((d,i) => i*30)
+          .attr("y", d => y(d))
+          .attr("height", d => y(0) - y(d));
+      }
+
+      // Radiação Global Máxima (Line chart)
+      {
+        const svg = d3.select("#radiacaoMax").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scalePoint().domain(anos).range([margin.left, width - margin.right]);
+        const y = d3.scaleLinear()
+          .domain([0, d3.max(radMax.filter(d=>d!=null))*1.1]).nice()
+          .range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x).tickValues(anos.filter((d,i) => i%2===0)));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        svg.append("path")
+          .datum(radMax)
+          .attr("fill", "none")
+          .attr("stroke", "#fd7e14")
+          .attr("stroke-width", 2)
+          .attr("d", d3.line()
+            .defined(d => d != null)
+            .x((d,i) => x(anos[i]))
+            .y(d => y(d))
+          )
+          .attr("stroke-dasharray", function() { return this.getTotalLength(); })
+          .attr("stroke-dashoffset", function() { return this.getTotalLength(); })
+          .transition().duration(1200)
+          .attr("stroke-dashoffset", 0);
+
+        svg.selectAll(".dot-rad")
+          .data(radMax)
+          .enter().append("circle")
+          .filter(d => d != null)
+          .attr("class", "dot-rad")
+          .attr("cx", (d,i) => x(anos[i]))
+          .attr("cy", d => y(d))
+          .attr("r", 0)
+          .attr("fill", "#fd7e14")
+          .on("mousemove", (event, d, i) => {
+            showTooltip(`Ano: ${anos[i]}<br>Radiação: ${d} KJ/m²`, event);
+          })
+          .on("mouseout", hideTooltip)
+          .transition().delay((d,i) => i*30).duration(500)
+          .attr("r", 5);
+      }
+
+      // Rajada Máxima de Vento (Bar chart)
+      {
+        const svg = d3.select("#ventoRajada").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scaleBand().domain(anos).range([margin.left, width - margin.right]).padding(0.15);
+        const y = d3.scaleLinear().domain([0, d3.max(ventoMax.filter(d=>d!=null))*1.1]).nice().range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x).tickValues(anos.filter((d,i) => i%2===0)));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        svg.selectAll(".bar")
+          .data(ventoMax)
+          .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", (d,i) => x(anos[i]))
+          .attr("y", y(0))
+          .attr("width", x.bandwidth())
+          .attr("height", 0)
+          .attr("fill", "#6c757d")
+          .on("mousemove", (event, d, i) => {
+            showTooltip(`Ano: ${anos[i]}<br>Rajada: ${d} m/s`, event);
+          })
+          .on("mouseout", hideTooltip)
+          .transition()
+          .duration(900)
+          .delay((d,i) => i*30)
+          .attr("y", d => y(d))
+          .attr("height", d => y(0) - y(d));
+      }
+
+      // Scatter: Temperatura vs Umidade
+      {
+        const svg = d3.select("#scatterTempUmidade").append("svg")
+          .attr("width", width).attr("height", height);
+
+        const x = d3.scaleLinear()
+          .domain([d3.min(scatter, d=>d.x)-1, d3.max(scatter, d=>d.x)+1])
+          .range([margin.left, width - margin.right]);
+        const y = d3.scaleLinear()
+          .domain([d3.min(scatter, d=>d.y)-2, d3.max(scatter, d=>d.y)+2])
+          .range([height - margin.bottom, margin.top]);
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height - margin.bottom})`)
+          .call(d3.axisBottom(x));
+        svg.append("g")
+          .attr("transform", `translate(${margin.left},0)`)
+          .call(d3.axisLeft(y));
+
+        svg.selectAll(".dot-scatter")
+          .data(scatter)
+          .enter().append("circle")
+          .attr("class", "dot-scatter")
+          .attr("cx", d => x(d.x))
+          .attr("cy", d => y(d.y))
+          .attr("r", 0)
+          .attr("fill", "#198754")
+          .attr("opacity", 0.8)
+          .on("mousemove", (event, d) => {
+            showTooltip(`Ano: ${d.ano}<br>Temp: ${d.x.toFixed(1)}°C<br>Umidade: ${d.y.toFixed(1)}%`, event);
+          })
+          .on("mouseout", hideTooltip)
+          .transition()
+          .duration(800)
+          .delay((d,i) => i*30)
+          .attr("r", 7);
+
+        svg.selectAll(".dot-scatter")
+          .on("mouseover", function(event, d) {
+            svg.append("text")
+              .attr("id", "scatter-label")
+              .attr("x", x(d.x)+10)
+              .attr("y", y(d.y)-10)
+              .text(d.ano)
+              .attr("font-size", "12px")
+              .attr("fill", "#333");
+          })
+          .on("mouseout", function() {
+            svg.select("#scatter-label").remove();
+          });
+      }
     }
 
     carregarResumo().then(gerarGraficos);
   </script>
-
-
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
