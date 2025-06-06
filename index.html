@@ -131,9 +131,8 @@
                             1.400 mm. Este aumento de 200 mm em apenas 25 anos destaca a urgência de ações climáticas e
                             a
                             necessidade de adaptação às novas realidades climáticas.</p>
-
-                        <div class="slide" id="slide-area">
-                            <svg id="grafico-area" width="800" height="400"></svg>
+                        <div class="slide chart-container" id="slide-area">
+                            <svg id="grafico-area"></svg>
                         </div>
                         <p>O gráfico acima ilustra a evolução da precipitação acumulada anual em Porto Alegre,
                             destacando
@@ -176,9 +175,8 @@
                             80%. Este aumento de 10% em apenas 25 anos destaca a
                             urgência de ações climáticas e a necessidade de adaptação às novas realidades climáticas.
                         </p>
-
-                        <div class="slide" id="slide-umidade">
-                            <svg id="grafico-umidade" width="800" height="400"></svg>
+                        <div class="slide chart-container" id="slide-umidade">
+                            <svg id="grafico-umidade"></svg>
                         </div>
 
                         <div class="end-content">
@@ -210,9 +208,8 @@
                             a
                             necessidade de adaptação às novas realidades climáticas.</p>
 
-
-                        <div class="slide" id="slide-vento">
-                            <svg id="grafico-vento" width="800" height="400"></svg>
+                        <div class="slide chart-container" id="slide-vento">
+                            <svg id="grafico-vento"></svg>
                         </div>
 
                         <div class="end-content">
@@ -244,8 +241,8 @@
                         🔥 Eventos de Temperatura Extrema</h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <div class="slide" id="slide-extremos">
-                            <svg id="grafico-extremos" width="800" height="400"></svg>
+                        <div class="slide chart-container" id="slide-extremos">
+                            <svg id="grafico-extremos"></svg>
                         </div>
 
                         <div class="end-content">
@@ -268,8 +265,8 @@
                         ❄️ Dias de Calor/Frio Intensos</h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <div class="slide" id="slide-intensos">
-                            <svg id="grafico-intensos" width="800" height="400"></svg>
+                        <div class="slide chart-container" id="slide-intensos">
+                            <svg id="grafico-intensos"></svg>
                         </div>
 
                         <div class="end-content">
@@ -554,10 +551,10 @@
                                     animacoes.intensos = true;
                                 }
                                 break;
-                            case 'slide-vento-direcao':
-                                if (!animacoes.ventoDirecao) {
-                                    desenharGraficoVentoDirecao();
-                                    animacoes.ventoDirecao = true;
+                            case 'slide-vento':
+                                if (!animacoes.vento) {
+                                    animarVento();
+                                    animacoes.vento = true;
                                 }
                                 break;
                         }
@@ -570,10 +567,18 @@
                 observer.observe(slide);
             });
 
+            let resizeTimeout;
             window.addEventListener("resize", () => {
-            if (animacoes.linha) {
-                animarLinha(); // redesenha em tela menor/maior
-            }
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                        animarLinha();                     
+                        animarArea(); 
+                        animarUmidade();                    
+                        animarVento(); 
+                        animarExtremos(); 
+                        animarIntensos(); 
+                    
+                }, 100); 
             });
         </script>
 

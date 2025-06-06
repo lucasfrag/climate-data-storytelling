@@ -59,11 +59,15 @@ function animarLinha() {
 
 
 function animarArea() {
-    const svg = d3.select("#grafico-area"),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const svg = d3.select("#grafico-area");
+
+    svg.selectAll("*").remove();
+   
+    const bounds = svg.node().getBoundingClientRect(),
+          margin = { top: 20, right: 30, bottom: 30, left: 50 },
+          width = bounds.width - margin.left - margin.right,
+          height = bounds.height - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleLinear().domain(d3.extent(dados, d => d.ano)).range([0, width]);
     const y = d3.scaleLinear().domain([1000, d3.max(dados, d => d.chuva)]).nice().range([height, 0]);
@@ -132,11 +136,15 @@ function animarMapa() {
 }
 
 function animarUmidade() {
-    const svg = d3.select("#grafico-umidade"),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const svg = d3.select("#grafico-umidade");
+
+    svg.selectAll("*").remove();
+   
+    const bounds = svg.node().getBoundingClientRect(),
+          margin = { top: 20, right: 30, bottom: 30, left: 50 },
+          width = bounds.width - margin.left - margin.right,
+          height = bounds.height - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const dadosUmidade = [
         { ano: 2000, umid: 76 },
@@ -182,16 +190,17 @@ function animarUmidade() {
         .on("mouseout", () => tooltip.style("opacity", 0));
 }
 
-function animarVento() {
-    desenharGraficoBarra("#grafico-vento", dadosVento, "vento", "green", "Velocidade (m/s)");
-}
 
 function animarIntensos() {
-    const svg = d3.select("#grafico-intensos"),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const svg = d3.select("#grafico-intensos");
+
+    svg.selectAll("*").remove();
+   
+    const bounds = svg.node().getBoundingClientRect(),
+          margin = { top: 20, right: 30, bottom: 30, left: 50 },
+          width = bounds.width - margin.left - margin.right,
+          height = bounds.height - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleBand().domain(dadosIntensos.map(d => d.ano)).range([0, width]).padding(0.2);
     const y = d3.scaleLinear().domain([0, d3.max(dadosIntensos, d => Math.max(d.calor, d.frio))]).range([height, 0]);
@@ -243,11 +252,15 @@ function animarIntensos() {
 }
 
 function animarExtremos() {
-    const svg = d3.select("#grafico-extremos"),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const svg = d3.select("#grafico-extremos");
+
+    svg.selectAll("*").remove();
+   
+    const bounds = svg.node().getBoundingClientRect(),
+          margin = { top: 20, right: 30, bottom: 30, left: 50 },
+          width = bounds.width - margin.left - margin.right,
+          height = bounds.height - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleBand().domain(dadosExtremos.map(d => d.ano)).range([0, width]).padding(0.2);
     const y = d3.scaleLinear().domain([0, 45]).range([height, 0]);
@@ -294,43 +307,18 @@ function animarExtremos() {
         .attr("y", d => y(d.min)).attr("height", d => height - y(d.min));
 }
 
-function desenharGraficoBarra(id, dados, chave, cor, label) {
-    const svg = d3.select(id),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    const x = d3.scaleBand().domain(dados.map(d => d.ano)).range([0, width]).padding(0.2);
-    const y = d3.scaleLinear().domain([0, d3.max(dados, d => d[chave]) + 2]).range([height, 0]);
+function animarVento() {
+    const svg = d3.select("#grafico-vento");
 
-    g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).tickFormat(d3.format("d")));
-    g.append("g").call(d3.axisLeft(y));
+    svg.selectAll("*").remove();
+   
+    const bounds = svg.node().getBoundingClientRect(),
+          margin = { top: 20, right: 30, bottom: 30, left: 50 },
+          width = bounds.width - margin.left - margin.right,
+          height = bounds.height - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
-    g.selectAll("rect")
-        .data(dados)
-        .enter().append("rect")
-        .attr("x", d => x(d.ano))
-        .attr("y", y(0))
-        .attr("width", x.bandwidth())
-        .attr("height", 0)
-        .attr("fill", cor)
-        .on("mouseover", (event, d) => {
-            tooltip.style("opacity", 1)
-                .html(`<strong>${d.ano}</strong><br>${label}: ${d[chave]}`)
-                .style("left", `${event.pageX + 10}px`)
-                .style("top", `${event.pageY - 28}px`);
-        })
-        .on("mouseout", () => tooltip.style("opacity", 0))
-        .transition().duration(1000).attr("y", d => y(d[chave])).attr("height", d => height - y(d[chave]));
-}
-
-function desenharGraficoVentoDirecao() {
-    const svg = d3.select("#grafico-vento-direcao"),
-        margin = { top: 20, right: 30, bottom: 30, left: 50 },
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = +svg.attr("height") - margin.top - margin.bottom,
-        g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = d3.scaleBand().domain(direcoes.map(d => d.dir)).range([0, width]).padding(0.1);
     const y = d3.scaleLinear().domain([0, d3.max(direcoes, d => d.freq)]).range([height, 0]);
