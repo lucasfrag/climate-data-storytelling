@@ -90,8 +90,8 @@
                             20,2°C. Este aumento de 1,7°C em apenas 25 anos destaca a urgência de ações climáticas e a
                             necessidade de adaptação às novas realidades climáticas.</p>
 
-                        <div class="slide" id="slide-linha">
-                            <svg id="grafico-linha" width="700" height="400"></svg>
+                        <div class="slide chart-container" id="slide-linha">
+                            <svg id="grafico-linha"></svg>
                         </div>
                         
                         <p>O gráfico acima ilustra a evolução da temperatura média anual em Porto Alegre, destacando
@@ -568,6 +568,12 @@
             // Observa todos os slides que precisam de animação
             document.querySelectorAll('.slide[id]').forEach(slide => {
                 observer.observe(slide);
+            });
+
+            window.addEventListener("resize", () => {
+            if (animacoes.linha) {
+                animarLinha(); // redesenha em tela menor/maior
+            }
             });
         </script>
 
