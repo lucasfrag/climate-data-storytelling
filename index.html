@@ -115,9 +115,9 @@
         <div class="row">
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6" style="background-color: #f8f9fa;">
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar" style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light mb-3 text-primary reveal-item" id="estacoes-title" style="margin-top: 50px; background-color: #f8f9fa;" tabindex="0">
+                    <h1 class="bg-light mb-3 text-primary reveal-item sticky-top" id="estacoes-title" style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
                         <i class="fas fa-cloud-sun-rain me-2"></i> Estações Meteorológicas
                     </h1>
 
@@ -154,7 +154,8 @@
                         </section>
                         
 
-                        <div class="end-content">
+                        <div class="end-content reveal-item">
+                            <p>Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;" aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.5em; vertical-align: middle;" aria-hidden="true">&#8595;</span>
                             </button>
@@ -166,22 +167,11 @@
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map"></div>
+                <div id="map" style="height: 900px;"></div>
             </div>
         </div>
     </div>
-    <style>
-        .reveal-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
-            will-change: opacity, transform;
-        }
-        .reveal-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+
     <script>
         // Revela os elementos da seção aos poucos
         document.addEventListener("DOMContentLoaded", function () {
