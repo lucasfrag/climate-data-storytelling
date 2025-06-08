@@ -31,14 +31,17 @@
                         Descubra como o clima está mudando em Porto Alegre e no Brasil.<br>
                         Visualize dados meteorológicos, tendências e impactos de forma interativa e envolvente.
                     </p>
+
+
                     <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
                         <i class="fas fa-book-open me-2"></i> Ler o artigo completo
                     </a>
                     <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
                         <i class="fab fa-github me-2"></i> Ver no GitHub
                     </a>
-                    
-                    <div class="d-flex flex-column align-items-center mt-5" style="padding-top: 150px;">
+
+
+                    <div class="d-flex flex-column align-items-center mt-5">
                         <p class="mb-2" style="font-size: 1.15rem;">
                             <strong>Clique no botão abaixo para começar a explorar os dados.</strong>
                         </p>
@@ -91,7 +94,7 @@
                     <script>
                         document.getElementById('explorarBtn').addEventListener('click', function(e) {
                             e.preventDefault();
-                            const target = document.querySelector('#temperatura-media-anual');
+                            const target = document.querySelector('#estacoes-meteorologicas');
                             if (target) {
                                 target.scrollIntoView({ behavior: 'smooth' });
                             }
@@ -108,21 +111,22 @@
     <!--------------------------------------------------------------------------------------------------------------------------->
 
     <!-- Seção Estações Meteorológicas -->
-    <div class="container-fluid" id="temperatura-media-anual">
+    <div class="container-fluid reveal-section" id="estacoes-meteorologicas">
         <div class="row">
 
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6" style="background-color: #f8f9fa;">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light mb-3 text-primary" id="estacoes-title" style="margin-top: 50px; background-color: #f8f9fa;" tabindex="0">
+                    <h1 class="bg-light mb-3 text-primary reveal-item" id="estacoes-title" style="margin-top: 50px; background-color: #f8f9fa;" tabindex="0">
                         <i class="fas fa-cloud-sun-rain me-2"></i> Estações Meteorológicas
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <p>As estações meteorológicas são fundamentais para o monitoramento do clima e previsão do tempo. Elas coletam dados essenciais, como <strong>temperatura</strong>, <strong>umidade</strong>, <strong>pressão atmosférica</strong> e <strong>precipitação</strong>, que ajudam a entender as condições climáticas em diferentes regiões.</p>
-                        <p>O <a href="https://portal.inmet.gov.br/" target="_blank">Instituto Nacional de Meteorologia (INMET)</a> opera uma rede de estações meteorológicas em todo o Brasil, fornecendo dados valiosos para pesquisadores, meteorologistas e o público em geral. Essas informações são cruciais para a previsão do tempo, planejamento agrícola, gestão de recursos hídricos e resposta a desastres naturais.</p>
+                        <p class="reveal-item">As estações meteorológicas são fundamentais para o monitoramento do clima e previsão do tempo. Elas coletam dados essenciais, como <strong>temperatura</strong>, <strong>umidade</strong>, <strong>pressão atmosférica</strong> e <strong>precipitação</strong>, que ajudam a entender as condições climáticas em diferentes regiões.</p>
+                        <p class="reveal-item">O <a href="https://portal.inmet.gov.br/" target="_blank">Instituto Nacional de Meteorologia (INMET)</a> opera uma rede de estações meteorológicas em todo o Brasil, fornecendo dados valiosos para pesquisadores, meteorologistas e o público em geral. Essas informações são cruciais para a previsão do tempo, planejamento agrícola, gestão de recursos hídricos e resposta a desastres naturais.</p>
+                        <p class="reveal-item">Nessa seção, você pode explorar as estações meteorológicas de diferentes estados e anos da região sul do Brasil, visualizando sua distribuição e evolução ao longo do tempo.</p>
 
-                        <section aria-labelledby="estacoes-title">
+                        <section aria-labelledby="estacoes-title" class="reveal-item">
                             <p>
                                 <span class="badge bg-primary me-5 text-white">Dica</span>
                                 <strong>Selecione um estado ou arraste o ano para ver as estações surgindo no mapa!</strong>
@@ -133,7 +137,7 @@
                                     <option value="TODOS">Todos</option>
                                 </select>
                                 <button id="playBtn" type="button" aria-label="Mostrar evolução das estações" title="Mostrar evolução das estações" class="btn btn-primary" aria-pressed="false" style="margin-left: 8px;">▶️ Ver evolução das estações</button>
-                                <button id="resetBtn" type="button" aria-label="Reiniciar mapa" title="Reiniciar mapa" class="btn btn-outline-secondary" style="margin-left: 8px;">🔄 Reiniciar mapa</button>
+                                <button id="resetBtn" type="button" aria-label="Centralizar mapa" title="Centralizar mapa" class="btn btn-outline-secondary" style="margin-left: 8px;">🔄 Centralizar mapa</button>
                             </form>
 
                             <div id="yearSliderContainer" class="my-3">
@@ -142,8 +146,9 @@
                             </div>
 
                             <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts" aria-label="Gráfico de estações por ano">
+                                <p><strong>Gráfico de Estações por Ano</strong> </p>
                                 <canvas id="graficoEstacoes" role="img" aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
-                                <p class="text-muted small mt-2">Dica: Clique em um marcador para saber mais sobre a estação.</p>
+                                <p class="text-muted small mt-2 text-center">Dica: Passe o mouse sobre as barras para ver mais detalhes.</p>
                             </div>
 
                         </section>
@@ -165,6 +170,48 @@
             </div>
         </div>
     </div>
+    <style>
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+            will-change: opacity, transform;
+        }
+        .reveal-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        // Revela os elementos da seção aos poucos
+        document.addEventListener("DOMContentLoaded", function () {
+            function revealSequentially(items, delay = 350) {
+                items.forEach((item, idx) => {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, idx * delay);
+                });
+            }
+
+            // Só revela quando a seção entra na tela
+            const section = document.getElementById('estacoes-meteorologicas');
+            const revealItems = section.querySelectorAll('.reveal-item');
+            let revealed = false;
+
+            function handleReveal(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !revealed) {
+                        revealSequentially(Array.from(revealItems));
+                        revealed = true;
+                        observer.disconnect();
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(handleReveal, { threshold: 0.2 });
+            observer.observe(section);
+        });
+    </script>
 
 
 
@@ -182,7 +229,68 @@
             <!-- Mapa -->
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map"></div>
+                <!-- Criar heat map -->
+                <div id="heatmap" style="width: 100%; height: 500px;"></div>
+                <script>
+                    // Heatmap de temperatura média anual usando leaflet-heat
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // Exemplo de dados de temperatura média anual por região (latitude, longitude, valor)
+                        // Substitua pelos dados reais conforme necessário
+                        const tempData = [
+                            // Porto Alegre (aprox)
+                            { lat: -30.0346, lng: -51.2177, temp: 23.5 },
+                            // Região Norte de Porto Alegre
+                            { lat: -29.95, lng: -51.18, temp: 22.4 },
+                            // Região Sul de Porto Alegre
+                            { lat: -30.15, lng: -51.25, temp: 24.0 },
+                            // Centro
+                            { lat: -30.03, lng: -51.23, temp: 23.1 }
+                        ];
+
+                        // Normaliza os valores para o heatmap (valor entre 0 e 1)
+                        const temps = tempData.map(d => d.temp);
+                        const minTemp = Math.min(...temps);
+                        const maxTemp = Math.max(...temps);
+                        const heatPoints = tempData.map(d => [
+                            d.lat,
+                            d.lng,
+                            (d.temp - minTemp) / (maxTemp - minTemp) // intensidade normalizada
+                        ]);
+
+                        // Cria o mapa Leaflet
+                        const heatMap = L.map('heatmap').setView([-30.0346, -51.2177], 11);
+
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; OpenStreetMap contributors'
+                        }).addTo(heatMap);
+
+                        // Adiciona o heatmap layer
+                        L.heatLayer(heatPoints, {
+                            radius: 40,
+                            blur: 25,
+                            maxZoom: 15,
+                            gradient: {
+                                0.0: '#00f2fe',
+                                0.5: '#ffdd59',
+                                1.0: '#ff3838'
+                            }
+                        }).addTo(heatMap);
+
+                        // Adiciona marcadores com tooltip de temperatura
+                        tempData.forEach(d => {
+                            L.circleMarker([d.lat, d.lng], {
+                                radius: 8,
+                                fillColor: "#1976d2",
+                                color: "#fff",
+                                weight: 2,
+                                opacity: 1,
+                                fillOpacity: 0.8
+                            })
+                            .bindTooltip(`Temperatura média: ${d.temp}°C`)
+                            .addTo(heatMap);
+                        });
+                    });
+                </script>
             </div>
 
             <!-- Storytelling -->
