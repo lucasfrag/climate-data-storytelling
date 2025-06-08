@@ -54,60 +54,6 @@
                             <i class="fas fa-arrow-down"></i>
                         </button>
                     </div>
-                    <style>
-                        @keyframes bounce {
-
-                            0%,
-                            20%,
-                            50%,
-                            80%,
-                            100% {
-                                transform: translateY(0);
-                            }
-
-                            40% {
-                                transform: translateY(-30px);
-                            }
-
-                            60% {
-                                transform: translateY(-15px);
-                            }
-                        }
-
-                        .animate-bounce {
-                            animation: bounce 2s infinite;
-                        }
-
-                        .hero-section {
-                            min-height: 100vh;
-                            width: 100vw;
-                            padding: 0;
-                        }
-
-                        @media (max-width: 991.98px) {
-                            .hero-section h1 {
-                                font-size: 2.2rem;
-                            }
-
-                            .hero-section .lead {
-                                font-size: 1.1rem;
-                            }
-                        }
-
-                        @media (max-width: 575.98px) {
-                            .hero-section {
-                                padding: 0 10px;
-                            }
-
-                            .hero-section h1 {
-                                font-size: 1.5rem;
-                            }
-
-                            .hero-section .lead {
-                                font-size: 1rem;
-                            }
-                        }
-                    </style>
                     <script>
                         document.getElementById('explorarBtn').addEventListener('click', function (e) {
                             e.preventDefault();
@@ -135,7 +81,7 @@
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
                 style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light mb-3 text-primary reveal-item sticky-top" id="estacoes-title"
+                    <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
                         <i class="fas fa-cloud-sun-rain me-2"></i> Estações Meteorológicas
                     </h1>
@@ -152,7 +98,7 @@
 
                         <section aria-labelledby="estacoes-title" class="reveal-item">
                             <p>
-                                
+
                                 <strong>Selecione um estado ou arraste o ano para ver as estações surgindo no
                                     mapa!</strong>
                             </p>
@@ -188,24 +134,29 @@
                                     ver mais detalhes.</p>
                             </div>
 
-                            <p class="reveal-item">Hoje o INMET conta com mais de 700 estações meteorológicas que monitoram <strong>temperatura</strong>,
+                            <p class="reveal-item">Hoje o INMET conta com mais de 700 estações meteorológicas que
+                                monitoram <strong>temperatura</strong>,
                                 <strong>umidade</strong>, <strong>pressão</strong>, <strong>vento</strong>,
                                 <strong>chuva</strong> e outros dados climáticos essenciais para entender o clima local
-                                e acompanhar suas mudanças ao longo do tempo.</p>
+                                e acompanhar suas mudanças ao longo do tempo.
+                            </p>
                             <p class="reveal-item">Essas informações são atualizadas em tempo real e estão disponíveis
-                                no <a href="https://portal.inmet.gov.br/" target="_blank">portal do INMET</a>, acessível
+                                no <a href="https://portal.inmet.gov.br/dadoshistoricos" target="_blank">portal do INMET</a>, acessível
                                 a qualquer pessoa.</p>
 
-                            <p class="reveal-item">O que você viu até agora foram apenas dados da <strong>região sul do Brasil</strong>. Neste storytelling, vamos explorar juntos a história que esses dados contam e o que eles revelam sobre as mudanças climáticas nessa parte do país.</p>
+                            <p class="reveal-item">O que você viu até agora foram apenas dados da <strong>região sul do
+                                    Brasil</strong>. Neste <i>storytelling</i>, vamos explorar juntos a história que
+                                esses
+                                dados contam e o que eles revelam sobre as mudanças climáticas nessa parte do país.</p>
 
                         </section>
 
 
-                        <div class="end-content reveal-item">
-                            <p>Clique no botão abaixo para seguir para a próxima seção.</p>
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;"
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.5em; vertical-align: middle;"
+                                <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
@@ -221,41 +172,136 @@
         </div>
     </div>
 
-    <script>
-        // Revela os elementos da seção aos poucos
-        document.addEventListener("DOMContentLoaded", function () {
-            function revealSequentially(items, delay = 350) {
-                items.forEach((item, idx) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, idx * delay);
-                });
-            }
-
-            // Só revela quando a seção entra na tela
-            const section = document.getElementById('estacoes-meteorologicas');
-            const revealItems = section.querySelectorAll('.reveal-item');
-            let revealed = false;
-
-            function handleReveal(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !revealed) {
-                        revealSequentially(Array.from(revealItems));
-                        revealed = true;
-                        observer.disconnect();
-                    }
-                });
-            }
-
-            const observer = new IntersectionObserver(handleReveal, { threshold: 0.2 });
-            observer.observe(section);
-        });
-    </script>
 
 
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <!-- Seção Porto Alegre -->
+    <div class="container-fluid reveal-section" id="porto-alegre">
+        <div class="row">
+
+            <!-- Galeria de imagens -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+                <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
+                    <h2 style="padding: 30px 0px 50px 0px; background-color: #f8f9fa;"></h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                                class="w-100 shadow-1-strong rounded mb-4" alt="..." />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;  tabindex=" 0">
+                        <i class="fas fa-city me-2"></i> Porto Alegre: A Capital Gaúcha
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
 
 
 
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-map-marker-alt fa-lg text-danger me-2"></i>&nbsp;<span class="fw-bold">Porto Alegre, RS</span>
+                        </div>
+                        <p class="mb-2 text-secondary">
+                            Porto Alegre, capital do Rio Grande do Sul, é marcada por sua diversidade cultural,
+                            história rica e paisagens naturais. Às margens do Lago Guaíba, a cidade une áreas verdes
+                            exuberantes, como o <span class="fw-semibold">Parque Farroupilha</span> e o <span
+                                class="fw-semibold">Morro do Osso</span>, a uma vida urbana vibrante e acolhedora.
+                        </p>
+
+
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-users fa-lg text-success me-2"></i>&nbsp;<span class="fw-semibold">Centro do Sul do Brasil</span>
+                        </div>
+                        <p class="mb-2 text-secondary">
+                            Com cerca de <span class="fw-semibold">1,5 milhão de habitantes</span>, Porto Alegre é
+                            referência econômica, política e educacional. Abriga universidades renomadas, centros de
+                            pesquisa e uma agenda cultural intensa, com festivais, eventos e manifestações
+                            artísticas durante todo o ano.
+                        </p>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-temperature-high fa-lg text-warning me-2"></i>&nbsp;<span class="fw-semibold">Desafios Climáticos Recentes</span>
+                            </div>
+                            <p class="mb-2 text-secondary">
+                                Nos últimos anos, Porto Alegre tem sentido os efeitos das <span class="">mudanças
+                                    climáticas</span>: aumento da temperatura média,
+                                chuvas mais intensas e eventos extremos desafiam a infraestrutura e a rotina da
+                                cidade.
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-water fa-lg text-info me-2"></i>&nbsp;<span class="fw-semibold text-dark">Enchentes Históricas</span>
+                            </div>
+                            <p class="mb-2 text-secondary">
+                                Em <span class="">2024</span>, Porto Alegre enfrentou as maiores
+                                enchentes de sua história, impactando milhares de pessoas e evidenciando a urgência
+                                de compreender e agir frente às mudanças do clima local.
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-chart-line fa-lg text-primary me-2"></i>&nbsp;<span class="fw-semibold text-dark">O que os dados revelam?</span>
+                            </div>
+                            <p class="mb-2 text-secondary">
+                                A seguir, vamos explorar como os <span class="fw-semibold">dados
+                                    meteorológicos</span> ao longo dos anos revelam a evolução dessas mudanças — e o
+                                que podemos aprender para construir um futuro mais resiliente.
+                            </p>
+                        </div>
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
 
 
@@ -965,6 +1011,35 @@
         </script>
 
 
+        <script>
+            // Revela os elementos da seção aos poucos
+            document.addEventListener("DOMContentLoaded", function () {
+                function revealSequentially(items, delay = 350) {
+                    items.forEach((item, idx) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, idx * delay);
+                    });
+                }
+
+                const section = document.getElementById('estacoes-meteorologicas');
+                const revealItems = section.querySelectorAll('.reveal-item');
+                let revealed = false;
+
+                function handleReveal(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !revealed) {
+                            revealSequentially(Array.from(revealItems));
+                            revealed = true;
+                            observer.disconnect();
+                        }
+                    });
+                }
+
+                const observer = new IntersectionObserver(handleReveal, { threshold: 0.2 });
+                observer.observe(section);
+            });
+        </script>
 
 
 
