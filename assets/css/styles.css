@@ -18,17 +18,7 @@
     /* For Chrome, Safari, and Opera */
 }
 
-.navbar {
-    justify-content: center;
-}
 
-.navbar-nav {
-    flex-direction: row;
-}
-
-.nav-item {
-    margin: 0 10px;
-}
 
 .description {
     font-size: 18px;

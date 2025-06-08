@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Climate Date Storytelling</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">    
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css">
+    
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
@@ -15,11 +17,16 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+    
+        <a class="navbar-brand" href="./index.html"> Meu Site</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active"></li>
                     <a class="nav-link" href="./index.html">Início</a>
                 </li>
                 <li class="nav-item">
@@ -28,10 +35,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Artigo</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">GitHub</a>
-                </li>
             </ul>
+        </div>
+        
+        <div class="d-flex justify-content-end">
+            <!-- Crie um link preto para o GitHub e adicione um ícone do GitHub -->
+            <a class="btn btn-outline-dark" href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
     </nav>
 
     <!-- Seção Principal -->
