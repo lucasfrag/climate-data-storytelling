@@ -61,7 +61,7 @@
                             if (target) {
                                 target.scrollIntoView({ behavior: 'smooth' });
                             }
-                        });
+                        });                     
                     </script>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
                 style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
+                    <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top text-primary" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
                         <i class="fas fa-cloud-sun-rain me-2"></i> Estações Meteorológicas
                     </h1>
@@ -92,7 +92,8 @@
                             Brasil, fornecendo dados valiosos para pesquisadores, meteorologistas e o público em geral.
                             Essas informações são cruciais para a previsão do tempo, planejamento agrícola, gestão de
                             recursos hídricos e resposta a desastres naturais.</p>
-                        <p class="reveal-item">A primeira estação meteorológica foi inaugurada em 2000, em <strong>Porto
+                        <p class="reveal-item">A primeira estação meteorológica da região sul foi inaugurada em 2000, em
+                            <strong>Porto
                                 Alegre</strong>, e desde então, a rede se expandiu para incluir inúmeras estações em
                             todo o país. E que tal vermos isso na prática?</p>
 
@@ -127,11 +128,14 @@
 
                             <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts"
                                 aria-label="Gráfico de estações por ano">
-                                <p><strong>Gráfico de Estações por Ano</strong> </p>
+                                <h3>Gráfico de Estações por Ano</h3>
+                                <p class="mb-2 text-secondary">O gráfico abaixo mostra a evolução do número de estações
+                                    meteorológicas ao longo dos anos. Para visualizar as informações de um ano
+                                    específico, basta passar o mouse sobre as barras.</p>
+                                <br>
                                 <canvas id="graficoEstacoes" role="img"
                                     aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
-                                <p class="text-muted small mt-2 text-center">Dica: Passe o mouse sobre as barras para
-                                    ver mais detalhes.</p>
+
                             </div>
 
                             <p class="reveal-item">Hoje o INMET conta com mais de 700 estações meteorológicas que
@@ -141,24 +145,42 @@
                                 e acompanhar suas mudanças ao longo do tempo.
                             </p>
                             <p class="reveal-item">Essas informações são atualizadas em tempo real e estão disponíveis
-                                no <a href="https://portal.inmet.gov.br/dadoshistoricos" target="_blank">portal do INMET</a>, acessível
+                                no <a href="https://portal.inmet.gov.br/dadoshistoricos" target="_blank">portal do
+                                    INMET</a>, acessível
                                 a qualquer pessoa.</p>
 
-                            <p class="reveal-item">O que você viu até agora foram apenas dados da <strong>região sul do
-                                    Brasil</strong>. Neste <i>storytelling</i>, vamos explorar juntos a história que
-                                esses
-                                dados contam e o que eles revelam sobre as mudanças climáticas nessa parte do país.</p>
-
+                            <p class="reveal-item">
+                                Até aqui, você acompanhou dados referentes à <strong>Região Sul do Brasil</strong>. A
+                                partir de agora, este <i>storytelling</i> nos levará a descobrir o que essas informações
+                                nos dizem sobre as transformações climáticas que vêm ocorrendo nessa parte do país.
+                            </p>
+                            <p class="reveal-item">
+                                Entre todas as estações da região sul, a de <strong>Porto Alegre</strong> se destaca por
+                                ser a mais
+                                antiga da rede, desempenhando um papel essencial na geração de séries históricas e na
+                                identificação de tendências ao longo do tempo.
+                                Por isso, ela será o nosso ponto central de análise nas próximas seções.
+                            </p>
                         </section>
 
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
-                                aria-label="Ir para a próxima seção">
+                            <button id="explorarPortoAlegre" class="btn btn-primary rounded-circle shadow"
+                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
                             </button>
+
+                            <script>
+                                document.getElementById('explorarPortoAlegre').addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    const target = document.querySelector('#porto-alegre');
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });                                   
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -232,7 +254,8 @@
 
 
                         <div class="d-flex align-items-center mb-2">
-                            <i class="fas fa-map-marker-alt fa-lg text-danger me-2"></i>&nbsp;<span class="fw-bold">Porto Alegre, RS</span>
+                            <i class="fas fa-map-marker-alt fa-lg text-danger me-2"></i>&nbsp;<span
+                                class="fw-bold">Porto Alegre, RS</span>
                         </div>
                         <p class="mb-2 text-secondary">
                             Porto Alegre, capital do Rio Grande do Sul, é marcada por sua diversidade cultural,
@@ -243,7 +266,8 @@
 
 
                         <div class="d-flex align-items-center mb-2">
-                            <i class="fas fa-users fa-lg text-success me-2"></i>&nbsp;<span class="fw-semibold">Centro do Sul do Brasil</span>
+                            <i class="fas fa-users fa-lg text-success me-2"></i>&nbsp;<span class="fw-semibold">Centro
+                                do Sul do Brasil</span>
                         </div>
                         <p class="mb-2 text-secondary">
                             Com cerca de <span class="fw-semibold">1,5 milhão de habitantes</span>, Porto Alegre é
@@ -254,7 +278,8 @@
 
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-temperature-high fa-lg text-warning me-2"></i>&nbsp;<span class="fw-semibold">Desafios Climáticos Recentes</span>
+                                <i class="fas fa-temperature-high fa-lg text-warning me-2"></i>&nbsp;<span
+                                    class="fw-semibold">Desafios Climáticos Recentes</span>
                             </div>
                             <p class="mb-2 text-secondary">
                                 Nos últimos anos, Porto Alegre tem sentido os efeitos das <span class="">mudanças
@@ -265,7 +290,8 @@
                         </div>
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-water fa-lg text-info me-2"></i>&nbsp;<span class="fw-semibold text-dark">Enchentes Históricas</span>
+                                <i class="fas fa-water fa-lg text-info me-2"></i>&nbsp;<span
+                                    class="fw-semibold text-dark">Enchentes Históricas</span>
                             </div>
                             <p class="mb-2 text-secondary">
                                 Em <span class="">2024</span>, Porto Alegre enfrentou as maiores
@@ -275,7 +301,8 @@
                         </div>
                         <div class="mb-4">
                             <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-chart-line fa-lg text-primary me-2"></i>&nbsp;<span class="fw-semibold text-dark">O que os dados revelam?</span>
+                                <i class="fas fa-chart-line fa-lg text-primary me-2"></i>&nbsp;<span
+                                    class="fw-semibold text-dark">O que os dados revelam?</span>
                             </div>
                             <p class="mb-2 text-secondary">
                                 A seguir, vamos explorar como os <span class="fw-semibold">dados
@@ -302,6 +329,70 @@
 
         </div>
     </div>
+
+
+    <!---------------------------------------------------------------------------------------------------->
+
+    <!-- Seção Aquecimento ao Longo dos Anos -->
+    <div class="container-fluid reveal-section" id="aquecimento">
+        <div class="row">
+
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top text-danger" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        <i class="fas fa-temperature-high me-2"></i> Aquecimento ao Longo dos Anos
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+
+
+
+
+
+                        
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
