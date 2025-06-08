@@ -4,6 +4,10 @@
     margin: 0px;
 }
 
+button {
+    margin: 5px;
+}
+
 .hide-scrollbar {
     overflow: auto;
     /* or overflow-y: auto for vertical only */
