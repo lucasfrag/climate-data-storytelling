@@ -10,7 +10,7 @@ def parse_val(v):
     except:
         return None
 
-def resumir_ano(ano, pasta_base="./"):
+def resumir_ano(ano, pasta_base="./dataset/"):
     pasta_ano = os.path.join(pasta_base, str(ano))
     if not os.path.isdir(pasta_ano):
         return None

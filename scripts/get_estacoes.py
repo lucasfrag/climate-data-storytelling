@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 
-PASTA_CSV = "./"
+PASTA_CSV = "../dataset/"
 ARQUIVO_SAIDA = "estacoes.json"
 
 def extrair_valor(linha):

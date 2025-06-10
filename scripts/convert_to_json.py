@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import json
 
-base_dir = "./"
+base_dir = "../dataset/"
 
 def extrair_metadados(caminho_csv):
     with open(caminho_csv, 'r', encoding='latin1') as f:
