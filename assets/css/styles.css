@@ -141,3 +141,7 @@ svg {
         font-size: 1rem;
     }
 }
+
+.grafico-container {
+    padding: 80px;
+}

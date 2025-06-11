@@ -1,0 +1,1554 @@
+{
+  "2000": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.17,
+        "max": 26.2,
+        "min": 0.0,
+        "soma": 401.8
+      },
+      "pressao": {
+        "media": 1008.22,
+        "max": 1026.8,
+        "min": 994.8,
+        "soma": 2398544.4
+      },
+      "radiacao": {
+        "media": 1410.37,
+        "max": 3959.0,
+        "min": 0.0,
+        "soma": 1995670.0
+      },
+      "temperatura": {
+        "media": 20.86,
+        "max": 35.5,
+        "min": 7.1,
+        "soma": 49618.3
+      },
+      "ponto_orvalho": {
+        "media": 15.46,
+        "max": 23.4,
+        "min": -0.4,
+        "soma": 36783.2
+      },
+      "umidade": {
+        "media": 73.49,
+        "max": 97.0,
+        "min": 24.0,
+        "soma": 174832.0
+      },
+      "vento": {
+        "media": 2.09,
+        "max": 8.0,
+        "min": 0.0,
+        "soma": 4967.3
+      },
+      "extremos": {
+        "dia_temp_max": "2000-11-23",
+        "temp_max": 35.5,
+        "dia_temp_min": "2000-09-25",
+        "temp_min": 7.1
+      }
+    }
+  },
+  "2001": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.15,
+        "max": 27.6,
+        "min": 0.0,
+        "soma": 447.6
+      },
+      "pressao": {
+        "media": 1009.56,
+        "max": 1023.5,
+        "min": 995.3,
+        "soma": 3042809.3
+      },
+      "radiacao": {
+        "media": 1163.11,
+        "max": 3824.0,
+        "min": 0.0,
+        "soma": 1866792.0
+      },
+      "temperatura": {
+        "media": 21.32,
+        "max": 35.4,
+        "min": 5.9,
+        "soma": 64414.3
+      },
+      "ponto_orvalho": {
+        "media": 16.68,
+        "max": 24.3,
+        "min": 3.3,
+        "soma": 50416.9
+      },
+      "umidade": {
+        "media": 76.54,
+        "max": 96.0,
+        "min": 28.0,
+        "soma": 231304.0
+      },
+      "vento": {
+        "media": 1.81,
+        "max": 13.3,
+        "min": 0.0,
+        "soma": 5459.0
+      },
+      "extremos": {
+        "dia_temp_max": "2001-05-01",
+        "temp_max": 35.4,
+        "dia_temp_min": "2001-12-07",
+        "temp_min": 5.9
+      }
+    }
+  },
+  "2002": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.18,
+        "max": 22.8,
+        "min": 0.0,
+        "soma": 553.2
+      },
+      "pressao": {
+        "media": 1010.0,
+        "max": 1024.5,
+        "min": 996.3,
+        "soma": 3088577.7
+      },
+      "radiacao": {
+        "media": 1140.56,
+        "max": 3865.0,
+        "min": 0.0,
+        "soma": 1934389.0
+      },
+      "temperatura": {
+        "media": 20.02,
+        "max": 37.3,
+        "min": 4.8,
+        "soma": 61407.4
+      },
+      "ponto_orvalho": {
+        "media": 15.04,
+        "max": 23.8,
+        "min": 0.7,
+        "soma": 46158.7
+      },
+      "umidade": {
+        "media": 74.92,
+        "max": 96.0,
+        "min": 26.0,
+        "soma": 229868.0
+      },
+      "vento": {
+        "media": 1.77,
+        "max": 7.4,
+        "min": 0.0,
+        "soma": 5439.0
+      },
+      "extremos": {
+        "dia_temp_max": "2002-10-03",
+        "temp_max": 37.3,
+        "dia_temp_min": "2002-12-07",
+        "temp_min": 4.8
+      }
+    }
+  },
+  "2003": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.19,
+        "max": 31.2,
+        "min": 0.0,
+        "soma": 551.4
+      },
+      "pressao": {
+        "media": 1009.83,
+        "max": 1028.1,
+        "min": 992.9,
+        "soma": 2901233.3
+      },
+      "radiacao": {
+        "media": 1254.06,
+        "max": 3951.0,
+        "min": 0.0,
+        "soma": 1957584.0
+      },
+      "temperatura": {
+        "media": 19.75,
+        "max": 37.5,
+        "min": 3.3,
+        "soma": 56851.7
+      },
+      "ponto_orvalho": {
+        "media": 14.34,
+        "max": 24.3,
+        "min": -2.3,
+        "soma": 41278.8
+      },
+      "umidade": {
+        "media": 73.15,
+        "max": 96.0,
+        "min": 23.0,
+        "soma": 210531.0
+      },
+      "vento": {
+        "media": 1.72,
+        "max": 9.5,
+        "min": 0.0,
+        "soma": 4941.1
+      },
+      "extremos": {
+        "dia_temp_max": "2003-01-02",
+        "temp_max": 37.5,
+        "dia_temp_min": "2003-12-07",
+        "temp_min": 3.3
+      }
+    }
+  },
+  "2004": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.11,
+        "max": 20.8,
+        "min": 0.0,
+        "soma": 345.8
+      },
+      "pressao": {
+        "media": 1010.6,
+        "max": 1028.0,
+        "min": 993.6,
+        "soma": 3144978.6
+      },
+      "radiacao": {
+        "media": 1267.58,
+        "max": 3952.0,
+        "min": 0.0,
+        "soma": 2162499.0
+      },
+      "temperatura": {
+        "media": 19.74,
+        "max": 36.4,
+        "min": 3.0,
+        "soma": 61648.9
+      },
+      "ponto_orvalho": {
+        "media": 14.31,
+        "max": 22.9,
+        "min": -3.3,
+        "soma": 44704.4
+      },
+      "umidade": {
+        "media": 73.18,
+        "max": 96.0,
+        "min": 19.0,
+        "soma": 228528.0
+      },
+      "vento": {
+        "media": 1.7,
+        "max": 6.1,
+        "min": 0.0,
+        "soma": 5312.6
+      },
+      "extremos": {
+        "dia_temp_max": "2004-06-09",
+        "temp_max": 36.4,
+        "dia_temp_min": "2004-12-07",
+        "temp_min": 3.0
+      }
+    }
+  },
+  "2005": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.16,
+        "max": 27.6,
+        "min": 0.0,
+        "soma": 524.6
+      },
+      "pressao": {
+        "media": 1011.69,
+        "max": 1032.0,
+        "min": 995.8,
+        "soma": 3228299.1
+      },
+      "radiacao": {
+        "media": 1189.09,
+        "max": 3948.0,
+        "min": 0.0,
+        "soma": 2074968.0
+      },
+      "temperatura": {
+        "media": 20.3,
+        "max": 39.0,
+        "min": 5.5,
+        "soma": 64870.2
+      },
+      "ponto_orvalho": {
+        "media": 14.58,
+        "max": 23.5,
+        "min": 1.2,
+        "soma": 46571.4
+      },
+      "umidade": {
+        "media": 72.16,
+        "max": 95.0,
+        "min": 23.0,
+        "soma": 230552.0
+      },
+      "vento": {
+        "media": 1.67,
+        "max": 6.9,
+        "min": 0.0,
+        "soma": 5325.9
+      },
+      "extremos": {
+        "dia_temp_max": "2005-09-01",
+        "temp_max": 39.0,
+        "dia_temp_min": "2005-06-07",
+        "temp_min": 5.5
+      }
+    }
+  },
+  "2006": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.07,
+        "max": 31.2,
+        "min": 0.0,
+        "soma": 241.0
+      },
+      "pressao": {
+        "media": 1009.71,
+        "max": 1025.8,
+        "min": 994.3,
+        "soma": 3255308.1
+      },
+      "radiacao": {
+        "media": 1298.11,
+        "max": 3859.0,
+        "min": 0.0,
+        "soma": 2267800.6
+      },
+      "temperatura": {
+        "media": 20.2,
+        "max": 38.1,
+        "min": 3.3,
+        "soma": 65138.7
+      },
+      "ponto_orvalho": {
+        "media": 14.71,
+        "max": 24.2,
+        "min": -3.2,
+        "soma": 47413.4
+      },
+      "umidade": {
+        "media": 72.56,
+        "max": 96.0,
+        "min": 23.0,
+        "soma": 233873.0
+      },
+      "vento": {
+        "media": 1.61,
+        "max": 7.4,
+        "min": 0.0,
+        "soma": 5178.4
+      },
+      "extremos": {
+        "dia_temp_max": "2006-08-01",
+        "temp_max": 38.1,
+        "dia_temp_min": "2006-02-08",
+        "temp_min": 3.3
+      }
+    }
+  },
+  "2007": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.16,
+        "max": 21.2,
+        "min": 0.0,
+        "soma": 551.8
+      },
+      "pressao": {
+        "media": 1009.65,
+        "max": 1024.8,
+        "min": 990.1,
+        "soma": 3467147.9
+      },
+      "radiacao": {
+        "media": 1167.44,
+        "max": 3840.0,
+        "min": 0.0,
+        "soma": 2187782.8
+      },
+      "temperatura": {
+        "media": 20.24,
+        "max": 35.7,
+        "min": 1.5,
+        "soma": 69517.2
+      },
+      "ponto_orvalho": {
+        "media": 14.97,
+        "max": 23.8,
+        "min": -1.3,
+        "soma": 51413.1
+      },
+      "umidade": {
+        "media": 74.02,
+        "max": 96.0,
+        "min": 22.0,
+        "soma": 254195.0
+      },
+      "vento": {
+        "media": 1.66,
+        "max": 5.8,
+        "min": 0.0,
+        "soma": 5701.9
+      },
+      "extremos": {
+        "dia_temp_max": "2007-10-01",
+        "temp_max": 35.7,
+        "dia_temp_min": "2007-12-07",
+        "temp_min": 1.5
+      }
+    }
+  },
+  "2008": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.21,
+        "max": 22.2,
+        "min": 0.0,
+        "soma": 722.0
+      },
+      "pressao": {
+        "media": 1009.3,
+        "max": 1026.1,
+        "min": 994.4,
+        "soma": 3474003.8
+      },
+      "radiacao": {
+        "media": 1222.35,
+        "max": 3956.7,
+        "min": 0.0,
+        "soma": 2249130.9
+      },
+      "temperatura": {
+        "media": 19.24,
+        "max": 37.1,
+        "min": 4.3,
+        "soma": 66225.4
+      },
+      "ponto_orvalho": {
+        "media": 14.25,
+        "max": 22.3,
+        "min": 1.7,
+        "soma": 49041.4
+      },
+      "umidade": {
+        "media": 75.07,
+        "max": 95.0,
+        "min": 24.0,
+        "soma": 258406.0
+      },
+      "vento": {
+        "media": 1.58,
+        "max": 6.7,
+        "min": 0.0,
+        "soma": 5439.5
+      },
+      "extremos": {
+        "dia_temp_max": "2008-10-01",
+        "temp_max": 37.1,
+        "dia_temp_min": "2008-04-08",
+        "temp_min": 4.3
+      }
+    }
+  },
+  "2009": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.28,
+        "max": 22.6,
+        "min": 0.0,
+        "soma": 954.0
+      },
+      "pressao": {
+        "media": 1008.98,
+        "max": 1024.9,
+        "min": 993.6,
+        "soma": 3466856.0
+      },
+      "radiacao": {
+        "media": 1095.42,
+        "max": 3866.3,
+        "min": 0.0,
+        "soma": 2016671.3
+      },
+      "temperatura": {
+        "media": 18.98,
+        "max": 35.0,
+        "min": 4.0,
+        "soma": 65208.9
+      },
+      "ponto_orvalho": {
+        "media": 14.47,
+        "max": 24.4,
+        "min": 1.9,
+        "soma": 49679.8
+      },
+      "umidade": {
+        "media": 76.89,
+        "max": 96.0,
+        "min": 25.0,
+        "soma": 264042.0
+      },
+      "vento": {
+        "media": 1.55,
+        "max": 8.9,
+        "min": 0.0,
+        "soma": 5334.2
+      },
+      "extremos": {
+        "dia_temp_max": "2009-02-11",
+        "temp_max": 35.0,
+        "dia_temp_min": "2009-04-06",
+        "temp_min": 4.0
+      }
+    }
+  },
+  "2010": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.15,
+        "max": 16.6,
+        "min": 0.0,
+        "soma": 508.2
+      },
+      "pressao": {
+        "media": 1010.37,
+        "max": 1027.8,
+        "min": 992.7,
+        "soma": 3483758.1
+      },
+      "radiacao": {
+        "media": 1230.72,
+        "max": 3987.1,
+        "min": 0.0,
+        "soma": 2269445.4
+      },
+      "temperatura": {
+        "media": 19.63,
+        "max": 38.2,
+        "min": 3.0,
+        "soma": 67684.6
+      },
+      "ponto_orvalho": {
+        "media": 14.53,
+        "max": 26.3,
+        "min": 0.3,
+        "soma": 50100.9
+      },
+      "umidade": {
+        "media": 74.54,
+        "max": 96.0,
+        "min": 22.0,
+        "soma": 257027.0
+      },
+      "vento": {
+        "media": 1.41,
+        "max": 7.4,
+        "min": 0.0,
+        "soma": 4867.8
+      },
+      "extremos": {
+        "dia_temp_max": "2010-03-02",
+        "temp_max": 38.2,
+        "dia_temp_min": "2010-04-08",
+        "temp_min": 3.0
+      }
+    }
+  },
+  "2011": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.13,
+        "max": 28.4,
+        "min": 0.0,
+        "soma": 438.8
+      },
+      "pressao": {
+        "media": 1009.27,
+        "max": 1025.3,
+        "min": 996.4,
+        "soma": 3482994.0
+      },
+      "radiacao": {
+        "media": 1281.55,
+        "max": 3999.9,
+        "min": 0.1,
+        "soma": 2364460.7
+      },
+      "temperatura": {
+        "media": 18.78,
+        "max": 36.0,
+        "min": 2.0,
+        "soma": 64812.1
+      },
+      "ponto_orvalho": {
+        "media": 13.97,
+        "max": 24.8,
+        "min": -0.7,
+        "soma": 48224.1
+      },
+      "umidade": {
+        "media": 75.54,
+        "max": 97.0,
+        "min": 29.0,
+        "soma": 260694.0
+      },
+      "vento": {
+        "media": 1.52,
+        "max": 6.9,
+        "min": 0.0,
+        "soma": 5253.9
+      },
+      "extremos": {
+        "dia_temp_max": "2011-08-01",
+        "temp_max": 36.0,
+        "dia_temp_min": "2011-06-07",
+        "temp_min": 2.0
+      }
+    }
+  },
+  "2012": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.13,
+        "max": 18.4,
+        "min": 0.0,
+        "soma": 436.8
+      },
+      "pressao": {
+        "media": 1009.13,
+        "max": 1025.1,
+        "min": 991.1,
+        "soma": 3486559.1
+      },
+      "radiacao": {
+        "media": 1272.41,
+        "max": 3913.3,
+        "min": 0.0,
+        "soma": 2351417.6
+      },
+      "temperatura": {
+        "media": 20.78,
+        "max": 36.7,
+        "min": 1.1,
+        "soma": 71804.3
+      },
+      "ponto_orvalho": {
+        "media": 15.49,
+        "max": 24.0,
+        "min": -3.4,
+        "soma": 53512.7
+      },
+      "umidade": {
+        "media": 74.08,
+        "max": 96.0,
+        "min": 19.0,
+        "soma": 255951.0
+      },
+      "vento": {
+        "media": 1.34,
+        "max": 5.7,
+        "min": 0.0,
+        "soma": 4629.7
+      },
+      "extremos": {
+        "dia_temp_max": "2012-10-12",
+        "temp_max": 36.7,
+        "dia_temp_min": "2012-09-06",
+        "temp_min": 1.1
+      }
+    }
+  },
+  "2013": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.18,
+        "max": 27.2,
+        "min": 0.0,
+        "soma": 600.8
+      },
+      "pressao": {
+        "media": 1009.71,
+        "max": 1024.1,
+        "min": 993.7,
+        "soma": 3411810.8
+      },
+      "radiacao": {
+        "media": 1237.24,
+        "max": 3972.4,
+        "min": 0.0,
+        "soma": 2228274.6
+      },
+      "temperatura": {
+        "media": 19.7,
+        "max": 37.4,
+        "min": 5.5,
+        "soma": 66575.7
+      },
+      "ponto_orvalho": {
+        "media": 14.78,
+        "max": 23.9,
+        "min": 3.0,
+        "soma": 49936.1
+      },
+      "umidade": {
+        "media": 75.2,
+        "max": 97.0,
+        "min": 28.0,
+        "soma": 254086.0
+      },
+      "vento": {
+        "media": 1.4,
+        "max": 5.9,
+        "min": 0.0,
+        "soma": 4735.5
+      },
+      "extremos": {
+        "dia_temp_max": "2013-01-02",
+        "temp_max": 37.4,
+        "dia_temp_min": "2013-12-08",
+        "temp_min": 5.5
+      }
+    }
+  },
+  "2014": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.22,
+        "max": 20.2,
+        "min": 0.0,
+        "soma": 769.2
+      },
+      "pressao": {
+        "media": 1009.35,
+        "max": 1025.5,
+        "min": 992.2,
+        "soma": 3487310.6
+      },
+      "radiacao": {
+        "media": 1206.1,
+        "max": 3984.6,
+        "min": 0.0,
+        "soma": 2218013.2
+      },
+      "temperatura": {
+        "media": 21.04,
+        "max": 40.2,
+        "min": 6.3,
+        "soma": 72695.7
+      },
+      "ponto_orvalho": {
+        "media": 16.46,
+        "max": 25.9,
+        "min": 2.3,
+        "soma": 56882.8
+      },
+      "umidade": {
+        "media": 77.18,
+        "max": 97.0,
+        "min": 25.0,
+        "soma": 266663.0
+      },
+      "vento": {
+        "media": 1.33,
+        "max": 5.6,
+        "min": 0.0,
+        "soma": 4605.1
+      },
+      "extremos": {
+        "dia_temp_max": "2014-06-02",
+        "temp_max": 40.2,
+        "dia_temp_min": "2014-05-08",
+        "temp_min": 6.3
+      }
+    }
+  },
+  "2015": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.2,
+        "max": 27.0,
+        "min": 0.0,
+        "soma": 691.6
+      },
+      "pressao": {
+        "media": 1009.12,
+        "max": 1021.0,
+        "min": 996.0,
+        "soma": 3486496.8
+      },
+      "radiacao": {
+        "media": 1191.66,
+        "max": 3949.5,
+        "min": 0.1,
+        "soma": 2185498.6
+      },
+      "temperatura": {
+        "media": 20.5,
+        "max": 35.7,
+        "min": 6.3,
+        "soma": 70815.8
+      },
+      "ponto_orvalho": {
+        "media": 16.2,
+        "max": 25.5,
+        "min": -0.7,
+        "soma": 55960.4
+      },
+      "umidade": {
+        "media": 78.34,
+        "max": 99.0,
+        "min": 31.0,
+        "soma": 270657.0
+      },
+      "vento": {
+        "media": 1.36,
+        "max": 5.3,
+        "min": 0.0,
+        "soma": 4683.4
+      },
+      "extremos": {
+        "dia_temp_max": "2015-06-01",
+        "temp_max": 35.7,
+        "dia_temp_min": "2015-12-09",
+        "temp_min": 6.3
+      }
+    }
+  },
+  "2016": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.17,
+        "max": 27.6,
+        "min": 0.0,
+        "soma": 554.4
+      },
+      "pressao": {
+        "media": 1010.22,
+        "max": 1024.2,
+        "min": 995.7,
+        "soma": 3375150.5
+      },
+      "radiacao": {
+        "media": 1223.65,
+        "max": 3899.7,
+        "min": 0.0,
+        "soma": 2190336.2
+      },
+      "temperatura": {
+        "media": 19.49,
+        "max": 35.3,
+        "min": 4.6,
+        "soma": 65131.3
+      },
+      "ponto_orvalho": {
+        "media": 15.29,
+        "max": 25.8,
+        "min": -1.0,
+        "soma": 51097.6
+      },
+      "umidade": {
+        "media": 78.68,
+        "max": 99.0,
+        "min": 23.0,
+        "soma": 262862.0
+      },
+      "vento": {
+        "media": 1.5,
+        "max": 6.3,
+        "min": 0.0,
+        "soma": 5009.4
+      },
+      "extremos": {
+        "dia_temp_max": "2016-08-02",
+        "temp_max": 35.3,
+        "dia_temp_min": "2016-11-06",
+        "temp_min": 4.6
+      }
+    }
+  },
+  "2017": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.26,
+        "max": 29.8,
+        "min": 0.0,
+        "soma": 888.6
+      },
+      "pressao": {
+        "media": 1009.01,
+        "max": 1028.1,
+        "min": 988.7,
+        "soma": 3486138.8
+      },
+      "radiacao": {
+        "media": 1214.15,
+        "max": 3883.7,
+        "min": 0.0,
+        "soma": 2226750.1
+      },
+      "temperatura": {
+        "media": 21.03,
+        "max": 34.9,
+        "min": 6.3,
+        "soma": 72662.9
+      },
+      "ponto_orvalho": {
+        "media": 16.92,
+        "max": 25.9,
+        "min": 6.0,
+        "soma": 58447.0
+      },
+      "umidade": {
+        "media": 79.17,
+        "max": 100.0,
+        "min": 30.0,
+        "soma": 273532.0
+      },
+      "vento": {
+        "media": 1.46,
+        "max": 6.7,
+        "min": 0.0,
+        "soma": 4834.5
+      },
+      "extremos": {
+        "dia_temp_max": "2017-04-02",
+        "temp_max": 34.9,
+        "dia_temp_min": "2017-02-07",
+        "temp_min": 6.3
+      }
+    }
+  },
+  "2018": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.13,
+        "max": 26.8,
+        "min": 0.0,
+        "soma": 443.8
+      },
+      "pressao": {
+        "media": 1009.87,
+        "max": 1024.8,
+        "min": 994.9,
+        "soma": 3490117.7
+      },
+      "radiacao": {
+        "media": 1269.05,
+        "max": 3939.2,
+        "min": 0.0,
+        "soma": 2354085.8
+      },
+      "temperatura": {
+        "media": 19.96,
+        "max": 37.4,
+        "min": 5.6,
+        "soma": 68944.7
+      },
+      "ponto_orvalho": {
+        "media": 15.9,
+        "max": 24.2,
+        "min": 5.1,
+        "soma": 54928.9
+      },
+      "umidade": {
+        "media": 79.54,
+        "max": 100.0,
+        "min": 28.0,
+        "soma": 274900.0
+      },
+      "vento": {
+        "media": 1.7,
+        "max": 6.7,
+        "min": 0.0,
+        "soma": 5517.8
+      },
+      "extremos": {
+        "dia_temp_max": "2018-11-12",
+        "temp_max": 37.4,
+        "dia_temp_min": "2018-09-06",
+        "temp_min": 5.6
+      }
+    }
+  },
+  "2019": {
+    "HORA_UTC": {
+      "precipitacao": {
+        "media": 0.16,
+        "max": 37.8,
+        "min": 0.0,
+        "soma": 559.0
+      },
+      "pressao": {
+        "media": 1009.78,
+        "max": 1027.8,
+        "min": 995.6,
+        "soma": 3486787.5
+      },
+      "radiacao": {
+        "media": 1200.89,
+        "max": 3945.8,
+        "min": 0.0,
+        "soma": 2216841.7
+      },
+      "temperatura": {
+        "media": 20.53,
+        "max": 38.0,
+        "min": 2.3,
+        "soma": 70882.1
+      },
+      "ponto_orvalho": {
+        "media": 16.02,
+        "max": 26.2,
+        "min": -0.6,
+        "soma": 55310.3
+      },
+      "umidade": {
+        "media": 77.69,
+        "max": 100.0,
+        "min": 18.0,
+        "soma": 268262.0
+      },
+      "vento": {
+        "media": 1.49,
+        "max": 6.7,
+        "min": 0.0,
+        "soma": 5132.5
+      },
+      "extremos": {
+        "dia_temp_max": "2019-02-01",
+        "temp_max": 38.0,
+        "dia_temp_min": "2019-07-07",
+        "temp_min": 2.3
+      }
+    }
+  },
+  "2020": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.17,
+        "max": 24.6,
+        "min": 0.0,
+        "soma": 602.2
+      },
+      "pressao": {
+        "media": 1010.09,
+        "max": 1023.8,
+        "min": 993.8,
+        "soma": 3489870.1
+      },
+      "radiacao": {
+        "media": 1248.04,
+        "max": 3842.3,
+        "min": 0.0,
+        "soma": 2316353.5
+      },
+      "temperatura": {
+        "media": 19.57,
+        "max": 37.7,
+        "min": 4.3,
+        "soma": 67617.5
+      },
+      "ponto_orvalho": {
+        "media": 14.75,
+        "max": 24.1,
+        "min": 1.5,
+        "soma": 50950.5
+      },
+      "umidade": {
+        "media": 75.94,
+        "max": 97.0,
+        "min": 18.0,
+        "soma": 262382.0
+      },
+      "vento": {
+        "media": 1.63,
+        "max": 5.7,
+        "min": 0.2,
+        "soma": 5628.5
+      },
+      "extremos": {
+        "dia_temp_max": "2020-09-01",
+        "temp_max": 37.7,
+        "dia_temp_min": "2020-04-07",
+        "temp_min": 4.3
+      }
+    }
+  },
+  "2021": {
+    "PORTO_ALEGRE": {
+      "precipitacao": {
+        "media": 0.13,
+        "max": 25.0,
+        "min": 0.0,
+        "soma": 421.8
+      },
+      "pressao": {
+        "media": 1010.53,
+        "max": 1026.5,
+        "min": 998.5,
+        "soma": 3405497.7
+      },
+      "radiacao": {
+        "media": 1295.2,
+        "max": 3912.9,
+        "min": 0.0,
+        "soma": 2323592.4
+      },
+      "temperatura": {
+        "media": 19.92,
+        "max": 37.2,
+        "min": 4.0,
+        "soma": 67116.2
+      },
+      "ponto_orvalho": {
+        "media": 15.03,
+        "max": 24.5,
+        "min": 3.0,
+        "soma": 50622.8
+      },
+      "umidade": {
+        "media": 75.51,
+        "max": 98.0,
+        "min": 15.0,
+        "soma": 254409.0
+      },
+      "vento": {
+        "media": 1.45,
+        "max": 4.7,
+        "min": 0.1,
+        "soma": 4893.4
+      },
+      "extremos": {
+        "dia_temp_max": "2021-11-01",
+        "temp_max": 37.2,
+        "dia_temp_min": "2021-12-08",
+        "temp_min": 4.0
+      }
+    }
+  },
+  "2022": {
+    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+      "precipitacao": {
+        "media": 0.15,
+        "max": 36.8,
+        "min": 0.0,
+        "soma": 521.2
+      },
+      "pressao": {
+        "media": 1009.64,
+        "max": 1025.7,
+        "min": 991.9,
+        "soma": 3482235.6
+      },
+      "radiacao": {
+        "media": 1179.53,
+        "max": 3920.3,
+        "min": 0.0,
+        "soma": 2199816.9
+      },
+      "temperatura": {
+        "media": 19.38,
+        "max": 36.5,
+        "min": 4.1,
+        "soma": 66824.8
+      },
+      "ponto_orvalho": {
+        "media": 15.12,
+        "max": 24.5,
+        "min": -0.1,
+        "soma": 52135.2
+      },
+      "umidade": {
+        "media": 78.24,
+        "max": 97.0,
+        "min": 23.0,
+        "soma": 269852.0
+      },
+      "vento": {
+        "media": 1.43,
+        "max": 5.8,
+        "min": 0.1,
+        "soma": 4924.2
+      },
+      "extremos": {
+        "dia_temp_max": "2022-03-02",
+        "temp_max": 36.5,
+        "dia_temp_min": "2022-01-06",
+        "temp_min": 4.1
+      }
+    },
+    "PORTO_ALEGRE_BELEM_NOVO": {
+      "precipitacao": {
+        "media": 0.07,
+        "max": 3.0,
+        "min": 0.0,
+        "soma": 6.8
+      },
+      "pressao": {
+        "media": 1006.25,
+        "max": 1010.7,
+        "min": 999.3,
+        "soma": 100624.8
+      },
+      "radiacao": {
+        "media": 1139.27,
+        "max": 3844.6,
+        "min": 0.0,
+        "soma": 113927.0
+      },
+      "temperatura": {
+        "media": 25.19,
+        "max": 36.8,
+        "min": 17.9,
+        "soma": 2519.3
+      },
+      "ponto_orvalho": {
+        "media": 20.36,
+        "max": 23.1,
+        "min": 15.9,
+        "soma": 2035.5
+      },
+      "umidade": {
+        "media": 76.5,
+        "max": 98.0,
+        "min": 37.0,
+        "soma": 7650.0
+      },
+      "vento": {
+        "media": 2.6,
+        "max": 8.1,
+        "min": 0.2,
+        "soma": 259.6
+      },
+      "extremos": {
+        "dia_temp_max": "2022-12-12",
+        "temp_max": 36.8,
+        "dia_temp_min": "2022-09-12",
+        "temp_min": 17.9
+      }
+    }
+  },
+  "2023": {
+    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+      "precipitacao": {
+        "media": 0.23,
+        "max": 24.4,
+        "min": 0.0,
+        "soma": 801.4
+      },
+      "pressao": {
+        "media": 1008.96,
+        "max": 1023.7,
+        "min": 991.2,
+        "soma": 3464759.4
+      },
+      "radiacao": {
+        "media": 1152.79,
+        "max": 3995.6,
+        "min": 0.0,
+        "soma": 2136110.8
+      },
+      "temperatura": {
+        "media": 20.81,
+        "max": 36.2,
+        "min": 7.5,
+        "soma": 71449.8
+      },
+      "ponto_orvalho": {
+        "media": 16.28,
+        "max": 24.1,
+        "min": -0.4,
+        "soma": 55916.5
+      },
+      "umidade": {
+        "media": 77.37,
+        "max": 97.0,
+        "min": 23.0,
+        "soma": 265705.0
+      },
+      "vento": {
+        "media": 1.45,
+        "max": 4.6,
+        "min": 0.1,
+        "soma": 4954.6
+      },
+      "extremos": {
+        "dia_temp_max": "2023-12-02",
+        "temp_max": 36.2,
+        "dia_temp_min": "2023-12-06",
+        "temp_min": 7.5
+      }
+    },
+    "PORTO_ALEGRE_BELEM_NOVO": {
+      "precipitacao": {
+        "media": 0.25,
+        "max": 23.0,
+        "min": 0.0,
+        "soma": 856.4
+      },
+      "pressao": {
+        "media": 1014.08,
+        "max": 1029.0,
+        "min": 995.3,
+        "soma": 3504658.5
+      },
+      "radiacao": {
+        "media": 639.73,
+        "max": 4042.0,
+        "min": 0.0,
+        "soma": 2210920.3
+      },
+      "temperatura": {
+        "media": 20.34,
+        "max": 35.4,
+        "min": 6.2,
+        "soma": 70283.0
+      },
+      "ponto_orvalho": {
+        "media": 16.6,
+        "max": 26.0,
+        "min": 0.6,
+        "soma": 57371.0
+      },
+      "umidade": {
+        "media": 80.52,
+        "max": 99.0,
+        "min": 28.0,
+        "soma": 278264.0
+      },
+      "vento": {
+        "media": 2.44,
+        "max": 10.2,
+        "min": 0.1,
+        "soma": 8420.4
+      },
+      "extremos": {
+        "dia_temp_max": "2023-01-01",
+        "temp_max": 35.4,
+        "dia_temp_min": "2023-12-06",
+        "temp_min": 6.2
+      }
+    }
+  },
+  "2024": {
+    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+      "precipitacao": {
+        "media": 0.21,
+        "max": 40.0,
+        "min": 0.0,
+        "soma": 723.8
+      },
+      "pressao": {
+        "media": 1009.19,
+        "max": 1027.0,
+        "min": 990.4,
+        "soma": 3479690.9
+      },
+      "radiacao": {
+        "media": 1107.19,
+        "max": 3974.5,
+        "min": 0.0,
+        "soma": 2050516.4
+      },
+      "temperatura": {
+        "media": 20.47,
+        "max": 36.7,
+        "min": 3.4,
+        "soma": 70563.9
+      },
+      "ponto_orvalho": {
+        "media": 16.13,
+        "max": 24.9,
+        "min": -0.7,
+        "soma": 55618.7
+      },
+      "umidade": {
+        "media": 77.92,
+        "max": 97.0,
+        "min": 33.0,
+        "soma": 268657.0
+      },
+      "vento": {
+        "media": 1.44,
+        "max": 5.7,
+        "min": 0.1,
+        "soma": 4971.6
+      },
+      "extremos": {
+        "dia_temp_max": "2024-10-02",
+        "temp_max": 36.7,
+        "dia_temp_min": "2024-06-07",
+        "temp_min": 3.4
+      }
+    },
+    "PORTO_ALEGRE_BELEM_NOVO": {
+      "precipitacao": {
+        "media": 0.19,
+        "max": 26.6,
+        "min": 0.0,
+        "soma": 673.2
+      },
+      "pressao": {
+        "media": 1014.33,
+        "max": 1032.3,
+        "min": 995.1,
+        "soma": 3505535.2
+      },
+      "radiacao": {
+        "media": 626.53,
+        "max": 4158.4,
+        "min": 0.0,
+        "soma": 2165287.1
+      },
+      "temperatura": {
+        "media": 20.1,
+        "max": 35.6,
+        "min": 2.6,
+        "soma": 69462.8
+      },
+      "ponto_orvalho": {
+        "media": 16.55,
+        "max": 25.9,
+        "min": 0.0,
+        "soma": 57212.1
+      },
+      "umidade": {
+        "media": 81.63,
+        "max": 100.0,
+        "min": 36.0,
+        "soma": 282118.0
+      },
+      "vento": {
+        "media": 2.52,
+        "max": 8.8,
+        "min": 0.1,
+        "soma": 8717.6
+      },
+      "extremos": {
+        "dia_temp_max": "2024-12-02",
+        "temp_max": 35.6,
+        "dia_temp_min": "2024-06-07",
+        "temp_min": 2.6
+      }
+    }
+  },
+  "2025": {
+    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+      "precipitacao": {
+        "media": 0.11,
+        "max": 11.4,
+        "min": 0.0,
+        "soma": 121.2
+      },
+      "pressao": {
+        "media": 1008.03,
+        "max": 1024.6,
+        "min": 998.0,
+        "soma": 1160240.6
+      },
+      "radiacao": {
+        "media": 1508.42,
+        "max": 3871.1,
+        "min": 0.0,
+        "soma": 997066.4
+      },
+      "temperatura": {
+        "media": 24.79,
+        "max": 38.9,
+        "min": 12.5,
+        "soma": 28528.0
+      },
+      "ponto_orvalho": {
+        "media": 18.96,
+        "max": 25.6,
+        "min": 5.9,
+        "soma": 21822.4
+      },
+      "umidade": {
+        "media": 72.07,
+        "max": 96.0,
+        "min": 24.0,
+        "soma": 82947.0
+      },
+      "vento": {
+        "media": 1.48,
+        "max": 5.4,
+        "min": 0.2,
+        "soma": 1613.4
+      },
+      "extremos": {
+        "dia_temp_max": "2025-11-02",
+        "temp_max": 38.9,
+        "dia_temp_min": "2025-05-04",
+        "temp_min": 12.5
+      }
+    },
+    "PORTO_ALEGRE_BELEM_NOVO": {
+      "precipitacao": {
+        "media": 0.12,
+        "max": 13.2,
+        "min": 0.0,
+        "soma": 138.6
+      },
+      "pressao": {
+        "media": 1013.14,
+        "max": 1030.0,
+        "min": 1002.9,
+        "soma": 1167139.3
+      },
+      "radiacao": {
+        "media": 919.94,
+        "max": 4029.4,
+        "min": 0.0,
+        "soma": 1059769.1
+      },
+      "temperatura": {
+        "media": 24.34,
+        "max": 38.6,
+        "min": 12.0,
+        "soma": 28037.0
+      },
+      "ponto_orvalho": {
+        "media": 19.51,
+        "max": 26.1,
+        "min": 5.8,
+        "soma": 22472.8
+      },
+      "umidade": {
+        "media": 76.19,
+        "max": 100.0,
+        "min": 37.0,
+        "soma": 87772.0
+      },
+      "vento": {
+        "media": 2.75,
+        "max": 8.2,
+        "min": 0.1,
+        "soma": 3086.3
+      },
+      "extremos": {
+        "dia_temp_max": "2025-11-02",
+        "temp_max": 38.6,
+        "dia_temp_min": "2025-05-04",
+        "temp_min": 12.0
+      }
+    }
+  }
+}

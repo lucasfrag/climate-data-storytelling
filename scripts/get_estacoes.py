@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 PASTA_CSV = "../dataset/"
-ARQUIVO_SAIDA = "estacoes.json"
+ARQUIVO_SAIDA = "../dataset/estacoes.json"
 
 def extrair_valor(linha):
     partes = linha.strip().split(";")

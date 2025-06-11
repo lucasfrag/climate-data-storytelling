@@ -57,7 +57,7 @@
                     <script>
                         document.getElementById('explorarBtn').addEventListener('click', function (e) {
                             e.preventDefault();
-                            const target = document.querySelector('#estacoes-meteorologicas');
+                            const target = document.querySelector('#porto-alegre');
                             if (target) {
                                 target.scrollIntoView({ behavior: 'smooth' });
                             }
@@ -72,132 +72,6 @@
 
 
     <!--------------------------------------------------------------------------------------------------------------------------->
-
-    <!-- Seção Estações Meteorológicas -->
-    <div class="container-fluid reveal-section" id="estacoes-meteorologicas">
-        <div class="row">
-
-            <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top text-primary" id="estacoes-title"
-                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        <i class="fas fa-cloud-sun-rain me-2"></i> Estações Meteorológicas
-                    </h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p class="reveal-item">O <a href="https://portal.inmet.gov.br/" target="_blank">Instituto
-                                Nacional de Meteorologia (INMET)</a> opera uma rede de estações meteorológicas em todo o
-                            Brasil, fornecendo dados valiosos para pesquisadores, meteorologistas e o público em geral.
-                            Essas informações são cruciais para a previsão do tempo, planejamento agrícola, gestão de
-                            recursos hídricos e resposta a desastres naturais.</p>
-                        <p class="reveal-item">A primeira estação meteorológica da região sul foi inaugurada em 2000, em
-                            <strong>Porto
-                                Alegre</strong>, e desde então, a rede se expandiu para incluir inúmeras estações em
-                            todo o país. E que tal vermos isso na prática?</p>
-
-                        <section aria-labelledby="estacoes-title" class="reveal-item">
-                            <p>
-
-                                <strong>Selecione um estado ou arraste o ano para ver as estações surgindo no
-                                    mapa!</strong>
-                            </p>
-                            <form id="controls" class="d-flex flex-wrap align-items-center gap-3 mb-3"
-                                aria-label="Filtros de estações" style="padding: 8px 0;">
-                                <label for="ufSelect" class="form-label mb-0 me-2"
-                                    style="margin-right: 8px;">UF:</label>
-                                <select id="ufSelect" class="form-select form-control me-3"
-                                    style="width: 150px; margin-right: 12px;" aria-label="Filtrar por estado">
-                                    <option value="TODOS">Todos</option>
-                                </select>
-                                <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
-                                    title="Mostrar evolução das estações" class="btn btn-primary" aria-pressed="false"
-                                    style="margin-left: 8px;">▶️ Ver evolução das estações</button>
-                                <button id="resetBtn" type="button" aria-label="Centralizar mapa"
-                                    title="Centralizar mapa" class="btn btn-outline-secondary"
-                                    style="margin-left: 8px;">🔄 Centralizar mapa</button>
-                            </form>
-
-                            <div id="yearSliderContainer" class="my-3">
-                                <label for="yearSlider" id="yearSliderLabel" class="form-label"><strong>Ano:</strong>
-                                    <span id="yearLabel">2020</span></label>
-                                <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025"
-                                    value="2000" aria-labelledby="yearSliderLabel" />
-                            </div>
-
-                            <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts"
-                                aria-label="Gráfico de estações por ano">
-                                <h3>Gráfico de Estações por Ano</h3>
-                                <p class="mb-2 text-secondary">O gráfico abaixo mostra a evolução do número de estações
-                                    meteorológicas ao longo dos anos. Para visualizar as informações de um ano
-                                    específico, basta passar o mouse sobre as barras.</p>
-                                <br>
-                                <canvas id="graficoEstacoes" role="img"
-                                    aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
-
-                            </div>
-
-                            <p class="reveal-item">Hoje o INMET conta com mais de 700 estações meteorológicas que
-                                monitoram <strong>temperatura</strong>,
-                                <strong>umidade</strong>, <strong>pressão</strong>, <strong>vento</strong>,
-                                <strong>chuva</strong> e outros dados climáticos essenciais para entender o clima local
-                                e acompanhar suas mudanças ao longo do tempo.
-                            </p>
-                            <p class="reveal-item">Essas informações são atualizadas em tempo real e estão disponíveis
-                                no <a href="https://portal.inmet.gov.br/dadoshistoricos" target="_blank">portal do
-                                    INMET</a>, acessível
-                                a qualquer pessoa.</p>
-
-                            <p class="reveal-item">
-                                Até aqui, você acompanhou dados referentes à <strong>Região Sul do Brasil</strong>. A
-                                partir de agora, este <i>storytelling</i> nos levará a descobrir o que essas informações
-                                nos dizem sobre as transformações climáticas que vêm ocorrendo nessa parte do país.
-                            </p>
-                            <p class="reveal-item">
-                                Entre todas as estações da região sul, a de <strong>Porto Alegre</strong> se destaca por
-                                ser a mais
-                                antiga da rede, desempenhando um papel essencial na geração de séries históricas e na
-                                identificação de tendências ao longo do tempo.
-                                Por isso, ela será o nosso ponto central de análise nas próximas seções.
-                            </p>
-                        </section>
-
-
-                        <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
-                            <button id="explorarPortoAlegre" class="btn btn-primary rounded-circle shadow"
-                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
-
-                            <script>
-                                document.getElementById('explorarPortoAlegre').addEventListener('click', function (e) {
-                                    e.preventDefault();
-                                    const target = document.querySelector('#porto-alegre');
-                                    if (target) {
-                                        target.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                });                                   
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!------------------------------------------------------------------------------------------------------------------------------->
-
 
     <!-- Seção Porto Alegre -->
     <div class="container-fluid reveal-section" id="porto-alegre">
@@ -246,70 +120,181 @@
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        <i class="fas fa-city me-2"></i> Porto Alegre: A Capital Gaúcha
+                        Porto Alegre: A Capital Gaúcha
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Porto Alegre é a capital do estado do Rio Grande do Sul, localizada no extremo sul do Brasil.
+                            Com cerca de 1,5 milhão de habitantes, é um importante centro político, econômico e cultural
+                            da região.</p>
+
+                        <p>Situada às margens do Lago Guaíba e cercada por morros, a cidade possui uma geografia que a
+                            torna suscetível a alagamentos. Essa relação histórica com a água molda tanto sua paisagem
+                            quanto seus desafios.</p>
+
+                        <p>Além disso, Porto Alegre abriga algumas das estações meteorológicas mais antigas e completas
+                            do estado, o que a torna um ponto estratégico para entender como as mudanças climáticas
+                            afetam o Sul do Brasil.</p>
+
+                        <p>Escolhemos essa cidade porque ela sintetiza uma realidade comum a muitas outras: um ambiente
+                            urbano pressionado por eventos climáticos cada vez mais extremos.</p>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button id="explorarEstacoes" class="btn btn-primary rounded-circle shadow"
+                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+
+                            <script>
+                                document.getElementById('explorarEstacoes').addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    const target = document.querySelector('#estacoes-meteorologicas');
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });                                   
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+
+
+
+    <!-- Seção Estações Meteorológicas -->
+    <div class="container-fluid reveal-section" id="estacoes-meteorologicas">
+        <div class="row">
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        As Estações Meteorológicas
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p class="reveal-item">Antes de entendermos as mudanças no clima, é fundamental conhecer as
+                            fontes dos dados. </p>
+
+                        <p class="reveal-item">Desde o ano 2000, a estação A801 coleta dados consistentes. Com o tempo,
+                            outras unidades, como a do Jardim Botânico e Belém Novo, passaram a integrar essa rede,
+                            permitindo análises mais detalhadas e comparações entre regiões da cidade.</p>
+
+                        <section aria-labelledby="estacoes-title" class="reveal-item">
+
+                            <form id="controls" class="d-flex flex-wrap align-items-center gap-3 mb-3"
+                                aria-label="Filtros de estações" style="padding: 8px 0;">
+                                <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
+                                    title="Mostrar evolução das estações" class="btn btn-primary" aria-pressed="false"
+                                    style="margin-left: 8px;">▶️ Ver evolução das estações</button>
+                                <button id="resetBtn" type="button" aria-label="Centralizar mapa"
+                                    title="Centralizar mapa" class="btn btn-outline-secondary"
+                                    style="margin-left: 8px;">🔄 Centralizar mapa</button>
+                            </form>
+
+                            <p>
+
+                                <strong>Arraste o ano para ver a evolução das estações!</strong>
+                            </p>
+
+                            <div id="yearSliderContainer" class="my-3">
+                                <label for="yearSlider" id="yearSliderLabel" class="form-label"><strong>Ano:</strong>
+                                    <span id="yearLabel">2020</span></label>
+                                <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025"
+                                    value="2000" aria-labelledby="yearSliderLabel" />
+                            </div>
+
+                            <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts"
+                                aria-label="Gráfico de estações por ano">
+                                <h3>Gráfico de Estações por Ano</h3>
+                                <p class="mb-2 text-secondary">O gráfico abaixo mostra a evolução do número de estações
+                                    meteorológicas ao longo dos anos. Para visualizar as informações de um ano
+                                    específico, basta passar o mouse sobre as barras.</p>
+                                <br>
+                                <canvas id="graficoEstacoes" role="img"
+                                    aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
+
+                            </div>
+
+                            <p class="reveal-item">
+
+                            </p>
+
+                        </section>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button id="explorarTransformacoes" class="btn btn-primary rounded-circle shadow"
+                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+
+                            <script>
+                                document.getElementById('explorarTransformacoes').addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    const target = document.querySelector('#transformacoes');
+                                    if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                });                                   
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Transformações Climáticas na Cidade
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
 
 
+                        <p>Ao longo dos últimos 25 anos, Porto Alegre passou por mudanças climáticas visíveis nos dados.
+                            As médias mensais de temperatura indicam uma tendência de elevação, especialmente no verão.
+                            Os extremos — dias excessivamente quentes ou frios — tornaram-se mais frequentes.</p>
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="fas fa-map-marker-alt fa-lg text-danger me-2"></i>&nbsp;<span
-                                class="fw-bold">Porto Alegre, RS</span>
-                        </div>
-                        <p class="mb-2 text-secondary">
-                            Porto Alegre, capital do Rio Grande do Sul, é marcada por sua diversidade cultural,
-                            história rica e paisagens naturais. Às margens do Lago Guaíba, a cidade une áreas verdes
-                            exuberantes, como o <span class="fw-semibold">Parque Farroupilha</span> e o <span
-                                class="fw-semibold">Morro do Osso</span>, a uma vida urbana vibrante e acolhedora.
-                        </p>
+                        <p>Comparando os primeiros anos da série com os mais recentes, notamos mudanças que, embora
+                            sutis no curto prazo, revelam uma transformação progressiva.</p>
 
 
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="fas fa-users fa-lg text-success me-2"></i>&nbsp;<span class="fw-semibold">Centro
-                                do Sul do Brasil</span>
-                        </div>
-                        <p class="mb-2 text-secondary">
-                            Com cerca de <span class="fw-semibold">1,5 milhão de habitantes</span>, Porto Alegre é
-                            referência econômica, política e educacional. Abriga universidades renomadas, centros de
-                            pesquisa e uma agenda cultural intensa, com festivais, eventos e manifestações
-                            artísticas durante todo o ano.
-                        </p>
-
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-temperature-high fa-lg text-warning me-2"></i>&nbsp;<span
-                                    class="fw-semibold">Desafios Climáticos Recentes</span>
-                            </div>
-                            <p class="mb-2 text-secondary">
-                                Nos últimos anos, Porto Alegre tem sentido os efeitos das <span class="">mudanças
-                                    climáticas</span>: aumento da temperatura média,
-                                chuvas mais intensas e eventos extremos desafiam a infraestrutura e a rotina da
-                                cidade.
-                            </p>
-                        </div>
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-water fa-lg text-info me-2"></i>&nbsp;<span
-                                    class="fw-semibold text-dark">Enchentes Históricas</span>
-                            </div>
-                            <p class="mb-2 text-secondary">
-                                Em <span class="">2024</span>, Porto Alegre enfrentou as maiores
-                                enchentes de sua história, impactando milhares de pessoas e evidenciando a urgência
-                                de compreender e agir frente às mudanças do clima local.
-                            </p>
-                        </div>
-                        <div class="mb-4">
-                            <div class="d-flex align-items-center mb-2">
-                                <i class="fas fa-chart-line fa-lg text-primary me-2"></i>&nbsp;<span
-                                    class="fw-semibold text-dark">O que os dados revelam?</span>
-                            </div>
-                            <p class="mb-2 text-secondary">
-                                A seguir, vamos explorar como os <span class="fw-semibold">dados
-                                    meteorológicos</span> ao longo dos anos revelam a evolução dessas mudanças — e o
-                                que podemos aprender para construir um futuro mais resiliente.
-                            </p>
-                        </div>
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -319,6 +304,484 @@
                             </button>
                         </div>
 
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center grafico-container"
+                style="background-color: #f8f9fa;">
+
+
+                <section id="transformacoes-climaticas" class="container my-5">
+                    <canvas id="grafico-transformacoes" height="150"></canvas>
+                </section>
+
+                <!-- Chart.js via CDN -->
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    fetch('./data/resumo_visualizacoes.json')
+                        .then(res => res.json())
+                        .then(dados => {
+                            const anos = [];
+                            const tempMedia = [];
+                            const tempMax = [];
+                            const tempMin = [];
+                            const diasMax = {};
+                            const diasMin = {};
+
+                            // Função para formatar datas para DD/MM/AAAA
+                            function formatarData(dataISO) {
+                                const data = new Date(dataISO);
+                                return isNaN(data) ? "Data inválida" : data.toLocaleDateString("pt-BR");
+                            }
+
+                            for (const ano in dados) {
+                                const estacoes = Object.keys(dados[ano]);
+                                const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
+                                if (poaKey && dados[ano][poaKey].temperatura) {
+                                    anos.push(ano);
+                                    tempMedia.push(dados[ano][poaKey].temperatura.media);
+                                    tempMax.push(dados[ano][poaKey].temperatura.max);
+                                    tempMin.push(dados[ano][poaKey].temperatura.min);
+
+                                    if (dados[ano][poaKey].extremos) {
+                                        diasMax[ano] = formatarData(dados[ano][poaKey].extremos.dia_temp_max);
+                                        diasMin[ano] = formatarData(dados[ano][poaKey].extremos.dia_temp_min);
+                                    }
+                                }
+                            }
+
+                            const ctx = document.getElementById("grafico-transformacoes").getContext("2d");
+                            new Chart(ctx, {
+                                type: "line",
+                                data: {
+                                    labels: anos,
+                                    datasets: [
+                                        {
+                                            label: "Temperatura Média (°C)",
+                                            data: tempMedia,
+                                            borderColor: "#007bff",
+                                            backgroundColor: "rgba(0,123,255,0.1)",
+                                            tension: 0.4,
+                                            fill: false,
+                                            pointRadius: 3
+                                        },
+                                        {
+                                            label: "Temperatura Máxima (°C)",
+                                            data: tempMax,
+                                            borderColor: "#e74c3c",
+                                            backgroundColor: "rgba(231,76,60,0.1)",
+                                            tension: 0.4,
+                                            fill: false,
+                                            pointRadius: 3
+                                        },
+                                        {
+                                            label: "Temperatura Mínima (°C)",
+                                            data: tempMin,
+                                            borderColor: "#2ecc71",
+                                            backgroundColor: "rgba(46,204,113,0.1)",
+                                            tension: 0.4,
+                                            fill: false,
+                                            pointRadius: 3
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    interaction: {
+                                        mode: "nearest",
+                                        intersect: false
+                                    },
+                                    plugins: {
+                                        tooltip: {
+                                            callbacks: {
+                                                label: ctx => {
+                                                    const tipo = ctx.dataset.label;
+                                                    const valor = ctx.formattedValue;
+                                                    const ano = ctx.label;
+
+                                                    const linhas = [`${tipo}: ${valor} °C`];
+
+                                                    if (tipo.includes("Máxima") && diasMax[ano]) {
+                                                        linhas.push(`Registrado em: ${diasMax[ano]}`);
+                                                    }
+
+                                                    if (tipo.includes("Mínima") && diasMin[ano]) {
+                                                        linhas.push(`Registrado em: ${diasMin[ano]}`);
+                                                    }
+
+                                                    return linhas;
+                                                }
+                                            }
+                                        },
+                                        legend: {
+                                            display: true,
+                                            position: "top",
+                                            labels: {
+                                                usePointStyle: true
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            title: { display: true, text: "Temperatura (°C)" },
+                                            beginAtZero: false
+                                        },
+                                        x: {
+                                            title: { display: true, text: "Ano" }
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        O Evento de Maio de 2024
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+
+
+                        <p>Maio de 2024 foi o ponto de ruptura. A água não teve por onde escoar, o solo estava saturado,
+                            e a chuva não cessava. Em poucos dias, bairros inteiros ficaram debaixo d’água.</p>
+
+                        <p>Mas por que essa enchente foi tão severa? Foi apenas uma chuva intensa ou havia algo maior em
+                            curso?</p>
+
+                        <p>Para compreender, é necessário revisar os padrões de chuva e os meses que antecederam o
+                            evento.</p>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Abril: O Mês das Chuvas
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+
+                        <p>Abril é, historicamente, um mês chuvoso em Porto Alegre - os dados desde 2000 confirmam essa
+                            tendência.</p>
+
+                        <p>No entanto, em 2024, a quantidade e a persistência das chuvas ultrapassaram a média
+                            histórica, contribuindo para o agravamento da situação.</p>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        O El Niño Chegou
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>O El Niño é um fenômeno climático caracterizado pelo aquecimento anômalo das águas do
+                            Pacífico, influenciando o
+                            clima global.</p>
+
+                        <p>No Sul do Brasil, ele costuma trazer mais calor e umidade, o que aumenta a frequência e
+                            intensidade das chuvas.</p>
+
+                        <p>Em 2024, os dados mostraram aumento nas temperaturas, umidade elevada e volumes de
+                            precipitação acima do esperado.</p>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        La Niña: O Contraponto
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>La Niña, por outro lado, provoca o resfriamento das águas do Pacífico. Isso geralmente
+                            resulta em um clima mais seco e frio na região Sul.</p>
+
+                        <p>Durante seus ciclos, observamos redução da umidade, temperaturas mais baixas e menor
+                            incidência de chuvas.</p>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        A Gangorra do Clima
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>El Niño e La Niña alternam-se em ciclos de três a cinco anos, afetando diretamente o clima
+                            regional.</p>
+
+                        <p>Nos últimos anos, esses ciclos parecem estar se tornando mais curtos e intensos,
+                            possivelmente em função do aquecimento global.</p>
+
+                        <p>Isso aumenta os riscos de desastres como enchentes, estiagens e colapsos urbanos.</p>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Radiação Solar e Calor Urbano
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Os dados de radiação solar mostram aumento ao longo dos anos. Céus mais limpos significam
+                            dias mais quentes, intensificando o calor nas cidades.</p>
+
+                        <p>Esse fenômeno, combinado com o El Niño, contribui para um ciclo de calor e umidade que
+                            favorece eventos extremos.</p>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section" id="transformacoes">
+        <div class="row">
+
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
+
+
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Pressão Atmosférica: Um Sinal Antecipado
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>Quedas na pressão atmosférica indicam aproximação de frentes frias. Nos dias que antecederam
+                            a enchente de 2024, as estações registraram quedas sucessivas, evidenciando a gravidade da
+                            situação.</p>
+
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
 
 
 
@@ -333,8 +796,8 @@
 
     <!---------------------------------------------------------------------------------------------------->
 
-    <!-- Seção Aquecimento ao Longo dos Anos -->
-    <div class="container-fluid reveal-section" id="aquecimento">
+
+    <div class="container-fluid reveal-section" id="transformacoes">
         <div class="row">
 
 
@@ -342,18 +805,16 @@
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
                 style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light h1 mb-3 sticky-top text-danger" id="estacoes-title"
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        <i class="fas fa-temperature-high me-2"></i> Aquecimento ao Longo dos Anos
+                        Ventos e Umidade
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
+                        <p>A direção e velocidade dos ventos também influenciam a retenção de umidade na atmosfera. Em
+                            2024, ventos predominantes impediram a dispersão das nuvens sobre Porto Alegre.</p>
 
 
-
-
-
-                        
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -365,413 +826,82 @@
 
 
 
-
                     </div>
                 </div>
             </div>
-
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="container-fluid" id="temperatura-media-anual">
-        <div class="row" style="min-height: 800px;">
 
             <!-- Mapa -->
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <!-- Criar heat map -->
-                <div id="heatmap" style="width: 100%; height: 500px;"></div>
-                <script>
-                    // Heatmap de temperatura média anual usando leaflet-heat
-                    document.addEventListener("DOMContentLoaded", function () {
-                        // Exemplo de dados de temperatura média anual por região (latitude, longitude, valor)
-                        // Substitua pelos dados reais conforme necessário
-                        const tempData = [
-                            // Porto Alegre (aprox)
-                            { lat: -30.0346, lng: -51.2177, temp: 23.5 },
-                            // Região Norte de Porto Alegre
-                            { lat: -29.95, lng: -51.18, temp: 22.4 },
-                            // Região Sul de Porto Alegre
-                            { lat: -30.15, lng: -51.25, temp: 24.0 },
-                            // Centro
-                            { lat: -30.03, lng: -51.23, temp: 23.1 }
-                        ];
-
-                        // Normaliza os valores para o heatmap (valor entre 0 e 1)
-                        const temps = tempData.map(d => d.temp);
-                        const minTemp = Math.min(...temps);
-                        const maxTemp = Math.max(...temps);
-                        const heatPoints = tempData.map(d => [
-                            d.lat,
-                            d.lng,
-                            (d.temp - minTemp) / (maxTemp - minTemp) // intensidade normalizada
-                        ]);
-
-                        // Cria o mapa Leaflet
-                        const heatMap = L.map('heatmap').setView([-30.0346, -51.2177], 11);
-
-                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                            attribution: '&copy; OpenStreetMap contributors'
-                        }).addTo(heatMap);
-
-                        // Adiciona o heatmap layer
-                        L.heatLayer(heatPoints, {
-                            radius: 40,
-                            blur: 25,
-                            maxZoom: 15,
-                            gradient: {
-                                0.0: '#00f2fe',
-                                0.5: '#ffdd59',
-                                1.0: '#ff3838'
-                            }
-                        }).addTo(heatMap);
-
-                        // Adiciona marcadores com tooltip de temperatura
-                        tempData.forEach(d => {
-                            L.circleMarker([d.lat, d.lng], {
-                                radius: 8,
-                                fillColor: "#1976d2",
-                                color: "#fff",
-                                weight: 2,
-                                opacity: 1,
-                                fillOpacity: 0.8
-                            })
-                                .bindTooltip(`Temperatura média: ${d.temp}°C`)
-                                .addTo(heatMap);
-                        });
-                    });
-                </script>
-            </div>
-
-            <!-- Storytelling -->
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        📈 Temperatura Média Anual</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <!--<h2 style="padding: 30px 0px 30px 0px; background-color: #f8f9fa;"></h2>-->
-                        <p>...</p>
-                        <p>...</p>
-
-                        <div class="slide chart-container" id="slide-linha">
-                            <svg id="grafico-linha"></svg>
-                        </div>
-
-                        <p>...</p>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="container-fluid" id="">
-        <div class="row" style="min-height: 800px;">
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        🌧️ Precipitação Acumulada por Ano</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p>Entre 2000 e 2025, Porto Alegre experimentou variações significativas na precipitação
-                            acumulada
-                            anual, refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos
-                            dados pluviométricos revela um aumento gradual, com picos notáveis em anos específicos.</p>
-                        <p>Em 2000, a precipitação acumulada anual foi de 1.200 mm, enquanto em 2025, essa média subiu
-                            para
-                            1.400 mm. Este aumento de 200 mm em apenas 25 anos destaca a urgência de ações climáticas e
-                            a
-                            necessidade de adaptação às novas realidades climáticas.</p>
-                        <div class="slide chart-container" id="slide-area">
-                            <svg id="grafico-area"></svg>
-                        </div>
-                        <p>O gráfico acima ilustra a evolução da precipitação acumulada anual em Porto Alegre,
-                            destacando
-                            os anos com precipitações mais altas e mais baixas. A linha ascendente indica uma tendência
-                            preocupante, reforçando a necessidade de monitoramento contínuo e ações para mitigar os
-                            impactos das mudanças climáticas.</p>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid" id="">
-        <div class="row" style="min-height: 800px;">
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-            </div>
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        💧 Umidade Relativa Média Anual</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p>Entre 2000 e 2025, Porto Alegre experimentou uma variação na umidade relativa média anual,
-                            refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos dados
-                            de umidade revela uma tendência de aumento, com picos notáveis em anos específicos.</p>
-                        <p>Em 2000, a umidade relativa média anual foi de 70%, enquanto em 2025, essa média subiu para
-                            80%. Este aumento de 10% em apenas 25 anos destaca a
-                            urgência de ações climáticas e a necessidade de adaptação às novas realidades climáticas.
-                        </p>
-                        <div class="slide chart-container" id="slide-umidade">
-                            <svg id="grafico-umidade"></svg>
-                        </div>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <div id="map" style="height: 900px;"></div>
             </div>
 
         </div>
     </div>
 
 
-    <div class="container-fluid" id="">
-        <div class="row" style="min-height: 800px;">
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        🌬️ Velocidade Média do Vento</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p>Entre 2000 e 2025, Porto Alegre experimentou uma variação na velocidade média do vento,
-                            refletindo as mudanças climáticas e padrões meteorológicos em evolução. A análise dos dados
-                            de vento revela uma tendência de aumento, com picos notáveis em anos específicos.</p>
-                        <p>Em 2000, a velocidade média do vento foi de 2.4 m/s, enquanto em 2025, essa média subiu para
-                            3.3 m/s. Este aumento de 0.9 m/s em apenas 25 anos destaca a urgência de ações climáticas e
-                            a
-                            necessidade de adaptação às novas realidades climáticas.</p>
-
-                        <div class="slide chart-container" id="slide-vento">
-                            <svg id="grafico-vento"></svg>
-                        </div>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-            </div>
-        </div>
-    </div>
+    <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid" id="">
-        <div class="row" style="min-height: 800px;">
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-            </div>
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        🔥 Eventos de Temperatura Extrema</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <div class="slide chart-container" id="slide-extremos">
-                            <svg id="grafico-extremos"></svg>
-                        </div>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container-fluid" id="">
-        <div class="row" style="min-height: 800px;">
-            <div class="col-md-6 d-flex flex-column" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light" style="padding: 50px 0px 20px 0px; background-color: #f8f9fa;">
-                        ❄️ Dias de Calor/Frio Intensos</h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <div class="slide chart-container" id="slide-intensos">
-                            <svg id="grafico-intensos"></svg>
-                        </div>
-
-                        <div class="end-content">
-                            <button class="btn btn-primary rounded-circle" style="width: 50px; height: 50px;">
-                                <span style="font-size: 1.5em; vertical-align: middle;">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-
-    <!-- Seção Galeria de Imagens -->
-    <div class="container-fluid" id="estacoes-meteorologicas">
+    <div class="container-fluid reveal-section" id="transformacoes">
         <div class="row">
+            <!-- Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+                <div id="map" style="height: 900px;"></div>
+            </div>
 
             <!-- Storytelling -->
-            <div class="col-md-6 d-flex flex-column vh-100" style="background-color: #f8f9fa;">
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
                 <div class="col-12 d-flex flex-column">
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-                        <h1 style="padding: 30px 0px 30px 0px; background-color: #f8f9fa;">...</h1>
-                        <p>Conteúdo da coluna 1.</p>
-                        <button class="btn btn-primary">Clique aqui</button>
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        O Ponto de Orvalho
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>O ponto de orvalho indica a saturação do ar. Em períodos de El Niño, os valores tendem a ser
+                            mais altos, favorecendo chuvas intensas e sensação térmica elevada.</p>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 d-flex flex-column vh-100" style="background-color: #f8f9fa;">
-                <div class="col-12 d-flex flex-column hide-scrollbar" style="overflow-y: scroll;">
 
-                    <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
-                        <h2 style="padding: 30px 0px 50px 0px; background-color: #f8f9fa;">2000</h2>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-
-                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-
-                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
-                        <h2 style="padding: 30px 0px 50px 0px; background-color: #f8f9fa;">2024</h2>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-
-                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-
-                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
-                                    class="w-100 shadow-1-strong rounded mb-4" alt="..." />
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Rodapé -->
     <footer class="bg-light text-center text-lg-start">
@@ -781,155 +911,38 @@
 
 
         <script>
-            // Dados de exemplo
-            const dados = [
-                { ano: 2000, temp: 21.3, chuva: 1200 },
-                { ano: 2005, temp: 21.7, chuva: 1580 },
-                { ano: 2010, temp: 22.4, chuva: 1420 },
-                { ano: 2015, temp: 22.9, chuva: 1350 },
-                { ano: 2020, temp: 23.5, chuva: 1480 },
-                { ano: 2025, temp: 24.1, chuva: 1600 }
-            ];
+            // Revela os elementos da seção aos poucos
+            document.addEventListener("DOMContentLoaded", function () {
+                function revealSequentially(items, delay = 350) {
+                    items.forEach((item, idx) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, idx * delay);
+                    });
+                }
 
-            const regioes = [
-                { nome: "Zona Norte", x: 150, y: 100, temp: 22.4 },
-                { nome: "Centro", x: 300, y: 200, temp: 23.1 },
-                { nome: "Zona Sul", x: 500, y: 300, temp: 24.0 }
-            ];
+                const section = document.getElementById('estacoes-meteorologicas');
+                const revealItems = section.querySelectorAll('.reveal-item');
+                let revealed = false;
 
-            const dadosVento = [
-                { ano: 2000, vento: 2.4 },
-                { ano: 2005, vento: 2.8 },
-                { ano: 2010, vento: 3.1 },
-                { ano: 2015, vento: 2.7 },
-                { ano: 2020, vento: 3.3 }
-            ];
-
-            const dadosExtremos = [
-                { ano: 2000, max: 39, min: 3 },
-                { ano: 2005, max: 41, min: 2 },
-                { ano: 2010, max: 43, min: 1 },
-                { ano: 2015, max: 40, min: 4 },
-                { ano: 2020, max: 42, min: 3 }
-            ];
-
-            const dadosIntensos = [
-                { ano: 2000, calor: 18, frio: 10 },
-                { ano: 2005, calor: 22, frio: 8 },
-                { ano: 2010, calor: 26, frio: 6 },
-                { ano: 2015, calor: 20, frio: 9 },
-                { ano: 2020, calor: 25, frio: 7 }
-            ];
-
-            const direcoes = [
-                { dir: "N", freq: 12 },
-                { dir: "NE", freq: 18 },
-                { dir: "E", freq: 22 },
-                { dir: "SE", freq: 14 },
-                { dir: "S", freq: 10 },
-                { dir: "SO", freq: 8 },
-                { dir: "O", freq: 6 },
-                { dir: "NO", freq: 10 }
-            ];
-
-            // Seleção do tooltip
-            const tooltip = d3.select("#tooltip");
-
-            // Variáveis para controle de animação
-            const animacoes = {
-                linha: false,
-                area: false,
-                mapa: false,
-                umidade: false,
-                vento: false,
-                extremos: false,
-                intensos: false,
-                ventoDirecao: false
-            };
-
-            // Configuração do IntersectionObserver para animação dos slides
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        switch (entry.target.id) {
-                            case 'slide-linha':
-                                if (!animacoes.linha) {
-                                    animarLinha();
-                                    animacoes.linha = true;
-                                }
-                                break;
-                            case 'slide-area':
-                                if (!animacoes.area) {
-                                    animarArea();
-                                    animacoes.area = true;
-                                }
-                                break;
-                            case 'slide-mapa':
-                                if (!animacoes.mapa) {
-                                    animarMapa();
-                                    animacoes.mapa = true;
-                                }
-                                break;
-                            case 'slide-umidade':
-                                if (!animacoes.umidade) {
-                                    animarUmidade();
-                                    animacoes.umidade = true;
-                                }
-                                break;
-                            case 'slide-vento':
-                                if (!animacoes.vento) {
-                                    animarVento();
-                                    animacoes.vento = true;
-                                }
-                                break;
-                            case 'slide-extremos':
-                                if (!animacoes.extremos) {
-                                    animarExtremos();
-                                    animacoes.extremos = true;
-                                }
-                                break;
-                            case 'slide-intensos':
-                                if (!animacoes.intensos) {
-                                    animarIntensos();
-                                    animacoes.intensos = true;
-                                }
-                                break;
-                            case 'slide-vento':
-                                if (!animacoes.vento) {
-                                    animarVento();
-                                    animacoes.vento = true;
-                                }
-                                break;
+                function handleReveal(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !revealed) {
+                            revealSequentially(Array.from(revealItems));
+                            revealed = true;
+                            observer.disconnect();
                         }
-                    }
-                });
-            }, { threshold: 0.5 });
+                    });
+                }
 
-            // Observa todos os slides que precisam de animação
-            document.querySelectorAll('.slide[id]').forEach(slide => {
-                observer.observe(slide);
-            });
-
-            let resizeTimeout;
-            window.addEventListener("resize", () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    animarLinha();
-                    animarArea();
-                    animarUmidade();
-                    animarVento();
-                    animarExtremos();
-                    animarIntensos();
-
-                }, 100);
+                const observer = new IntersectionObserver(handleReveal, { threshold: 0.2 });
+                observer.observe(section);
             });
         </script>
 
-
-
-        <!-- Mapa -->
+        <!-- Mapa e gráfico de estações -->
         <script>
-            const map = L.map('map').setView([-28.50, -53], 5.5);
+            const map = L.map('map').setView([-30.5, -53], 6.5);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
@@ -940,9 +953,8 @@
             let chart;
 
             async function carregarEstacoes() {
-                const resp = await fetch('./dataset/estacoes.json');
+                const resp = await fetch('./data/estacoes.json');
                 estacoes = await resp.json();
-                preencherUFs(estacoes);
                 atualizarMapa(parseInt(document.getElementById('yearSlider').value));
                 desenharGrafico();
             }
@@ -960,26 +972,13 @@
                 return `${dia}/${mes}/${ano}`;
             }
 
-            function preencherUFs(estacoes) {
-                const select = document.getElementById('ufSelect');
-                const ufs = Array.from(new Set(estacoes.map(e => e.uf))).sort();
-                for (const uf of ufs) {
-                    const opt = document.createElement('option');
-                    opt.value = uf;
-                    opt.textContent = uf;
-                    select.appendChild(opt);
-                }
-            }
-
             function atualizarMapa(ano) {
-                const ufSelecionado = document.getElementById('ufSelect').value;
                 marcadores.forEach(m => map.removeLayer(m));
                 marcadores = [];
 
                 estacoes
                     .map(est => ({ ...est, data_fundacao: normalizarData(est.data_fundacao) }))
                     .filter(est => parseInt(est.data_fundacao.substring(0, 4)) <= ano)
-                    .filter(est => ufSelecionado === 'TODOS' || est.uf === ufSelecionado)
                     .forEach(est => {
                         const dataBR = formatarDataParaBR(est.data_fundacao);
                         const marker = L.marker([est.latitude, est.longitude])
@@ -992,7 +991,7 @@
                                         <span class="badge bg-primary text-white" style="font-size:0.9em;"> ${est.uf}</span>
                                     </p>
                                     <p style="margin-bottom: 0.3em;">
-                                        <i class="fas fa-calendar-alt me-1"></i><strong> Inaugurada:</strong> ${dataBR}
+                                        <i class="fas fa-calendar-alt me-1"></i><strong> Coletando dados de:</strong> ${dataBR}
                                     </p>
                                     ${est.municipio ? `<p style="margin-bottom: 0.3em;"><i class="fas fa-city me-1"></i><strong> Município:</strong> ${est.municipio}</p>` : ''}
                                     ${est.altitude ? `<p style="margin-bottom: 0.3em;"><i class="fas fa-mountain me-1"></i><strong> Altitude:</strong> ${est.altitude} m</p>` : ''}
@@ -1037,12 +1036,10 @@
                     }
                 });
                 if (marcadores.length > 0) {
-
                     const popupContent = marcadores[0].getPopup().getContent();
                     const instrucoes = `<hr><p><strong>📍 Clique nas estações para ver mais detalhes.</strong></p>`;
                     marcadores[0].getPopup().setContent(popupContent + instrucoes);
                     marcadores[0].openPopup();
-
                 }
             }
 
@@ -1057,13 +1054,8 @@
                 atualizarMapa(ano);
             });
 
-            document.getElementById('ufSelect').addEventListener('change', () => {
-                atualizarMapa(parseInt(slider.value));
-            });
-
             resetBtn.addEventListener('click', () => {
-                // O usuário pode querer reiniciar a posição do mapa
-                map.setView([-28.50, -53], 5.5);
+                map.setView([-30.5, -53], 6.5)
             });
 
             btn.addEventListener('click', () => {
@@ -1072,7 +1064,6 @@
                     intervalo = null;
                     btn.textContent = '▶️ Ver evolução das estações';
                 } else {
-                    // Se já está no final, reinicia do começo
                     if (parseInt(slider.value) >= 2025) {
                         slider.value = 2000;
                         label.textContent = 2000;
@@ -1099,37 +1090,6 @@
             });
 
             carregarEstacoes();
-        </script>
-
-
-        <script>
-            // Revela os elementos da seção aos poucos
-            document.addEventListener("DOMContentLoaded", function () {
-                function revealSequentially(items, delay = 350) {
-                    items.forEach((item, idx) => {
-                        setTimeout(() => {
-                            item.classList.add('visible');
-                        }, idx * delay);
-                    });
-                }
-
-                const section = document.getElementById('estacoes-meteorologicas');
-                const revealItems = section.querySelectorAll('.reveal-item');
-                let revealed = false;
-
-                function handleReveal(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !revealed) {
-                            revealSequentially(Array.from(revealItems));
-                            revealed = true;
-                            observer.disconnect();
-                        }
-                    });
-                }
-
-                const observer = new IntersectionObserver(handleReveal, { threshold: 0.2 });
-                observer.observe(section);
-            });
         </script>
 
 
