@@ -28,7 +28,6 @@ ALVO_COLUNAS = {
     'vento_velocidade_horaria_m_s': 'vento'
 }
 
-# Conversor para JSON
 def convert(obj):
     if isinstance(obj, (np.integer,)):
         return int(obj)
@@ -40,19 +39,21 @@ def convert(obj):
         return obj.strftime('%Y-%m-%d')
     return obj
 
-# Verifica se "porto alegre" aparece no nome
 def nome_contem_porto_alegre(caminho):
     nome = unicodedata.normalize('NFKD', caminho.name).encode('ASCII', 'ignore').decode('ASCII').lower()
     return "porto alegre" in nome
 
-# Verifica se a linha contém a palavra "estacao"
-def contem_estacao(linha):
-    linha_normalizada = unicodedata.normalize('NFKD', linha).encode('ASCII', 'ignore').decode('ASCII').upper()
-    return "ESTACAO" in linha_normalizada
+def extrair_nome_estacao(linhas):
+    for linha in linhas[:10]:  # examina apenas as 10 primeiras linhas
+        linha_norm = unicodedata.normalize('NFKD', linha).encode('ASCII', 'ignore').decode('ASCII').upper()
+        if "ESTAC" in linha_norm:
+            partes = linha.split(";")
+            if len(partes) > 1:
+                return partes[1].strip().replace(" ", "_").replace("-", "").upper()
+    return "desconhecida"
 
 resumo = {}
 
-# Itera pelos arquivos CSV
 for caminho in PASTA_DATASET.rglob("*.CSV"):
     if not nome_contem_porto_alegre(caminho):
         continue
@@ -61,31 +62,23 @@ for caminho in PASTA_DATASET.rglob("*.CSV"):
         with open(caminho, "r", encoding="latin1") as f:
             linhas = f.readlines()
 
-        # Extrai nome da estação
-        estacao = "desconhecida"
-        for linha in linhas:
-            if contem_estacao(linha):
-                estacao = linha.split(";")[1].strip().replace(" ", "_").replace("-", "").upper()
-                break
+        estacao = extrair_nome_estacao(linhas)
 
-        # Lê os dados pulando cabeçalho
         df = pd.read_csv(caminho, sep=";", encoding="latin1", skiprows=8)
         df.columns = [normalizar_coluna(c) for c in df.columns]
 
-        # Converte colunas numéricas
         for col in ALVO_COLUNAS:
             if col in df.columns:
                 df[col] = df[col].astype(str).str.replace(",", ".").str.strip()
                 df[col] = pd.to_numeric(df[col], errors="coerce")
                 df.loc[df[col] == -9999, col] = np.nan
 
-        # Converte data
         col_data = next((c for c in df.columns if 'data' in c), df.columns[0])
         df[col_data] = df[col_data].astype(str).str.strip()
         df['data'] = pd.to_datetime(df[col_data], errors="coerce", dayfirst=True)
         df['ano'] = df['data'].dt.year
+        df['mes'] = df['data'].dt.month
 
-        # Agrega por ano e estação
         for ano, grupo in df.groupby('ano'):
             if pd.isna(ano):
                 continue
@@ -103,24 +96,24 @@ for caminho in PASTA_DATASET.rglob("*.CSV"):
                             'soma': round(serie.sum(), 2)
                         }
 
-            # Adiciona extremos de temperatura por dia
-            col_temp = 'temperatura_do_ar_bulbo_seco_horaria_c'
-            if col_temp in grupo.columns and 'data' in grupo.columns:
-                temp_grupo = grupo[['data', col_temp]].dropna()
-                if not temp_grupo.empty:
-                    idx_max = temp_grupo[col_temp].idxmax()
-                    idx_min = temp_grupo[col_temp].idxmin()
-                    resumo[ano_str][estacao]["extremos"] = {
-                        "dia_temp_max": convert(temp_grupo.loc[idx_max, 'data']),
-                        "temp_max": round(temp_grupo.loc[idx_max, col_temp], 2),
-                        "dia_temp_min": convert(temp_grupo.loc[idx_min, 'data']),
-                        "temp_min": round(temp_grupo.loc[idx_min, col_temp], 2)
-                    }
+                        if alias == 'temperatura':
+                            idx_max = grupo[col].idxmax()
+                            idx_min = grupo[col].idxmin()
+                            if pd.notna(idx_max) and pd.notna(idx_min):
+                                resumo[ano_str][estacao]['extremos'] = {
+                                    'dia_temp_max': grupo.loc[idx_max, 'data'],
+                                    'dia_temp_min': grupo.loc[idx_min, 'data']
+                                }
+
+            if 'precipitacao_total_horario_mm' in grupo.columns:
+                prec_por_mes = grupo.groupby('mes')['precipitacao_total_horario_mm'].sum(min_count=1)
+                resumo[ano_str][estacao]['precipitacao_mensal'] = {
+                    f"{int(mes):02d}": round(valor, 2) for mes, valor in prec_por_mes.items()
+                }
 
     except Exception as e:
         print(f"❌ Erro em {caminho.name}: {e}")
 
-# Salva o arquivo JSON final
 ARQUIVO_SAIDA.parent.mkdir(parents=True, exist_ok=True)
 with open(ARQUIVO_SAIDA, "w", encoding="utf-8") as f:
     json.dump(resumo, f, ensure_ascii=False, indent=2, default=convert)
