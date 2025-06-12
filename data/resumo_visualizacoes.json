@@ -29,6 +29,8 @@
         "dia_temp_max": "2000-11-23",
         "dia_temp_min": "2000-09-25"
       },
+      "amplitude_termica": 8.94,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 15.46,
         "max": 23.4,
@@ -41,6 +43,7 @@
         "min": 24.0,
         "soma": 174832.0
       },
+      "dias_secos": 5,
       "vento": {
         "media": 2.09,
         "max": 8.0,
@@ -52,7 +55,9 @@
         "10": 138.8,
         "11": 137.6,
         "12": 73.6
-      }
+      },
+      "chuva_consecutiva": 4,
+      "chuvas_intensas": 0
     }
   },
   "2001": {
@@ -85,6 +90,8 @@
         "dia_temp_max": "2001-05-01",
         "dia_temp_min": "2001-12-07"
       },
+      "amplitude_termica": 7.96,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 16.68,
         "max": 24.3,
@@ -97,6 +104,7 @@
         "min": 28.0,
         "soma": 231304.0
       },
+      "dias_secos": 3,
       "vento": {
         "media": 1.81,
         "max": 13.3,
@@ -116,7 +124,9 @@
         "10": 61.0,
         "11": 84.8,
         "12": 18.8
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2002": {
@@ -149,6 +159,8 @@
         "dia_temp_max": "2002-10-03",
         "dia_temp_min": "2002-12-07"
       },
+      "amplitude_termica": 7.65,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 15.04,
         "max": 23.8,
@@ -161,6 +173,7 @@
         "min": 26.0,
         "soma": 229868.0
       },
+      "dias_secos": 3,
       "vento": {
         "media": 1.77,
         "max": 7.4,
@@ -180,7 +193,9 @@
         "10": 27.6,
         "11": 62.6,
         "12": 16.4
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2003": {
@@ -213,6 +228,8 @@
         "dia_temp_max": "2003-01-02",
         "dia_temp_min": "2003-12-07"
       },
+      "amplitude_termica": 8.31,
+      "dias_quentes": 5,
       "ponto_orvalho": {
         "media": 14.34,
         "max": 24.3,
@@ -225,6 +242,7 @@
         "min": 23.0,
         "soma": 210531.0
       },
+      "dias_secos": 8,
       "vento": {
         "media": 1.72,
         "max": 9.5,
@@ -244,7 +262,9 @@
         "10": 23.0,
         "11": 68.6,
         "12": 17.2
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2004": {
@@ -277,6 +297,8 @@
         "dia_temp_max": "2004-06-09",
         "dia_temp_min": "2004-12-07"
       },
+      "amplitude_termica": 8.83,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 14.31,
         "max": 22.9,
@@ -289,6 +311,7 @@
         "min": 19.0,
         "soma": 228528.0
       },
+      "dias_secos": 5,
       "vento": {
         "media": 1.7,
         "max": 6.1,
@@ -308,7 +331,9 @@
         "10": 66.4,
         "11": 54.4,
         "12": 19.8
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2005": {
@@ -341,6 +366,8 @@
         "dia_temp_max": "2005-09-01",
         "dia_temp_min": "2005-06-07"
       },
+      "amplitude_termica": 9.16,
+      "dias_quentes": 5,
       "ponto_orvalho": {
         "media": 14.58,
         "max": 23.5,
@@ -353,6 +380,7 @@
         "min": 23.0,
         "soma": 230552.0
       },
+      "dias_secos": 8,
       "vento": {
         "media": 1.67,
         "max": 6.9,
@@ -372,7 +400,9 @@
         "10": 22.2,
         "11": 65.6,
         "12": 15.6
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2006": {
@@ -405,6 +435,8 @@
         "dia_temp_max": "2006-08-01",
         "dia_temp_min": "2006-02-08"
       },
+      "amplitude_termica": 8.88,
+      "dias_quentes": 6,
       "ponto_orvalho": {
         "media": 14.71,
         "max": 24.2,
@@ -417,6 +449,7 @@
         "min": 23.0,
         "soma": 233873.0
       },
+      "dias_secos": 4,
       "vento": {
         "media": 1.61,
         "max": 7.4,
@@ -436,7 +469,9 @@
         "10": 47.6,
         "11": 21.6,
         "12": 1.2
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2007": {
@@ -469,6 +504,8 @@
         "dia_temp_max": "2007-10-01",
         "dia_temp_min": "2007-12-07"
       },
+      "amplitude_termica": 9.04,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 14.97,
         "max": 23.8,
@@ -481,6 +518,7 @@
         "min": 22.0,
         "soma": 254195.0
       },
+      "dias_secos": 6,
       "vento": {
         "media": 1.66,
         "max": 5.8,
@@ -500,7 +538,9 @@
         "10": 140.6,
         "11": 23.2,
         "12": 18.0
-      }
+      },
+      "chuva_consecutiva": 5,
+      "chuvas_intensas": 0
     }
   },
   "2008": {
@@ -533,6 +573,8 @@
         "dia_temp_max": "2008-10-01",
         "dia_temp_min": "2008-04-08"
       },
+      "amplitude_termica": 8.77,
+      "dias_quentes": 3,
       "ponto_orvalho": {
         "media": 14.25,
         "max": 22.3,
@@ -545,6 +587,7 @@
         "min": 24.0,
         "soma": 258406.0
       },
+      "dias_secos": 9,
       "vento": {
         "media": 1.58,
         "max": 6.7,
@@ -564,7 +607,9 @@
         "10": 35.6,
         "11": 148.0,
         "12": 37.2
-      }
+      },
+      "chuva_consecutiva": 5,
+      "chuvas_intensas": 0
     }
   },
   "2009": {
@@ -597,6 +642,8 @@
         "dia_temp_max": "2009-02-11",
         "dia_temp_min": "2009-04-06"
       },
+      "amplitude_termica": 8.18,
+      "dias_quentes": 0,
       "ponto_orvalho": {
         "media": 14.47,
         "max": 24.4,
@@ -609,6 +656,7 @@
         "min": 25.0,
         "soma": 264042.0
       },
+      "dias_secos": 3,
       "vento": {
         "media": 1.55,
         "max": 8.9,
@@ -628,7 +676,9 @@
         "10": 52.6,
         "11": 138.6,
         "12": 89.2
-      }
+      },
+      "chuva_consecutiva": 4,
+      "chuvas_intensas": 0
     }
   },
   "2010": {
@@ -661,6 +711,8 @@
         "dia_temp_max": "2010-03-02",
         "dia_temp_min": "2010-04-08"
       },
+      "amplitude_termica": 8.98,
+      "dias_quentes": 5,
       "ponto_orvalho": {
         "media": 14.53,
         "max": 26.3,
@@ -673,6 +725,7 @@
         "min": 22.0,
         "soma": 257027.0
       },
+      "dias_secos": 5,
       "vento": {
         "media": 1.41,
         "max": 7.4,
@@ -692,7 +745,9 @@
         "10": 22.4,
         "11": 41.2,
         "12": 62.0
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2011": {
@@ -725,6 +780,8 @@
         "dia_temp_max": "2011-08-01",
         "dia_temp_min": "2011-06-07"
       },
+      "amplitude_termica": 9.08,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 13.97,
         "max": 24.8,
@@ -737,6 +794,7 @@
         "min": 29.0,
         "soma": 260694.0
       },
+      "dias_secos": 1,
       "vento": {
         "media": 1.52,
         "max": 6.9,
@@ -756,7 +814,9 @@
         "10": 28.6,
         "11": 50.6,
         "12": 21.4
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2012": {
@@ -789,6 +849,8 @@
         "dia_temp_max": "2012-10-12",
         "dia_temp_min": "2012-09-06"
       },
+      "amplitude_termica": 9.81,
+      "dias_quentes": 6,
       "ponto_orvalho": {
         "media": 15.49,
         "max": 24.0,
@@ -801,6 +863,7 @@
         "min": 19.0,
         "soma": 255951.0
       },
+      "dias_secos": 5,
       "vento": {
         "media": 1.34,
         "max": 5.7,
@@ -820,7 +883,9 @@
         "10": 67.2,
         "11": 22.6,
         "12": 57.2
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2013": {
@@ -853,6 +918,8 @@
         "dia_temp_max": "2013-01-02",
         "dia_temp_min": "2013-12-08"
       },
+      "amplitude_termica": 9.31,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 14.78,
         "max": 23.9,
@@ -865,6 +932,7 @@
         "min": 28.0,
         "soma": 254086.0
       },
+      "dias_secos": 4,
       "vento": {
         "media": 1.4,
         "max": 5.9,
@@ -884,7 +952,9 @@
         "10": 42.6,
         "11": 125.2,
         "12": 23.6
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2014": {
@@ -917,6 +987,8 @@
         "dia_temp_max": "2014-06-02",
         "dia_temp_min": "2014-05-08"
       },
+      "amplitude_termica": 8.79,
+      "dias_quentes": 12,
       "ponto_orvalho": {
         "media": 16.46,
         "max": 25.9,
@@ -929,6 +1001,7 @@
         "min": 25.0,
         "soma": 266663.0
       },
+      "dias_secos": 3,
       "vento": {
         "media": 1.33,
         "max": 5.6,
@@ -948,7 +1021,9 @@
         "10": 120.2,
         "11": 91.4,
         "12": 96.4
-      }
+      },
+      "chuva_consecutiva": 5,
+      "chuvas_intensas": 0
     }
   },
   "2015": {
@@ -981,6 +1056,8 @@
         "dia_temp_max": "2015-06-01",
         "dia_temp_min": "2015-12-09"
       },
+      "amplitude_termica": 8.42,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 16.2,
         "max": 25.5,
@@ -993,6 +1070,7 @@
         "min": 31.0,
         "soma": 270657.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 1.36,
         "max": 5.3,
@@ -1012,7 +1090,9 @@
         "10": 52.4,
         "11": 112.4,
         "12": 13.6
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2016": {
@@ -1045,6 +1125,8 @@
         "dia_temp_max": "2016-08-02",
         "dia_temp_min": "2016-11-06"
       },
+      "amplitude_termica": 8.28,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 15.29,
         "max": 25.8,
@@ -1057,6 +1139,7 @@
         "min": 23.0,
         "soma": 262862.0
       },
+      "dias_secos": 4,
       "vento": {
         "media": 1.5,
         "max": 6.3,
@@ -1076,7 +1159,9 @@
         "10": 38.0,
         "11": 108.4,
         "12": 21.8
-      }
+      },
+      "chuva_consecutiva": 4,
+      "chuvas_intensas": 0
     }
   },
   "2017": {
@@ -1109,6 +1194,8 @@
         "dia_temp_max": "2017-04-02",
         "dia_temp_min": "2017-02-07"
       },
+      "amplitude_termica": 8.42,
+      "dias_quentes": 0,
       "ponto_orvalho": {
         "media": 16.92,
         "max": 25.9,
@@ -1121,6 +1208,7 @@
         "min": 30.0,
         "soma": 273532.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 1.46,
         "max": 6.7,
@@ -1140,7 +1228,9 @@
         "10": 107.8,
         "11": 101.4,
         "12": 158.4
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2018": {
@@ -1173,6 +1263,8 @@
         "dia_temp_max": "2018-11-12",
         "dia_temp_min": "2018-09-06"
       },
+      "amplitude_termica": 8.48,
+      "dias_quentes": 3,
       "ponto_orvalho": {
         "media": 15.9,
         "max": 24.2,
@@ -1185,6 +1277,7 @@
         "min": 28.0,
         "soma": 274900.0
       },
+      "dias_secos": 3,
       "vento": {
         "media": 1.7,
         "max": 6.7,
@@ -1204,11 +1297,13 @@
         "10": 60.2,
         "11": 26.0,
         "12": 52.4
-      }
+      },
+      "chuva_consecutiva": 5,
+      "chuvas_intensas": 0
     }
   },
   "2019": {
-    "PORTO_ALEGRE": {
+    "HORA_UTC": {
       "precipitacao": {
         "media": 0.16,
         "max": 37.8,
@@ -1237,6 +1332,8 @@
         "dia_temp_max": "2019-02-01",
         "dia_temp_min": "2019-07-07"
       },
+      "amplitude_termica": 9.08,
+      "dias_quentes": 9,
       "ponto_orvalho": {
         "media": 16.02,
         "max": 26.2,
@@ -1249,6 +1346,7 @@
         "min": 18.0,
         "soma": 268262.0
       },
+      "dias_secos": 6,
       "vento": {
         "media": 1.49,
         "max": 6.7,
@@ -1268,7 +1366,9 @@
         "10": 38.6,
         "11": 40.0,
         "12": 46.0
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     }
   },
   "2020": {
@@ -1301,6 +1401,8 @@
         "dia_temp_max": "2020-09-01",
         "dia_temp_min": "2020-04-07"
       },
+      "amplitude_termica": 8.96,
+      "dias_quentes": 7,
       "ponto_orvalho": {
         "media": 14.75,
         "max": 24.1,
@@ -1313,6 +1415,7 @@
         "min": 18.0,
         "soma": 262382.0
       },
+      "dias_secos": 2,
       "vento": {
         "media": 1.63,
         "max": 5.7,
@@ -1332,7 +1435,9 @@
         "10": 53.2,
         "11": 23.4,
         "12": 99.8
-      }
+      },
+      "chuva_consecutiva": 5,
+      "chuvas_intensas": 0
     }
   },
   "2021": {
@@ -1365,6 +1470,8 @@
         "dia_temp_max": "2021-11-01",
         "dia_temp_min": "2021-12-08"
       },
+      "amplitude_termica": 9.12,
+      "dias_quentes": 2,
       "ponto_orvalho": {
         "media": 15.03,
         "max": 24.5,
@@ -1377,6 +1484,7 @@
         "min": 15.0,
         "soma": 254409.0
       },
+      "dias_secos": 2,
       "vento": {
         "media": 1.45,
         "max": 4.7,
@@ -1396,7 +1504,9 @@
         "10": 29.0,
         "11": 17.8,
         "12": 15.2
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   },
   "2022": {
@@ -1429,6 +1539,8 @@
         "dia_temp_max": "2022-03-02",
         "dia_temp_min": "2022-01-06"
       },
+      "amplitude_termica": 8.62,
+      "dias_quentes": 6,
       "ponto_orvalho": {
         "media": 15.12,
         "max": 24.5,
@@ -1441,6 +1553,7 @@
         "min": 23.0,
         "soma": 269852.0
       },
+      "dias_secos": 2,
       "vento": {
         "media": 1.43,
         "max": 5.8,
@@ -1460,7 +1573,9 @@
         "10": 25.0,
         "11": 38.4,
         "12": 48.4
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     },
     "PORTO_ALEGRE_BELEM_NOVO": {
       "precipitacao": {
@@ -1491,6 +1606,8 @@
         "dia_temp_max": "2022-12-12",
         "dia_temp_min": "2022-09-12"
       },
+      "amplitude_termica": 11.0,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 20.36,
         "max": 23.1,
@@ -1503,6 +1620,7 @@
         "min": 37.0,
         "soma": 7650.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 2.6,
         "max": 8.1,
@@ -1515,7 +1633,9 @@
         "10": 0.0,
         "11": 0.0,
         "12": 4.0
-      }
+      },
+      "chuva_consecutiva": 1,
+      "chuvas_intensas": 0
     }
   },
   "2023": {
@@ -1548,6 +1668,8 @@
         "dia_temp_max": "2023-12-02",
         "dia_temp_min": "2023-12-06"
       },
+      "amplitude_termica": 8.45,
+      "dias_quentes": 4,
       "ponto_orvalho": {
         "media": 16.28,
         "max": 24.1,
@@ -1560,6 +1682,7 @@
         "min": 23.0,
         "soma": 265705.0
       },
+      "dias_secos": 5,
       "vento": {
         "media": 1.45,
         "max": 4.6,
@@ -1579,7 +1702,9 @@
         "10": 36.4,
         "11": 141.6,
         "12": 149.0
-      }
+      },
+      "chuva_consecutiva": 4,
+      "chuvas_intensas": 0
     },
     "PORTO_ALEGRE_BELEM_NOVO": {
       "precipitacao": {
@@ -1610,6 +1735,8 @@
         "dia_temp_max": "2023-01-01",
         "dia_temp_min": "2023-12-06"
       },
+      "amplitude_termica": 8.3,
+      "dias_quentes": 1,
       "ponto_orvalho": {
         "media": 16.6,
         "max": 26.0,
@@ -1622,6 +1749,7 @@
         "min": 28.0,
         "soma": 278264.0
       },
+      "dias_secos": 1,
       "vento": {
         "media": 2.44,
         "max": 10.2,
@@ -1641,7 +1769,9 @@
         "10": 35.0,
         "11": 118.0,
         "12": 130.8
-      }
+      },
+      "chuva_consecutiva": 4,
+      "chuvas_intensas": 0
     }
   },
   "2024": {
@@ -1674,6 +1804,8 @@
         "dia_temp_max": "2024-10-02",
         "dia_temp_min": "2024-06-07"
       },
+      "amplitude_termica": 8.21,
+      "dias_quentes": 3,
       "ponto_orvalho": {
         "media": 16.13,
         "max": 24.9,
@@ -1686,6 +1818,7 @@
         "min": 33.0,
         "soma": 268657.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 1.44,
         "max": 5.7,
@@ -1705,7 +1838,9 @@
         "10": 61.2,
         "11": 55.8,
         "12": 78.6
-      }
+      },
+      "chuva_consecutiva": 3,
+      "chuvas_intensas": 0
     },
     "PORTO_ALEGRE_BELEM_NOVO": {
       "precipitacao": {
@@ -1736,6 +1871,8 @@
         "dia_temp_max": "2024-12-02",
         "dia_temp_min": "2024-06-07"
       },
+      "amplitude_termica": 8.05,
+      "dias_quentes": 3,
       "ponto_orvalho": {
         "media": 16.55,
         "max": 25.9,
@@ -1748,6 +1885,7 @@
         "min": 36.0,
         "soma": 282118.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 2.52,
         "max": 8.8,
@@ -1767,7 +1905,9 @@
         "10": 81.2,
         "11": 66.4,
         "12": 70.0
-      }
+      },
+      "chuva_consecutiva": 6,
+      "chuvas_intensas": 0
     }
   },
   "2025": {
@@ -1800,6 +1940,8 @@
         "dia_temp_max": "2025-11-02",
         "dia_temp_min": "2025-05-04"
       },
+      "amplitude_termica": 9.47,
+      "dias_quentes": 9,
       "ponto_orvalho": {
         "media": 18.96,
         "max": 25.6,
@@ -1812,6 +1954,7 @@
         "min": 24.0,
         "soma": 82947.0
       },
+      "dias_secos": 1,
       "vento": {
         "media": 1.48,
         "max": 5.4,
@@ -1831,7 +1974,9 @@
         "10": 0.8,
         "11": 0.0,
         "12": 17.2
-      }
+      },
+      "chuva_consecutiva": 1,
+      "chuvas_intensas": 0
     },
     "PORTO_ALEGRE_BELEM_NOVO": {
       "precipitacao": {
@@ -1862,6 +2007,8 @@
         "dia_temp_max": "2025-11-02",
         "dia_temp_min": "2025-05-04"
       },
+      "amplitude_termica": 9.19,
+      "dias_quentes": 3,
       "ponto_orvalho": {
         "media": 19.51,
         "max": 26.1,
@@ -1874,6 +2021,7 @@
         "min": 37.0,
         "soma": 87772.0
       },
+      "dias_secos": 0,
       "vento": {
         "media": 2.75,
         "max": 8.2,
@@ -1893,7 +2041,9 @@
         "10": 0.2,
         "11": 1.0,
         "12": 28.0
-      }
+      },
+      "chuva_consecutiva": 2,
+      "chuvas_intensas": 0
     }
   }
 }
