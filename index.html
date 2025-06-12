@@ -7,6 +7,8 @@
     <title>Climate Date Storytelling</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/styles.css">
 
@@ -295,6 +297,41 @@
                             sutis no curto prazo, revelam uma transformação progressiva.</p>
 
 
+
+                        <p>O gráfico ao lado mostra a evolução das temperaturas em Porto Alegre entre 2000 e 2025. Cada
+                            linha representa:</p>
+
+                        <ul>
+                            <li><strong style="color:#007bff;">Azul:</strong> Temperatura Média anual.</li>
+                            <li><strong style="color:#e74c3c;">Vermelha:</strong> Temperatura Máxima anual registrada.
+                            </li>
+                            <li><strong style="color:#2ecc71;">Verde:</strong> Temperatura Mínima anual registrada.</li>
+                        </ul>
+
+                        <p>Passe o mouse sobre os pontos para ver os valores e as datas dos extremos. O gráfico é
+                            interativo.</p>
+
+                        <p>Use o controle deslizante abaixo para selecionar um <strong>intervalo de anos</strong>. O
+                            gráfico será atualizado automaticamente de acordo com a seleção.</p>
+
+
+
+                        
+
+                        <div class="mb-4">
+                            <p class="text-center">
+                                <label for="range-anos" class="form-label" style="background-color: ;">
+                                    Selecione um intervalo de anos:
+                                </label>
+                            </p>
+                            <div id="range-anos"></div>
+                            <div class="d-flex justify-content-between mt-2">
+                                <span id="range-inicio"></span>
+                                <span id="range-fim"></span>
+                            </div>
+                        </div>
+
+
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -315,11 +352,15 @@
 
 
                 <section id="transformacoes-climaticas" class="container my-5">
-                    <canvas id="grafico-transformacoes" height="150"></canvas>
+                    <!-- Explique o que é esse gráfico -->
+
+                    <canvas id="grafico-transformacoes" height="220"></canvas>
                 </section>
 
-                <!-- Chart.js via CDN -->
+                <!-- Chart.js -->
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <!-- noUiSlider -->
+                <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
 
                 <script>
                     fetch('./data/resumo_visualizacoes.json')
@@ -332,7 +373,6 @@
                             const diasMax = {};
                             const diasMin = {};
 
-                            // Função para formatar datas para DD/MM/AAAA
                             function formatarData(dataISO) {
                                 const data = new Date(dataISO);
                                 return isNaN(data) ? "Data inválida" : data.toLocaleDateString("pt-BR");
@@ -355,7 +395,8 @@
                             }
 
                             const ctx = document.getElementById("grafico-transformacoes").getContext("2d");
-                            new Chart(ctx, {
+
+                            const chart = new Chart(ctx, {
                                 type: "line",
                                 data: {
                                     labels: anos,
@@ -402,15 +443,14 @@
                                                     const tipo = ctx.dataset.label;
                                                     const valor = ctx.formattedValue;
                                                     const ano = ctx.label;
-
                                                     const linhas = [`${tipo}: ${valor} °C`];
 
                                                     if (tipo.includes("Máxima") && diasMax[ano]) {
-                                                        linhas.push(`Registrado em: ${diasMax[ano]}`);
+                                                        linhas.push(`Registrado em:\n${diasMax[ano]}`);
                                                     }
 
                                                     if (tipo.includes("Mínima") && diasMin[ano]) {
-                                                        linhas.push(`Registrado em: ${diasMin[ano]}`);
+                                                        linhas.push(`Registrado em:\n${diasMin[ano]}`);
                                                     }
 
                                                     return linhas;
@@ -435,6 +475,47 @@
                                         }
                                     }
                                 }
+                            });
+
+                            // === Criação do Range Slider ===
+                            const slider = document.getElementById("range-anos");
+                            noUiSlider.create(slider, {
+                                start: [2000, 2025],
+                                connect: true,
+                                step: 1,
+                                tooltips: false,
+                                range: {
+                                    min: 2000,
+                                    max: 2025
+                                },
+                                format: {
+                                    to: value => parseInt(value),
+                                    from: value => parseInt(value)
+                                }
+                            });
+
+                            const spanInicio = document.getElementById("range-inicio");
+                            const spanFim = document.getElementById("range-fim");
+
+                            function atualizarGrafico([inicio, fim]) {
+                                const iInicio = anos.indexOf(inicio.toString());
+                                const iFim = anos.indexOf(fim.toString()) + 1;
+
+                                chart.data.labels = anos.slice(iInicio, iFim);
+                                chart.data.datasets[0].data = tempMedia.slice(iInicio, iFim);
+                                chart.data.datasets[1].data = tempMax.slice(iInicio, iFim);
+                                chart.data.datasets[2].data = tempMin.slice(iInicio, iFim);
+                                chart.update();
+                            }
+
+                            slider.noUiSlider.on("update", valores => {
+                                const [inicio, fim] = valores.map(v => parseInt(v));
+                                // Impede seleção menor que 2 anos
+                                if (fim - inicio < 1) return;
+
+                                spanInicio.textContent = `De: ${inicio}`;
+                                spanFim.textContent = `Até: ${fim}`;
+                                atualizarGrafico([inicio, fim]);
                             });
                         });
                 </script>

@@ -145,3 +145,17 @@ svg {
 .grafico-container {
     padding: 80px;
 }
+
+#slider-ano-range {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.noUi-connect {
+  background: #007bff;
+}
+.noUi-handle {
+  border: none;
+  background: #f2f8ff;
+  cursor: grab;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
