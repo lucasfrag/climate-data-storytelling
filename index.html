@@ -316,7 +316,7 @@
 
 
 
-                        
+
 
                         <div class="mb-4">
                             <p class="text-center">
@@ -532,10 +532,72 @@
 
     <div class="container-fluid reveal-section" id="transformacoes">
         <div class="row">
-            <!-- Mapa -->
+            <!-- Grafico -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <section class="container my-5">
+                    <canvas id="grafico-maio-2024" height="150"></canvas>
+                </section>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    fetch('./data/resumo_visualizacoes.json')
+                        .then(res => res.json())
+                        .then(dados => {
+                            const estacoes = Object.keys(dados["2024"]);
+                            const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
+                            const precPorMes = dados["2024"][poaKey].precipitacao_mensal;
+
+                            const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+                            const valores = Array(12).fill(0).map((_, i) => precPorMes[String(i + 1).padStart(2, "0")] || 0);
+
+                            const cores = valores.map((v, i) => i === 4 ? "#e74c3c" : "#3498db"); // maio = índice 4
+
+                            const ctx = document.getElementById("grafico-maio-2024").getContext("2d");
+                            new Chart(ctx, {
+                                type: "bar",
+                                data: {
+                                    labels: meses,
+                                    datasets: [{
+                                        label: "Precipitação (mm)",
+                                        data: valores,
+                                        backgroundColor: cores
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        tooltip: {
+                                            callbacks: {
+                                                label: ctx => `Precipitação: ${ctx.formattedValue} mm`
+                                            }
+                                        },
+                                        legend: {
+                                            display: false
+                                        },
+                                        title: {
+                                            display: false
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            title: {
+                                                display: true,
+                                                text: "Milímetros de Chuva"
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                </script>
+
+
+
             </div>
 
             <!-- Storytelling -->
