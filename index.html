@@ -536,10 +536,8 @@
 
 
                 <section class="container my-5">
-                    <canvas id="grafico-maio-2024" height="150"></canvas>
+                    <canvas id="grafico-maio-2024" height="220"></canvas>
                 </section>
-
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
                 <script>
                     fetch('./data/resumo_visualizacoes.json')
@@ -696,7 +694,7 @@
                         </div>
                     </div>
 
-                    <canvas id="graficoPrecipitacaoMensal" height="150"></canvas>
+                    <canvas id="graficoPrecipitacaoMensal" height="220"></canvas>
                 </section>
 
                 <style>
@@ -829,7 +827,7 @@
                     <select id="ano-comparacao" class="form-select" style="max-width: 300px;"></select>
                 </div>
 
-                <canvas id="grafico-el-nino" height="150"></canvas>
+                <canvas id="grafico-el-nino" height="220"></canvas>
 
                 <script>
                     fetch("./data/resumo_visualizacoes.json")
@@ -1091,7 +1089,7 @@ fetch('./data/resumo_visualizacoes.json')
       const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
       if (poaKey && data[ano][poaKey].precipitacao_mensal) {
         datasets.push({
-          label: `🌧️ ${ano}`,
+          label: `${ano}`,
           data: acumular(data[ano][poaKey].precipitacao_mensal),
           borderColor: "rgba(0, 123, 255, 0.6)",
           backgroundColor: "rgba(0, 123, 255, 0.1)",
@@ -1105,7 +1103,7 @@ fetch('./data/resumo_visualizacoes.json')
     const poa2024 = estacoes2024.find(e => e.includes("PORTO_ALEGRE"));
     if (poa2024 && data[anoReferencia][poa2024].precipitacao_mensal) {
       datasets.push({
-        label: `🔴 ${anoReferencia}`,
+        label: `${anoReferencia}`,
         data: acumular(data[anoReferencia][poa2024].precipitacao_mensal),
         borderColor: "rgba(220, 53, 69, 1)",
         backgroundColor: "rgba(220, 53, 69, 0.1)",
