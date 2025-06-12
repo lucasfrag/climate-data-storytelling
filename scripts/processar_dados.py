@@ -1,3 +1,5 @@
+# Salve este conteúdo como processar_dados.py e execute com: python processar_dados.py
+
 import os
 import json
 import pandas as pd
@@ -99,7 +101,8 @@ for caminho in PASTA_DATASET.rglob("*.CSV"):
                             'media': round(serie.mean(), 2),
                             'max': round(serie.max(), 2),
                             'min': round(serie.min(), 2),
-                            'soma': round(serie.sum(), 2)
+                            'soma': round(serie.sum(), 2),
+                            'desvio_padrao': round(serie.std(), 2)
                         }
 
                         if alias == 'temperatura':
