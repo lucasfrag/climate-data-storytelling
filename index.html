@@ -141,6 +141,8 @@
                         <p>Escolhemos essa cidade porque ela sintetiza uma realidade comum a muitas outras: um ambiente
                             urbano pressionado por eventos climáticos cada vez mais extremos.</p>
 
+                        <hr>
+
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button id="explorarEstacoes" class="btn btn-primary rounded-circle shadow"
@@ -181,7 +183,7 @@
 
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -198,47 +200,25 @@
 
                         <section aria-labelledby="estacoes-title" class="reveal-item">
 
-                            <form id="controls" class="d-flex flex-wrap align-items-center gap-3 mb-3"
-                                aria-label="Filtros de estações" style="padding: 8px 0;">
-                                <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
-                                    title="Mostrar evolução das estações" class="btn btn-primary" aria-pressed="false"
-                                    style="margin-left: 8px;">▶️ Ver evolução das estações</button>
-                                <button id="resetBtn" type="button" aria-label="Centralizar mapa"
-                                    title="Centralizar mapa" class="btn btn-outline-secondary"
-                                    style="margin-left: 8px;">🔄 Centralizar mapa</button>
-                            </form>
 
-                            <p>
 
-                                <strong>Arraste o ano para ver a evolução das estações!</strong>
-                            </p>
+                            
 
-                            <div id="yearSliderContainer" class="my-3">
-                                <label for="yearSlider" id="yearSliderLabel" class="form-label"><strong>Ano:</strong>
-                                    <span id="yearLabel">2020</span></label>
-                                <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025"
-                                    value="2000" aria-labelledby="yearSliderLabel" />
+                            <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                                <h4>📊 Gráfico de Estações por Ano</h4>
+                                <hr>
+                                <p class="mb-2 text-muted">O gráfico abaixo mostra a evolução do número de estações
+                                    meteorológicas ao longo dos anos no estado do Rio Grande do Sul.
+                                    <br><br>Para visualizar as informações de um ano
+                                    específico, basta passar o mouse sobre as barras.
+                                </p>
+
+                                <canvas height="80" id="graficoEstacoes" role="img" aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
                             </div>
-
-                            <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts"
-                                aria-label="Gráfico de estações por ano">
-                                <h3>Gráfico de Estações por Ano</h3>
-                                <p class="mb-2 text-secondary">O gráfico abaixo mostra a evolução do número de estações
-                                    meteorológicas ao longo dos anos. Para visualizar as informações de um ano
-                                    específico, basta passar o mouse sobre as barras.</p>
-                                <br>
-                                <canvas id="graficoEstacoes" role="img"
-                                    aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
-
-                            </div>
-
-                            <p class="reveal-item">
-
-                            </p>
 
                         </section>
 
-
+                        <hr>
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button id="explorarTransformacoes" class="btn btn-primary rounded-circle shadow"
@@ -246,6 +226,7 @@
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
                             </button>
+
 
                             <script>
                                 document.getElementById('explorarTransformacoes').addEventListener('click', function (e) {
@@ -262,9 +243,36 @@
             </div>
 
             <!-- Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center grafico-container"
+                style="background-color: #f8f9fa; margin-top: 20px;">
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>🗺️ Mapa de estações no Rio Grande do Sul</h4>
+                    <small class="text-muted mb-3">
+                        Clique no botão <strong>"Ver evolução"</strong> ou <strong>deslize o controle abaixo</strong> para ver a evolução das estações.
+                    </small>
+                    <hr>
+                    
+                    <div id="yearSliderContainer" class="my-3">
+                        <label for="yearSlider" id="yearSliderLabel"
+                            class="form-label d-flex justify-content-between align-items-center">
+                            <strong>Ano:</strong>
+                            <span id="yearLabel">2020</span>
+
+                            <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
+                                title="Mostrar evolução das estações" class="btn btn-outline-primary btn-sm ms-3"
+                                aria-pressed="false" style="margin-left: 8px;">▶️ Ver evolução</button>
+                        </label>
+
+                        <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025" value="2000"
+                            aria-labelledby="yearSliderLabel" />
+                    </div>
+
+
+                    <div id="map" style="height: 600px;"></div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -279,7 +287,7 @@
 
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -298,39 +306,50 @@
 
 
 
-                        <p>O gráfico ao lado mostra a evolução das temperaturas em Porto Alegre entre 2000 e 2025. Cada
-                            linha representa:</p>
+                        <p> Cada linha representa:</p>
 
-                        <ul>
-                            <li><strong style="color:#007bff;">Azul:</strong> Temperatura Média anual.</li>
-                            <li><strong style="color:#e74c3c;">Vermelha:</strong> Temperatura Máxima anual registrada.
-                            </li>
-                            <li><strong style="color:#2ecc71;">Verde:</strong> Temperatura Mínima anual registrada.</li>
-                        </ul>
-
-                        <p>Passe o mouse sobre os pontos para ver os valores e as datas dos extremos. O gráfico é
-                            interativo.</p>
-
-                        <p>Use o controle deslizante abaixo para selecionar um <strong>intervalo de anos</strong>. O
-                            gráfico será atualizado automaticamente de acordo com a seleção.</p>
-
+                        <p>
+                            <strong>🔥 Temperatura Máxima:</strong> O dia mais quente
+                            registrado em cada ano.
+                        </p>
+                        <p>
+                            <strong>🌡️ Temperatura Média:</strong> A média das temperaturas
+                            mensais ao longo dos anos.
+                        </p>
+                        <p>
+                            <strong>❄️ Temperatura Mínima:</strong> O dia mais frio registrado
+                            em cada ano.
+                        </p>
 
 
+
+
+                        <div class="alert alert-info mt-4" role="alert">
+                            <strong>Dica:</strong> Use o controle deslizante abaixo para selecionar um <strong>intervalo
+                                de anos</strong>. O
+                            gráfico será atualizado automaticamente de acordo com a seleção.
+                        </div>
+
+                        <br>
 
                         <div class="mb-4">
-                            <p class="text-center">
+                            <center>
                                 <label for="range-anos" class="form-label">
                                     Selecione um intervalo de anos:
                                 </label>
-                            </p>
-                            <div id="range-anos"></div>
-                            <div class="d-flex justify-content-between mt-2">
-                                <span id="range-inicio"></span>
-                                <span id="range-fim"></span>
-                            </div>
+                                <div style="width: 80%;">
+
+                                    <div id="range-anos"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <span id="range-inicio"></span>
+                                        <span id="range-fim"></span>
+                                    </div>
+
+                                </div>
+                            </center>
                         </div>
 
-
+                        <hr>
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -351,12 +370,22 @@
 
 
                 <section id="transformacoes-climaticas" class="container my-5">
+                    <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                        <h4>📊 Gráfico de Transformações Climáticas</h4>
+                        <hr>
+                        <p class="text-muted mb-2 ">O gráfico abaixo mostra a evolução das temperaturas em Porto Alegre
+                            entre 2000 e 2025.
+                            <br><br>
+                            Passe o mouse sobre os pontos para ver os valores e as datas dos
+                            extremos.
+                        </p>
+                        <br>
 
-                    <canvas id="grafico-transformacoes" height="220"></canvas>
+                        <canvas id="grafico-transformacoes" height="180"></canvas>
+                    </div>
                 </section>
 
-                <!-- Chart.js -->
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
                 <!-- noUiSlider -->
                 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
 
@@ -400,15 +429,6 @@
                                     labels: anos,
                                     datasets: [
                                         {
-                                            label: "Temperatura Média (°C)",
-                                            data: tempMedia,
-                                            borderColor: "#007bff",
-                                            backgroundColor: "rgba(0,123,255,0.1)",
-                                            tension: 0.4,
-                                            fill: false,
-                                            pointRadius: 3
-                                        },
-                                        {
                                             label: "Temperatura Máxima (°C)",
                                             data: tempMax,
                                             borderColor: "#e74c3c",
@@ -417,11 +437,22 @@
                                             fill: false,
                                             pointRadius: 3
                                         },
+
+                                        {
+                                            label: "Temperatura Média (°C)",
+                                            data: tempMedia,
+                                            borderColor: "#2ecc71",
+                                            backgroundColor: "rgba(46,204,113,0.1)",
+                                            tension: 0.4,
+                                            fill: false,
+                                            pointRadius: 3
+                                        },
+
                                         {
                                             label: "Temperatura Mínima (°C)",
                                             data: tempMin,
-                                            borderColor: "#2ecc71",
-                                            backgroundColor: "rgba(46,204,113,0.1)",
+                                            borderColor: "#007bff",
+                                            backgroundColor: "rgba(0,123,255,0.1)",
                                             tension: 0.4,
                                             fill: false,
                                             pointRadius: 3
@@ -500,8 +531,8 @@
                                 const iFim = anos.indexOf(fim.toString()) + 1;
 
                                 chart.data.labels = anos.slice(iInicio, iFim);
-                                chart.data.datasets[0].data = tempMedia.slice(iInicio, iFim);
-                                chart.data.datasets[1].data = tempMax.slice(iInicio, iFim);
+                                chart.data.datasets[0].data = tempMax.slice(iInicio, iFim);
+                                chart.data.datasets[1].data = tempMedia.slice(iInicio, iFim);
                                 chart.data.datasets[2].data = tempMin.slice(iInicio, iFim);
                                 chart.update();
                             }
@@ -536,7 +567,21 @@
 
 
                 <section class="container my-5">
-                    <canvas id="grafico-maio-2024" height="220"></canvas>
+
+                    <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                        <h4>📊 Gráfico de Temperaturas</h4>
+                        <hr>
+                        <p class="text-muted mb-2 ">O gráfico abaixo mostra a evolução das temperaturas em Porto Alegre
+                            entre 2000 e 2025.
+                            <br><br>
+                            Passe o mouse sobre os pontos para ver os valores e as datas dos
+                            extremos.
+                        </p>
+                        <br>
+
+                        <canvas id="grafico-maio-2024" height="180"></canvas>
+                    </div>
+
                 </section>
 
                 <script>
@@ -617,6 +662,9 @@
                         <p>Para compreender, é necessário revisar os padrões de chuva e os meses que antecederam o
                             evento.</p>
 
+                        <p>O gráfico abaixo mostra a precipitação acumulada mês a mês desde 2000.</p>
+
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -626,10 +674,6 @@
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -661,6 +705,8 @@
                             histórica, contribuindo para o agravamento da situação.</p>
 
 
+                        <hr>
+
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -669,9 +715,6 @@
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
-
-
-
 
                     </div>
                 </div>
@@ -976,7 +1019,7 @@
 
 
 
-
+                        <hr>
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
@@ -1037,8 +1080,11 @@
                         </p>
 
                         <div class="alert alert-info mt-4" role="alert">
-      <strong>Dica:</strong> passe o mouse sobre as linhas para ver os valores acumulados mês a mês.
-    </div>
+                            <strong>Dica:</strong> passe o mouse sobre as linhas para ver os valores acumulados mês a
+                            mês.
+                        </div>
+
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1056,107 +1102,107 @@
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
-                 <canvas id="grafico-la-nina" height="220"></canvas>
+                <canvas id="grafico-la-nina" height="220"></canvas>
             </div>
 
 
         </div>
     </div>
 
-<script>
-fetch('./data/resumo_visualizacoes.json')
-  .then(res => res.json())
-  .then(data => {
-    const anosLaNina = ["2008", "2011", "2016", "2022"];
-    const anoReferencia = "2024";
-    const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+    <script>
+        fetch('./data/resumo_visualizacoes.json')
+            .then(res => res.json())
+            .then(data => {
+                const anosLaNina = ["2008", "2011", "2016", "2020"];
+                const anoReferencia = "2024";
+                const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
-    function acumular(mensal) {
-      const acumulado = [];
-      let soma = 0;
-      for (let i = 1; i <= 12; i++) {
-        const valor = mensal[String(i).padStart(2, '0')] || 0;
-        soma += valor;
-        acumulado.push(parseFloat(soma.toFixed(2)));
-      }
-      return acumulado;
-    }
+                function acumular(mensal) {
+                    const acumulado = [];
+                    let soma = 0;
+                    for (let i = 1; i <= 12; i++) {
+                        const valor = mensal[String(i).padStart(2, '0')] || 0;
+                        soma += valor;
+                        acumulado.push(parseFloat(soma.toFixed(2)));
+                    }
+                    return acumulado;
+                }
 
-    const datasets = [];
+                const datasets = [];
 
-    anosLaNina.forEach(ano => {
-      const estacoes = Object.keys(data[ano] || {});
-      const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
-      if (poaKey && data[ano][poaKey].precipitacao_mensal) {
-        datasets.push({
-          label: `${ano}`,
-          data: acumular(data[ano][poaKey].precipitacao_mensal),
-          borderColor: "rgba(0, 123, 255, 0.6)",
-          backgroundColor: "rgba(0, 123, 255, 0.1)",
-          fill: true,
-          tension: 0.3
-        });
-      }
-    });
+                anosLaNina.forEach(ano => {
+                    const estacoes = Object.keys(data[ano] || {});
+                    const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
+                    if (poaKey && data[ano][poaKey].precipitacao_mensal) {
+                        datasets.push({
+                            label: `${ano}`,
+                            data: acumular(data[ano][poaKey].precipitacao_mensal),
+                            borderColor: "rgba(0, 123, 255, 0.6)",
+                            backgroundColor: "rgba(0, 123, 255, 0.1)",
+                            fill: true,
+                            tension: 0.3
+                        });
+                    }
+                });
 
-    const estacoes2024 = Object.keys(data[anoReferencia] || {});
-    const poa2024 = estacoes2024.find(e => e.includes("PORTO_ALEGRE"));
-    if (poa2024 && data[anoReferencia][poa2024].precipitacao_mensal) {
-      datasets.push({
-        label: `${anoReferencia}`,
-        data: acumular(data[anoReferencia][poa2024].precipitacao_mensal),
-        borderColor: "rgba(220, 53, 69, 1)",
-        backgroundColor: "rgba(220, 53, 69, 0.1)",
-        fill: true,
-        borderWidth: 2,
-        tension: 0.3
-      });
-    }
+                const estacoes2024 = Object.keys(data[anoReferencia] || {});
+                const poa2024 = estacoes2024.find(e => e.includes("PORTO_ALEGRE"));
+                if (poa2024 && data[anoReferencia][poa2024].precipitacao_mensal) {
+                    datasets.push({
+                        label: `${anoReferencia}`,
+                        data: acumular(data[anoReferencia][poa2024].precipitacao_mensal),
+                        borderColor: "rgba(220, 53, 69, 1)",
+                        backgroundColor: "rgba(220, 53, 69, 0.1)",
+                        fill: true,
+                        borderWidth: 2,
+                        tension: 0.3
+                    });
+                }
 
-    new Chart(document.getElementById("grafico-la-nina").getContext("2d"), {
-      type: "line",
-      data: {
-        labels: meses,
-        datasets: datasets
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: "Precipitação Acumulada – La Niña vs. 2024"
-          },
-          tooltip: {
-            callbacks: {
-              label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm acumulado até ${ctx.label}`
-            }
-          },
-          legend: {
-            position: "top",
-            labels: {
-              usePointStyle: true
-            }
-          }
-        },
-        scales: {
-          y: {
-            title: {
-              display: true,
-              text: "Precipitação acumulada (mm)"
-            },
-            beginAtZero: true
-          },
-          x: {
-            title: {
-              display: true,
-              text: "Mês"
-            }
-          }
-        }
-      }
-    });
-  });
-</script>
+                new Chart(document.getElementById("grafico-la-nina").getContext("2d"), {
+                    type: "line",
+                    data: {
+                        labels: meses,
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: "Precipitação Acumulada – La Niña vs. 2024"
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm acumulado até ${ctx.label}`
+                                }
+                            },
+                            legend: {
+                                position: "top",
+                                labels: {
+                                    usePointStyle: true
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: "Precipitação acumulada (mm)"
+                                },
+                                beginAtZero: true
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: "Mês"
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+    </script>
 
     <!---------------------------------------------------------------------------------------------------->
 
@@ -1166,8 +1212,118 @@ fetch('./data/resumo_visualizacoes.json')
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>📊 ...</h4>
+                    <hr>
+                    <p class="text-muted mb-2 ">O que é?
+                        <br><br>
+                        Como usar?
+                    </p>
+                    <br>
+
+                    <canvas id="gangorraChart"></canvas>
+                </div>
             </div>
+
+
+
+
+            <script>
+                async function carregarDados() {
+                    const resposta = await fetch("./data/resumo_visualizacoes.json");
+                    const dados = await resposta.json();
+
+                    const anos = Object.keys(dados).sort();
+                    const estacao = Object.values(dados[anos[0]])[0];
+
+                    const precipitacao = anos.map(ano => {
+                        const est = Object.values(dados[ano])[0];
+                        return est.precipitacao?.soma || null;
+                    });
+
+                    const temperatura = anos.map(ano => {
+                        const est = Object.values(dados[ano])[0];
+                        return est.temperatura?.media || null;
+                    });
+
+                    const ctx = document.getElementById('gangorraChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: anos,
+                            datasets: [
+                                {
+                                    label: 'Precipitação Total (mm)',
+                                    data: precipitacao,
+                                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                                    yAxisID: 'y',
+                                    borderRadius: 5
+                                },
+                                {
+                                    label: 'Temperatura Média (°C)',
+                                    data: temperatura,
+                                    type: 'line',
+                                    borderColor: 'red',
+                                    backgroundColor: 'red',
+                                    yAxisID: 'y1',
+                                    tension: 0.3,
+                                    pointRadius: 4,
+                                    pointHoverRadius: 6
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            interaction: {
+                                mode: 'index',
+                                intersect: false,
+                            },
+                            stacked: false,
+                            plugins: {
+                                tooltip: {
+                                    mode: 'index',
+                                    intersect: false
+                                },
+                                legend: {
+                                    position: 'top'
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Gangorra Climática: Precipitação x Temperatura ao Longo dos Anos'
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    type: 'linear',
+                                    display: true,
+                                    position: 'left',
+                                    title: {
+                                        display: true,
+                                        text: 'Precipitação (mm)'
+                                    }
+                                },
+                                y1: {
+                                    type: 'linear',
+                                    display: true,
+                                    position: 'right',
+                                    grid: {
+                                        drawOnChartArea: false
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: 'Temperatura (°C)'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                carregarDados();
+            </script>
+
 
 
             <!-- Storytelling -->
@@ -1188,6 +1344,7 @@ fetch('./data/resumo_visualizacoes.json')
 
                         <p>Isso aumenta os riscos de desastres como enchentes, estiagens e colapsos urbanos.</p>
 
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1197,9 +1354,6 @@ fetch('./data/resumo_visualizacoes.json')
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
-
-
-
 
                     </div>
                 </div>
@@ -1231,6 +1385,7 @@ fetch('./data/resumo_visualizacoes.json')
                         <p>Esse fenômeno, combinado com o El Niño, contribui para um ciclo de calor e umidade que
                             favorece eventos extremos.</p>
 
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1247,7 +1402,19 @@ fetch('./data/resumo_visualizacoes.json')
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>📊 ...</h4>
+                    <hr>
+                    <p class="text-muted mb-2 ">O que é?
+                        <br><br>
+                        Como usar?
+                    </p>
+                    <br>
+
+
+                </div>
             </div>
 
         </div>
@@ -1262,7 +1429,19 @@ fetch('./data/resumo_visualizacoes.json')
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>📊 ...</h4>
+                    <hr>
+                    <p class="text-muted mb-2 ">O que é?
+                        <br><br>
+                        Como usar?
+                    </p>
+                    <br>
+
+
+                </div>
             </div>
 
 
@@ -1281,6 +1460,7 @@ fetch('./data/resumo_visualizacoes.json')
                             a enchente de 2024, as estações registraram quedas sucessivas, evidenciando a gravidade da
                             situação.</p>
 
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1322,6 +1502,7 @@ fetch('./data/resumo_visualizacoes.json')
                         <p>A direção e velocidade dos ventos também influenciam a retenção de umidade na atmosfera. Em
                             2024, ventos predominantes impediram a dispersão das nuvens sobre Porto Alegre.</p>
 
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1341,7 +1522,19 @@ fetch('./data/resumo_visualizacoes.json')
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>📊 ...</h4>
+                    <hr>
+                    <p class="text-muted mb-2 ">O que é?
+                        <br><br>
+                        Como usar?
+                    </p>
+                    <br>
+
+
+                </div>
             </div>
 
         </div>
@@ -1356,7 +1549,19 @@ fetch('./data/resumo_visualizacoes.json')
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4>📊 ...</h4>
+                    <hr>
+                    <p class="text-muted mb-2 ">O que é?
+                        <br><br>
+                        Como usar?
+                    </p>
+                    <br>
+
+
+                </div>
             </div>
 
             <!-- Storytelling -->
@@ -1371,6 +1576,8 @@ fetch('./data/resumo_visualizacoes.json')
                     <div class="col-12 justify-content-center align-items-center">
                         <p>O ponto de orvalho indica a saturação do ar. Em períodos de El Niño, os valores tendem a ser
                             mais altos, favorecendo chuvas intensas e sensação térmica elevada.</p>
+
+                        <hr>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -1450,7 +1657,7 @@ fetch('./data/resumo_visualizacoes.json')
 
         <!-- Mapa e gráfico de estações -->
         <script>
-            const map = L.map('map').setView([-30.5, -53], 6.5);
+            const map = L.map('map').setView([-30.5, -53], 6.0);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
@@ -1545,7 +1752,7 @@ fetch('./data/resumo_visualizacoes.json')
                 });
                 if (marcadores.length > 0) {
                     const popupContent = marcadores[0].getPopup().getContent();
-                    const instrucoes = `<hr><p><strong>📍 Clique nas estações para ver mais detalhes.</strong></p>`;
+                    const instrucoes = `<hr><p class='text-center'><strong> 📍 ESTE MAPA É INTERATIVO</strong><p class='text-muted'>Clique nas estações para ver mais detalhes.</p></p>`;
                     marcadores[0].getPopup().setContent(popupContent + instrucoes);
                     marcadores[0].openPopup();
                 }
@@ -1554,7 +1761,7 @@ fetch('./data/resumo_visualizacoes.json')
             const slider = document.getElementById('yearSlider');
             const label = document.getElementById('yearLabel');
             const btn = document.getElementById('playBtn');
-            const resetBtn = document.getElementById('resetBtn');
+            //const resetBtn = document.getElementById('resetBtn');
 
             slider.addEventListener('input', () => {
                 const ano = parseInt(slider.value);
@@ -1562,15 +1769,15 @@ fetch('./data/resumo_visualizacoes.json')
                 atualizarMapa(ano);
             });
 
-            resetBtn.addEventListener('click', () => {
-                map.setView([-30.5, -53], 6.5)
-            });
+            //resetBtn.addEventListener('click', () => {
+            //    map.setView([-30.5, -53], 6.5)
+            //});
 
             btn.addEventListener('click', () => {
                 if (intervalo) {
                     clearInterval(intervalo);
                     intervalo = null;
-                    btn.textContent = '▶️ Ver evolução das estações';
+                    btn.textContent = '▶️ Ver evolução';
                 } else {
                     if (parseInt(slider.value) >= 2025) {
                         slider.value = 2000;
@@ -1589,7 +1796,7 @@ fetch('./data/resumo_visualizacoes.json')
                             intervalo = null;
                             btn.textContent = '▶️ Reproduzir novamente';
                             setTimeout(() => {
-                                btn.textContent = '▶️ Ver evolução das estações';
+                                btn.textContent = '▶️ Ver evolução';
                             }, 2000);
                         }
                     }, 150);

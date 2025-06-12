@@ -3,10 +3,6 @@ body {
     font-size:1.18rem;
 }
 
-#map {
-    width: 100%;
-    margin: 0px;
-}
 
 button {
     margin: 10px;
@@ -143,7 +139,7 @@ svg {
 }
 
 .grafico-container {
-    padding: 80px;
+    padding: 0px;
 }
 
 #slider-ano-range {

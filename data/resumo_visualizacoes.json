@@ -5,25 +5,29 @@
         "media": 0.17,
         "max": 26.2,
         "min": 0.0,
-        "soma": 401.8
+        "soma": 401.8,
+        "desvio_padrao": 1.11
       },
       "pressao": {
         "media": 1008.22,
         "max": 1026.8,
         "min": 994.8,
-        "soma": 2398544.4
+        "soma": 2398544.4,
+        "desvio_padrao": 5.08
       },
       "radiacao": {
         "media": 1410.37,
         "max": 3959.0,
         "min": 0.0,
-        "soma": 1995670.0
+        "soma": 1995670.0,
+        "desvio_padrao": 1174.65
       },
       "temperatura": {
         "media": 20.86,
         "max": 35.5,
         "min": 7.1,
-        "soma": 49618.3
+        "soma": 49618.3,
+        "desvio_padrao": 4.79
       },
       "extremos": {
         "dia_temp_max": "2000-11-23",
@@ -35,20 +39,23 @@
         "media": 15.46,
         "max": 23.4,
         "min": -0.4,
-        "soma": 36783.2
+        "soma": 36783.2,
+        "desvio_padrao": 4.13
       },
       "umidade": {
         "media": 73.49,
         "max": 97.0,
         "min": 24.0,
-        "soma": 174832.0
+        "soma": 174832.0,
+        "desvio_padrao": 16.63
       },
       "dias_secos": 5,
       "vento": {
         "media": 2.09,
         "max": 8.0,
         "min": 0.0,
-        "soma": 4967.3
+        "soma": 4967.3,
+        "desvio_padrao": 1.28
       },
       "precipitacao_mensal": {
         "09": 51.8,
@@ -66,25 +73,29 @@
         "media": 0.15,
         "max": 27.6,
         "min": 0.0,
-        "soma": 447.6
+        "soma": 447.6,
+        "desvio_padrao": 1.0
       },
       "pressao": {
         "media": 1009.56,
         "max": 1023.5,
         "min": 995.3,
-        "soma": 3042809.3
+        "soma": 3042809.3,
+        "desvio_padrao": 5.41
       },
       "radiacao": {
         "media": 1163.11,
         "max": 3824.0,
         "min": 0.0,
-        "soma": 1866792.0
+        "soma": 1866792.0,
+        "desvio_padrao": 1012.45
       },
       "temperatura": {
         "media": 21.32,
         "max": 35.4,
         "min": 5.9,
-        "soma": 64414.3
+        "soma": 64414.3,
+        "desvio_padrao": 4.87
       },
       "extremos": {
         "dia_temp_max": "2001-05-01",
@@ -96,20 +107,23 @@
         "media": 16.68,
         "max": 24.3,
         "min": 3.3,
-        "soma": 50416.9
+        "soma": 50416.9,
+        "desvio_padrao": 3.68
       },
       "umidade": {
         "media": 76.54,
         "max": 96.0,
         "min": 28.0,
-        "soma": 231304.0
+        "soma": 231304.0,
+        "desvio_padrao": 14.26
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.81,
         "max": 13.3,
         "min": 0.0,
-        "soma": 5459.0
+        "soma": 5459.0,
+        "desvio_padrao": 1.33
       },
       "precipitacao_mensal": {
         "01": 16.6,
@@ -135,25 +149,29 @@
         "media": 0.18,
         "max": 22.8,
         "min": 0.0,
-        "soma": 553.2
+        "soma": 553.2,
+        "desvio_padrao": 1.0
       },
       "pressao": {
         "media": 1010.0,
         "max": 1024.5,
         "min": 996.3,
-        "soma": 3088577.7
+        "soma": 3088577.7,
+        "desvio_padrao": 5.24
       },
       "radiacao": {
         "media": 1140.56,
         "max": 3865.0,
         "min": 0.0,
-        "soma": 1934389.0
+        "soma": 1934389.0,
+        "desvio_padrao": 1035.04
       },
       "temperatura": {
         "media": 20.02,
         "max": 37.3,
         "min": 4.8,
-        "soma": 61407.4
+        "soma": 61407.4,
+        "desvio_padrao": 5.76
       },
       "extremos": {
         "dia_temp_max": "2002-10-03",
@@ -165,20 +183,23 @@
         "media": 15.04,
         "max": 23.8,
         "min": 0.7,
-        "soma": 46158.7
+        "soma": 46158.7,
+        "desvio_padrao": 4.81
       },
       "umidade": {
         "media": 74.92,
         "max": 96.0,
         "min": 26.0,
-        "soma": 229868.0
+        "soma": 229868.0,
+        "desvio_padrao": 15.1
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.77,
         "max": 7.4,
         "min": 0.0,
-        "soma": 5439.0
+        "soma": 5439.0,
+        "desvio_padrao": 1.19
       },
       "precipitacao_mensal": {
         "01": 90.2,
@@ -204,25 +225,29 @@
         "media": 0.19,
         "max": 31.2,
         "min": 0.0,
-        "soma": 551.4
+        "soma": 551.4,
+        "desvio_padrao": 1.24
       },
       "pressao": {
         "media": 1009.83,
         "max": 1028.1,
         "min": 992.9,
-        "soma": 2901233.3
+        "soma": 2901233.3,
+        "desvio_padrao": 6.11
       },
       "radiacao": {
         "media": 1254.06,
         "max": 3951.0,
         "min": 0.0,
-        "soma": 1957584.0
+        "soma": 1957584.0,
+        "desvio_padrao": 1100.07
       },
       "temperatura": {
         "media": 19.75,
         "max": 37.5,
         "min": 3.3,
-        "soma": 56851.7
+        "soma": 56851.7,
+        "desvio_padrao": 6.11
       },
       "extremos": {
         "dia_temp_max": "2003-01-02",
@@ -234,20 +259,23 @@
         "media": 14.34,
         "max": 24.3,
         "min": -2.3,
-        "soma": 41278.8
+        "soma": 41278.8,
+        "desvio_padrao": 5.51
       },
       "umidade": {
         "media": 73.15,
         "max": 96.0,
         "min": 23.0,
-        "soma": 210531.0
+        "soma": 210531.0,
+        "desvio_padrao": 16.23
       },
       "dias_secos": 8,
       "vento": {
         "media": 1.72,
         "max": 9.5,
         "min": 0.0,
-        "soma": 4941.1
+        "soma": 4941.1,
+        "desvio_padrao": 1.17
       },
       "precipitacao_mensal": {
         "01": 111.0,
@@ -273,25 +301,29 @@
         "media": 0.11,
         "max": 20.8,
         "min": 0.0,
-        "soma": 345.8
+        "soma": 345.8,
+        "desvio_padrao": 0.92
       },
       "pressao": {
         "media": 1010.6,
         "max": 1028.0,
         "min": 993.6,
-        "soma": 3144978.6
+        "soma": 3144978.6,
+        "desvio_padrao": 5.74
       },
       "radiacao": {
         "media": 1267.58,
         "max": 3952.0,
         "min": 0.0,
-        "soma": 2162499.0
+        "soma": 2162499.0,
+        "desvio_padrao": 1081.03
       },
       "temperatura": {
         "media": 19.74,
         "max": 36.4,
         "min": 3.0,
-        "soma": 61648.9
+        "soma": 61648.9,
+        "desvio_padrao": 5.88
       },
       "extremos": {
         "dia_temp_max": "2004-06-09",
@@ -303,20 +335,23 @@
         "media": 14.31,
         "max": 22.9,
         "min": -3.3,
-        "soma": 44704.4
+        "soma": 44704.4,
+        "desvio_padrao": 4.58
       },
       "umidade": {
         "media": 73.18,
         "max": 96.0,
         "min": 19.0,
-        "soma": 228528.0
+        "soma": 228528.0,
+        "desvio_padrao": 16.23
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.7,
         "max": 6.1,
         "min": 0.0,
-        "soma": 5312.6
+        "soma": 5312.6,
+        "desvio_padrao": 1.17
       },
       "precipitacao_mensal": {
         "01": 24.4,
@@ -342,25 +377,29 @@
         "media": 0.16,
         "max": 27.6,
         "min": 0.0,
-        "soma": 524.6
+        "soma": 524.6,
+        "desvio_padrao": 0.94
       },
       "pressao": {
         "media": 1011.69,
         "max": 1032.0,
         "min": 995.8,
-        "soma": 3228299.1
+        "soma": 3228299.1,
+        "desvio_padrao": 6.04
       },
       "radiacao": {
         "media": 1189.09,
         "max": 3948.0,
         "min": 0.0,
-        "soma": 2074968.0
+        "soma": 2074968.0,
+        "desvio_padrao": 1084.6
       },
       "temperatura": {
         "media": 20.3,
         "max": 39.0,
         "min": 5.5,
-        "soma": 64870.2
+        "soma": 64870.2,
+        "desvio_padrao": 5.65
       },
       "extremos": {
         "dia_temp_max": "2005-09-01",
@@ -372,20 +411,23 @@
         "media": 14.58,
         "max": 23.5,
         "min": 1.2,
-        "soma": 46571.4
+        "soma": 46571.4,
+        "desvio_padrao": 4.08
       },
       "umidade": {
         "media": 72.16,
         "max": 95.0,
         "min": 23.0,
-        "soma": 230552.0
+        "soma": 230552.0,
+        "desvio_padrao": 16.67
       },
       "dias_secos": 8,
       "vento": {
         "media": 1.67,
         "max": 6.9,
         "min": 0.0,
-        "soma": 5325.9
+        "soma": 5325.9,
+        "desvio_padrao": 1.17
       },
       "precipitacao_mensal": {
         "01": 65.6,
@@ -411,25 +453,29 @@
         "media": 0.07,
         "max": 31.2,
         "min": 0.0,
-        "soma": 241.0
+        "soma": 241.0,
+        "desvio_padrao": 0.81
       },
       "pressao": {
         "media": 1009.71,
         "max": 1025.8,
         "min": 994.3,
-        "soma": 3255308.1
+        "soma": 3255308.1,
+        "desvio_padrao": 5.34
       },
       "radiacao": {
         "media": 1298.11,
         "max": 3859.0,
         "min": 0.0,
-        "soma": 2267800.6
+        "soma": 2267800.6,
+        "desvio_padrao": 1063.92
       },
       "temperatura": {
         "media": 20.2,
         "max": 38.1,
         "min": 3.3,
-        "soma": 65138.7
+        "soma": 65138.7,
+        "desvio_padrao": 5.74
       },
       "extremos": {
         "dia_temp_max": "2006-08-01",
@@ -441,20 +487,23 @@
         "media": 14.71,
         "max": 24.2,
         "min": -3.2,
-        "soma": 47413.4
+        "soma": 47413.4,
+        "desvio_padrao": 4.59
       },
       "umidade": {
         "media": 72.56,
         "max": 96.0,
         "min": 23.0,
-        "soma": 233873.0
+        "soma": 233873.0,
+        "desvio_padrao": 14.48
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.61,
         "max": 7.4,
         "min": 0.0,
-        "soma": 5178.4
+        "soma": 5178.4,
+        "desvio_padrao": 1.11
       },
       "precipitacao_mensal": {
         "01": 0.8,
@@ -480,25 +529,29 @@
         "media": 0.16,
         "max": 21.2,
         "min": 0.0,
-        "soma": 551.8
+        "soma": 551.8,
+        "desvio_padrao": 0.94
       },
       "pressao": {
         "media": 1009.65,
         "max": 1024.8,
         "min": 990.1,
-        "soma": 3467147.9
+        "soma": 3467147.9,
+        "desvio_padrao": 5.42
       },
       "radiacao": {
         "media": 1167.44,
         "max": 3840.0,
         "min": 0.0,
-        "soma": 2187782.8
+        "soma": 2187782.8,
+        "desvio_padrao": 1067.43
       },
       "temperatura": {
         "media": 20.24,
         "max": 35.7,
         "min": 1.5,
-        "soma": 69517.2
+        "soma": 69517.2,
+        "desvio_padrao": 6.03
       },
       "extremos": {
         "dia_temp_max": "2007-10-01",
@@ -510,20 +563,23 @@
         "media": 14.97,
         "max": 23.8,
         "min": -1.3,
-        "soma": 51413.1
+        "soma": 51413.1,
+        "desvio_padrao": 4.89
       },
       "umidade": {
         "media": 74.02,
         "max": 96.0,
         "min": 22.0,
-        "soma": 254195.0
+        "soma": 254195.0,
+        "desvio_padrao": 16.22
       },
       "dias_secos": 6,
       "vento": {
         "media": 1.66,
         "max": 5.8,
         "min": 0.0,
-        "soma": 5701.9
+        "soma": 5701.9,
+        "desvio_padrao": 1.03
       },
       "precipitacao_mensal": {
         "01": 55.0,
@@ -549,25 +605,29 @@
         "media": 0.21,
         "max": 22.2,
         "min": 0.0,
-        "soma": 722.0
+        "soma": 722.0,
+        "desvio_padrao": 1.11
       },
       "pressao": {
         "media": 1009.3,
         "max": 1026.1,
         "min": 994.4,
-        "soma": 3474003.8
+        "soma": 3474003.8,
+        "desvio_padrao": 5.47
       },
       "radiacao": {
         "media": 1222.35,
         "max": 3956.7,
         "min": 0.0,
-        "soma": 2249130.9
+        "soma": 2249130.9,
+        "desvio_padrao": 1073.99
       },
       "temperatura": {
         "media": 19.24,
         "max": 37.1,
         "min": 4.3,
-        "soma": 66225.4
+        "soma": 66225.4,
+        "desvio_padrao": 5.67
       },
       "extremos": {
         "dia_temp_max": "2008-10-01",
@@ -579,20 +639,23 @@
         "media": 14.25,
         "max": 22.3,
         "min": 1.7,
-        "soma": 49041.4
+        "soma": 49041.4,
+        "desvio_padrao": 4.17
       },
       "umidade": {
         "media": 75.07,
         "max": 95.0,
         "min": 24.0,
-        "soma": 258406.0
+        "soma": 258406.0,
+        "desvio_padrao": 15.88
       },
       "dias_secos": 9,
       "vento": {
         "media": 1.58,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5439.5
+        "soma": 5439.5,
+        "desvio_padrao": 1.06
       },
       "precipitacao_mensal": {
         "01": 31.2,
@@ -618,25 +681,29 @@
         "media": 0.28,
         "max": 22.6,
         "min": 0.0,
-        "soma": 954.0
+        "soma": 954.0,
+        "desvio_padrao": 1.27
       },
       "pressao": {
         "media": 1008.98,
         "max": 1024.9,
         "min": 993.6,
-        "soma": 3466856.0
+        "soma": 3466856.0,
+        "desvio_padrao": 4.97
       },
       "radiacao": {
         "media": 1095.42,
         "max": 3866.3,
         "min": 0.0,
-        "soma": 2016671.3
+        "soma": 2016671.3,
+        "desvio_padrao": 1013.61
       },
       "temperatura": {
         "media": 18.98,
         "max": 35.0,
         "min": 4.0,
-        "soma": 65208.9
+        "soma": 65208.9,
+        "desvio_padrao": 5.54
       },
       "extremos": {
         "dia_temp_max": "2009-02-11",
@@ -648,20 +715,23 @@
         "media": 14.47,
         "max": 24.4,
         "min": 1.9,
-        "soma": 49679.8
+        "soma": 49679.8,
+        "desvio_padrao": 4.56
       },
       "umidade": {
         "media": 76.89,
         "max": 96.0,
         "min": 25.0,
-        "soma": 264042.0
+        "soma": 264042.0,
+        "desvio_padrao": 14.6
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.55,
         "max": 8.9,
         "min": 0.0,
-        "soma": 5334.2
+        "soma": 5334.2,
+        "desvio_padrao": 1.02
       },
       "precipitacao_mensal": {
         "01": 17.2,
@@ -687,25 +757,29 @@
         "media": 0.15,
         "max": 16.6,
         "min": 0.0,
-        "soma": 508.2
+        "soma": 508.2,
+        "desvio_padrao": 0.9
       },
       "pressao": {
         "media": 1010.37,
         "max": 1027.8,
         "min": 992.7,
-        "soma": 3483758.1
+        "soma": 3483758.1,
+        "desvio_padrao": 6.81
       },
       "radiacao": {
         "media": 1230.72,
         "max": 3987.1,
         "min": 0.0,
-        "soma": 2269445.4
+        "soma": 2269445.4,
+        "desvio_padrao": 1091.8
       },
       "temperatura": {
         "media": 19.63,
         "max": 38.2,
         "min": 3.0,
-        "soma": 67684.6
+        "soma": 67684.6,
+        "desvio_padrao": 6.04
       },
       "extremos": {
         "dia_temp_max": "2010-03-02",
@@ -717,20 +791,23 @@
         "media": 14.53,
         "max": 26.3,
         "min": 0.3,
-        "soma": 50100.9
+        "soma": 50100.9,
+        "desvio_padrao": 4.91
       },
       "umidade": {
         "media": 74.54,
         "max": 96.0,
         "min": 22.0,
-        "soma": 257027.0
+        "soma": 257027.0,
+        "desvio_padrao": 15.6
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.41,
         "max": 7.4,
         "min": 0.0,
-        "soma": 4867.8
+        "soma": 4867.8,
+        "desvio_padrao": 0.94
       },
       "precipitacao_mensal": {
         "01": 1.0,
@@ -756,25 +833,29 @@
         "media": 0.13,
         "max": 28.4,
         "min": 0.0,
-        "soma": 438.8
+        "soma": 438.8,
+        "desvio_padrao": 0.95
       },
       "pressao": {
         "media": 1009.27,
         "max": 1025.3,
         "min": 996.4,
-        "soma": 3482994.0
+        "soma": 3482994.0,
+        "desvio_padrao": 5.15
       },
       "radiacao": {
         "media": 1281.55,
         "max": 3999.9,
         "min": 0.1,
-        "soma": 2364460.7
+        "soma": 2364460.7,
+        "desvio_padrao": 1084.05
       },
       "temperatura": {
         "media": 18.78,
         "max": 36.0,
         "min": 2.0,
-        "soma": 64812.1
+        "soma": 64812.1,
+        "desvio_padrao": 6.23
       },
       "extremos": {
         "dia_temp_max": "2011-08-01",
@@ -786,20 +867,23 @@
         "media": 13.97,
         "max": 24.8,
         "min": -0.7,
-        "soma": 48224.1
+        "soma": 48224.1,
+        "desvio_padrao": 5.31
       },
       "umidade": {
         "media": 75.54,
         "max": 97.0,
         "min": 29.0,
-        "soma": 260694.0
+        "soma": 260694.0,
+        "desvio_padrao": 15.11
       },
       "dias_secos": 1,
       "vento": {
         "media": 1.52,
         "max": 6.9,
         "min": 0.0,
-        "soma": 5253.9
+        "soma": 5253.9,
+        "desvio_padrao": 1.06
       },
       "precipitacao_mensal": {
         "01": 52.6,
@@ -825,25 +909,29 @@
         "media": 0.13,
         "max": 18.4,
         "min": 0.0,
-        "soma": 436.8
+        "soma": 436.8,
+        "desvio_padrao": 0.79
       },
       "pressao": {
         "media": 1009.13,
         "max": 1025.1,
         "min": 991.1,
-        "soma": 3486559.1
+        "soma": 3486559.1,
+        "desvio_padrao": 5.13
       },
       "radiacao": {
         "media": 1272.41,
         "max": 3913.3,
         "min": 0.0,
-        "soma": 2351417.6
+        "soma": 2351417.6,
+        "desvio_padrao": 1087.67
       },
       "temperatura": {
         "media": 20.78,
         "max": 36.7,
         "min": 1.1,
-        "soma": 71804.3
+        "soma": 71804.3,
+        "desvio_padrao": 6.22
       },
       "extremos": {
         "dia_temp_max": "2012-10-12",
@@ -855,20 +943,23 @@
         "media": 15.49,
         "max": 24.0,
         "min": -3.4,
-        "soma": 53512.7
+        "soma": 53512.7,
+        "desvio_padrao": 4.79
       },
       "umidade": {
         "media": 74.08,
         "max": 96.0,
         "min": 19.0,
-        "soma": 255951.0
+        "soma": 255951.0,
+        "desvio_padrao": 16.41
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.34,
         "max": 5.7,
         "min": 0.0,
-        "soma": 4629.7
+        "soma": 4629.7,
+        "desvio_padrao": 0.93
       },
       "precipitacao_mensal": {
         "01": 60.6,
@@ -894,25 +985,29 @@
         "media": 0.18,
         "max": 27.2,
         "min": 0.0,
-        "soma": 600.8
+        "soma": 600.8,
+        "desvio_padrao": 1.29
       },
       "pressao": {
         "media": 1009.71,
         "max": 1024.1,
         "min": 993.7,
-        "soma": 3411810.8
+        "soma": 3411810.8,
+        "desvio_padrao": 5.08
       },
       "radiacao": {
         "media": 1237.24,
         "max": 3972.4,
         "min": 0.0,
-        "soma": 2228274.6
+        "soma": 2228274.6,
+        "desvio_padrao": 1061.74
       },
       "temperatura": {
         "media": 19.7,
         "max": 37.4,
         "min": 5.5,
-        "soma": 66575.7
+        "soma": 66575.7,
+        "desvio_padrao": 5.36
       },
       "extremos": {
         "dia_temp_max": "2013-01-02",
@@ -924,20 +1019,23 @@
         "media": 14.78,
         "max": 23.9,
         "min": 3.0,
-        "soma": 49936.1
+        "soma": 49936.1,
+        "desvio_padrao": 4.01
       },
       "umidade": {
         "media": 75.2,
         "max": 97.0,
         "min": 28.0,
-        "soma": 254086.0
+        "soma": 254086.0,
+        "desvio_padrao": 15.11
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.4,
         "max": 5.9,
         "min": 0.0,
-        "soma": 4735.5
+        "soma": 4735.5,
+        "desvio_padrao": 0.95
       },
       "precipitacao_mensal": {
         "01": 50.6,
@@ -963,25 +1061,29 @@
         "media": 0.22,
         "max": 20.2,
         "min": 0.0,
-        "soma": 769.2
+        "soma": 769.2,
+        "desvio_padrao": 1.23
       },
       "pressao": {
         "media": 1009.35,
         "max": 1025.5,
         "min": 992.2,
-        "soma": 3487310.6
+        "soma": 3487310.6,
+        "desvio_padrao": 5.58
       },
       "radiacao": {
         "media": 1206.1,
         "max": 3984.6,
         "min": 0.0,
-        "soma": 2218013.2
+        "soma": 2218013.2,
+        "desvio_padrao": 1085.46
       },
       "temperatura": {
         "media": 21.04,
         "max": 40.2,
         "min": 6.3,
-        "soma": 72695.7
+        "soma": 72695.7,
+        "desvio_padrao": 5.81
       },
       "extremos": {
         "dia_temp_max": "2014-06-02",
@@ -993,20 +1095,23 @@
         "media": 16.46,
         "max": 25.9,
         "min": 2.3,
-        "soma": 56882.8
+        "soma": 56882.8,
+        "desvio_padrao": 4.19
       },
       "umidade": {
         "media": 77.18,
         "max": 97.0,
         "min": 25.0,
-        "soma": 266663.0
+        "soma": 266663.0,
+        "desvio_padrao": 15.38
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.33,
         "max": 5.6,
         "min": 0.0,
-        "soma": 4605.1
+        "soma": 4605.1,
+        "desvio_padrao": 0.94
       },
       "precipitacao_mensal": {
         "01": 58.2,
@@ -1032,25 +1137,29 @@
         "media": 0.2,
         "max": 27.0,
         "min": 0.0,
-        "soma": 691.6
+        "soma": 691.6,
+        "desvio_padrao": 1.09
       },
       "pressao": {
         "media": 1009.12,
         "max": 1021.0,
         "min": 996.0,
-        "soma": 3486496.8
+        "soma": 3486496.8,
+        "desvio_padrao": 4.27
       },
       "radiacao": {
         "media": 1191.66,
         "max": 3949.5,
         "min": 0.1,
-        "soma": 2185498.6
+        "soma": 2185498.6,
+        "desvio_padrao": 1057.59
       },
       "temperatura": {
         "media": 20.5,
         "max": 35.7,
         "min": 6.3,
-        "soma": 70815.8
+        "soma": 70815.8,
+        "desvio_padrao": 5.22
       },
       "extremos": {
         "dia_temp_max": "2015-06-01",
@@ -1062,20 +1171,23 @@
         "media": 16.2,
         "max": 25.5,
         "min": -0.7,
-        "soma": 55960.4
+        "soma": 55960.4,
+        "desvio_padrao": 4.06
       },
       "umidade": {
         "media": 78.34,
         "max": 99.0,
         "min": 31.0,
-        "soma": 270657.0
+        "soma": 270657.0,
+        "desvio_padrao": 15.48
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.36,
         "max": 5.3,
         "min": 0.0,
-        "soma": 4683.4
+        "soma": 4683.4,
+        "desvio_padrao": 0.91
       },
       "precipitacao_mensal": {
         "01": 9.8,
@@ -1101,25 +1213,29 @@
         "media": 0.17,
         "max": 27.6,
         "min": 0.0,
-        "soma": 554.4
+        "soma": 554.4,
+        "desvio_padrao": 1.09
       },
       "pressao": {
         "media": 1010.22,
         "max": 1024.2,
         "min": 995.7,
-        "soma": 3375150.5
+        "soma": 3375150.5,
+        "desvio_padrao": 5.18
       },
       "radiacao": {
         "media": 1223.65,
         "max": 3899.7,
         "min": 0.0,
-        "soma": 2190336.2
+        "soma": 2190336.2,
+        "desvio_padrao": 1071.4
       },
       "temperatura": {
         "media": 19.49,
         "max": 35.3,
         "min": 4.6,
-        "soma": 65131.3
+        "soma": 65131.3,
+        "desvio_padrao": 5.75
       },
       "extremos": {
         "dia_temp_max": "2016-08-02",
@@ -1131,20 +1247,23 @@
         "media": 15.29,
         "max": 25.8,
         "min": -1.0,
-        "soma": 51097.6
+        "soma": 51097.6,
+        "desvio_padrao": 4.92
       },
       "umidade": {
         "media": 78.68,
         "max": 99.0,
         "min": 23.0,
-        "soma": 262862.0
+        "soma": 262862.0,
+        "desvio_padrao": 15.65
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.5,
         "max": 6.3,
         "min": 0.0,
-        "soma": 5009.4
+        "soma": 5009.4,
+        "desvio_padrao": 1.04
       },
       "precipitacao_mensal": {
         "01": 6.0,
@@ -1170,25 +1289,29 @@
         "media": 0.26,
         "max": 29.8,
         "min": 0.0,
-        "soma": 888.6
+        "soma": 888.6,
+        "desvio_padrao": 1.62
       },
       "pressao": {
         "media": 1009.01,
         "max": 1028.1,
         "min": 988.7,
-        "soma": 3486138.8
+        "soma": 3486138.8,
+        "desvio_padrao": 5.95
       },
       "radiacao": {
         "media": 1214.15,
         "max": 3883.7,
         "min": 0.0,
-        "soma": 2226750.1
+        "soma": 2226750.1,
+        "desvio_padrao": 1076.47
       },
       "temperatura": {
         "media": 21.03,
         "max": 34.9,
         "min": 6.3,
-        "soma": 72662.9
+        "soma": 72662.9,
+        "desvio_padrao": 5.0
       },
       "extremos": {
         "dia_temp_max": "2017-04-02",
@@ -1200,20 +1323,23 @@
         "media": 16.92,
         "max": 25.9,
         "min": 6.0,
-        "soma": 58447.0
+        "soma": 58447.0,
+        "desvio_padrao": 3.96
       },
       "umidade": {
         "media": 79.17,
         "max": 100.0,
         "min": 30.0,
-        "soma": 273532.0
+        "soma": 273532.0,
+        "desvio_padrao": 15.11
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.46,
         "max": 6.7,
         "min": 0.0,
-        "soma": 4834.5
+        "soma": 4834.5,
+        "desvio_padrao": 0.98
       },
       "precipitacao_mensal": {
         "01": 99.0,
@@ -1239,25 +1365,29 @@
         "media": 0.13,
         "max": 26.8,
         "min": 0.0,
-        "soma": 443.8
+        "soma": 443.8,
+        "desvio_padrao": 0.97
       },
       "pressao": {
         "media": 1009.87,
         "max": 1024.8,
         "min": 994.9,
-        "soma": 3490117.7
+        "soma": 3490117.7,
+        "desvio_padrao": 5.29
       },
       "radiacao": {
         "media": 1269.05,
         "max": 3939.2,
         "min": 0.0,
-        "soma": 2354085.8
+        "soma": 2354085.8,
+        "desvio_padrao": 1100.12
       },
       "temperatura": {
         "media": 19.96,
         "max": 37.4,
         "min": 5.6,
-        "soma": 68944.7
+        "soma": 68944.7,
+        "desvio_padrao": 5.58
       },
       "extremos": {
         "dia_temp_max": "2018-11-12",
@@ -1269,20 +1399,23 @@
         "media": 15.9,
         "max": 24.2,
         "min": 5.1,
-        "soma": 54928.9
+        "soma": 54928.9,
+        "desvio_padrao": 4.28
       },
       "umidade": {
         "media": 79.54,
         "max": 100.0,
         "min": 28.0,
-        "soma": 274900.0
+        "soma": 274900.0,
+        "desvio_padrao": 15.85
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.7,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5517.8
+        "soma": 5517.8,
+        "desvio_padrao": 1.06
       },
       "precipitacao_mensal": {
         "01": 111.4,
@@ -1308,25 +1441,29 @@
         "media": 0.16,
         "max": 37.8,
         "min": 0.0,
-        "soma": 559.0
+        "soma": 559.0,
+        "desvio_padrao": 1.16
       },
       "pressao": {
         "media": 1009.78,
         "max": 1027.8,
         "min": 995.6,
-        "soma": 3486787.5
+        "soma": 3486787.5,
+        "desvio_padrao": 5.62
       },
       "radiacao": {
         "media": 1200.89,
         "max": 3945.8,
         "min": 0.0,
-        "soma": 2216841.7
+        "soma": 2216841.7,
+        "desvio_padrao": 1066.2
       },
       "temperatura": {
         "media": 20.53,
         "max": 38.0,
         "min": 2.3,
-        "soma": 70882.1
+        "soma": 70882.1,
+        "desvio_padrao": 6.08
       },
       "extremos": {
         "dia_temp_max": "2019-02-01",
@@ -1338,20 +1475,23 @@
         "media": 16.02,
         "max": 26.2,
         "min": -0.6,
-        "soma": 55310.3
+        "soma": 55310.3,
+        "desvio_padrao": 5.31
       },
       "umidade": {
         "media": 77.69,
         "max": 100.0,
         "min": 18.0,
-        "soma": 268262.0
+        "soma": 268262.0,
+        "desvio_padrao": 16.84
       },
       "dias_secos": 6,
       "vento": {
         "media": 1.49,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5132.5
+        "soma": 5132.5,
+        "desvio_padrao": 0.92
       },
       "precipitacao_mensal": {
         "01": 6.0,
@@ -1377,25 +1517,29 @@
         "media": 0.17,
         "max": 24.6,
         "min": 0.0,
-        "soma": 602.2
+        "soma": 602.2,
+        "desvio_padrao": 1.0
       },
       "pressao": {
         "media": 1010.09,
         "max": 1023.8,
         "min": 993.8,
-        "soma": 3489870.1
+        "soma": 3489870.1,
+        "desvio_padrao": 4.96
       },
       "radiacao": {
         "media": 1248.04,
         "max": 3842.3,
         "min": 0.0,
-        "soma": 2316353.5
+        "soma": 2316353.5,
+        "desvio_padrao": 1091.64
       },
       "temperatura": {
         "media": 19.57,
         "max": 37.7,
         "min": 4.3,
-        "soma": 67617.5
+        "soma": 67617.5,
+        "desvio_padrao": 5.79
       },
       "extremos": {
         "dia_temp_max": "2020-09-01",
@@ -1407,20 +1551,23 @@
         "media": 14.75,
         "max": 24.1,
         "min": 1.5,
-        "soma": 50950.5
+        "soma": 50950.5,
+        "desvio_padrao": 4.15
       },
       "umidade": {
         "media": 75.94,
         "max": 97.0,
         "min": 18.0,
-        "soma": 262382.0
+        "soma": 262382.0,
+        "desvio_padrao": 16.12
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.63,
         "max": 5.7,
         "min": 0.2,
-        "soma": 5628.5
+        "soma": 5628.5,
+        "desvio_padrao": 0.85
       },
       "precipitacao_mensal": {
         "01": 19.0,
@@ -1446,25 +1593,29 @@
         "media": 0.13,
         "max": 25.0,
         "min": 0.0,
-        "soma": 421.8
+        "soma": 421.8,
+        "desvio_padrao": 0.89
       },
       "pressao": {
         "media": 1010.53,
         "max": 1026.5,
         "min": 998.5,
-        "soma": 3405497.7
+        "soma": 3405497.7,
+        "desvio_padrao": 5.38
       },
       "radiacao": {
         "media": 1295.2,
         "max": 3912.9,
         "min": 0.0,
-        "soma": 2323592.4
+        "soma": 2323592.4,
+        "desvio_padrao": 1068.24
       },
       "temperatura": {
         "media": 19.92,
         "max": 37.2,
         "min": 4.0,
-        "soma": 67116.2
+        "soma": 67116.2,
+        "desvio_padrao": 5.49
       },
       "extremos": {
         "dia_temp_max": "2021-11-01",
@@ -1476,20 +1627,23 @@
         "media": 15.03,
         "max": 24.5,
         "min": 3.0,
-        "soma": 50622.8
+        "soma": 50622.8,
+        "desvio_padrao": 3.99
       },
       "umidade": {
         "media": 75.51,
         "max": 98.0,
         "min": 15.0,
-        "soma": 254409.0
+        "soma": 254409.0,
+        "desvio_padrao": 15.55
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.45,
         "max": 4.7,
         "min": 0.1,
-        "soma": 4893.4
+        "soma": 4893.4,
+        "desvio_padrao": 0.78
       },
       "precipitacao_mensal": {
         "01": 31.8,
@@ -1515,25 +1669,29 @@
         "media": 0.15,
         "max": 36.8,
         "min": 0.0,
-        "soma": 521.2
+        "soma": 521.2,
+        "desvio_padrao": 1.03
       },
       "pressao": {
         "media": 1009.64,
         "max": 1025.7,
         "min": 991.9,
-        "soma": 3482235.6
+        "soma": 3482235.6,
+        "desvio_padrao": 5.88
       },
       "radiacao": {
         "media": 1179.53,
         "max": 3920.3,
         "min": 0.0,
-        "soma": 2199816.9
+        "soma": 2199816.9,
+        "desvio_padrao": 1068.66
       },
       "temperatura": {
         "media": 19.38,
         "max": 36.5,
         "min": 4.1,
-        "soma": 66824.8
+        "soma": 66824.8,
+        "desvio_padrao": 5.71
       },
       "extremos": {
         "dia_temp_max": "2022-03-02",
@@ -1545,20 +1703,23 @@
         "media": 15.12,
         "max": 24.5,
         "min": -0.1,
-        "soma": 52135.2
+        "soma": 52135.2,
+        "desvio_padrao": 4.73
       },
       "umidade": {
         "media": 78.24,
         "max": 97.0,
         "min": 23.0,
-        "soma": 269852.0
+        "soma": 269852.0,
+        "desvio_padrao": 15.09
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.43,
         "max": 5.8,
         "min": 0.1,
-        "soma": 4924.2
+        "soma": 4924.2,
+        "desvio_padrao": 0.75
       },
       "precipitacao_mensal": {
         "01": 17.6,
@@ -1582,25 +1743,29 @@
         "media": 0.07,
         "max": 3.0,
         "min": 0.0,
-        "soma": 6.8
+        "soma": 6.8,
+        "desvio_padrao": 0.41
       },
       "pressao": {
         "media": 1006.25,
         "max": 1010.7,
         "min": 999.3,
-        "soma": 100624.8
+        "soma": 100624.8,
+        "desvio_padrao": 2.91
       },
       "radiacao": {
         "media": 1139.27,
         "max": 3844.6,
         "min": 0.0,
-        "soma": 113927.0
+        "soma": 113927.0,
+        "desvio_padrao": 1373.32
       },
       "temperatura": {
         "media": 25.19,
         "max": 36.8,
         "min": 17.9,
-        "soma": 2519.3
+        "soma": 2519.3,
+        "desvio_padrao": 4.25
       },
       "extremos": {
         "dia_temp_max": "2022-12-12",
@@ -1612,20 +1777,23 @@
         "media": 20.36,
         "max": 23.1,
         "min": 15.9,
-        "soma": 2035.5
+        "soma": 2035.5,
+        "desvio_padrao": 1.47
       },
       "umidade": {
         "media": 76.5,
         "max": 98.0,
         "min": 37.0,
-        "soma": 7650.0
+        "soma": 7650.0,
+        "desvio_padrao": 15.3
       },
       "dias_secos": 0,
       "vento": {
         "media": 2.6,
         "max": 8.1,
         "min": 0.2,
-        "soma": 259.6
+        "soma": 259.6,
+        "desvio_padrao": 1.74
       },
       "precipitacao_mensal": {
         "08": 2.8,
@@ -1644,25 +1812,29 @@
         "media": 0.23,
         "max": 24.4,
         "min": 0.0,
-        "soma": 801.4
+        "soma": 801.4,
+        "desvio_padrao": 1.17
       },
       "pressao": {
         "media": 1008.96,
         "max": 1023.7,
         "min": 991.2,
-        "soma": 3464759.4
+        "soma": 3464759.4,
+        "desvio_padrao": 4.63
       },
       "radiacao": {
         "media": 1152.79,
         "max": 3995.6,
         "min": 0.0,
-        "soma": 2136110.8
+        "soma": 2136110.8,
+        "desvio_padrao": 1071.86
       },
       "temperatura": {
         "media": 20.81,
         "max": 36.2,
         "min": 7.5,
-        "soma": 71449.8
+        "soma": 71449.8,
+        "desvio_padrao": 4.96
       },
       "extremos": {
         "dia_temp_max": "2023-12-02",
@@ -1674,20 +1846,23 @@
         "media": 16.28,
         "max": 24.1,
         "min": -0.4,
-        "soma": 55916.5
+        "soma": 55916.5,
+        "desvio_padrao": 3.68
       },
       "umidade": {
         "media": 77.37,
         "max": 97.0,
         "min": 23.0,
-        "soma": 265705.0
+        "soma": 265705.0,
+        "desvio_padrao": 15.59
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.45,
         "max": 4.6,
         "min": 0.1,
-        "soma": 4954.6
+        "soma": 4954.6,
+        "desvio_padrao": 0.77
       },
       "precipitacao_mensal": {
         "01": 0.2,
@@ -1711,25 +1886,29 @@
         "media": 0.25,
         "max": 23.0,
         "min": 0.0,
-        "soma": 856.4
+        "soma": 856.4,
+        "desvio_padrao": 1.22
       },
       "pressao": {
         "media": 1014.08,
         "max": 1029.0,
         "min": 995.3,
-        "soma": 3504658.5
+        "soma": 3504658.5,
+        "desvio_padrao": 4.71
       },
       "radiacao": {
         "media": 639.73,
         "max": 4042.0,
         "min": 0.0,
-        "soma": 2210920.3
+        "soma": 2210920.3,
+        "desvio_padrao": 998.32
       },
       "temperatura": {
         "media": 20.34,
         "max": 35.4,
         "min": 6.2,
-        "soma": 70283.0
+        "soma": 70283.0,
+        "desvio_padrao": 4.81
       },
       "extremos": {
         "dia_temp_max": "2023-01-01",
@@ -1741,20 +1920,23 @@
         "media": 16.6,
         "max": 26.0,
         "min": 0.6,
-        "soma": 57371.0
+        "soma": 57371.0,
+        "desvio_padrao": 3.91
       },
       "umidade": {
         "media": 80.52,
         "max": 99.0,
         "min": 28.0,
-        "soma": 278264.0
+        "soma": 278264.0,
+        "desvio_padrao": 13.16
       },
       "dias_secos": 1,
       "vento": {
         "media": 2.44,
         "max": 10.2,
         "min": 0.1,
-        "soma": 8420.4
+        "soma": 8420.4,
+        "desvio_padrao": 1.59
       },
       "precipitacao_mensal": {
         "01": 0.6,
@@ -1780,25 +1962,29 @@
         "media": 0.21,
         "max": 40.0,
         "min": 0.0,
-        "soma": 723.8
+        "soma": 723.8,
+        "desvio_padrao": 1.38
       },
       "pressao": {
         "media": 1009.19,
         "max": 1027.0,
         "min": 990.4,
-        "soma": 3479690.9
+        "soma": 3479690.9,
+        "desvio_padrao": 4.86
       },
       "radiacao": {
         "media": 1107.19,
         "max": 3974.5,
         "min": 0.0,
-        "soma": 2050516.4
+        "soma": 2050516.4,
+        "desvio_padrao": 1056.62
       },
       "temperatura": {
         "media": 20.47,
         "max": 36.7,
         "min": 3.4,
-        "soma": 70563.9
+        "soma": 70563.9,
+        "desvio_padrao": 5.89
       },
       "extremos": {
         "dia_temp_max": "2024-10-02",
@@ -1810,20 +1996,23 @@
         "media": 16.13,
         "max": 24.9,
         "min": -0.7,
-        "soma": 55618.7
+        "soma": 55618.7,
+        "desvio_padrao": 4.97
       },
       "umidade": {
         "media": 77.92,
         "max": 97.0,
         "min": 33.0,
-        "soma": 268657.0
+        "soma": 268657.0,
+        "desvio_padrao": 14.61
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.44,
         "max": 5.7,
         "min": 0.1,
-        "soma": 4971.6
+        "soma": 4971.6,
+        "desvio_padrao": 0.75
       },
       "precipitacao_mensal": {
         "01": 90.2,
@@ -1847,25 +2036,29 @@
         "media": 0.19,
         "max": 26.6,
         "min": 0.0,
-        "soma": 673.2
+        "soma": 673.2,
+        "desvio_padrao": 1.06
       },
       "pressao": {
         "media": 1014.33,
         "max": 1032.3,
         "min": 995.1,
-        "soma": 3505535.2
+        "soma": 3505535.2,
+        "desvio_padrao": 4.97
       },
       "radiacao": {
         "media": 626.53,
         "max": 4158.4,
         "min": 0.0,
-        "soma": 2165287.1
+        "soma": 2165287.1,
+        "desvio_padrao": 996.41
       },
       "temperatura": {
         "media": 20.1,
         "max": 35.6,
         "min": 2.6,
-        "soma": 69462.8
+        "soma": 69462.8,
+        "desvio_padrao": 5.79
       },
       "extremos": {
         "dia_temp_max": "2024-12-02",
@@ -1877,20 +2070,23 @@
         "media": 16.55,
         "max": 25.9,
         "min": 0.0,
-        "soma": 57212.1
+        "soma": 57212.1,
+        "desvio_padrao": 5.03
       },
       "umidade": {
         "media": 81.63,
         "max": 100.0,
         "min": 36.0,
-        "soma": 282118.0
+        "soma": 282118.0,
+        "desvio_padrao": 14.27
       },
       "dias_secos": 0,
       "vento": {
         "media": 2.52,
         "max": 8.8,
         "min": 0.1,
-        "soma": 8717.6
+        "soma": 8717.6,
+        "desvio_padrao": 1.54
       },
       "precipitacao_mensal": {
         "01": 77.6,
@@ -1916,25 +2112,29 @@
         "media": 0.11,
         "max": 11.4,
         "min": 0.0,
-        "soma": 121.2
+        "soma": 121.2,
+        "desvio_padrao": 0.7
       },
       "pressao": {
         "media": 1008.03,
         "max": 1024.6,
         "min": 998.0,
-        "soma": 1160240.6
+        "soma": 1160240.6,
+        "desvio_padrao": 4.79
       },
       "radiacao": {
         "media": 1508.42,
         "max": 3871.1,
         "min": 0.0,
-        "soma": 997066.4
+        "soma": 997066.4,
+        "desvio_padrao": 1162.85
       },
       "temperatura": {
         "media": 24.79,
         "max": 38.9,
         "min": 12.5,
-        "soma": 28528.0
+        "soma": 28528.0,
+        "desvio_padrao": 4.66
       },
       "extremos": {
         "dia_temp_max": "2025-11-02",
@@ -1946,20 +2146,23 @@
         "media": 18.96,
         "max": 25.6,
         "min": 5.9,
-        "soma": 21822.4
+        "soma": 21822.4,
+        "desvio_padrao": 3.14
       },
       "umidade": {
         "media": 72.07,
         "max": 96.0,
         "min": 24.0,
-        "soma": 82947.0
+        "soma": 82947.0,
+        "desvio_padrao": 15.23
       },
       "dias_secos": 1,
       "vento": {
         "media": 1.48,
         "max": 5.4,
         "min": 0.2,
-        "soma": 1613.4
+        "soma": 1613.4,
+        "desvio_padrao": 0.72
       },
       "precipitacao_mensal": {
         "01": 9.4,
@@ -1983,25 +2186,29 @@
         "media": 0.12,
         "max": 13.2,
         "min": 0.0,
-        "soma": 138.6
+        "soma": 138.6,
+        "desvio_padrao": 0.86
       },
       "pressao": {
         "media": 1013.14,
         "max": 1030.0,
         "min": 1002.9,
-        "soma": 1167139.3
+        "soma": 1167139.3,
+        "desvio_padrao": 4.85
       },
       "radiacao": {
         "media": 919.94,
         "max": 4029.4,
         "min": 0.0,
-        "soma": 1059769.1
+        "soma": 1059769.1,
+        "desvio_padrao": 1229.13
       },
       "temperatura": {
         "media": 24.34,
         "max": 38.6,
         "min": 12.0,
-        "soma": 28037.0
+        "soma": 28037.0,
+        "desvio_padrao": 4.36
       },
       "extremos": {
         "dia_temp_max": "2025-11-02",
@@ -2013,20 +2220,23 @@
         "media": 19.51,
         "max": 26.1,
         "min": 5.8,
-        "soma": 22472.8
+        "soma": 22472.8,
+        "desvio_padrao": 3.2
       },
       "umidade": {
         "media": 76.19,
         "max": 100.0,
         "min": 37.0,
-        "soma": 87772.0
+        "soma": 87772.0,
+        "desvio_padrao": 14.86
       },
       "dias_secos": 0,
       "vento": {
         "media": 2.75,
         "max": 8.2,
         "min": 0.1,
-        "soma": 3086.3
+        "soma": 3086.3,
+        "desvio_padrao": 1.57
       },
       "precipitacao_mensal": {
         "01": 0.8,
