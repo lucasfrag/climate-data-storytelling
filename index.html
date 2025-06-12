@@ -76,7 +76,8 @@
     <!--------------------------------------------------------------------------------------------------------------------------->
 
     <!-- Seção Porto Alegre -->
-    <div class="container-fluid reveal-section" id="porto-alegre">
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
+        id="porto-alegre">
         <div class="row">
 
             <!-- Galeria de imagens -->
@@ -141,10 +142,13 @@
                         <p>Escolhemos essa cidade porque ela sintetiza uma realidade comum a muitas outras: um ambiente
                             urbano pressionado por eventos climáticos cada vez mais extremos.</p>
 
+                        <p>Antes de entendermos as mudanças no clima, é fundamental conhecer as fontes dos dados.</p>
+
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button id="explorarEstacoes" class="btn btn-primary rounded-circle shadow"
                                 style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -173,17 +177,13 @@
 
     <!---------------------------------------------------------------------------------------------------->
 
-
-
-
-
     <!-- Seção Estações Meteorológicas -->
-    <div class="container-fluid reveal-section" id="estacoes-meteorologicas">
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
+        id="estacoes-meteorologicas">
         <div class="row">
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar" style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -191,10 +191,8 @@
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <p class="reveal-item">Antes de entendermos as mudanças no clima, é fundamental conhecer as
-                            fontes dos dados. </p>
-
-                        <p class="reveal-item">Desde o ano 2000, a estação A801 coleta dados consistentes. Com o tempo,
+                        <p class="reveal-item">Desde o ano 2000, as estações meteorológicas do INMET coletam dados
+                            climáticos. Com o tempo,
                             outras unidades, como a do Jardim Botânico e Belém Novo, passaram a integrar essa rede,
                             permitindo análises mais detalhadas e comparações entre regiões da cidade.</p>
 
@@ -202,7 +200,31 @@
 
 
 
-                            
+
+
+                            <div id="yearSliderContainer" class="my-3">
+                                <label for="yearSlider" id="yearSliderLabel"
+                                    class="form-label d-flex justify-content-between align-items-center">
+                                    <strong>Ano:</strong>
+                                    <span id="yearLabel">2020</span>
+
+                                    <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
+                                        title="Mostrar evolução das estações"
+                                        class="btn btn-outline-primary btn-sm ms-3" aria-pressed="false"
+                                        style="margin-left: 8px;">▶️ Ver evolução</button>
+                                </label>
+
+                                <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025"
+                                    value="2000" aria-labelledby="yearSliderLabel" />
+
+                                <small class="text-muted mb-3">
+                                    Clique no botão <strong>"Ver evolução"</strong> ou <strong>deslize o controle
+                                        abaixo</strong>
+                                    para ver a evolução das estações.
+                                </small>
+                            </div>
+
+
 
                             <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
                                 <h4>📊 Gráfico de Estações por Ano</h4>
@@ -213,14 +235,16 @@
                                     específico, basta passar o mouse sobre as barras.
                                 </p>
 
-                                <canvas height="80" id="graficoEstacoes" role="img" aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
+                                <canvas height="80" id="graficoEstacoes" role="img"
+                                    aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
                             </div>
 
                         </section>
 
                         <hr>
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button id="explorarTransformacoes" class="btn btn-primary rounded-circle shadow"
                                 style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -242,52 +266,25 @@
                 </div>
             </div>
 
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center grafico-container"
-                style="background-color: #f8f9fa; margin-top: 20px;">
-
-
-                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>🗺️ Mapa de estações no Rio Grande do Sul</h4>
-                    <small class="text-muted mb-3">
-                        Clique no botão <strong>"Ver evolução"</strong> ou <strong>deslize o controle abaixo</strong> para ver a evolução das estações.
-                    </small>
-                    <hr>
-                    
-                    <div id="yearSliderContainer" class="my-3">
-                        <label for="yearSlider" id="yearSliderLabel"
-                            class="form-label d-flex justify-content-between align-items-center">
-                            <strong>Ano:</strong>
-                            <span id="yearLabel">2020</span>
-
-                            <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
-                                title="Mostrar evolução das estações" class="btn btn-outline-primary btn-sm ms-3"
-                                aria-pressed="false" style="margin-left: 8px;">▶️ Ver evolução</button>
-                        </label>
-
-                        <input style="width: 100%;" type="range" id="yearSlider" min="2000" max="2025" value="2000"
-                            aria-labelledby="yearSliderLabel" />
-                    </div>
-
-
-                    <div id="map" style="height: 600px;"></div>
-
-                </div>
+                style="background-color: #f8f9fa;">
+                <div id="map" class="vh-100" style="height: 600px;"></div>
             </div>
         </div>
     </div>
-
+    </div>
 
 
     <!------------------------------------------------------------------------------------------------------------------------------->
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
 
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar" style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -351,7 +348,8 @@
 
                         <hr>
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -359,6 +357,15 @@
                             </button>
                         </div>
 
+                        <script>
+                            document.getElementById('explorarTransformacoes').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector('#transformacoes');
+                                if (target) {
+                                    target.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            });                                   
+                        </script>
 
                     </div>
                 </div>
@@ -557,320 +564,41 @@
 
 
 
-    <!------------------------------------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------->
+    <!-----------------------------  CONTEUDO REMOVIDO TEMPORARIAMENTE ----------------------------------->
+    <!---------------------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------->
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <!-- Seção El Niño -->
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center " id="el-nino">
         <div class="row">
-            <!-- Grafico -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-
 
                 <section class="container my-5">
-
                     <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                        <h4>📊 Gráfico de Temperaturas</h4>
+                        <h4>📊 Gráfico de El Niño</h4>
                         <hr>
-                        <p class="text-muted mb-2 ">O gráfico abaixo mostra a evolução das temperaturas em Porto Alegre
-                            entre 2000 e 2025.
+                        <p class="text-muted mb-2 ">
+                            O gráfico abaixo mostra a soma acumulada de chuva ao longo dos meses do ano em Porto Alegre.
                             <br><br>
-                            Passe o mouse sobre os pontos para ver os valores e as datas dos
-                            extremos.
+                            Passe o mouse sobre os pontos para ver os valores e as datas dos extremos.
                         </p>
                         <br>
+                        <center>
+                            <label for="ano-comparacao" class="form-label mb-0">📅 Escolha um ano para comparar:</label><br><br>
+                            <select id="ano-comparacao" class="form-control form-select" style="max-width: 100px;"></select>
+                        </center>
 
-                        <canvas id="grafico-maio-2024" height="180"></canvas>
+                        <br>
+
+                        <canvas id="grafico-el-nino" height="220"></canvas>
                     </div>
-
                 </section>
 
-                <script>
-                    fetch('./data/resumo_visualizacoes.json')
-                        .then(res => res.json())
-                        .then(dados => {
-                            const estacoes = Object.keys(dados["2024"]);
-                            const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
-                            const precPorMes = dados["2024"][poaKey].precipitacao_mensal;
 
-                            const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-                            const valores = Array(12).fill(0).map((_, i) => precPorMes[String(i + 1).padStart(2, "0")] || 0);
-
-                            const cores = valores.map((v, i) => i === 4 ? "#e74c3c" : "#3498db"); // maio = índice 4
-
-                            const ctx = document.getElementById("grafico-maio-2024").getContext("2d");
-                            new Chart(ctx, {
-                                type: "bar",
-                                data: {
-                                    labels: meses,
-                                    datasets: [{
-                                        label: "Precipitação (mm)",
-                                        data: valores,
-                                        backgroundColor: cores
-                                    }]
-                                },
-                                options: {
-                                    responsive: true,
-                                    plugins: {
-                                        tooltip: {
-                                            callbacks: {
-                                                label: ctx => `Precipitação: ${ctx.formattedValue} mm`
-                                            }
-                                        },
-                                        legend: {
-                                            display: false
-                                        },
-                                        title: {
-                                            display: false
-                                        }
-                                    },
-                                    scales: {
-                                        y: {
-                                            beginAtZero: true,
-                                            title: {
-                                                display: true,
-                                                text: "Milímetros de Chuva"
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-                        });
-                </script>
-
-
-
-            </div>
-
-            <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
-                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        O Evento de Maio de 2024
-                    </h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-
-
-                        <p>Maio de 2024 foi o ponto de ruptura. A água não teve por onde escoar, o solo estava saturado,
-                            e a chuva não cessava. Em poucos dias, bairros inteiros ficaram debaixo d’água.</p>
-
-                        <p>Mas por que essa enchente foi tão severa? Foi apenas uma chuva intensa ou havia algo maior em
-                            curso?</p>
-
-                        <p>Para compreender, é necessário revisar os padrões de chuva e os meses que antecederam o
-                            evento.</p>
-
-                        <p>O gráfico abaixo mostra a precipitação acumulada mês a mês desde 2000.</p>
-
-                        <hr>
-
-                        <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
-                                aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-    <!---------------------------------------------------------------------------------------------------->
-
-
-    <div class="container-fluid reveal-section" id="transformacoes">
-        <div class="row">
-            <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
-                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
-                <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
-                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        Abril: O Mês das Chuvas
-                    </h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-
-                        <p>Abril é, historicamente, um mês chuvoso em Porto Alegre - os dados desde 2000 confirmam essa
-                            tendência.</p>
-
-                        <p>No entanto, em 2024, a quantidade e a persistência das chuvas ultrapassaram a média
-                            histórica, contribuindo para o agravamento da situação.</p>
-
-
-                        <hr>
-
-                        <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
-                                aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-
-
-                <section class="container my-5" id="evento-maio-2024">
-                    <h2 class="mb-4">Padrão de Precipitação Mensal</h2>
-                    <p>Use o seletor abaixo para visualizar os dados de chuva mês a mês para um determinado ano.</p>
-
-                    <div class="row mb-3">
-                        <div class="col-md-4">
-                            <label for="seletorAno" class="form-label">Selecione o ano:</label>
-                            <select id="seletorAno" class="form-select"></select>
-                        </div>
-                    </div>
-
-                    <canvas id="graficoPrecipitacaoMensal" height="220"></canvas>
-                </section>
-
-                <style>
-                    #evento-maio-2024 select {
-                        max-width: 200px;
-                    }
-                </style>
-
-
-                <!-- Chart.js CDN -->
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-                <script>
-                    fetch('./data/resumo_visualizacoes.json')
-                        .then(res => res.json())
-                        .then(dados => {
-                            const seletor = document.getElementById("seletorAno");
-                            const ctx = document.getElementById("graficoPrecipitacaoMensal").getContext("2d");
-
-                            const nomesMeses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-
-                            // Dados fixos de 2024
-                            const dados2024 = (() => {
-                                const chave = Object.keys(dados["2024"]).find(e => e.includes("PORTO_ALEGRE"));
-                                const mensal = dados["2024"][chave]?.precipitacao_mensal || {};
-                                return Array.from({ length: 12 }, (_, i) => mensal[String(i + 1).padStart(2, "0")] || 0);
-                            })();
-
-                            // Anos disponíveis exceto 2024
-                            const anosDisponiveis = Object.keys(dados)
-                                .filter(ano => {
-                                    const anoNum = parseInt(ano);
-                                    return anoNum < 2024 && Object.keys(dados[ano]).some(k => k.includes("PORTO_ALEGRE"));
-                                })
-                                .sort();
-
-                            // Preencher seletor
-                            anosDisponiveis.forEach(ano => {
-                                const opt = document.createElement("option");
-                                opt.value = ano;
-                                opt.textContent = ano;
-                                seletor.appendChild(opt);
-                            });
-
-                            let chart;
-
-                            function atualizarGrafico(anoSelecionado) {
-                                const estacaoKey = Object.keys(dados[anoSelecionado]).find(k => k.includes("PORTO_ALEGRE"));
-                                const mensal = dados[anoSelecionado][estacaoKey]?.precipitacao_mensal || {};
-
-                                const valoresSelecionado = Array.from({ length: 12 }, (_, i) => {
-                                    const chave = (i + 1).toString().padStart(2, "0");
-                                    return mensal[chave] || 0;
-                                });
-
-                                if (chart) chart.destroy();
-
-                                chart = new Chart(ctx, {
-                                    type: "bar",
-                                    data: {
-                                        labels: nomesMeses,
-                                        datasets: [
-                                            {
-                                                label: `${anoSelecionado}`,
-                                                data: valoresSelecionado,
-                                                backgroundColor: "rgba(52, 152, 219, 0.8)"
-                                            },
-                                            {
-                                                label: "2024",
-                                                data: dados2024,
-                                                backgroundColor: "rgba(231, 76, 60, 0.8)"
-                                            }
-                                        ]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        scales: {
-                                            y: {
-                                                beginAtZero: true,
-                                                title: { display: true, text: "Precipitação (mm)" }
-                                            }
-                                        },
-                                        plugins: {
-                                            tooltip: {
-                                                mode: "index",
-                                                intersect: false,
-                                                callbacks: {
-                                                    label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm`
-                                                }
-                                            },
-                                            legend: {
-                                                position: "top"
-                                            }
-                                        }
-                                    }
-                                });
-                            }
-
-                            const anoInicial = anosDisponiveis.at(-1);
-                            atualizarGrafico(anoInicial);
-                            seletor.value = anoInicial;
-
-                            seletor.addEventListener("change", () => {
-                                atualizarGrafico(seletor.value);
-                            });
-                        });
-                </script>
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <!---------------------------------------------------------------------------------------------------->
-
-    <!---------------------------------------------------------------------------------------------------->
-
-
-    <div class="container-fluid reveal-section" id="transformacoes">
-        <div class="row">
-            <!-- Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
-                style="background-color: #f8f9fa;">
-
-
-
-                <div class="my-4">
-                    <label for="ano-comparacao" class="form-label">Escolha um ano para comparar com 2024:</label>
-                    <select id="ano-comparacao" class="form-select" style="max-width: 300px;"></select>
-                </div>
-
-                <canvas id="grafico-el-nino" height="220"></canvas>
 
                 <script>
                     fetch("./data/resumo_visualizacoes.json")
@@ -913,6 +641,9 @@
                                 opt.textContent = ano;
                                 select.appendChild(opt);
                             });
+                            // Adiciona classes Bootstrap para estilizar o select
+                            select.classList.add("form-select", "form-select-lg", "mb-3", "shadow-sm");
+                            
 
                             const ctx = document.getElementById("grafico-el-nino").getContext("2d");
 
@@ -979,14 +710,14 @@
                             const anoInicial = anosValidos[anosValidos.length - 1];
                             select.value = anoInicial;
                             chart.data.datasets[1].data = acumuladosAnos[anoInicial];
-                            chart.data.datasets[1].label = `📅 Ano: ${anoInicial}`;
+                            chart.data.datasets[1].label = `Chuva acumulada em ${anoInicial}`;
                             chart.update();
 
                             // === Atualiza comparação ao trocar o ano ===
                             select.addEventListener("change", () => {
                                 const anoSelecionado = select.value;
                                 chart.data.datasets[1].data = acumuladosAnos[anoSelecionado];
-                                chart.data.datasets[1].label = `📅 Ano: ${anoSelecionado}`;
+                                chart.data.datasets[1].label = `Chuva acumulada em ${anoSelecionado}`;
                                 chart.update();
                             });
                         });
@@ -1003,32 +734,51 @@
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <p>O El Niño é um fenômeno climático caracterizado pelo aquecimento anômalo das águas do
-                            Pacífico, influenciando o
-                            clima global.</p>
-
-                        <p>No Sul do Brasil, ele costuma trazer mais calor e umidade, o que aumenta a <strong>frequência
-                                e
-                                intensidade das chuvas.</strong></p>
+                        <p>
+                            O El Niño é um fenômeno climático que ocorre quando as águas do Oceano Pacífico Equatorial ficam mais quentes do que o normal. Esse aquecimento altera os padrões de circulação dos ventos e das chuvas em várias partes do mundo, inclusive no Brasil.
+                        </p>
 
                         <p>
-                            O gráfico ao lado mostra a soma acumulada de chuva ao longo dos meses do ano.
-                            Compare como 2024 se comportou em relação aos anos anteriores.
+                            Durante anos de El Niño, como foi 2024, a quantidade de chuva foi muito maior do que em anos anteriores. Isso significa que, ao longo do ano, a cidade recebeu volumes de chuva acima da média, especialmente em alguns meses.
                         </p>
+
+                        <p>
+                            O gráfico ao lado mostra a <b>chuva acumulada mês a mês</b> em Porto Alegre.
+                        </p>
+                        
+                        <div class="alert alert-info mt-4" role="alert">
+                            <strong>Dica:</strong> Selecione outros anos e compare como 2024 se comportou em relação aos anos anteriores.
+                        </div>
+                     
+
+                        <p>
+                            O El Niño costuma trazer <b>chuvas mais intensas e frequentes</b> para o Sul do Brasil. Em Porto Alegre, isso pode resultar em enchentes, alagamentos e outros impactos urbanos. O aumento das chuvas pressiona a infraestrutura da cidade, afeta o trânsito, a saúde pública e pode causar prejuízos para a população.
+                        </p>
+                      
 
 
 
 
                         <hr>
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
-                                aria-label="Ir para a próxima seção">
+                                aria-label="Ir para a próxima seção" id="explorarLaNina">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
 
+                        <script>
+                            document.getElementById('explorarLaNina').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector('#la-nina');
+                                if (target) {
+                                    target.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            });                                   
+                        </script>
 
 
                     </div>
@@ -1044,7 +794,7 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center " id="la-nina">
         <div class="row">
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
@@ -1087,7 +837,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1098,7 +849,7 @@
                 </div>
             </div>
 
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1207,9 +958,9 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100" id="transformacoes">
         <div class="row">
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1347,7 +1098,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1366,7 +1118,7 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100" id="transformacoes">
         <div class="row">
 
             <!-- Storytelling -->
@@ -1388,7 +1140,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1399,7 +1152,7 @@
 
                 </div>
             </div>
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1423,10 +1176,10 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100" id="transformacoes">
         <div class="row">
 
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1463,7 +1216,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1485,7 +1239,7 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100" id="transformacoes">
         <div class="row">
 
 
@@ -1505,7 +1259,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1519,7 +1274,7 @@
                 </div>
             </div>
 
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1544,9 +1299,9 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section" id="transformacoes">
+    <div class="container-fluid reveal-section vh-100" id="transformacoes">
         <div class="row">
-            <!-- Mapa -->
+            <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
 
@@ -1580,7 +1335,8 @@
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</small>
                             <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
@@ -1657,7 +1413,7 @@
 
         <!-- Mapa e gráfico de estações -->
         <script>
-            const map = L.map('map').setView([-30.5, -53], 6.0);
+            const map = L.map('map').setView([-30.5, -53], 7.0);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
