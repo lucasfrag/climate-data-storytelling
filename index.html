@@ -351,7 +351,6 @@
 
 
                 <section id="transformacoes-climaticas" class="container my-5">
-                    <!-- Explique o que é esse gráfico -->
 
                     <canvas id="grafico-transformacoes" height="220"></canvas>
                 </section>
@@ -683,7 +682,130 @@
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+
+                <section class="container my-5" id="evento-maio-2024">
+                    <h2 class="mb-4">Padrão de Precipitação Mensal</h2>
+                    <p>Use o seletor abaixo para visualizar os dados de chuva mês a mês para um determinado ano.</p>
+
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="seletorAno" class="form-label">Selecione o ano:</label>
+                            <select id="seletorAno" class="form-select"></select>
+                        </div>
+                    </div>
+
+                    <canvas id="graficoPrecipitacaoMensal" height="150"></canvas>
+                </section>
+
+                <style>
+                    #evento-maio-2024 select {
+                        max-width: 200px;
+                    }
+                </style>
+
+
+                <!-- Chart.js CDN -->
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    fetch('./data/resumo_visualizacoes.json')
+                        .then(res => res.json())
+                        .then(dados => {
+                            const seletor = document.getElementById("seletorAno");
+                            const ctx = document.getElementById("graficoPrecipitacaoMensal").getContext("2d");
+
+                            const nomesMeses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+
+                            // Dados fixos de 2024
+                            const dados2024 = (() => {
+                                const chave = Object.keys(dados["2024"]).find(e => e.includes("PORTO_ALEGRE"));
+                                const mensal = dados["2024"][chave]?.precipitacao_mensal || {};
+                                return Array.from({ length: 12 }, (_, i) => mensal[String(i + 1).padStart(2, "0")] || 0);
+                            })();
+
+                            // Anos disponíveis exceto 2024
+                            const anosDisponiveis = Object.keys(dados)
+                                .filter(ano => {
+                                    const anoNum = parseInt(ano);
+                                    return anoNum < 2024 && Object.keys(dados[ano]).some(k => k.includes("PORTO_ALEGRE"));
+                                })
+                                .sort();
+
+                            // Preencher seletor
+                            anosDisponiveis.forEach(ano => {
+                                const opt = document.createElement("option");
+                                opt.value = ano;
+                                opt.textContent = ano;
+                                seletor.appendChild(opt);
+                            });
+
+                            let chart;
+
+                            function atualizarGrafico(anoSelecionado) {
+                                const estacaoKey = Object.keys(dados[anoSelecionado]).find(k => k.includes("PORTO_ALEGRE"));
+                                const mensal = dados[anoSelecionado][estacaoKey]?.precipitacao_mensal || {};
+
+                                const valoresSelecionado = Array.from({ length: 12 }, (_, i) => {
+                                    const chave = (i + 1).toString().padStart(2, "0");
+                                    return mensal[chave] || 0;
+                                });
+
+                                if (chart) chart.destroy();
+
+                                chart = new Chart(ctx, {
+                                    type: "bar",
+                                    data: {
+                                        labels: nomesMeses,
+                                        datasets: [
+                                            {
+                                                label: `${anoSelecionado}`,
+                                                data: valoresSelecionado,
+                                                backgroundColor: "rgba(52, 152, 219, 0.8)"
+                                            },
+                                            {
+                                                label: "2024",
+                                                data: dados2024,
+                                                backgroundColor: "rgba(231, 76, 60, 0.8)"
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true,
+                                                title: { display: true, text: "Precipitação (mm)" }
+                                            }
+                                        },
+                                        plugins: {
+                                            tooltip: {
+                                                mode: "index",
+                                                intersect: false,
+                                                callbacks: {
+                                                    label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm`
+                                                }
+                                            },
+                                            legend: {
+                                                position: "top"
+                                            }
+                                        }
+                                    }
+                                });
+                            }
+
+                            const anoInicial = anosDisponiveis.at(-1);
+                            atualizarGrafico(anoInicial);
+                            seletor.value = anoInicial;
+
+                            seletor.addEventListener("change", () => {
+                                atualizarGrafico(seletor.value);
+                            });
+                        });
+                </script>
+
+
             </div>
 
         </div>
@@ -699,7 +821,135 @@
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+
+
+                <div class="my-4">
+                    <label for="ano-comparacao" class="form-label">Escolha um ano para comparar com 2024:</label>
+                    <select id="ano-comparacao" class="form-select" style="max-width: 300px;"></select>
+                </div>
+
+                <canvas id="grafico-el-nino" height="150"></canvas>
+
+                <script>
+                    fetch("./data/resumo_visualizacoes.json")
+                        .then((res) => res.json())
+                        .then((dados) => {
+                            const estacoesPorAno = Object.entries(dados);
+                            const acumulados2024 = new Array(12).fill(0);
+                            const acumuladosAnos = {};
+                            const mesesLabels = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+                            const anosValidos = [];
+
+                            for (const [ano, estacoes] of estacoesPorAno) {
+                                const chave = Object.keys(estacoes).find(e => e.includes("PORTO_ALEGRE"));
+                                if (!chave || !estacoes[chave].precipitacao_mensal) continue;
+
+                                const prec = estacoes[chave].precipitacao_mensal;
+                                const acumulado = [];
+                                let soma = 0;
+
+                                for (let i = 1; i <= 12; i++) {
+                                    const mm = prec[String(i).padStart(2, "0")] || 0;
+                                    soma += mm;
+                                    acumulado.push(soma);
+                                }
+
+                                if (ano === "2024") {
+                                    for (let i = 0; i < 12; i++) acumulados2024[i] = acumulado[i];
+                                } else if (+ano < 2024) {
+                                    acumuladosAnos[ano] = acumulado;
+                                    anosValidos.push(ano);
+                                }
+                            }
+
+                            anosValidos.sort((a, b) => a - b);
+
+                            const select = document.getElementById("ano-comparacao");
+                            anosValidos.forEach((ano) => {
+                                const opt = document.createElement("option");
+                                opt.value = ano;
+                                opt.textContent = ano;
+                                select.appendChild(opt);
+                            });
+
+                            const ctx = document.getElementById("grafico-el-nino").getContext("2d");
+
+                            const chart = new Chart(ctx, {
+                                type: "line",
+                                data: {
+                                    labels: mesesLabels,
+                                    datasets: [
+                                        {
+                                            label: "Chuva acumulada em 2024",
+                                            data: acumulados2024,
+                                            backgroundColor: "rgba(255, 99, 132, 0.2)",
+                                            borderColor: "rgb(255, 99, 132)",
+                                            fill: true,
+                                            tension: 0.4,
+                                            pointRadius: 3
+                                        },
+                                        {
+                                            label: "", // Comparação (será preenchido abaixo)
+                                            data: [],
+                                            backgroundColor: "rgba(54, 162, 235, 0.2)",
+                                            borderColor: "rgb(54, 162, 235)",
+                                            fill: true,
+                                            tension: 0.4,
+                                            pointRadius: 3
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        tooltip: {
+                                            callbacks: {
+                                                label: (ctx) => `${ctx.dataset.label}: ${ctx.formattedValue} mm`
+                                            }
+                                        },
+                                        legend: {
+                                            display: true,
+                                            position: "top",
+                                            labels: {
+                                                usePointStyle: true
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            title: {
+                                                display: true,
+                                                text: "Chuva Acumulada (mm)"
+                                            }
+                                        },
+                                        x: {
+                                            title: {
+                                                display: true,
+                                                text: "Mês"
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+
+                            // === Define valor inicial ===
+                            const anoInicial = anosValidos[anosValidos.length - 1];
+                            select.value = anoInicial;
+                            chart.data.datasets[1].data = acumuladosAnos[anoInicial];
+                            chart.data.datasets[1].label = `📅 Ano: ${anoInicial}`;
+                            chart.update();
+
+                            // === Atualiza comparação ao trocar o ano ===
+                            select.addEventListener("change", () => {
+                                const anoSelecionado = select.value;
+                                chart.data.datasets[1].data = acumuladosAnos[anoSelecionado];
+                                chart.data.datasets[1].label = `📅 Ano: ${anoSelecionado}`;
+                                chart.update();
+                            });
+                        });
+                </script>
             </div>
 
             <!-- Storytelling -->
@@ -716,11 +966,18 @@
                             Pacífico, influenciando o
                             clima global.</p>
 
-                        <p>No Sul do Brasil, ele costuma trazer mais calor e umidade, o que aumenta a frequência e
-                            intensidade das chuvas.</p>
+                        <p>No Sul do Brasil, ele costuma trazer mais calor e umidade, o que aumenta a <strong>frequência
+                                e
+                                intensidade das chuvas.</strong></p>
 
-                        <p>Em 2024, os dados mostraram aumento nas temperaturas, umidade elevada e volumes de
-                            precipitação acima do esperado.</p>
+                        <p>
+                            O gráfico ao lado mostra a soma acumulada de chuva ao longo dos meses do ano.
+                            Compare como 2024 se comportou em relação aos anos anteriores.
+                        </p>
+
+
+
+
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -730,7 +987,6 @@
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
-
 
 
 
@@ -759,11 +1015,32 @@
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
-                        <p>La Niña, por outro lado, provoca o resfriamento das águas do Pacífico. Isso geralmente
-                            resulta em um clima mais seco e frio na região Sul.</p>
 
-                        <p>Durante seus ciclos, observamos redução da umidade, temperaturas mais baixas e menor
-                            incidência de chuvas.</p>
+                        <p>
+                            Enquanto o El Niño aquece as águas do Pacífico e intensifica chuvas em regiões como o Sul do
+                            Brasil, o fenômeno
+                            <strong>La Niña</strong> provoca o efeito oposto. Com o resfriamento anômalo do oceano, as
+                            massas de ar se comportam de forma diferente.
+                        </p>
+
+                        <p>
+                            No Rio Grande do Sul, anos de La Niña costumam ser marcados por períodos mais secos, embora
+                            isso não seja uma regra absoluta.
+                        </p>
+
+                        <p>
+                            Abaixo, você pode visualizar como se comportaram os volumes acumulados de chuva em anos
+                            influenciados por La Niña, comparando com o ano de 2024 — o mais chuvoso da série.
+                        </p>
+
+                        <p>
+                            Explore o gráfico e veja como os efeitos climáticos podem variar de forma significativa
+                            entre os anos.
+                        </p>
+
+                        <div class="alert alert-info mt-4" role="alert">
+      <strong>Dica:</strong> passe o mouse sobre as linhas para ver os valores acumulados mês a mês.
+    </div>
 
                         <div class="end-content w-100 text-center mt-4">
                             <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</p>
@@ -773,10 +1050,6 @@
                                     aria-hidden="true">&#8595;</span>
                             </button>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -784,13 +1057,108 @@
             <!-- Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
                 style="background-color: #f8f9fa;">
-                <div id="map" style="height: 900px;"></div>
+
+                 <canvas id="grafico-la-nina" height="150"></canvas>
             </div>
 
 
         </div>
     </div>
 
+<script>
+fetch('./data/resumo_visualizacoes.json')
+  .then(res => res.json())
+  .then(data => {
+    const anosLaNina = ["2008", "2011", "2016", "2022"];
+    const anoReferencia = "2024";
+    const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+
+    function acumular(mensal) {
+      const acumulado = [];
+      let soma = 0;
+      for (let i = 1; i <= 12; i++) {
+        const valor = mensal[String(i).padStart(2, '0')] || 0;
+        soma += valor;
+        acumulado.push(parseFloat(soma.toFixed(2)));
+      }
+      return acumulado;
+    }
+
+    const datasets = [];
+
+    anosLaNina.forEach(ano => {
+      const estacoes = Object.keys(data[ano] || {});
+      const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
+      if (poaKey && data[ano][poaKey].precipitacao_mensal) {
+        datasets.push({
+          label: `🌧️ ${ano}`,
+          data: acumular(data[ano][poaKey].precipitacao_mensal),
+          borderColor: "rgba(0, 123, 255, 0.6)",
+          backgroundColor: "rgba(0, 123, 255, 0.1)",
+          fill: true,
+          tension: 0.3
+        });
+      }
+    });
+
+    const estacoes2024 = Object.keys(data[anoReferencia] || {});
+    const poa2024 = estacoes2024.find(e => e.includes("PORTO_ALEGRE"));
+    if (poa2024 && data[anoReferencia][poa2024].precipitacao_mensal) {
+      datasets.push({
+        label: `🔴 ${anoReferencia}`,
+        data: acumular(data[anoReferencia][poa2024].precipitacao_mensal),
+        borderColor: "rgba(220, 53, 69, 1)",
+        backgroundColor: "rgba(220, 53, 69, 0.1)",
+        fill: true,
+        borderWidth: 2,
+        tension: 0.3
+      });
+    }
+
+    new Chart(document.getElementById("grafico-la-nina").getContext("2d"), {
+      type: "line",
+      data: {
+        labels: meses,
+        datasets: datasets
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: "Precipitação Acumulada – La Niña vs. 2024"
+          },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm acumulado até ${ctx.label}`
+            }
+          },
+          legend: {
+            position: "top",
+            labels: {
+              usePointStyle: true
+            }
+          }
+        },
+        scales: {
+          y: {
+            title: {
+              display: true,
+              text: "Precipitação acumulada (mm)"
+            },
+            beginAtZero: true
+          },
+          x: {
+            title: {
+              display: true,
+              text: "Mês"
+            }
+          }
+        }
+      }
+    });
+  });
+</script>
 
     <!---------------------------------------------------------------------------------------------------->
 
