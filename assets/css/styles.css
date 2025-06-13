@@ -8,18 +8,17 @@ button {
     margin: 10px;
 }
 
-.hide-scrollbar {
-    overflow: auto;
+.scroll-content {
+    overflow-y: scroll; 
+    height: 800px;
+    
+    overflow-y: scroll;
     /* or overflow-y: auto for vertical only */
     scrollbar-width: none;
     /* For Firefox */
     -ms-overflow-style: none;
     /* For IE and Edge */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* For Chrome, Safari, and Opera */
+    
 }
 
 
@@ -49,8 +48,7 @@ button {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 30px;
-    ;
+
 }
 
 .slide {

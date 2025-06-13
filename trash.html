@@ -1,0 +1,293 @@
+    <!------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
+        <div class="row">
+            <!-- Grafico -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+
+                <section class="container my-5">
+
+                    <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                        <h4>📊 ...</h4>
+                        <hr>
+                        <p class="text-muted mb-2 ">...
+                        </p>
+                        <br>
+                        <!--<canvas id="grafico-maio-2024" height="180"></canvas>-->
+                    </div>
+
+                </section>
+
+                <!--<script>
+                    fetch('./data/resumo_visualizacoes.json')
+                        .then(res => res.json())
+                        .then(dados => {
+                            const estacoes = Object.keys(dados["2024"]);
+                            const poaKey = estacoes.find(e => e.includes("PORTO_ALEGRE"));
+                            const precPorMes = dados["2024"][poaKey].precipitacao_mensal;
+
+                            const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+                            const valores = Array(12).fill(0).map((_, i) => precPorMes[String(i + 1).padStart(2, "0")] || 0);
+
+                            const cores = valores.map((v, i) => i === 4 ? "#e74c3c" : "#3498db"); // maio = índice 4
+
+                            const ctx = document.getElementById("grafico-maio-2024").getContext("2d");
+                            new Chart(ctx, {
+                                type: "bar",
+                                data: {
+                                    labels: meses,
+                                    datasets: [{
+                                        label: "Precipitação (mm)",
+                                        data: valores,
+                                        backgroundColor: cores
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    plugins: {
+                                        tooltip: {
+                                            callbacks: {
+                                                label: ctx => `Precipitação: ${ctx.formattedValue} mm`
+                                            }
+                                        },
+                                        legend: {
+                                            display: false
+                                        },
+                                        title: {
+                                            display: false
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            title: {
+                                                display: true,
+                                                text: "Milímetros de Chuva"
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                </script>-->
+
+
+
+            </div>
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        O Evento de Maio de 2024
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+
+
+                        <p>Maio de 2024 foi o ponto de ruptura. A água não teve por onde escoar, o solo estava saturado,
+                            e a chuva não cessava. Em poucos dias, bairros inteiros ficaram debaixo d’água.</p>
+
+                        <p>Mas por que essa enchente foi tão severa? Foi apenas uma chuva intensa ou havia algo maior em
+                            curso?</p>
+
+                        <p>Para compreender, é necessário revisar os padrões de chuva e os meses que antecederam o
+                            evento.</p>
+
+                        <p>O gráfico abaixo mostra a precipitação acumulada mês a mês desde 2000.</p>
+
+                        <hr>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</small>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+
+
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
+        <div class="row">
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 hide-scrollbar"
+                style="background-color: #f8f9fa; overflow-y: scroll; height: 900px;">
+                <div class="col-12 d-flex flex-column">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Abril: O Mês das Chuvas
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+
+                        <p>Abril é, historicamente, um mês chuvoso em Porto Alegre - os dados desde 2000 confirmam essa
+                            tendência.</p>
+
+                        <p>No entanto, em 2024, a quantidade e a persistência das chuvas ultrapassaram a média
+                            histórica, contribuindo para o agravamento da situação.</p>
+
+
+                        <hr>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima seção.</small>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                                aria-label="Ir para a próxima seção">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráficos / Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
+                style="background-color: #f8f9fa;">
+
+
+
+                <section class="container my-5" id="evento-maio-2024">
+                    <h2 class="mb-4">Padrão de Precipitação Mensal</h2>
+                    <p>Use o seletor abaixo para visualizar os dados de chuva mês a mês para um determinado ano.</p>
+
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="seletorAno" class="form-label">Selecione o ano:</label>
+                            <select id="seletorAno" class="form-select"></select>
+                        </div>
+                    </div>
+
+                    <canvas id="graficoPrecipitacaoMensal" height="220"></canvas>
+                </section>
+
+                <style>
+                    #evento-maio-2024 select {
+                        max-width: 200px;
+                    }
+                </style>
+
+
+                <!-- Chart.js CDN -->
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    fetch('./data/resumo_visualizacoes.json')
+                        .then(res => res.json())
+                        .then(dados => {
+                            const seletor = document.getElementById("seletorAno");
+                            const ctx = document.getElementById("graficoPrecipitacaoMensal").getContext("2d");
+
+                            const nomesMeses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+
+                            // Dados fixos de 2024
+                            const dados2024 = (() => {
+                                const chave = Object.keys(dados["2024"]).find(e => e.includes("PORTO_ALEGRE"));
+                                const mensal = dados["2024"][chave]?.precipitacao_mensal || {};
+                                return Array.from({ length: 12 }, (_, i) => mensal[String(i + 1).padStart(2, "0")] || 0);
+                            })();
+
+                            // Anos disponíveis exceto 2024
+                            const anosDisponiveis = Object.keys(dados)
+                                .filter(ano => {
+                                    const anoNum = parseInt(ano);
+                                    return anoNum < 2024 && Object.keys(dados[ano]).some(k => k.includes("PORTO_ALEGRE"));
+                                })
+                                .sort();
+
+                            // Preencher seletor
+                            anosDisponiveis.forEach(ano => {
+                                const opt = document.createElement("option");
+                                opt.value = ano;
+                                opt.textContent = ano;
+                                seletor.appendChild(opt);
+                            });
+
+                            let chart;
+
+                            function atualizarGrafico(anoSelecionado) {
+                                const estacaoKey = Object.keys(dados[anoSelecionado]).find(k => k.includes("PORTO_ALEGRE"));
+                                const mensal = dados[anoSelecionado][estacaoKey]?.precipitacao_mensal || {};
+
+                                const valoresSelecionado = Array.from({ length: 12 }, (_, i) => {
+                                    const chave = (i + 1).toString().padStart(2, "0");
+                                    return mensal[chave] || 0;
+                                });
+
+                                if (chart) chart.destroy();
+
+                                chart = new Chart(ctx, {
+                                    type: "bar",
+                                    data: {
+                                        labels: nomesMeses,
+                                        datasets: [
+                                            {
+                                                label: `${anoSelecionado}`,
+                                                data: valoresSelecionado,
+                                                backgroundColor: "rgba(52, 152, 219, 0.8)"
+                                            },
+                                            {
+                                                label: "2024",
+                                                data: dados2024,
+                                                backgroundColor: "rgba(231, 76, 60, 0.8)"
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true,
+                                                title: { display: true, text: "Precipitação (mm)" }
+                                            }
+                                        },
+                                        plugins: {
+                                            tooltip: {
+                                                mode: "index",
+                                                intersect: false,
+                                                callbacks: {
+                                                    label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} mm`
+                                                }
+                                            },
+                                            legend: {
+                                                position: "top"
+                                            }
+                                        }
+                                    }
+                                });
+                            }
+
+                            const anoInicial = anosDisponiveis.at(-1);
+                            atualizarGrafico(anoInicial);
+                            seletor.value = anoInicial;
+
+                            seletor.addEventListener("change", () => {
+                                atualizarGrafico(seletor.value);
+                            });
+                        });
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->

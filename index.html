@@ -118,8 +118,7 @@
 
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -150,7 +149,7 @@
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
                             <button id="explorarEstacoes" class="btn btn-primary rounded-circle shadow"
-                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
+                                style="width: 55px; height: 55px;" aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
                             </button>
@@ -183,7 +182,7 @@
         <div class="row">
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa;">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light mb-3 text-h1 reveal-item sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -218,49 +217,50 @@
                                     value="2000" aria-labelledby="yearSliderLabel" />
 
 
-                        <div class="alert alert-info mt-4" role="alert">
-                            <strong>Dica:</strong> Clique no botão <strong>"Ver evolução"</strong> ou <strong>deslize o controle
-                                        abaixo</strong>
-                                    para ver a evolução das estações.
-                        </div>
+                                <div class="alert alert-info mt-4" role="alert">
+                                    <strong>Dica:</strong> Clique no botão <strong>"Ver evolução"</strong> ou
+                                    <strong>deslize o controle
+                                        abaixo</strong>.
+                                </div>
 
-        
+
                             </div>
 
 
 
-                            
-                            
-                                <p class="mb-2 text-muted">O gráfico abaixo mostra a evolução do número de estações
-                                    meteorológicas ao longo dos anos no estado do Rio Grande do Sul.
-                                    <br><br>Para visualizar as informações de um ano
-                                    específico, basta passar o mouse sobre as barras.
-                                </p>
-
-                                <canvas height="80" id="graficoEstacoes" role="img"
-                                    aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
-
-                        <hr>
-                        <div class="end-content w-100 text-center mt-4">
-                            <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
-                                seção.</small>
-                            <button id="explorarTransformacoes" class="btn btn-primary rounded-circle shadow"
-                                style="width: 56px; height: 56px;" aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
 
 
-                            <script>
-                                document.getElementById('explorarTransformacoes').addEventListener('click', function (e) {
-                                    e.preventDefault();
-                                    const target = document.querySelector('#transformacoes');
-                                    if (target) {
-                                        target.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                });                                   
-                            </script>
-                        </div>
+                            <p class="mb-2 text-muted">O gráfico abaixo mostra a evolução do número de estações
+                                meteorológicas ao longo dos anos no estado do Rio Grande do Sul.
+                                <br><br>Para visualizar as informações de um ano
+                                específico, basta passar o mouse sobre as barras.
+                            </p>
+
+                            <canvas height="80" id="graficoEstacoes" role="img"
+                                aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
+
+                            <hr>
+                            <div class="end-content w-100 text-center">
+                                <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                    seção.</small>
+                                <button id="explorarTransformacoes" class="btn btn-primary rounded-circle shadow"
+                                    style="width: 55px; height: 55px;" aria-label="Ir para a próxima seção">
+                                    <span style="font-size: 1.7em; vertical-align: middle;"
+                                        aria-hidden="true">&#8595;</span>
+                                </button>
+                                <br>
+
+
+                                <script>
+                                    document.getElementById('explorarTransformacoes').addEventListener('click', function (e) {
+                                        e.preventDefault();
+                                        const target = document.querySelector('#transformacoes');
+                                        if (target) {
+                                            target.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    });                                   
+                                </script>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -281,9 +281,8 @@
         id="transformacoes">
         <div class="row">
 
-
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6" style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 scroll-content" style="background-color: #f8f9fa;">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -293,16 +292,14 @@
                     <div class="col-12 justify-content-center align-items-center">
 
 
-                        <p>Ao longo dos últimos 25 anos, Porto Alegre passou por mudanças climáticas visíveis nos dados.
+                        <p>Ao longo dos últimos anos, Porto Alegre passou por mudanças climáticas visíveis nos dados.
                             As médias mensais de temperatura indicam uma tendência de elevação, especialmente no verão.
                             Os extremos — dias excessivamente quentes ou frios — tornaram-se mais frequentes.</p>
 
                         <p>Comparando os primeiros anos da série com os mais recentes, notamos mudanças que, embora
-                            sutis no curto prazo, revelam uma transformação progressiva.</p>
+                            sutis no curto prazo, revelam uma transformação progressiva. </p>
 
-
-
-                        <p> Cada linha representa:</p>
+                        <p>No gráfico ao lado podemos ver:</p>
 
                         <p>
                             <strong>🔥 Temperatura Máxima:</strong> O dia mais quente
@@ -322,34 +319,30 @@
 
                         <div class="alert alert-info mt-4" role="alert">
                             <strong>Dica:</strong> Use o controle deslizante abaixo para selecionar um <strong>intervalo
-                                de anos</strong>. O
-                            gráfico será atualizado automaticamente de acordo com a seleção.
+                                de anos</strong>. O gráfico será atualizado automaticamente de acordo com a seleção.
                         </div>
 
                         <br>
 
-                        <div class="mb-4">
-                            <center>
-                                <label for="range-anos" class="form-label">
-                                    Selecione um intervalo de anos:
-                                </label>
-                                <div style="width: 80%;">
 
-                                    <div id="range-anos"></div>
-                                    <div class="d-flex justify-content-between">
-                                        <span id="range-inicio"></span>
-                                        <span id="range-fim"></span>
-                                    </div>
+                        <center>
+                            <small>Selecione um intervalo de anos:</small>
 
+                            <div style="width: 80%;">
+                                <div id="range-anos"></div>
+                                <div class="d-flex justify-content-between">
+                                    <span id="range-inicio"></span>
+                                    <span id="range-fim"></span>
                                 </div>
-                            </center>
-                        </div>
+                            </div>
+                        </center>
+
 
                         <hr>
-                        <div class="end-content w-100 text-center mt-4">
+                        <div class="end-content w-100 text-center">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -370,6 +363,8 @@
                 </div>
             </div>
 
+
+
             <!-- Gráfico -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center grafico-container"
                 style="background-color: #f8f9fa;">
@@ -386,8 +381,11 @@
                             extremos.
                         </p>
                         <br>
-
-                        <canvas id="grafico-transformacoes" height="180"></canvas>
+                        <center>
+                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>                            
+                        </center>
+                        
+                        <canvas id="grafico-transformacoes" height="170"></canvas>
                     </div>
                 </section>
 
@@ -587,16 +585,23 @@
                         </p>
                         <br>
                         <center>
-                            <label for="ano-comparacao" class="form-label mb-0">📅 Escolha um ano para comparar:</label><br><br>
-                            <select id="ano-comparacao" class="form-control form-select" style="max-width: 100px;"></select>
+                            <label for="ano-comparacao" class="form-label mb-0">📅 Escolha um ano para
+                                comparar e adicione ao gráfico:</label><br><br>
+                            <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap"
+                                style="margin-bottom: 1rem;">
+                                <select id="ano-comparacao" class="form-control form-select py-2"
+                                    style="max-width: 100px; height: 38px;"></select>
+                                <button id="btn-adicionar-ano" class="btn btn-primary btn-sm shadow-sm py-2"
+                                    style="height: 38px;">
+                                    <i class="fas fa-plus me-1"></i> Adicionar
+                                </button>
+                            </div>
+                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>                            
                         </center>
-
-                        <br>
 
                         <canvas id="grafico-el-nino" height="220"></canvas>
                     </div>
                 </section>
-
 
 
                 <script>
@@ -608,6 +613,7 @@
                             const acumuladosAnos = {};
                             const mesesLabels = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
                             const anosValidos = [];
+                            const anosAdicionados = new Set(["2024"]); // 2024 já incluso
 
                             for (const [ano, estacoes] of estacoesPorAno) {
                                 const chave = Object.keys(estacoes).find(e => e.includes("PORTO_ALEGRE"));
@@ -634,15 +640,23 @@
                             anosValidos.sort((a, b) => a - b);
 
                             const select = document.getElementById("ano-comparacao");
-                            anosValidos.forEach((ano) => {
-                                const opt = document.createElement("option");
-                                opt.value = ano;
-                                opt.textContent = ano;
-                                select.appendChild(opt);
-                            });
-                            // Adiciona classes Bootstrap para estilizar o select
-                            select.classList.add("form-select", "form-select-lg", "mb-3", "shadow-sm");
-                            
+                            const btnAdicionar = document.getElementById("btn-adicionar-ano");
+
+                            // Atualiza o <select> com os anos válidos, mantendo ordem e seleções
+                            function atualizarSelectOrdenado() {
+                                const ordenados = [...anosValidos].sort((a, b) => a - b);
+                                const anosSelecionados = new Set(Array.from(select.selectedOptions).map(opt => opt.value));
+                                select.innerHTML = "";
+                                for (const ano of ordenados) {
+                                    const opt = document.createElement("option");
+                                    opt.value = ano;
+                                    opt.textContent = ano;
+                                    if (ano === "2023" || anosSelecionados.has(ano)) opt.selected = true;
+                                    select.prepend(opt);
+                                }
+                            }
+
+                            atualizarSelectOrdenado(); // popula o select pela primeira vez
 
                             const ctx = document.getElementById("grafico-el-nino").getContext("2d");
 
@@ -652,19 +666,10 @@
                                     labels: mesesLabels,
                                     datasets: [
                                         {
-                                            label: "Chuva acumulada em 2024",
+                                            label: "2024",
                                             data: acumulados2024,
                                             backgroundColor: "rgba(255, 99, 132, 0.2)",
                                             borderColor: "rgb(255, 99, 132)",
-                                            fill: true,
-                                            tension: 0.4,
-                                            pointRadius: 3
-                                        },
-                                        {
-                                            label: "", // Comparação (será preenchido abaixo)
-                                            data: [],
-                                            backgroundColor: "rgba(54, 162, 235, 0.2)",
-                                            borderColor: "rgb(54, 162, 235)",
                                             fill: true,
                                             tension: 0.4,
                                             pointRadius: 3
@@ -682,50 +687,64 @@
                                         legend: {
                                             display: true,
                                             position: "top",
-                                            labels: {
-                                                usePointStyle: true
-                                            }
+                                            labels: { usePointStyle: true }
                                         }
                                     },
                                     scales: {
                                         y: {
                                             beginAtZero: true,
-                                            title: {
-                                                display: true,
-                                                text: "Chuva Acumulada (mm)"
-                                            }
+                                            title: { display: true, text: "Chuva Acumulada (mm)" }
                                         },
                                         x: {
-                                            title: {
-                                                display: true,
-                                                text: "Mês"
-                                            }
+                                            title: { display: true, text: "Mês" }
                                         }
                                     }
                                 }
                             });
 
-                            // === Define valor inicial ===
-                            const anoInicial = anosValidos[anosValidos.length - 1];
-                            select.value = anoInicial;
-                            chart.data.datasets[1].data = acumuladosAnos[anoInicial];
-                            chart.data.datasets[1].label = `Chuva acumulada em ${anoInicial}`;
-                            chart.update();
-
-                            // === Atualiza comparação ao trocar o ano ===
-                            select.addEventListener("change", () => {
-                                const anoSelecionado = select.value;
-                                chart.data.datasets[1].data = acumuladosAnos[anoSelecionado];
-                                chart.data.datasets[1].label = `Chuva acumulada em ${anoSelecionado}`;
+                            // Adiciona 2023 automaticamente se existir
+                            if (acumuladosAnos["2023"]) {
+                                chart.data.datasets.push({
+                                    label: "2023",
+                                    data: acumuladosAnos["2023"],
+                                    backgroundColor: "rgba(54, 162, 235, 0.2)",
+                                    borderColor: "rgb(54, 162, 235)",
+                                    fill: true,
+                                    tension: 0.4,
+                                    pointRadius: 3
+                                });
                                 chart.update();
+                                anosAdicionados.add("2023");
+                            }
+
+                            // Botão de adicionar anos selecionados ao gráfico
+                            btnAdicionar.addEventListener("click", () => {
+                                const selecionados = Array.from(select.selectedOptions).map(opt => opt.value);
+                                for (const ano of selecionados) {
+                                    if (anosAdicionados.has(ano)) continue;
+
+                                    chart.data.datasets.push({
+                                        label: `${ano}`,
+                                        data: acumuladosAnos[ano],
+                                        backgroundColor: "rgba(54, 162, 235, 0.2)",
+                                        borderColor: "rgb(54, 162, 235)",
+                                        fill: true,
+                                        tension: 0.4,
+                                        pointRadius: 3
+                                    });
+                                    anosAdicionados.add(ano);
+                                }
+                                chart.update();
+                                atualizarSelectOrdenado(); // reorganiza o select após adicionar
                             });
                         });
                 </script>
+
+
             </div>
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -734,35 +753,48 @@
 
                     <div class="col-12 justify-content-center align-items-center">
                         <p>
-                            O El Niño é um fenômeno climático que ocorre quando as águas do Oceano Pacífico Equatorial ficam mais quentes do que o normal. Esse aquecimento altera os padrões de circulação dos ventos e das chuvas em várias partes do mundo, inclusive no Brasil.
+                            O El Niño é um fenômeno climático que ocorre quando as águas do Oceano Pacífico Equatorial
+                            ficam mais quentes do que o normal. Esse aquecimento altera os padrões de circulação dos
+                            ventos e das chuvas em várias partes do mundo, inclusive no Brasil.
                         </p>
 
                         <p>
-                            Durante anos de El Niño, como foi 2024, a quantidade de chuva foi muito maior do que em anos anteriores. Isso significa que, ao longo do ano, a cidade recebeu volumes de chuva acima da média, especialmente em alguns meses.
+                            No Brasil, o El Niño pode causar diferentes impactos, como:
+                        </p>
+                        <p>
+                            <b>🌵 Seca no Norte e Nordeste:</b>
+                            O El Niño tende a levar a menos chuvas nessas regiões, aumentando o risco de secas e
+                            incêndios florestais.
+                        </p>
+                        <p>
+                            <b>🌧️ Aumento de chuvas no Sul:</b>
+                            Por outro lado, a Região Sul tende a experimentar chuvas mais intensas e frequentes durante
+                            um El Niño.
+
+                        </p>
+
+                        <p>
+                            Durante anos de El Niño, como foi 2024, a quantidade de chuva foi muito maior do que em anos
+                            anteriores. Isso significa que, ao longo do ano, a cidade recebeu volumes de chuva acima da
+                            média, especialmente em alguns meses.
                         </p>
 
                         <p>
                             O gráfico ao lado mostra a <b>chuva acumulada mês a mês</b> em Porto Alegre.
                         </p>
-                        
+
                         <div class="alert alert-info mt-4" role="alert">
-                            <strong>Dica:</strong> Selecione outros anos e compare como 2024 se comportou em relação aos anos anteriores.
+                            <strong>Dica:</strong> Selecione outros anos e compare como 2024 se comportou em relação aos
+                            anos anteriores.
                         </div>
-                     
 
-                        <p>
-                            O El Niño costuma trazer <b>chuvas mais intensas e frequentes</b> para o Sul do Brasil. Em Porto Alegre, isso pode resultar em enchentes, alagamentos e outros impactos urbanos. O aumento das chuvas pressiona a infraestrutura da cidade, afeta o trânsito, a saúde pública e pode causar prejuízos para a população.
-                        </p>
-                      
-
-
-
+                        <p><!-- Finalizar conectando essa seção com a próxima --></p>
 
                         <hr>
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção" id="explorarLaNina">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -791,13 +823,12 @@
 
 
     <!---------------------------------------------------------------------------------------------------->
-
+    <!-- Seção La Niña -->
 
     <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center " id="la-nina">
         <div class="row">
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa;">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa;">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -838,7 +869,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -863,7 +894,7 @@
         fetch('./data/resumo_visualizacoes.json')
             .then(res => res.json())
             .then(data => {
-                const anosLaNina = ["2008", "2011", "2016", "2020"];
+                const anosLaNina = ["2000", "2008", "2011", "2014", "2017", "2020"];
                 const anoReferencia = "2024";
                 const meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
@@ -957,7 +988,8 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="transformacoes">
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
             <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
@@ -1077,8 +1109,7 @@
 
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -1099,7 +1130,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -1117,12 +1148,12 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="transformacoes">
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -1141,7 +1172,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -1175,7 +1206,8 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="transformacoes">
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
 
             <!-- Gráficos / Mapa -->
@@ -1199,8 +1231,7 @@
 
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -1217,7 +1248,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -1238,13 +1269,13 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="transformacoes">
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
 
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -1260,7 +1291,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
@@ -1298,7 +1329,8 @@
     <!---------------------------------------------------------------------------------------------------->
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="transformacoes">
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
+        id="transformacoes">
         <div class="row">
             <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center"
@@ -1319,8 +1351,7 @@
             </div>
 
             <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 "
-                style="background-color: #f8f9fa; ">
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
                     <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
@@ -1336,7 +1367,7 @@
                         <div class="end-content w-100 text-center mt-4">
                             <small class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
                                 seção.</small>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 56px; height: 56px;"
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
                                 aria-label="Ir para a próxima seção">
                                 <span style="font-size: 1.7em; vertical-align: middle;"
                                     aria-hidden="true">&#8595;</span>
