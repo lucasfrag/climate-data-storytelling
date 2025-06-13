@@ -382,9 +382,9 @@
                         </p>
                         <br>
                         <center>
-                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>                            
+                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
                         </center>
-                        
+
                         <canvas id="grafico-transformacoes" height="170"></canvas>
                     </div>
                 </section>
@@ -587,16 +587,20 @@
                         <center>
                             <label for="ano-comparacao" class="form-label mb-0">📅 Escolha um ano para
                                 comparar e adicione ao gráfico:</label><br><br>
-                            <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap"
-                                style="margin-bottom: 1rem;">
-                                <select id="ano-comparacao" class="form-control form-select py-2"
-                                    style="max-width: 100px; height: 38px;"></select>
-                                <button id="btn-adicionar-ano" class="btn btn-primary btn-sm shadow-sm py-2"
-                                    style="height: 38px;">
+
+                            <div class="d-flex align-items-center justify-content-center flex-nowrap mb-3" style="gap: 0.2rem; margin-bottom: 1rem;">
+                                <div style="width: 120px;">
+                                    <select id="ano-comparacao" class="form-control form-select py-2" style="max-width: 100px; height: 38px;"></select>
+                                </div>
+                                <button id="btn-adicionar-ano" class="btn btn-primary" style="height: 38px;">
                                     <i class="fas fa-plus me-1"></i> Adicionar
                                 </button>
+                                <button id="btn-limpar" class="btn btn-outline-secondary" style="height: 38px;">
+                                    Limpar
+                                </button>    
                             </div>
-                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>                            
+                            
+                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
                         </center>
 
                         <canvas id="grafico-el-nino" height="220"></canvas>
@@ -736,6 +740,21 @@
                                 }
                                 chart.update();
                                 atualizarSelectOrdenado(); // reorganiza o select após adicionar
+                            });
+
+                            const btnLimpar = document.getElementById("btn-limpar");
+
+                            btnLimpar.addEventListener("click", () => {
+                                // Mantém apenas o dataset de 2024
+                                chart.data.datasets = chart.data.datasets.filter(ds => ds.label === "2024");
+                                chart.update();
+
+                                // Limpa todos os anos adicionados, exceto 2024
+                                anosAdicionados.clear();
+                                anosAdicionados.add("2024");
+
+                                // Restaura o select com apenas 2023 selecionado
+                                atualizarSelectOrdenado();
                             });
                         });
                 </script>
