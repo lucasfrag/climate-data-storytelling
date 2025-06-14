@@ -20,6 +20,48 @@
 </head>
 
 <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="row w-100 align-items-center">
+                <!-- Esquerda: Logo -->
+                <div class="col-2 d-flex align-items-center">
+                    <a class="navbar-brand fw-bold text-primary" href="#" style="font-size:1.3rem;">
+                        <i class="fas fa-globe-americas me-2"></i>
+                        Climate Data
+                    </a>
+                </div>
+                <!-- Meio: Navegação -->
+                <div class="col-8">
+                    <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Início</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Direita: Ações -->
+                <div class="col-2 d-flex justify-content-end align-items-center gap-2">
+                    <a href="./artigo.html" class="btn btn-outline-primary" title="Ler o artigo completo">
+                        <i class="fas fa-book-open me-1"></i> Artigo
+                    </a>
+                    <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank" rel="noopener" class="btn btn-outline-dark" title="Ver no GitHub">
+                        <i class="fab fa-github me-1"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center justify-content-center text-center vh-100"
         style="min-height: 100vh; width: 100%; padding: 0; background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%); color: #fff;">
@@ -209,7 +251,7 @@
 
                                     <button id="playBtn" type="button" aria-label="Mostrar evolução das estações"
                                         title="Mostrar evolução das estações"
-                                        class="btn btn-outline-primary btn-sm ms-3" aria-pressed="false"
+                                        class="btn btn-outline-primary ms-3" aria-pressed="false"
                                         style="margin-left: 8px;">▶️ Ver evolução</button>
                                 </label>
 
@@ -236,7 +278,7 @@
                                 específico, basta passar o mouse sobre as barras.
                             </p>
 
-                            <canvas height="80" id="graficoEstacoes" role="img"
+                            <canvas height="120" id="graficoEstacoes" role="img"
                                 aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
 
                             <hr>
@@ -1342,12 +1384,29 @@
     </div>
 
 
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center ">
+        <div class="col-12 text-center mt-5">
+            <h2 class="fw-bold mb-3" style="font-size:2.2rem;">🚀 Pronto para ir além? 🌎</h2>
+            <p class="lead mb-4" style="font-size:1.3rem;">
+                Você já viu como o clima está mudando em Porto Alegre.<br>
+                Que tal explorar <strong>a fundo</strong> os dados, comparar anos, descobrir padrões e interagir com
+                gráficos exclusivos?
+            </p>
 
+            <a href="dashboard.html" class="btn  btn-primary px-5 py-3 shadow" style="font-size:1.3rem;">
+                <i class="fas fa-chart-line me-2"></i> Explorar o Dashboard <i class="fas fa-arrow-right ms-2"></i>
+            </a>            
+            
+            <br><br>
+            <p class="mb-4" style="font-size:1.1rem;">
+                Clique no botão acima e mergulhe em uma experiência interativa no nosso <b>Dashboard de Dados
+                    Climáticos</b>!<br>
+                <span class="text-primary fw-semibold">Descubra tendências, faça suas próprias análises e compartilhe
+                    descobertas.</span>
+            </p>
 
-
-
-
-
+        </div>
+    </div>
 
 
 

@@ -13,13 +13,20 @@
     canvas {
       height: 480px !important;
     }
+    .dashboard-subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
   </style>
 </head>
 <body class="bg-light">
   <div class="container py-4">
     <h1 class="mb-4 text-center">🌤️ Dashboard de Dados Climáticos</h1>
-
+    <div class="dashboard-subtitle text-center">Visualize e explore dados de temperatura, umidade, precipitação, radiação e vento.</div>
     <div class="row mb-4">
+      <label for="arquivoSelect" class="form-label">Selecione o arquivo de dados:</label>
       <div class="col-md-8">
         <select id="arquivoSelect" class="form-select">
           <option>Carregando arquivos...</option>
