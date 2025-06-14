@@ -1,33 +1,29 @@
 {
   "2000": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.17,
         "max": 26.2,
         "min": 0.0,
-        "soma": 401.8,
-        "desvio_padrao": 1.11
+        "soma": 401.8
       },
       "pressao": {
         "media": 1008.22,
         "max": 1026.8,
         "min": 994.8,
-        "soma": 2398544.4,
-        "desvio_padrao": 5.08
+        "soma": 2398544.4
       },
       "radiacao": {
         "media": 1410.37,
         "max": 3959.0,
         "min": 0.0,
-        "soma": 1995670.0,
-        "desvio_padrao": 1174.65
+        "soma": 1995670.0
       },
       "temperatura": {
         "media": 20.86,
         "max": 35.5,
         "min": 7.1,
-        "soma": 49618.3,
-        "desvio_padrao": 4.79
+        "soma": 49618.3
       },
       "extremos": {
         "dia_temp_max": "2000-11-23",
@@ -39,23 +35,20 @@
         "media": 15.46,
         "max": 23.4,
         "min": -0.4,
-        "soma": 36783.2,
-        "desvio_padrao": 4.13
+        "soma": 36783.2
       },
       "umidade": {
         "media": 73.49,
         "max": 97.0,
         "min": 24.0,
-        "soma": 174832.0,
-        "desvio_padrao": 16.63
+        "soma": 174832.0
       },
       "dias_secos": 5,
       "vento": {
         "media": 2.09,
         "max": 8.0,
         "min": 0.0,
-        "soma": 4967.3,
-        "desvio_padrao": 1.28
+        "soma": 4967.3
       },
       "precipitacao_mensal": {
         "09": 51.8,
@@ -64,38 +57,41 @@
         "12": 73.6
       },
       "chuva_consecutiva": 4,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "09": 182401.0,
+        "10": 464510.0,
+        "11": 646816.0,
+        "12": 701943.0
+      },
+      "radiacao_anual": 1995670.0
     }
   },
   "2001": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.15,
         "max": 27.6,
         "min": 0.0,
-        "soma": 447.6,
-        "desvio_padrao": 1.0
+        "soma": 447.6
       },
       "pressao": {
         "media": 1009.56,
         "max": 1023.5,
         "min": 995.3,
-        "soma": 3042809.3,
-        "desvio_padrao": 5.41
+        "soma": 3042809.3
       },
       "radiacao": {
         "media": 1163.11,
         "max": 3824.0,
         "min": 0.0,
-        "soma": 1866792.0,
-        "desvio_padrao": 1012.45
+        "soma": 1866792.0
       },
       "temperatura": {
         "media": 21.32,
         "max": 35.4,
         "min": 5.9,
-        "soma": 64414.3,
-        "desvio_padrao": 4.87
+        "soma": 64414.3
       },
       "extremos": {
         "dia_temp_max": "2001-05-01",
@@ -107,23 +103,20 @@
         "media": 16.68,
         "max": 24.3,
         "min": 3.3,
-        "soma": 50416.9,
-        "desvio_padrao": 3.68
+        "soma": 50416.9
       },
       "umidade": {
         "media": 76.54,
         "max": 96.0,
         "min": 28.0,
-        "soma": 231304.0,
-        "desvio_padrao": 14.26
+        "soma": 231304.0
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.81,
         "max": 13.3,
         "min": 0.0,
-        "soma": 5459.0,
-        "desvio_padrao": 1.33
+        "soma": 5459.0
       },
       "precipitacao_mensal": {
         "01": 16.6,
@@ -140,38 +133,49 @@
         "12": 18.8
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 177119.0,
+        "02": 189528.0,
+        "03": 159189.0,
+        "04": 144982.0,
+        "05": 138471.0,
+        "06": 181436.0,
+        "07": 139341.0,
+        "08": 126253.0,
+        "09": 143116.0,
+        "10": 136313.0,
+        "11": 175252.0,
+        "12": 155792.0
+      },
+      "radiacao_anual": 1866792.0
     }
   },
   "2002": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.18,
         "max": 22.8,
         "min": 0.0,
-        "soma": 553.2,
-        "desvio_padrao": 1.0
+        "soma": 553.2
       },
       "pressao": {
         "media": 1010.0,
         "max": 1024.5,
         "min": 996.3,
-        "soma": 3088577.7,
-        "desvio_padrao": 5.24
+        "soma": 3088577.7
       },
       "radiacao": {
         "media": 1140.56,
         "max": 3865.0,
         "min": 0.0,
-        "soma": 1934389.0,
-        "desvio_padrao": 1035.04
+        "soma": 1934389.0
       },
       "temperatura": {
         "media": 20.02,
         "max": 37.3,
         "min": 4.8,
-        "soma": 61407.4,
-        "desvio_padrao": 5.76
+        "soma": 61407.4
       },
       "extremos": {
         "dia_temp_max": "2002-10-03",
@@ -183,23 +187,20 @@
         "media": 15.04,
         "max": 23.8,
         "min": 0.7,
-        "soma": 46158.7,
-        "desvio_padrao": 4.81
+        "soma": 46158.7
       },
       "umidade": {
         "media": 74.92,
         "max": 96.0,
         "min": 26.0,
-        "soma": 229868.0,
-        "desvio_padrao": 15.1
+        "soma": 229868.0
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.77,
         "max": 7.4,
         "min": 0.0,
-        "soma": 5439.0,
-        "desvio_padrao": 1.19
+        "soma": 5439.0
       },
       "precipitacao_mensal": {
         "01": 90.2,
@@ -216,38 +217,49 @@
         "12": 16.4
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 157982.0,
+        "02": 171785.0,
+        "03": 191446.0,
+        "04": 168805.0,
+        "05": 145961.0,
+        "06": 142329.0,
+        "07": 150462.0,
+        "08": 161448.0,
+        "09": 186845.0,
+        "10": 173467.0,
+        "11": 141787.0,
+        "12": 142072.0
+      },
+      "radiacao_anual": 1934389.0
     }
   },
   "2003": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.19,
         "max": 31.2,
         "min": 0.0,
-        "soma": 551.4,
-        "desvio_padrao": 1.24
+        "soma": 551.4
       },
       "pressao": {
         "media": 1009.83,
         "max": 1028.1,
         "min": 992.9,
-        "soma": 2901233.3,
-        "desvio_padrao": 6.11
+        "soma": 2901233.3
       },
       "radiacao": {
         "media": 1254.06,
         "max": 3951.0,
         "min": 0.0,
-        "soma": 1957584.0,
-        "desvio_padrao": 1100.07
+        "soma": 1957584.0
       },
       "temperatura": {
         "media": 19.75,
         "max": 37.5,
         "min": 3.3,
-        "soma": 56851.7,
-        "desvio_padrao": 6.11
+        "soma": 56851.7
       },
       "extremos": {
         "dia_temp_max": "2003-01-02",
@@ -259,23 +271,20 @@
         "media": 14.34,
         "max": 24.3,
         "min": -2.3,
-        "soma": 41278.8,
-        "desvio_padrao": 5.51
+        "soma": 41278.8
       },
       "umidade": {
         "media": 73.15,
         "max": 96.0,
         "min": 23.0,
-        "soma": 210531.0,
-        "desvio_padrao": 16.23
+        "soma": 210531.0
       },
       "dias_secos": 8,
       "vento": {
         "media": 1.72,
         "max": 9.5,
         "min": 0.0,
-        "soma": 4941.1,
-        "desvio_padrao": 1.17
+        "soma": 4941.1
       },
       "precipitacao_mensal": {
         "01": 111.0,
@@ -292,38 +301,49 @@
         "12": 17.2
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 165918.0,
+        "02": 197944.0,
+        "03": 143411.0,
+        "04": 140928.0,
+        "05": 146142.0,
+        "06": 153139.0,
+        "07": 175192.0,
+        "08": 170736.0,
+        "09": 139447.0,
+        "10": 181860.0,
+        "11": 166716.0,
+        "12": 176151.0
+      },
+      "radiacao_anual": 1957584.0
     }
   },
   "2004": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.11,
         "max": 20.8,
         "min": 0.0,
-        "soma": 345.8,
-        "desvio_padrao": 0.92
+        "soma": 345.8
       },
       "pressao": {
         "media": 1010.6,
         "max": 1028.0,
         "min": 993.6,
-        "soma": 3144978.6,
-        "desvio_padrao": 5.74
+        "soma": 3144978.6
       },
       "radiacao": {
         "media": 1267.58,
         "max": 3952.0,
         "min": 0.0,
-        "soma": 2162499.0,
-        "desvio_padrao": 1081.03
+        "soma": 2162499.0
       },
       "temperatura": {
         "media": 19.74,
         "max": 36.4,
         "min": 3.0,
-        "soma": 61648.9,
-        "desvio_padrao": 5.88
+        "soma": 61648.9
       },
       "extremos": {
         "dia_temp_max": "2004-06-09",
@@ -335,23 +355,20 @@
         "media": 14.31,
         "max": 22.9,
         "min": -3.3,
-        "soma": 44704.4,
-        "desvio_padrao": 4.58
+        "soma": 44704.4
       },
       "umidade": {
         "media": 73.18,
         "max": 96.0,
         "min": 19.0,
-        "soma": 228528.0,
-        "desvio_padrao": 16.23
+        "soma": 228528.0
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.7,
         "max": 6.1,
         "min": 0.0,
-        "soma": 5312.6,
-        "desvio_padrao": 1.17
+        "soma": 5312.6
       },
       "precipitacao_mensal": {
         "01": 24.4,
@@ -368,38 +385,49 @@
         "12": 19.8
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 199745.0,
+        "02": 186180.0,
+        "03": 178319.0,
+        "04": 174428.0,
+        "05": 171888.0,
+        "06": 200139.0,
+        "07": 187023.0,
+        "08": 193772.0,
+        "09": 166227.0,
+        "10": 173759.0,
+        "11": 161434.0,
+        "12": 169585.0
+      },
+      "radiacao_anual": 2162499.0
     }
   },
   "2005": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.16,
         "max": 27.6,
         "min": 0.0,
-        "soma": 524.6,
-        "desvio_padrao": 0.94
+        "soma": 524.6
       },
       "pressao": {
         "media": 1011.69,
         "max": 1032.0,
         "min": 995.8,
-        "soma": 3228299.1,
-        "desvio_padrao": 6.04
+        "soma": 3228299.1
       },
       "radiacao": {
         "media": 1189.09,
         "max": 3948.0,
         "min": 0.0,
-        "soma": 2074968.0,
-        "desvio_padrao": 1084.6
+        "soma": 2074968.0
       },
       "temperatura": {
         "media": 20.3,
         "max": 39.0,
         "min": 5.5,
-        "soma": 64870.2,
-        "desvio_padrao": 5.65
+        "soma": 64870.2
       },
       "extremos": {
         "dia_temp_max": "2005-09-01",
@@ -411,23 +439,20 @@
         "media": 14.58,
         "max": 23.5,
         "min": 1.2,
-        "soma": 46571.4,
-        "desvio_padrao": 4.08
+        "soma": 46571.4
       },
       "umidade": {
         "media": 72.16,
         "max": 95.0,
         "min": 23.0,
-        "soma": 230552.0,
-        "desvio_padrao": 16.67
+        "soma": 230552.0
       },
       "dias_secos": 8,
       "vento": {
         "media": 1.67,
         "max": 6.9,
         "min": 0.0,
-        "soma": 5325.9,
-        "desvio_padrao": 1.17
+        "soma": 5325.9
       },
       "precipitacao_mensal": {
         "01": 65.6,
@@ -444,38 +469,49 @@
         "12": 15.6
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 149498.0,
+        "02": 196972.0,
+        "03": 168933.0,
+        "04": 175403.0,
+        "05": 166048.0,
+        "06": 192112.0,
+        "07": 160738.0,
+        "08": 174621.0,
+        "09": 154937.0,
+        "10": 172408.0,
+        "11": 191247.0,
+        "12": 172051.0
+      },
+      "radiacao_anual": 2074968.0
     }
   },
   "2006": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.07,
         "max": 31.2,
         "min": 0.0,
-        "soma": 241.0,
-        "desvio_padrao": 0.81
+        "soma": 241.0
       },
       "pressao": {
         "media": 1009.71,
         "max": 1025.8,
         "min": 994.3,
-        "soma": 3255308.1,
-        "desvio_padrao": 5.34
+        "soma": 3255308.1
       },
       "radiacao": {
         "media": 1298.11,
         "max": 3859.0,
         "min": 0.0,
-        "soma": 2267800.6,
-        "desvio_padrao": 1063.92
+        "soma": 2267800.6
       },
       "temperatura": {
         "media": 20.2,
         "max": 38.1,
         "min": 3.3,
-        "soma": 65138.7,
-        "desvio_padrao": 5.74
+        "soma": 65138.7
       },
       "extremos": {
         "dia_temp_max": "2006-08-01",
@@ -487,23 +523,20 @@
         "media": 14.71,
         "max": 24.2,
         "min": -3.2,
-        "soma": 47413.4,
-        "desvio_padrao": 4.59
+        "soma": 47413.4
       },
       "umidade": {
         "media": 72.56,
         "max": 96.0,
         "min": 23.0,
-        "soma": 233873.0,
-        "desvio_padrao": 14.48
+        "soma": 233873.0
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.61,
         "max": 7.4,
         "min": 0.0,
-        "soma": 5178.4,
-        "desvio_padrao": 1.11
+        "soma": 5178.4
       },
       "precipitacao_mensal": {
         "01": 0.8,
@@ -520,38 +553,49 @@
         "12": 1.2
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 171534.6,
+        "02": 176811.1,
+        "03": 185519.9,
+        "04": 183828.0,
+        "05": 165730.0,
+        "06": 154771.0,
+        "07": 212676.0,
+        "08": 216701.0,
+        "09": 198197.0,
+        "10": 215599.0,
+        "11": 179829.0,
+        "12": 206604.0
+      },
+      "radiacao_anual": 2267800.6
     }
   },
   "2007": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.16,
         "max": 21.2,
         "min": 0.0,
-        "soma": 551.8,
-        "desvio_padrao": 0.94
+        "soma": 551.8
       },
       "pressao": {
         "media": 1009.65,
         "max": 1024.8,
         "min": 990.1,
-        "soma": 3467147.9,
-        "desvio_padrao": 5.42
+        "soma": 3467147.9
       },
       "radiacao": {
         "media": 1167.44,
         "max": 3840.0,
         "min": 0.0,
-        "soma": 2187782.8,
-        "desvio_padrao": 1067.43
+        "soma": 2187782.8
       },
       "temperatura": {
         "media": 20.24,
         "max": 35.7,
         "min": 1.5,
-        "soma": 69517.2,
-        "desvio_padrao": 6.03
+        "soma": 69517.2
       },
       "extremos": {
         "dia_temp_max": "2007-10-01",
@@ -563,23 +607,20 @@
         "media": 14.97,
         "max": 23.8,
         "min": -1.3,
-        "soma": 51413.1,
-        "desvio_padrao": 4.89
+        "soma": 51413.1
       },
       "umidade": {
         "media": 74.02,
         "max": 96.0,
         "min": 22.0,
-        "soma": 254195.0,
-        "desvio_padrao": 16.22
+        "soma": 254195.0
       },
       "dias_secos": 6,
       "vento": {
         "media": 1.66,
         "max": 5.8,
         "min": 0.0,
-        "soma": 5701.9,
-        "desvio_padrao": 1.03
+        "soma": 5701.9
       },
       "precipitacao_mensal": {
         "01": 55.0,
@@ -596,38 +637,49 @@
         "12": 18.0
       },
       "chuva_consecutiva": 5,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 193911.7,
+        "02": 182142.7,
+        "03": 180153.8,
+        "04": 188513.4,
+        "05": 181961.1,
+        "06": 179784.0,
+        "07": 182207.8,
+        "08": 201114.8,
+        "09": 178942.4,
+        "10": 153001.6,
+        "11": 181265.9,
+        "12": 184783.6
+      },
+      "radiacao_anual": 2187782.8
     }
   },
   "2008": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.21,
         "max": 22.2,
         "min": 0.0,
-        "soma": 722.0,
-        "desvio_padrao": 1.11
+        "soma": 722.0
       },
       "pressao": {
         "media": 1009.3,
         "max": 1026.1,
         "min": 994.4,
-        "soma": 3474003.8,
-        "desvio_padrao": 5.47
+        "soma": 3474003.8
       },
       "radiacao": {
         "media": 1222.35,
         "max": 3956.7,
         "min": 0.0,
-        "soma": 2249130.9,
-        "desvio_padrao": 1073.99
+        "soma": 2249130.9
       },
       "temperatura": {
         "media": 19.24,
         "max": 37.1,
         "min": 4.3,
-        "soma": 66225.4,
-        "desvio_padrao": 5.67
+        "soma": 66225.4
       },
       "extremos": {
         "dia_temp_max": "2008-10-01",
@@ -639,23 +691,20 @@
         "media": 14.25,
         "max": 22.3,
         "min": 1.7,
-        "soma": 49041.4,
-        "desvio_padrao": 4.17
+        "soma": 49041.4
       },
       "umidade": {
         "media": 75.07,
         "max": 95.0,
         "min": 24.0,
-        "soma": 258406.0,
-        "desvio_padrao": 15.88
+        "soma": 258406.0
       },
       "dias_secos": 9,
       "vento": {
         "media": 1.58,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5439.5,
-        "desvio_padrao": 1.06
+        "soma": 5439.5
       },
       "precipitacao_mensal": {
         "01": 31.2,
@@ -672,38 +721,49 @@
         "12": 37.2
       },
       "chuva_consecutiva": 5,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 186213.0,
+        "02": 153305.1,
+        "03": 175031.5,
+        "04": 187675.9,
+        "05": 197297.7,
+        "06": 216121.6,
+        "07": 226582.5,
+        "08": 218705.8,
+        "09": 200303.2,
+        "10": 177431.4,
+        "11": 136166.7,
+        "12": 174296.5
+      },
+      "radiacao_anual": 2249130.9
     }
   },
   "2009": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.28,
         "max": 22.6,
         "min": 0.0,
-        "soma": 954.0,
-        "desvio_padrao": 1.27
+        "soma": 954.0
       },
       "pressao": {
         "media": 1008.98,
         "max": 1024.9,
         "min": 993.6,
-        "soma": 3466856.0,
-        "desvio_padrao": 4.97
+        "soma": 3466856.0
       },
       "radiacao": {
         "media": 1095.42,
         "max": 3866.3,
         "min": 0.0,
-        "soma": 2016671.3,
-        "desvio_padrao": 1013.61
+        "soma": 2016671.3
       },
       "temperatura": {
         "media": 18.98,
         "max": 35.0,
         "min": 4.0,
-        "soma": 65208.9,
-        "desvio_padrao": 5.54
+        "soma": 65208.9
       },
       "extremos": {
         "dia_temp_max": "2009-02-11",
@@ -715,23 +775,20 @@
         "media": 14.47,
         "max": 24.4,
         "min": 1.9,
-        "soma": 49679.8,
-        "desvio_padrao": 4.56
+        "soma": 49679.8
       },
       "umidade": {
         "media": 76.89,
         "max": 96.0,
         "min": 25.0,
-        "soma": 264042.0,
-        "desvio_padrao": 14.6
+        "soma": 264042.0
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.55,
         "max": 8.9,
         "min": 0.0,
-        "soma": 5334.2,
-        "desvio_padrao": 1.02
+        "soma": 5334.2
       },
       "precipitacao_mensal": {
         "01": 17.2,
@@ -748,38 +805,49 @@
         "12": 89.2
       },
       "chuva_consecutiva": 4,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 163973.9,
+        "02": 137610.5,
+        "03": 167033.2,
+        "04": 213788.0,
+        "05": 181353.5,
+        "06": 183007.8,
+        "07": 153457.3,
+        "08": 159776.8,
+        "09": 174434.1,
+        "10": 168692.7,
+        "11": 141708.2,
+        "12": 171835.3
+      },
+      "radiacao_anual": 2016671.3
     }
   },
   "2010": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.15,
         "max": 16.6,
         "min": 0.0,
-        "soma": 508.2,
-        "desvio_padrao": 0.9
+        "soma": 508.2
       },
       "pressao": {
         "media": 1010.37,
         "max": 1027.8,
         "min": 992.7,
-        "soma": 3483758.1,
-        "desvio_padrao": 6.81
+        "soma": 3483758.1
       },
       "radiacao": {
         "media": 1230.72,
         "max": 3987.1,
         "min": 0.0,
-        "soma": 2269445.4,
-        "desvio_padrao": 1091.8
+        "soma": 2269445.4
       },
       "temperatura": {
         "media": 19.63,
         "max": 38.2,
         "min": 3.0,
-        "soma": 67684.6,
-        "desvio_padrao": 6.04
+        "soma": 67684.6
       },
       "extremos": {
         "dia_temp_max": "2010-03-02",
@@ -791,23 +859,20 @@
         "media": 14.53,
         "max": 26.3,
         "min": 0.3,
-        "soma": 50100.9,
-        "desvio_padrao": 4.91
+        "soma": 50100.9
       },
       "umidade": {
         "media": 74.54,
         "max": 96.0,
         "min": 22.0,
-        "soma": 257027.0,
-        "desvio_padrao": 15.6
+        "soma": 257027.0
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.41,
         "max": 7.4,
         "min": 0.0,
-        "soma": 4867.8,
-        "desvio_padrao": 0.94
+        "soma": 4867.8
       },
       "precipitacao_mensal": {
         "01": 1.0,
@@ -824,38 +889,49 @@
         "12": 62.0
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 224870.5,
+        "02": 210507.6,
+        "03": 206036.4,
+        "04": 144004.8,
+        "05": 179528.3,
+        "06": 214394.2,
+        "07": 170314.3,
+        "08": 160767.6,
+        "09": 183135.3,
+        "10": 218522.1,
+        "11": 192301.1,
+        "12": 165063.2
+      },
+      "radiacao_anual": 2269445.4
     }
   },
   "2011": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.13,
         "max": 28.4,
         "min": 0.0,
-        "soma": 438.8,
-        "desvio_padrao": 0.95
+        "soma": 438.8
       },
       "pressao": {
         "media": 1009.27,
         "max": 1025.3,
         "min": 996.4,
-        "soma": 3482994.0,
-        "desvio_padrao": 5.15
+        "soma": 3482994.0
       },
       "radiacao": {
         "media": 1281.55,
         "max": 3999.9,
         "min": 0.1,
-        "soma": 2364460.7,
-        "desvio_padrao": 1084.05
+        "soma": 2364460.7
       },
       "temperatura": {
         "media": 18.78,
         "max": 36.0,
         "min": 2.0,
-        "soma": 64812.1,
-        "desvio_padrao": 6.23
+        "soma": 64812.1
       },
       "extremos": {
         "dia_temp_max": "2011-08-01",
@@ -867,23 +943,20 @@
         "media": 13.97,
         "max": 24.8,
         "min": -0.7,
-        "soma": 48224.1,
-        "desvio_padrao": 5.31
+        "soma": 48224.1
       },
       "umidade": {
         "media": 75.54,
         "max": 97.0,
         "min": 29.0,
-        "soma": 260694.0,
-        "desvio_padrao": 15.11
+        "soma": 260694.0
       },
       "dias_secos": 1,
       "vento": {
         "media": 1.52,
         "max": 6.9,
         "min": 0.0,
-        "soma": 5253.9,
-        "desvio_padrao": 1.06
+        "soma": 5253.9
       },
       "precipitacao_mensal": {
         "01": 52.6,
@@ -900,38 +973,49 @@
         "12": 21.4
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 179163.4,
+        "02": 188480.5,
+        "03": 219680.1,
+        "04": 236348.3,
+        "05": 205733.0,
+        "06": 230060.6,
+        "07": 204547.3,
+        "08": 163728.6,
+        "09": 163367.3,
+        "10": 176162.1,
+        "11": 196075.3,
+        "12": 201114.2
+      },
+      "radiacao_anual": 2364460.7
     }
   },
   "2012": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.13,
         "max": 18.4,
         "min": 0.0,
-        "soma": 436.8,
-        "desvio_padrao": 0.79
+        "soma": 436.8
       },
       "pressao": {
         "media": 1009.13,
         "max": 1025.1,
         "min": 991.1,
-        "soma": 3486559.1,
-        "desvio_padrao": 5.13
+        "soma": 3486559.1
       },
       "radiacao": {
         "media": 1272.41,
         "max": 3913.3,
         "min": 0.0,
-        "soma": 2351417.6,
-        "desvio_padrao": 1087.67
+        "soma": 2351417.6
       },
       "temperatura": {
         "media": 20.78,
         "max": 36.7,
         "min": 1.1,
-        "soma": 71804.3,
-        "desvio_padrao": 6.22
+        "soma": 71804.3
       },
       "extremos": {
         "dia_temp_max": "2012-10-12",
@@ -943,23 +1027,20 @@
         "media": 15.49,
         "max": 24.0,
         "min": -3.4,
-        "soma": 53512.7,
-        "desvio_padrao": 4.79
+        "soma": 53512.7
       },
       "umidade": {
         "media": 74.08,
         "max": 96.0,
         "min": 19.0,
-        "soma": 255951.0,
-        "desvio_padrao": 16.41
+        "soma": 255951.0
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.34,
         "max": 5.7,
         "min": 0.0,
-        "soma": 4629.7,
-        "desvio_padrao": 0.93
+        "soma": 4629.7
       },
       "precipitacao_mensal": {
         "01": 60.6,
@@ -976,38 +1057,49 @@
         "12": 57.2
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 176979.8,
+        "02": 221042.8,
+        "03": 215006.0,
+        "04": 197861.2,
+        "05": 184348.7,
+        "06": 214797.3,
+        "07": 196871.0,
+        "08": 213325.4,
+        "09": 192578.6,
+        "10": 178302.2,
+        "11": 193166.4,
+        "12": 167138.2
+      },
+      "radiacao_anual": 2351417.6
     }
   },
   "2013": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.18,
         "max": 27.2,
         "min": 0.0,
-        "soma": 600.8,
-        "desvio_padrao": 1.29
+        "soma": 600.8
       },
       "pressao": {
         "media": 1009.71,
         "max": 1024.1,
         "min": 993.7,
-        "soma": 3411810.8,
-        "desvio_padrao": 5.08
+        "soma": 3411810.8
       },
       "radiacao": {
         "media": 1237.24,
         "max": 3972.4,
         "min": 0.0,
-        "soma": 2228274.6,
-        "desvio_padrao": 1061.74
+        "soma": 2228274.6
       },
       "temperatura": {
         "media": 19.7,
         "max": 37.4,
         "min": 5.5,
-        "soma": 66575.7,
-        "desvio_padrao": 5.36
+        "soma": 66575.7
       },
       "extremos": {
         "dia_temp_max": "2013-01-02",
@@ -1019,23 +1111,20 @@
         "media": 14.78,
         "max": 23.9,
         "min": 3.0,
-        "soma": 49936.1,
-        "desvio_padrao": 4.01
+        "soma": 49936.1
       },
       "umidade": {
         "media": 75.2,
         "max": 97.0,
         "min": 28.0,
-        "soma": 254086.0,
-        "desvio_padrao": 15.11
+        "soma": 254086.0
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.4,
         "max": 5.9,
         "min": 0.0,
-        "soma": 4735.5,
-        "desvio_padrao": 0.95
+        "soma": 4735.5
       },
       "precipitacao_mensal": {
         "01": 50.6,
@@ -1052,38 +1141,49 @@
         "12": 23.6
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 180945.2,
+        "02": 174148.2,
+        "03": 158873.8,
+        "04": 200859.8,
+        "05": 190852.1,
+        "06": 228663.5,
+        "07": 225334.9,
+        "08": 199922.5,
+        "09": 174799.3,
+        "10": 159769.4,
+        "11": 162607.2,
+        "12": 171498.7
+      },
+      "radiacao_anual": 2228274.6
     }
   },
   "2014": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.22,
         "max": 20.2,
         "min": 0.0,
-        "soma": 769.2,
-        "desvio_padrao": 1.23
+        "soma": 769.2
       },
       "pressao": {
         "media": 1009.35,
         "max": 1025.5,
         "min": 992.2,
-        "soma": 3487310.6,
-        "desvio_padrao": 5.58
+        "soma": 3487310.6
       },
       "radiacao": {
         "media": 1206.1,
         "max": 3984.6,
         "min": 0.0,
-        "soma": 2218013.2,
-        "desvio_padrao": 1085.46
+        "soma": 2218013.2
       },
       "temperatura": {
         "media": 21.04,
         "max": 40.2,
         "min": 6.3,
-        "soma": 72695.7,
-        "desvio_padrao": 5.81
+        "soma": 72695.7
       },
       "extremos": {
         "dia_temp_max": "2014-06-02",
@@ -1095,23 +1195,20 @@
         "media": 16.46,
         "max": 25.9,
         "min": 2.3,
-        "soma": 56882.8,
-        "desvio_padrao": 4.19
+        "soma": 56882.8
       },
       "umidade": {
         "media": 77.18,
         "max": 97.0,
         "min": 25.0,
-        "soma": 266663.0,
-        "desvio_padrao": 15.38
+        "soma": 266663.0
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.33,
         "max": 5.6,
         "min": 0.0,
-        "soma": 4605.1,
-        "desvio_padrao": 0.94
+        "soma": 4605.1
       },
       "precipitacao_mensal": {
         "01": 58.2,
@@ -1128,38 +1225,49 @@
         "12": 96.4
       },
       "chuva_consecutiva": 5,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 164984.2,
+        "02": 184537.9,
+        "03": 200026.3,
+        "04": 192497.6,
+        "05": 221010.1,
+        "06": 188905.8,
+        "07": 204767.2,
+        "08": 192409.2,
+        "09": 208460.1,
+        "10": 171968.9,
+        "11": 144625.4,
+        "12": 143820.5
+      },
+      "radiacao_anual": 2218013.2
     }
   },
   "2015": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.2,
         "max": 27.0,
         "min": 0.0,
-        "soma": 691.6,
-        "desvio_padrao": 1.09
+        "soma": 691.6
       },
       "pressao": {
         "media": 1009.12,
         "max": 1021.0,
         "min": 996.0,
-        "soma": 3486496.8,
-        "desvio_padrao": 4.27
+        "soma": 3486496.8
       },
       "radiacao": {
         "media": 1191.66,
         "max": 3949.5,
         "min": 0.1,
-        "soma": 2185498.6,
-        "desvio_padrao": 1057.59
+        "soma": 2185498.6
       },
       "temperatura": {
         "media": 20.5,
         "max": 35.7,
         "min": 6.3,
-        "soma": 70815.8,
-        "desvio_padrao": 5.22
+        "soma": 70815.8
       },
       "extremos": {
         "dia_temp_max": "2015-06-01",
@@ -1171,23 +1279,20 @@
         "media": 16.2,
         "max": 25.5,
         "min": -0.7,
-        "soma": 55960.4,
-        "desvio_padrao": 4.06
+        "soma": 55960.4
       },
       "umidade": {
         "media": 78.34,
         "max": 99.0,
         "min": 31.0,
-        "soma": 270657.0,
-        "desvio_padrao": 15.48
+        "soma": 270657.0
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.36,
         "max": 5.3,
         "min": 0.0,
-        "soma": 4683.4,
-        "desvio_padrao": 0.91
+        "soma": 4683.4
       },
       "precipitacao_mensal": {
         "01": 9.8,
@@ -1204,38 +1309,49 @@
         "12": 13.6
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 181365.9,
+        "02": 171081.1,
+        "03": 177468.2,
+        "04": 181086.3,
+        "05": 177603.6,
+        "06": 210474.3,
+        "07": 205127.9,
+        "08": 178917.8,
+        "09": 176985.2,
+        "10": 156386.0,
+        "11": 165871.2,
+        "12": 203131.1
+      },
+      "radiacao_anual": 2185498.6
     }
   },
   "2016": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.17,
         "max": 27.6,
         "min": 0.0,
-        "soma": 554.4,
-        "desvio_padrao": 1.09
+        "soma": 554.4
       },
       "pressao": {
         "media": 1010.22,
         "max": 1024.2,
         "min": 995.7,
-        "soma": 3375150.5,
-        "desvio_padrao": 5.18
+        "soma": 3375150.5
       },
       "radiacao": {
         "media": 1223.65,
         "max": 3899.7,
         "min": 0.0,
-        "soma": 2190336.2,
-        "desvio_padrao": 1071.4
+        "soma": 2190336.2
       },
       "temperatura": {
         "media": 19.49,
         "max": 35.3,
         "min": 4.6,
-        "soma": 65131.3,
-        "desvio_padrao": 5.75
+        "soma": 65131.3
       },
       "extremos": {
         "dia_temp_max": "2016-08-02",
@@ -1247,23 +1363,20 @@
         "media": 15.29,
         "max": 25.8,
         "min": -1.0,
-        "soma": 51097.6,
-        "desvio_padrao": 4.92
+        "soma": 51097.6
       },
       "umidade": {
         "media": 78.68,
         "max": 99.0,
         "min": 23.0,
-        "soma": 262862.0,
-        "desvio_padrao": 15.65
+        "soma": 262862.0
       },
       "dias_secos": 4,
       "vento": {
         "media": 1.5,
         "max": 6.3,
         "min": 0.0,
-        "soma": 5009.4,
-        "desvio_padrao": 1.04
+        "soma": 5009.4
       },
       "precipitacao_mensal": {
         "01": 6.0,
@@ -1280,38 +1393,49 @@
         "12": 21.8
       },
       "chuva_consecutiva": 4,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 180759.3,
+        "02": 154852.9,
+        "03": 161088.1,
+        "04": 162639.9,
+        "05": 199057.5,
+        "06": 191479.1,
+        "07": 195562.9,
+        "08": 205736.7,
+        "09": 148684.5,
+        "10": 194061.4,
+        "11": 185875.0,
+        "12": 210538.9
+      },
+      "radiacao_anual": 2190336.2
     }
   },
   "2017": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.26,
         "max": 29.8,
         "min": 0.0,
-        "soma": 888.6,
-        "desvio_padrao": 1.62
+        "soma": 888.6
       },
       "pressao": {
         "media": 1009.01,
         "max": 1028.1,
         "min": 988.7,
-        "soma": 3486138.8,
-        "desvio_padrao": 5.95
+        "soma": 3486138.8
       },
       "radiacao": {
         "media": 1214.15,
         "max": 3883.7,
         "min": 0.0,
-        "soma": 2226750.1,
-        "desvio_padrao": 1076.47
+        "soma": 2226750.1
       },
       "temperatura": {
         "media": 21.03,
         "max": 34.9,
         "min": 6.3,
-        "soma": 72662.9,
-        "desvio_padrao": 5.0
+        "soma": 72662.9
       },
       "extremos": {
         "dia_temp_max": "2017-04-02",
@@ -1323,23 +1447,20 @@
         "media": 16.92,
         "max": 25.9,
         "min": 6.0,
-        "soma": 58447.0,
-        "desvio_padrao": 3.96
+        "soma": 58447.0
       },
       "umidade": {
         "media": 79.17,
         "max": 100.0,
         "min": 30.0,
-        "soma": 273532.0,
-        "desvio_padrao": 15.11
+        "soma": 273532.0
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.46,
         "max": 6.7,
         "min": 0.0,
-        "soma": 4834.5,
-        "desvio_padrao": 0.98
+        "soma": 4834.5
       },
       "precipitacao_mensal": {
         "01": 99.0,
@@ -1356,38 +1477,49 @@
         "12": 158.4
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 211658.9,
+        "02": 214825.3,
+        "03": 203797.9,
+        "04": 159541.5,
+        "05": 164098.8,
+        "06": 192918.2,
+        "07": 202383.6,
+        "08": 183075.8,
+        "09": 176962.4,
+        "10": 172291.4,
+        "11": 179174.3,
+        "12": 166022.0
+      },
+      "radiacao_anual": 2226750.1
     }
   },
   "2018": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.13,
         "max": 26.8,
         "min": 0.0,
-        "soma": 443.8,
-        "desvio_padrao": 0.97
+        "soma": 443.8
       },
       "pressao": {
         "media": 1009.87,
         "max": 1024.8,
         "min": 994.9,
-        "soma": 3490117.7,
-        "desvio_padrao": 5.29
+        "soma": 3490117.7
       },
       "radiacao": {
         "media": 1269.05,
         "max": 3939.2,
         "min": 0.0,
-        "soma": 2354085.8,
-        "desvio_padrao": 1100.12
+        "soma": 2354085.8
       },
       "temperatura": {
         "media": 19.96,
         "max": 37.4,
         "min": 5.6,
-        "soma": 68944.7,
-        "desvio_padrao": 5.58
+        "soma": 68944.7
       },
       "extremos": {
         "dia_temp_max": "2018-11-12",
@@ -1399,23 +1531,20 @@
         "media": 15.9,
         "max": 24.2,
         "min": 5.1,
-        "soma": 54928.9,
-        "desvio_padrao": 4.28
+        "soma": 54928.9
       },
       "umidade": {
         "media": 79.54,
         "max": 100.0,
         "min": 28.0,
-        "soma": 274900.0,
-        "desvio_padrao": 15.85
+        "soma": 274900.0
       },
       "dias_secos": 3,
       "vento": {
         "media": 1.7,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5517.8,
-        "desvio_padrao": 1.06
+        "soma": 5517.8
       },
       "precipitacao_mensal": {
         "01": 111.4,
@@ -1432,38 +1561,49 @@
         "12": 52.4
       },
       "chuva_consecutiva": 5,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 146394.2,
+        "02": 167940.7,
+        "03": 164286.0,
+        "04": 218505.7,
+        "05": 224877.3,
+        "06": 196487.2,
+        "07": 231103.9,
+        "08": 230852.7,
+        "09": 200215.7,
+        "10": 198358.9,
+        "11": 182009.6,
+        "12": 193053.9
+      },
+      "radiacao_anual": 2354085.8
     }
   },
   "2019": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.16,
         "max": 37.8,
         "min": 0.0,
-        "soma": 559.0,
-        "desvio_padrao": 1.16
+        "soma": 559.0
       },
       "pressao": {
         "media": 1009.78,
         "max": 1027.8,
         "min": 995.6,
-        "soma": 3486787.5,
-        "desvio_padrao": 5.62
+        "soma": 3486787.5
       },
       "radiacao": {
         "media": 1200.89,
         "max": 3945.8,
         "min": 0.0,
-        "soma": 2216841.7,
-        "desvio_padrao": 1066.2
+        "soma": 2216841.7
       },
       "temperatura": {
         "media": 20.53,
         "max": 38.0,
         "min": 2.3,
-        "soma": 70882.1,
-        "desvio_padrao": 6.08
+        "soma": 70882.1
       },
       "extremos": {
         "dia_temp_max": "2019-02-01",
@@ -1475,23 +1615,20 @@
         "media": 16.02,
         "max": 26.2,
         "min": -0.6,
-        "soma": 55310.3,
-        "desvio_padrao": 5.31
+        "soma": 55310.3
       },
       "umidade": {
         "media": 77.69,
         "max": 100.0,
         "min": 18.0,
-        "soma": 268262.0,
-        "desvio_padrao": 16.84
+        "soma": 268262.0
       },
       "dias_secos": 6,
       "vento": {
         "media": 1.49,
         "max": 6.7,
         "min": 0.0,
-        "soma": 5132.5,
-        "desvio_padrao": 0.92
+        "soma": 5132.5
       },
       "precipitacao_mensal": {
         "01": 6.0,
@@ -1508,38 +1645,49 @@
         "12": 46.0
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 223435.0,
+        "02": 201772.5,
+        "03": 176513.4,
+        "04": 170552.7,
+        "05": 179830.7,
+        "06": 184093.2,
+        "07": 193097.4,
+        "08": 198475.4,
+        "09": 188466.0,
+        "10": 163441.7,
+        "11": 180470.8,
+        "12": 156692.9
+      },
+      "radiacao_anual": 2216841.7
     }
   },
   "2020": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.17,
         "max": 24.6,
         "min": 0.0,
-        "soma": 602.2,
-        "desvio_padrao": 1.0
+        "soma": 602.2
       },
       "pressao": {
         "media": 1010.09,
         "max": 1023.8,
         "min": 993.8,
-        "soma": 3489870.1,
-        "desvio_padrao": 4.96
+        "soma": 3489870.1
       },
       "radiacao": {
         "media": 1248.04,
         "max": 3842.3,
         "min": 0.0,
-        "soma": 2316353.5,
-        "desvio_padrao": 1091.64
+        "soma": 2316353.5
       },
       "temperatura": {
         "media": 19.57,
         "max": 37.7,
         "min": 4.3,
-        "soma": 67617.5,
-        "desvio_padrao": 5.79
+        "soma": 67617.5
       },
       "extremos": {
         "dia_temp_max": "2020-09-01",
@@ -1551,23 +1699,20 @@
         "media": 14.75,
         "max": 24.1,
         "min": 1.5,
-        "soma": 50950.5,
-        "desvio_padrao": 4.15
+        "soma": 50950.5
       },
       "umidade": {
         "media": 75.94,
         "max": 97.0,
         "min": 18.0,
-        "soma": 262382.0,
-        "desvio_padrao": 16.12
+        "soma": 262382.0
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.63,
         "max": 5.7,
         "min": 0.2,
-        "soma": 5628.5,
-        "desvio_padrao": 0.85
+        "soma": 5628.5
       },
       "precipitacao_mensal": {
         "01": 19.0,
@@ -1584,38 +1729,49 @@
         "12": 99.8
       },
       "chuva_consecutiva": 5,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 198040.9,
+        "02": 204789.9,
+        "03": 167981.8,
+        "04": 218629.5,
+        "05": 167445.3,
+        "06": 171648.9,
+        "07": 173511.7,
+        "08": 223902.3,
+        "09": 191880.8,
+        "10": 224308.8,
+        "11": 199077.8,
+        "12": 175135.8
+      },
+      "radiacao_anual": 2316353.5
     }
   },
   "2021": {
-    "PORTO_ALEGRE": {
+    "A801": {
       "precipitacao": {
         "media": 0.13,
         "max": 25.0,
         "min": 0.0,
-        "soma": 421.8,
-        "desvio_padrao": 0.89
+        "soma": 421.8
       },
       "pressao": {
         "media": 1010.53,
         "max": 1026.5,
         "min": 998.5,
-        "soma": 3405497.7,
-        "desvio_padrao": 5.38
+        "soma": 3405497.7
       },
       "radiacao": {
         "media": 1295.2,
         "max": 3912.9,
         "min": 0.0,
-        "soma": 2323592.4,
-        "desvio_padrao": 1068.24
+        "soma": 2323592.4
       },
       "temperatura": {
         "media": 19.92,
         "max": 37.2,
         "min": 4.0,
-        "soma": 67116.2,
-        "desvio_padrao": 5.49
+        "soma": 67116.2
       },
       "extremos": {
         "dia_temp_max": "2021-11-01",
@@ -1627,23 +1783,20 @@
         "media": 15.03,
         "max": 24.5,
         "min": 3.0,
-        "soma": 50622.8,
-        "desvio_padrao": 3.99
+        "soma": 50622.8
       },
       "umidade": {
         "media": 75.51,
         "max": 98.0,
         "min": 15.0,
-        "soma": 254409.0,
-        "desvio_padrao": 15.55
+        "soma": 254409.0
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.45,
         "max": 4.7,
         "min": 0.1,
-        "soma": 4893.4,
-        "desvio_padrao": 0.78
+        "soma": 4893.4
       },
       "precipitacao_mensal": {
         "01": 31.8,
@@ -1660,38 +1813,49 @@
         "12": 15.2
       },
       "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 186625.4,
+        "02": 197461.6,
+        "03": 152921.0,
+        "04": 159429.8,
+        "05": 168887.8,
+        "06": 174231.8,
+        "07": 216762.4,
+        "08": 222378.7,
+        "09": 218160.5,
+        "10": 208652.6,
+        "11": 211197.5,
+        "12": 206883.3
+      },
+      "radiacao_anual": 2323592.4
     }
   },
   "2022": {
-    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+    "A801": {
       "precipitacao": {
         "media": 0.15,
         "max": 36.8,
         "min": 0.0,
-        "soma": 521.2,
-        "desvio_padrao": 1.03
+        "soma": 521.2
       },
       "pressao": {
         "media": 1009.64,
         "max": 1025.7,
         "min": 991.9,
-        "soma": 3482235.6,
-        "desvio_padrao": 5.88
+        "soma": 3482235.6
       },
       "radiacao": {
         "media": 1179.53,
         "max": 3920.3,
         "min": 0.0,
-        "soma": 2199816.9,
-        "desvio_padrao": 1068.66
+        "soma": 2199816.9
       },
       "temperatura": {
         "media": 19.38,
         "max": 36.5,
         "min": 4.1,
-        "soma": 66824.8,
-        "desvio_padrao": 5.71
+        "soma": 66824.8
       },
       "extremos": {
         "dia_temp_max": "2022-03-02",
@@ -1703,23 +1867,20 @@
         "media": 15.12,
         "max": 24.5,
         "min": -0.1,
-        "soma": 52135.2,
-        "desvio_padrao": 4.73
+        "soma": 52135.2
       },
       "umidade": {
         "media": 78.24,
         "max": 97.0,
         "min": 23.0,
-        "soma": 269852.0,
-        "desvio_padrao": 15.09
+        "soma": 269852.0
       },
       "dias_secos": 2,
       "vento": {
         "media": 1.43,
         "max": 5.8,
         "min": 0.1,
-        "soma": 4924.2,
-        "desvio_padrao": 0.75
+        "soma": 4924.2
       },
       "precipitacao_mensal": {
         "01": 17.6,
@@ -1736,105 +1897,49 @@
         "12": 48.4
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
-    },
-    "PORTO_ALEGRE_BELEM_NOVO": {
-      "precipitacao": {
-        "media": 0.07,
-        "max": 3.0,
-        "min": 0.0,
-        "soma": 6.8,
-        "desvio_padrao": 0.41
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 199399.5,
+        "02": 185145.2,
+        "03": 188588.3,
+        "04": 157229.6,
+        "05": 180265.8,
+        "06": 173071.3,
+        "07": 176861.0,
+        "08": 195281.4,
+        "09": 183905.2,
+        "10": 195015.6,
+        "11": 173515.1,
+        "12": 191538.9
       },
-      "pressao": {
-        "media": 1006.25,
-        "max": 1010.7,
-        "min": 999.3,
-        "soma": 100624.8,
-        "desvio_padrao": 2.91
-      },
-      "radiacao": {
-        "media": 1139.27,
-        "max": 3844.6,
-        "min": 0.0,
-        "soma": 113927.0,
-        "desvio_padrao": 1373.32
-      },
-      "temperatura": {
-        "media": 25.19,
-        "max": 36.8,
-        "min": 17.9,
-        "soma": 2519.3,
-        "desvio_padrao": 4.25
-      },
-      "extremos": {
-        "dia_temp_max": "2022-12-12",
-        "dia_temp_min": "2022-09-12"
-      },
-      "amplitude_termica": 11.0,
-      "dias_quentes": 1,
-      "ponto_orvalho": {
-        "media": 20.36,
-        "max": 23.1,
-        "min": 15.9,
-        "soma": 2035.5,
-        "desvio_padrao": 1.47
-      },
-      "umidade": {
-        "media": 76.5,
-        "max": 98.0,
-        "min": 37.0,
-        "soma": 7650.0,
-        "desvio_padrao": 15.3
-      },
-      "dias_secos": 0,
-      "vento": {
-        "media": 2.6,
-        "max": 8.1,
-        "min": 0.2,
-        "soma": 259.6,
-        "desvio_padrao": 1.74
-      },
-      "precipitacao_mensal": {
-        "08": 2.8,
-        "09": 0.0,
-        "10": 0.0,
-        "11": 0.0,
-        "12": 4.0
-      },
-      "chuva_consecutiva": 1,
-      "chuvas_intensas": 0
+      "radiacao_anual": 2199816.9
     }
   },
   "2023": {
-    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+    "A801": {
       "precipitacao": {
         "media": 0.23,
         "max": 24.4,
         "min": 0.0,
-        "soma": 801.4,
-        "desvio_padrao": 1.17
+        "soma": 801.4
       },
       "pressao": {
         "media": 1008.96,
         "max": 1023.7,
         "min": 991.2,
-        "soma": 3464759.4,
-        "desvio_padrao": 4.63
+        "soma": 3464759.4
       },
       "radiacao": {
         "media": 1152.79,
         "max": 3995.6,
         "min": 0.0,
-        "soma": 2136110.8,
-        "desvio_padrao": 1071.86
+        "soma": 2136110.8
       },
       "temperatura": {
         "media": 20.81,
         "max": 36.2,
         "min": 7.5,
-        "soma": 71449.8,
-        "desvio_padrao": 4.96
+        "soma": 71449.8
       },
       "extremos": {
         "dia_temp_max": "2023-12-02",
@@ -1846,23 +1951,20 @@
         "media": 16.28,
         "max": 24.1,
         "min": -0.4,
-        "soma": 55916.5,
-        "desvio_padrao": 3.68
+        "soma": 55916.5
       },
       "umidade": {
         "media": 77.37,
         "max": 97.0,
         "min": 23.0,
-        "soma": 265705.0,
-        "desvio_padrao": 15.59
+        "soma": 265705.0
       },
       "dias_secos": 5,
       "vento": {
         "media": 1.45,
         "max": 4.6,
         "min": 0.1,
-        "soma": 4954.6,
-        "desvio_padrao": 0.77
+        "soma": 4954.6
       },
       "precipitacao_mensal": {
         "01": 0.2,
@@ -1879,112 +1981,49 @@
         "12": 149.0
       },
       "chuva_consecutiva": 4,
-      "chuvas_intensas": 0
-    },
-    "PORTO_ALEGRE_BELEM_NOVO": {
-      "precipitacao": {
-        "media": 0.25,
-        "max": 23.0,
-        "min": 0.0,
-        "soma": 856.4,
-        "desvio_padrao": 1.22
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 213754.1,
+        "02": 171872.7,
+        "03": 154178.9,
+        "04": 147283.8,
+        "05": 180359.6,
+        "06": 186115.5,
+        "07": 152579.8,
+        "08": 186697.6,
+        "09": 180466.1,
+        "10": 198020.3,
+        "11": 187114.4,
+        "12": 177668.0
       },
-      "pressao": {
-        "media": 1014.08,
-        "max": 1029.0,
-        "min": 995.3,
-        "soma": 3504658.5,
-        "desvio_padrao": 4.71
-      },
-      "radiacao": {
-        "media": 639.73,
-        "max": 4042.0,
-        "min": 0.0,
-        "soma": 2210920.3,
-        "desvio_padrao": 998.32
-      },
-      "temperatura": {
-        "media": 20.34,
-        "max": 35.4,
-        "min": 6.2,
-        "soma": 70283.0,
-        "desvio_padrao": 4.81
-      },
-      "extremos": {
-        "dia_temp_max": "2023-01-01",
-        "dia_temp_min": "2023-12-06"
-      },
-      "amplitude_termica": 8.3,
-      "dias_quentes": 1,
-      "ponto_orvalho": {
-        "media": 16.6,
-        "max": 26.0,
-        "min": 0.6,
-        "soma": 57371.0,
-        "desvio_padrao": 3.91
-      },
-      "umidade": {
-        "media": 80.52,
-        "max": 99.0,
-        "min": 28.0,
-        "soma": 278264.0,
-        "desvio_padrao": 13.16
-      },
-      "dias_secos": 1,
-      "vento": {
-        "media": 2.44,
-        "max": 10.2,
-        "min": 0.1,
-        "soma": 8420.4,
-        "desvio_padrao": 1.59
-      },
-      "precipitacao_mensal": {
-        "01": 0.6,
-        "02": 53.4,
-        "03": 104.0,
-        "04": 138.6,
-        "05": 40.4,
-        "06": 78.6,
-        "07": 67.6,
-        "08": 56.2,
-        "09": 33.2,
-        "10": 35.0,
-        "11": 118.0,
-        "12": 130.8
-      },
-      "chuva_consecutiva": 4,
-      "chuvas_intensas": 0
+      "radiacao_anual": 2136110.8
     }
   },
   "2024": {
-    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+    "A801": {
       "precipitacao": {
         "media": 0.21,
         "max": 40.0,
         "min": 0.0,
-        "soma": 723.8,
-        "desvio_padrao": 1.38
+        "soma": 723.8
       },
       "pressao": {
         "media": 1009.19,
         "max": 1027.0,
         "min": 990.4,
-        "soma": 3479690.9,
-        "desvio_padrao": 4.86
+        "soma": 3479690.9
       },
       "radiacao": {
         "media": 1107.19,
         "max": 3974.5,
         "min": 0.0,
-        "soma": 2050516.4,
-        "desvio_padrao": 1056.62
+        "soma": 2050516.4
       },
       "temperatura": {
         "media": 20.47,
         "max": 36.7,
         "min": 3.4,
-        "soma": 70563.9,
-        "desvio_padrao": 5.89
+        "soma": 70563.9
       },
       "extremos": {
         "dia_temp_max": "2024-10-02",
@@ -1996,23 +2035,20 @@
         "media": 16.13,
         "max": 24.9,
         "min": -0.7,
-        "soma": 55618.7,
-        "desvio_padrao": 4.97
+        "soma": 55618.7
       },
       "umidade": {
         "media": 77.92,
         "max": 97.0,
         "min": 33.0,
-        "soma": 268657.0,
-        "desvio_padrao": 14.61
+        "soma": 268657.0
       },
       "dias_secos": 0,
       "vento": {
         "media": 1.44,
         "max": 5.7,
         "min": 0.1,
-        "soma": 4971.6,
-        "desvio_padrao": 0.75
+        "soma": 4971.6
       },
       "precipitacao_mensal": {
         "01": 90.2,
@@ -2029,112 +2065,49 @@
         "12": 78.6
       },
       "chuva_consecutiva": 3,
-      "chuvas_intensas": 0
-    },
-    "PORTO_ALEGRE_BELEM_NOVO": {
-      "precipitacao": {
-        "media": 0.19,
-        "max": 26.6,
-        "min": 0.0,
-        "soma": 673.2,
-        "desvio_padrao": 1.06
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 194374.3,
+        "02": 168155.1,
+        "03": 194603.7,
+        "04": 151294.3,
+        "05": 201178.5,
+        "06": 196973.5,
+        "07": 146082.0,
+        "08": 139346.9,
+        "09": 163821.1,
+        "10": 151724.5,
+        "11": 155363.0,
+        "12": 187599.5
       },
-      "pressao": {
-        "media": 1014.33,
-        "max": 1032.3,
-        "min": 995.1,
-        "soma": 3505535.2,
-        "desvio_padrao": 4.97
-      },
-      "radiacao": {
-        "media": 626.53,
-        "max": 4158.4,
-        "min": 0.0,
-        "soma": 2165287.1,
-        "desvio_padrao": 996.41
-      },
-      "temperatura": {
-        "media": 20.1,
-        "max": 35.6,
-        "min": 2.6,
-        "soma": 69462.8,
-        "desvio_padrao": 5.79
-      },
-      "extremos": {
-        "dia_temp_max": "2024-12-02",
-        "dia_temp_min": "2024-06-07"
-      },
-      "amplitude_termica": 8.05,
-      "dias_quentes": 3,
-      "ponto_orvalho": {
-        "media": 16.55,
-        "max": 25.9,
-        "min": 0.0,
-        "soma": 57212.1,
-        "desvio_padrao": 5.03
-      },
-      "umidade": {
-        "media": 81.63,
-        "max": 100.0,
-        "min": 36.0,
-        "soma": 282118.0,
-        "desvio_padrao": 14.27
-      },
-      "dias_secos": 0,
-      "vento": {
-        "media": 2.52,
-        "max": 8.8,
-        "min": 0.1,
-        "soma": 8717.6,
-        "desvio_padrao": 1.54
-      },
-      "precipitacao_mensal": {
-        "01": 77.6,
-        "02": 131.2,
-        "03": 27.6,
-        "04": 31.6,
-        "05": 46.6,
-        "06": 40.4,
-        "07": 17.8,
-        "08": 77.8,
-        "09": 5.0,
-        "10": 81.2,
-        "11": 66.4,
-        "12": 70.0
-      },
-      "chuva_consecutiva": 6,
-      "chuvas_intensas": 0
+      "radiacao_anual": 2050516.4
     }
   },
   "2025": {
-    "PORTO_ALEGRE__JARDIM_BOTANICO": {
+    "A801": {
       "precipitacao": {
         "media": 0.11,
         "max": 11.4,
         "min": 0.0,
-        "soma": 121.2,
-        "desvio_padrao": 0.7
+        "soma": 121.2
       },
       "pressao": {
         "media": 1008.03,
         "max": 1024.6,
         "min": 998.0,
-        "soma": 1160240.6,
-        "desvio_padrao": 4.79
+        "soma": 1160240.6
       },
       "radiacao": {
         "media": 1508.42,
         "max": 3871.1,
         "min": 0.0,
-        "soma": 997066.4,
-        "desvio_padrao": 1162.85
+        "soma": 997066.4
       },
       "temperatura": {
         "media": 24.79,
         "max": 38.9,
         "min": 12.5,
-        "soma": 28528.0,
-        "desvio_padrao": 4.66
+        "soma": 28528.0
       },
       "extremos": {
         "dia_temp_max": "2025-11-02",
@@ -2146,23 +2119,20 @@
         "media": 18.96,
         "max": 25.6,
         "min": 5.9,
-        "soma": 21822.4,
-        "desvio_padrao": 3.14
+        "soma": 21822.4
       },
       "umidade": {
         "media": 72.07,
         "max": 96.0,
         "min": 24.0,
-        "soma": 82947.0,
-        "desvio_padrao": 15.23
+        "soma": 82947.0
       },
       "dias_secos": 1,
       "vento": {
         "media": 1.48,
         "max": 5.4,
         "min": 0.2,
-        "soma": 1613.4,
-        "desvio_padrao": 0.72
+        "soma": 1613.4
       },
       "precipitacao_mensal": {
         "01": 9.4,
@@ -2179,81 +2149,40 @@
         "12": 17.2
       },
       "chuva_consecutiva": 1,
-      "chuvas_intensas": 0
-    },
-    "PORTO_ALEGRE_BELEM_NOVO": {
-      "precipitacao": {
-        "media": 0.12,
-        "max": 13.2,
-        "min": 0.0,
-        "soma": 138.6,
-        "desvio_padrao": 0.86
+      "chuvas_intensas": 0,
+      "radiacao_mensal": {
+        "01": 71386.8,
+        "02": 86104.2,
+        "03": 86061.5,
+        "04": 99813.7,
+        "05": 96161.9,
+        "06": 85794.7,
+        "07": 83969.1,
+        "08": 87298.2,
+        "09": 76242.3,
+        "10": 85217.3,
+        "11": 75378.4,
+        "12": 63638.3
       },
-      "pressao": {
-        "media": 1013.14,
-        "max": 1030.0,
-        "min": 1002.9,
-        "soma": 1167139.3,
-        "desvio_padrao": 4.85
-      },
-      "radiacao": {
-        "media": 919.94,
-        "max": 4029.4,
-        "min": 0.0,
-        "soma": 1059769.1,
-        "desvio_padrao": 1229.13
-      },
-      "temperatura": {
-        "media": 24.34,
-        "max": 38.6,
-        "min": 12.0,
-        "soma": 28037.0,
-        "desvio_padrao": 4.36
-      },
-      "extremos": {
-        "dia_temp_max": "2025-11-02",
-        "dia_temp_min": "2025-05-04"
-      },
-      "amplitude_termica": 9.19,
-      "dias_quentes": 3,
-      "ponto_orvalho": {
-        "media": 19.51,
-        "max": 26.1,
-        "min": 5.8,
-        "soma": 22472.8,
-        "desvio_padrao": 3.2
-      },
-      "umidade": {
-        "media": 76.19,
-        "max": 100.0,
-        "min": 37.0,
-        "soma": 87772.0,
-        "desvio_padrao": 14.86
-      },
-      "dias_secos": 0,
-      "vento": {
-        "media": 2.75,
-        "max": 8.2,
-        "min": 0.1,
-        "soma": 3086.3,
-        "desvio_padrao": 1.57
-      },
-      "precipitacao_mensal": {
-        "01": 0.8,
-        "02": 21.4,
-        "03": 5.2,
-        "04": 0.6,
-        "05": 0.0,
-        "06": 2.0,
-        "07": 3.4,
-        "08": 30.4,
-        "09": 45.6,
-        "10": 0.2,
-        "11": 1.0,
-        "12": 28.0
-      },
-      "chuva_consecutiva": 2,
-      "chuvas_intensas": 0
+      "radiacao_anual": 997066.4
+    }
+  },
+  "media_historica": {
+    "A801": {
+      "radiacao_mensal": {
+        "09": 179704.86,
+        "10": 193012.63,
+        "11": 194804.29,
+        "12": 199350.54,
+        "01": 184098.76,
+        "02": 184379.88,
+        "03": 178064.46,
+        "04": 179340.08,
+        "05": 179076.13,
+        "06": 189573.06,
+        "07": 188543.69,
+        "08": 190373.92
+      }
     }
   }
 }
