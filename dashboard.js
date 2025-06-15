@@ -50,7 +50,7 @@ fetch("manifest.json")
     select.innerHTML = '<option value="">Selecione</option>';
     arquivos.forEach(arquivo => {
       const opt = document.createElement("option");
-      opt.value = "https://github.com/lucasfrag/climate-data-storytelling/raw/refs/heads/main" + arquivo;
+      opt.value = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2));
       opt.textContent = arquivo;
       select.appendChild(opt);
     });
@@ -300,7 +300,7 @@ function criarGrafico(id, labels, datasets, titulo, tipo = 'line') {
 }
 
 async function processarArquivo(nomeArquivo) {
-  const res = await fetch("dataset/" + nomeArquivo);
+  const res = await fetch("datasets/" + nomeArquivo);
   const texto = await res.text();
   const linhas = texto.split("\n").filter(l => l.trim().length > 5);
   const cabecalho = linhas[0].split(";").map(c => c.toLowerCase().trim());
