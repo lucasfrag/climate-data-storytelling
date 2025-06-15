@@ -74,26 +74,26 @@
         <div class="container h-100 d-flex flex-column justify-content-center">
             <div class="row justify-content-center align-items-center flex-grow-1">
                 <div class="col-lg-10 col-md-12">
-                    <h1 class="display-3 fw-bold mb-4 hero-reveal" style="opacity:0; text-shadow: 2px 2px 8px rgba(0,0,0,0.15);">
+                    <h1 class="display-3 fw-bold mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.15);">
                         <i class="fas fa-globe-americas me-2"></i>
                         Climate Data Storytelling
                     </h1>
-                    <p class="lead mb-5 hero-reveal" style="opacity:0; font-size: 1.5rem;">
+                    <p class="lead mb-5" style="font-size: 1.5rem;">
                         Descubra como o clima está mudando em Porto Alegre e no região sul do Brasil.<br>
                         Visualize dados meteorológicos, tendências e impactos de forma interativa e envolvente.
                     </p>
 
-                    <div class="hero-reveal" style="opacity:0;">
-                        <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
-                            <i class="fas fa-book-open me-2"></i> Ler o artigo completo
-                        </a>
-                        <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank"
-                            class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
-                            <i class="fab fa-github me-2"></i> Ver no GitHub
-                        </a>
-                    </div>
 
-                    <div class="d-flex flex-column align-items-center mt-5 hero-reveal" style="opacity:0;">
+                    <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                        <i class="fas fa-book-open me-2"></i> Ler o artigo completo
+                    </a>
+                    <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank"
+                        class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                        <i class="fab fa-github me-2"></i> Ver no GitHub
+                    </a>
+
+
+                    <div class="d-flex flex-column align-items-center mt-5">
                         <p class="mb-2" style="font-size: 1.15rem;">
                             <strong>Clique no botão abaixo para começar a explorar os dados.</strong>
                         </p>
@@ -111,25 +111,7 @@
                             if (target) {
                                 target.scrollIntoView({ behavior: 'smooth' });
                             }
-                        });
-
-                        // Revela os elementos da hero-section aos poucos
-                        document.addEventListener("DOMContentLoaded", function () {
-                            function revealSequentially(items, delay = 400) {
-                                items.forEach((item, idx) => {
-                                    setTimeout(() => {
-                                        item.style.opacity = 1;
-                                        item.style.transform = "translateY(0)";
-                                    }, idx * delay);
-                                });
-                            }
-                            const heroItems = document.querySelectorAll('.hero-section .hero-reveal');
-                            heroItems.forEach(el => {
-                                el.style.transition = "opacity 0.7s, transform 0.7s";
-                                el.style.transform = "translateY(30px)";
-                            });
-                            setTimeout(() => revealSequentially(Array.from(heroItems)), 400);
-                        });
+                        });                     
                     </script>
                 </div>
             </div>
@@ -174,6 +156,8 @@
                                         <hr class="my-2">
                                         <p id="modalTuristicoDesc" class="lead" style="color: #444;">
                                         </p>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -187,10 +171,10 @@
 
                 <div class="col-12 hv-100 d-flex flex-column justify-content-center align-items-center">
 
-                    <h2 class="reveal-item" style="padding: 30px 0px 50px 0px; background-color: #f8f9fa;"></h2>
+                    <h2 style="padding: 30px 0px 50px 0px; background-color: #f8f9fa;"></h2>
                     <div class="row">
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/06.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger"
                                     alt="Estátua do Laçador"
@@ -198,7 +182,7 @@
                                     data-title="Estátua do Laçador"
                                     data-desc="A Estátua do Laçador é um dos principais símbolos de Porto Alegre e do Rio Grande do Sul. Representa o tradicional gaúcho pilchado e é um ponto de referência cultural e histórica da cidade." />
                             </a>
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/05.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger" alt="Orla do Guaíba"
                                     style="width: 280px; height: 180px; object-fit: cover; cursor: pointer;"
@@ -208,14 +192,14 @@
                         </div>
 
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/03.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger" alt="Estádio Beira-Rio"
                                     style="width: 280px; height: 180px; object-fit: cover; cursor: pointer;"
                                     data-title="Estádio Beira-Rio"
                                     data-desc="O Estádio Beira-Rio é a casa do Sport Club Internacional e foi um dos palcos da Copa do Mundo de 2014. É um dos maiores estádios do Brasil e importante ponto esportivo da cidade." />
                             </a>
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/01.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger"
                                     alt="Parque Farroupilha"
@@ -227,7 +211,7 @@
                         </div>
 
                         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/08.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger"
                                     alt="Casa de Cultura Mario Quintana"
@@ -235,7 +219,7 @@
                                     data-title="Casa de Cultura Mario Quintana"
                                     data-desc="A Casa de Cultura Mario Quintana é um centro cultural instalado no antigo Hotel Majestic. Homenageia o poeta Mario Quintana e oferece programação artística diversificada." />
                             </a>
-                            <a href="javascript:void(0);" class="img-link reveal-item" tabindex="0">
+                            <a href="javascript:void(0);" class="img-link" tabindex="0">
                                 <img src="assets/images/07.jpg"
                                     class="w-100 shadow-1-strong rounded mb-4 img-modal-trigger"
                                     alt="Usina do Gasômetro"
@@ -246,17 +230,25 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
             </div>
+
 
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column">
-                    <h1 class="bg-light h1 mb-3 sticky-top reveal-item" id="estacoes-title"
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
                         style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
                         Porto Alegre: A Capital Gaúcha
                     </h1>
 
-                    <div class="mb-4 d-flex flex-wrap align-items-center reveal-item">
+                    <div class="mb-4 d-flex flex-wrap align-items-center">
                         <span class="badge badge-primary mr-2 mb-2 px-3 py-2 d-flex align-items-center"
                             style="font-size:1rem;">
                             <i class="fas fa-city mr-2"></i> Porto Alegre
@@ -741,6 +733,7 @@
     <!------------------------------------------------------------------------------------------------------------------------------->
 
     <!-- Seção as enchentes de 2024 -->
+
     <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center "
         id="enchentes-2024">
         <div class="row">
@@ -1746,6 +1739,7 @@
                 Ao longo desta jornada, você viu como Porto Alegre é afetada pelas mudanças climáticas <br>e como os
                 dados, quando bem apresentados, nos ajudam a entender e reagir a esses desafios.
             </p>
+            <br>
             <p class="lead mb-4" style="font-size:1.3rem;" style="max-width: 800px; margin: 0 auto;">
                 Os gráficos, os mapas e as séries temporais contaram uma história real. <br>Mas essa história continua —
                 e está sendo escrita todos os dias.
