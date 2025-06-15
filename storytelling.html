@@ -382,8 +382,8 @@
                     <div class="col-12 justify-content-center align-items-center">
                         <p class="reveal-item">Antes que a chuva caia ou o calor aperte, alguém já sabe: as estações meteorológicas.</p>
 
-                        <p class="reveal-item">Espalhadas por todo o Brasil e operadas pelo INMET (Instituto Nacional de
-                            Meteorologia), elas coletam dados sobre temperatura, umidade, vento e pressão — todos os
+                        <p class="reveal-item">Espalhadas por todo o Brasil e operadas pelo <a href="https://portal.inmet.gov.br/" target="_blank">INMET (Instituto Nacional de
+                            Meteorologia)</a>, elas coletam dados sobre temperatura, umidade, vento e pressão — todos os
                             dias, há décadas.</p>
 
                         <p class="reveal-item">As estações meteorológicas do INMET estão distribuídas por todo o
@@ -1740,17 +1740,26 @@
     <!--Crie um botão animado com uma seta apontando para baixo-->
     <div class="d-flex justify-content-center">
         <button class="btn btn-primary rounded-circle shadow animate-bounce" style="width: 55px; height: 55px;">
-            <span style="font-size: 1.7em; vertical-align: middle;" aria-hidden="true">&#8595;</span>
+            <span style="font-size: 1.7em; vertical-align: middle;" aria-hidden="true" id="btn-ir-alem">&#8595;</span>
         </button>
     </div>
     
 
+                        <script>
+                            document.getElementById('btn-ir-alem').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector('#ir-alem');
+                                if (target) {
+                                    target.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            });                                   
+                        </script>
 
   </div>
 </section>
 
 
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center ">
+    <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center" id="ir-alem">
         <div class="col-12 text-center mt-5">
             <h2 class="fw-bold mb-3" style="font-size:2.2rem;">🚀 Pronto para ir além? 🌎</h2>
             <br>
