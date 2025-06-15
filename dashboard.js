@@ -300,7 +300,7 @@ function criarGrafico(id, labels, datasets, titulo, tipo = 'line') {
 }
 
 async function processarArquivo(nomeArquivo) {
-  const res = await fetch("datasets/" + nomeArquivo);
+  const res = await fetch("dataset/" + nomeArquivo);
   const texto = await res.text();
   const linhas = texto.split("\n").filter(l => l.trim().length > 5);
   const cabecalho = linhas[0].split(";").map(c => c.toLowerCase().trim());
