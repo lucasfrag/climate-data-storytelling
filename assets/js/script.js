@@ -1,3 +1,14 @@
+document.querySelectorAll('.img-modal-trigger').forEach(img => {
+    img.addEventListener('click', function () {
+        const modal = new bootstrap.Modal(document.getElementById('modalTuristico'));
+        document.getElementById('modalTuristicoLabel').textContent = this.dataset.title;
+        document.getElementById('modalTuristicoImg').src = this.src;
+        document.getElementById('modalTuristicoImg').alt = this.alt;
+        document.getElementById('modalTuristicoDesc').textContent = this.dataset.desc;
+        modal.show();
+    });
+});
+
 const arquivosCSV = [
     //'./dataset/2021/INMET_S_RS_A801_PORTO ALEGRE_01-01-2021_A_31-12-2021.csv',
     //'./dataset/2025.csv'
@@ -9,8 +20,8 @@ const arquivosJSON = [
 
 function addMarkers(lat, lon) {
     L.marker([lat, lon]).addTo(map)
-    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-    .openPopup();  
+        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+        .openPopup();
 }
 
 async function loadJson() {

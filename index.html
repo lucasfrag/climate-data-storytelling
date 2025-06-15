@@ -12,48 +12,49 @@
             min-height: 100vh;
         }
         .main-title {
-            font-size: 2.5rem;
             color: #1565c0;
+            letter-spacing: 1px;
         }
-        .lead {
-            color: #333;
-        }
-        .feature-list li {
-            margin-bottom: 0.5rem;
+        .feature-list li::marker {
+            color: #43a047;
         }
         .highlight {
-            color: #388e3c;
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            display: inline-block;
         }
-        .card {
-            background: rgba(255,255,255,0.95);
-            border-radius: 1rem;
-            box-shadow: 0 4px 24px rgba(21,101,192,0.08);
+        .logo {
+            width: 80px;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card p-4">
-                    <h2 class="main-title fw-bold mb-3 text-center">
-                        Bem-vindo ao <span class="highlight">Climate Data Storytelling</span>
-                    </h2>
-                    <p class="lead mb-4 text-center">
-                        Uma jornada interativa pelos dados climáticos de <b>Porto Alegre</b> e do <b>Rio Grande do Sul</b>.
-                    </p>
-                    <ul class="feature-list list-unstyled mx-auto mb-4" style="max-width: 600px; font-size:1.1rem;">
-                        <li>🌡️ Visualização de séries históricas de temperatura, precipitação, radiação solar, vento e umidade.</li>
-                        <li>📊 Comparação entre anos e análise de extremos climáticos.</li>
-                        <li>🗺️ Mapa interativo das estações meteorológicas do INMET.</li>
-                        <li>📖 Contextualização dos dados com storytelling e explicações acessíveis.</li>
+            <div class="col-lg-8 text-center">
+                <img src="https://img.icons8.com/fluency/96/000000/earth-planet.png" alt="Logo" class="logo" />
+                <h2 class="fw-bold mb-3 main-title" style="font-size:2.4rem;">
+                    Bem-vindo ao <span class="text-success">Climate Data Storytelling</span>
+                </h2>
+                <p class="lead mb-4" style="font-size:1.25rem;">
+                    Uma jornada interativa pelos dados climáticos de <b>Porto Alegre</b> e do <b>Rio Grande do Sul</b>.
+                </p>
+                <div class="mb-4">
+                    <ul class="feature-list text-start d-inline-block" style="font-size:1.1rem;">
+                        <li>Visualização de séries históricas de temperatura, precipitação, radiação solar, vento e umidade.</li>
+                        <li>Comparação entre anos e análise de extremos climáticos.</li>
+                        <li>Mapa interativo das estações meteorológicas do INMET.</li>
+                        <li>Contextualização dos dados com storytelling e explicações acessíveis.</li>
                     </ul>
-                    <div class="text-center">
-                        <span class="fw-semibold highlight" style="font-size:1.2rem;">
-                            Descubra tendências, faça suas próprias análises e compartilhe descobertas!
-                        </span>
-                    </div>
                 </div>
+                <div class="mb-4">
+                    <span class="highlight text-primary fw-semibold">
+                        Descubra tendências, faça suas próprias análises e compartilhe descobertas!
+                    </span>
+                </div>
+                <a href="#explore" class="btn btn-success btn-lg px-4 shadow-sm">Explorar Agora</a>
             </div>
         </div>
     </div>
