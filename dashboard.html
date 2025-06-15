@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Climático</title>
-  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" /> <!-- Bootstrap v4.5.2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
@@ -33,7 +33,7 @@
         <div class="row w-100 align-items-center">
           <!-- Esquerda: Logo -->
           <div class="col-2 d-flex align-items-center">
-            <a class="navbar-brand fw-bold text-primary" href="#" style="font-size:1.3rem;">
+            <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size:1.3rem;">
               <i class="fas fa-globe-americas me-2"></i>
               Climate Data
             </a>
@@ -51,19 +51,23 @@
                 </li>
 
                 <li class="nav-item">
+                  <a class="nav-link" href="storytelling.html">Storytelling</a>
+                </li>
+
+                <li class="nav-item">
                   <a class="nav-link active" href="dashboard.html">Dashboard</a>
                 </li>
               </ul>
             </div>
           </div>
           <!-- Direita: Ações -->
-          <div class="col-2 d-flex justify-content-end align-items-center gap-2">
+          <div class="col-2 d-flex justify-content-end align-items-center">
             <a href="./artigo.html" class="btn btn-outline-primary" title="Ler o artigo completo">
-              <i class="fas fa-book-open me-1"></i> Artigo
+              <i class="fas fa-book-open mr-1"></i> Artigo
             </a>
             <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank" rel="noopener"
-              class="btn btn-outline-dark" title="Ver no GitHub">
-              <i class="fab fa-github me-1"></i> GitHub
+              class="btn btn-outline-dark ml-2" title="Ver no GitHub">
+              <i class="fab fa-github mr-1"></i> GitHub
             </a>
           </div>
         </div>
@@ -90,46 +94,46 @@
       </div>
     </div>
 
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="card grafico-card shadow-sm">
+    <!-- Espaçamento entre os cards de gráficos -->
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card grafico-card shadow-sm h-100">
           <div class="card-body">
             <canvas id="graficoTemperatura"></canvas>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card grafico-card shadow-sm">
+      <div class="col-lg-6 mb-4">
+        <div class="card grafico-card shadow-sm h-100">
           <div class="card-body">
             <canvas id="graficoUmidade"></canvas>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card grafico-card shadow-sm">
+      <div class="col-lg-6 mb-4">
+        <div class="card grafico-card shadow-sm h-100">
           <div class="card-body">
             <canvas id="graficoPrecipitacao"></canvas>
           </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="card grafico-card shadow-sm">
+      <div class="col-lg-6 mb-4">
+        <div class="card grafico-card shadow-sm h-100">
           <div class="card-body">
             <canvas id="graficoRadicao"></canvas>
           </div>
         </div>
       </div>
-      <div class="col-12">
-        <div class="card grafico-card shadow-sm">
+      <div class="col-12 mb-4">
+        <div class="card grafico-card shadow-sm h-100">
           <div class="card-body">
             <canvas id="graficoVento"></canvas>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="dashboard.js"></script>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>

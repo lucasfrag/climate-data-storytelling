@@ -1,19 +1,18 @@
-
 button {
     margin: 10px;
 }
 
 .scroll-content {
-    overflow-y: scroll; 
+    overflow-y: scroll;
     height: 800px;
-    
+
     overflow-y: scroll;
     /* or overflow-y: auto for vertical only */
     scrollbar-width: none;
     /* For Firefox */
     -ms-overflow-style: none;
     /* For IE and Edge */
-    
+
 }
 
 
@@ -136,15 +135,63 @@ svg {
 }
 
 #slider-ano-range {
-  margin: 0 auto;
-  max-width: 500px;
+    margin: 0 auto;
+    max-width: 500px;
 }
+
 .noUi-connect {
-  background: #007bff;
+    background: #007bff;
 }
+
 .noUi-handle {
-  border: none;
-  background: #f2f8ff;
-  cursor: grab;
+    border: none;
+    background: #f2f8ff;
+    cursor: grab;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal customização extra para responsividade e visual */
+@media (max-width: 767.98px) {
+    #modalTuristico .modal-dialog {
+        max-width: 98vw;
+    }
+
+    #modalTuristico .modal-content {
+        border-radius: 10px;
+    }
+
+    #modalTuristico .modal-body .row {
+        flex-direction: column;
+    }
+
+    #modalTuristicoImg {
+        border-radius: 10px 10px 0 0 !important;
+        min-height: 180px !important;
+    }
+}
+
+#modalTuristico .modal-content {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    border: none;
+}
+
+#modalTuristico .modal-title {
+    color: #1976d2;
+    letter-spacing: 0.5px;
+}
+
+#modalTuristicoDesc {
+    color: #333;
+}
+
+.img-modal-trigger {
+    transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s;
+    cursor: pointer;
+}
+
+.img-modal-trigger:hover,
+.img-modal-trigger:focus {
+    transform: scale(1.07);
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18), 0 2px 8px rgba(0, 0, 0, 0.10);
+    z-index: 2;
 }
