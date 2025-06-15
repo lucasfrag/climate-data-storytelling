@@ -50,7 +50,7 @@ fetch("manifest.json")
     select.innerHTML = '<option value="">Selecione</option>';
     arquivos.forEach(arquivo => {
       const opt = document.createElement("option");
-      opt.value = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2));
+      opt.value = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2)).replaceAll("%5C", "/");
       opt.textContent = arquivo;
       select.appendChild(opt);
     });
