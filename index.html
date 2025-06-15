@@ -1,64 +1,183 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Data Storytelling</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(135deg, #e0f7fa 0%, #fffde7 100%);
-            min-height: 100vh;
-        }
-        .main-title {
-            color: #1565c0;
-            letter-spacing: 1px;
-        }
-        .feature-list li::marker {
-            color: #43a047;
-        }
-        .highlight {
-            background: #e3f2fd;
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-            display: inline-block;
-        }
-        .logo {
-            width: 80px;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Date Storytelling</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/leaflet.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
-<body>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <img src="https://img.icons8.com/fluency/96/000000/earth-planet.png" alt="Logo" class="logo" />
-                <h2 class="fw-bold mb-3 main-title" style="font-size:2.4rem;">
-                    Bem-vindo ao <span class="text-success">Climate Data Storytelling</span>
-                </h2>
-                <p class="lead mb-4" style="font-size:1.25rem;">
-                    Uma jornada interativa pelos dados climáticos de <b>Porto Alegre</b> e do <b>Rio Grande do Sul</b>.
-                </p>
-                <div class="mb-4">
-                    <ul class="feature-list text-start d-inline-block" style="font-size:1.1rem;">
-                        <li>Visualização de séries históricas de temperatura, precipitação, radiação solar, vento e umidade.</li>
-                        <li>Comparação entre anos e análise de extremos climáticos.</li>
-                        <li>Mapa interativo das estações meteorológicas do INMET.</li>
-                        <li>Contextualização dos dados com storytelling e explicações acessíveis.</li>
-                    </ul>
+
+<body class="bg-light">
+    <div class="container py-4">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row w-100 align-items-center">
+                    <!-- Esquerda: Logo -->
+                    <div class="col-2 d-flex align-items-center">
+                        <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size:1.3rem;">
+                            <i class="fas fa-globe-americas me-2"></i>
+                            Climate Data Storytelling
+                        </a>
+                    </div>
+                    <!-- Meio: Navegação -->
+                    <div class="col-8">
+                        <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page"
+                                        href="storytelling.html">Storytelling</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Direita: Ações -->
+                    <div class="col-2 d-flex justify-content-end align-items-center">
+                        <a href="./artigo.html" class="btn btn-outline-primary" title="Ler o artigo completo">
+                            <i class="fas fa-book-open mr-1"></i> Artigo
+                        </a>
+                        <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank" rel="noopener"
+                            class="btn btn-outline-dark ml-2" title="Ver no GitHub">
+                            <i class="fab fa-github mr-1"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <span class="highlight text-primary fw-semibold">
-                        Descubra tendências, faça suas próprias análises e compartilhe descobertas!
-                    </span>
+            </div>
+        </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center vh-100"
+        style="min-height: 100vh; width: 100%; padding: 0; background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%); color: #fff;">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="row justify-content-center align-items-center flex-grow-1">
+                <div class="col-lg-10 col-md-12">
+                    <h1 class="display-3 fw-bold mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.15);">
+                        <i class="fas fa-globe-americas me-2"></i>
+                        Climate Data Storytelling
+                    </h1>
+                    <p class="lead mb-5" style="font-size: 1.5rem;">
+                        Descubra como o clima está mudando em Porto Alegre e no região sul do Brasil.<br>
+                        Visualize dados meteorológicos, tendências e impactos de forma interativa e envolvente.
+                    </p>
+
+
+                    <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                        <i class="fas fa-book-open me-2"></i> Ler o artigo completo
+                    </a>
+                    <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank"
+                        class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                        <i class="fab fa-github me-2"></i> Ver no GitHub
+                    </a>
+
+
+                    <div class="d-flex flex-column align-items-center mt-5">
+                        <p class="mb-2" style="font-size: 1.15rem;">
+                            <strong>Clique no botão abaixo para começar a explorar os dados.</strong>
+                        </p>
+                        <br><br>
+                        <button id="explorarBtn"
+                            class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                            style="width: 64px; height: 64px; font-size: 2rem; color: #1976d2;">
+                            <i class="fas fa-arrow-down"></i>
+                        </button>
+                    </div>
+                    <script>
+                        document.getElementById('explorarBtn').addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const target = document.querySelector('#porto-alegre');
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        });                     
+                    </script>
                 </div>
-                <a href="#explore" class="btn btn-success btn-lg px-4 shadow-sm">Explorar Agora</a>
             </div>
         </div>
+    </section>
+
+    <div class="tooltip" id="tooltip"></div>
+
+
+    <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center ">
+        <div class="col-12 text-center mt-5">
+            <h2 class="fw-bold mb-3" style="font-size:2.2rem;">🚀 Pronto para ir além? 🌎</h2>
+            <p class="lead mb-4" style="font-size:1.3rem;"><br>
+                Você já viu como o clima está mudando em Porto Alegre. Mas essa história não para aqui.<br><br>
+                No nosso dashboard interativo, você pode <br>comparar anos, gerar insights e encontrar padrões que talvez ainda não tenham sido contados.
+            </p>
+            <br>
+            <a href="dashboard.html" class="btn  btn-primary px-5 py-3 shadow" style="font-size:1.3rem;">
+                <i class="fas fa-chart-line me-2"></i> Explorar o Dashboard <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+
+            <br><br><br>
+            <p class="mb-4" style="font-size:1.1rem;">
+                Clique no botão acima e mergulhe em uma experiência interativa no nosso <b>Dashboard de Dados
+                    Climáticos</b>!<br>
+                <span class="text-primary fw-semibold">Descubra tendências, faça suas próprias análises e compartilhe
+                    descobertas.</span>
+            </p>
+
+        </div>
     </div>
-    <!-- Bootstrap JS (opcional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Rodapé -->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-4" style="background-color: #f8f9fa;">
+            2025 © Todos os direitos reservados.
+        </div>
+
+
+
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/d3-charts.js"></script>
+        <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/papaparse.min.js"></script>
 </body>
+
 </html>
+
+</body>
