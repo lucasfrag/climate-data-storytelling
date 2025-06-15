@@ -452,7 +452,7 @@
 
                             </div>
 
-                            <!--
+
 
                             <p class="mb-2 text-muted">O gráfico abaixo mostra a evolução do número de estações
                                 meteorológicas ao longo dos anos no Rio Grande do Sul.
@@ -462,8 +462,8 @@
                                 aria-label="Gráfico de barras mostrando o número de estações fundadas por ano"></canvas>
                             <center>
                                 <p class="mb-2 text-muted">Para visualizar as informações de um ano
-                                específico, basta passar o mouse sobre as barras.</p>
-                            </center>-->
+                                    específico, basta passar o mouse sobre as barras.</p>
+                            </center>
                             <br>
 
                             <div class="alert alert-success d-flex align-items-center my-4 reveal-item" role="alert"
@@ -763,10 +763,20 @@
                         <br>
 
 
+                        <p>Mas o que isso significa para a cidade? Para as pessoas? Para o futuro?</p>
 
-                        <br><br>
-                        <p>E em 2024, essa mudança deixou de ser apenas número. Vamos ver o que aconteceu quando a
-                            cidade enfrentou sua maior enchente em mais de 80 anos.</p>
+
+                        <div class="alert alert-danger d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.15rem;">
+                            <i class="fas fa-exclamation-circle fa-lg mr-3 text-danger"></i>
+                            <div>
+                                <strong>Em 2024, essa mudança deixou de ser apenas número.</strong><br>
+                                Vamos ver o que aconteceu quando a cidade enfrentou sua maior enchente em mais de 80
+                                anos.
+                            </div>
+                        </div>
+
+
 
                         <hr>
                         <div class="end-content w-100 text-center">
@@ -1295,14 +1305,16 @@
                             anos anteriores.
                         </div>
 
-                        
 
 
-                        <div class="alert alert-warning d-flex align-items-center my-4" role="alert" style="font-size: 1.15rem;">
+
+                        <div class="alert alert-warning d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.15rem;">
                             <i class="fas fa-exchange-alt fa-lg mr-3 text-warning"></i>
                             <div>
                                 <strong>Mas se o El Niño traz chuva, o que acontece quando ele vai embora?</strong><br>
-                                A resposta está no seu oposto: <span class="font-weight-bold text-primary">o fenômeno La Niña</span>.
+                                A resposta está no seu oposto: <span class="font-weight-bold text-primary">o fenômeno La
+                                    Niña</span>.
                             </div>
                         </div>
 
@@ -1366,11 +1378,27 @@
                             anos, mas ultimamente esses ciclos estão mais curtos e mais intensos. O motivo? Tudo indica
                             que o aquecimento global está por trás disso.</p>
 
+                        <p class="">
+                            O gráfico ao lado compara, ano a ano, dois fatores fundamentais para o clima de Porto
+                            Alegre:
+                            a <strong>precipitação total anual</strong> (barras azuis) e a <strong>temperatura média
+                                anual</strong> (linha laranja).
+                        </p>
+
                         <p class="font-weight-bold">🎯 Explore o gráfico ao lado para ver como a temperatura média e a
                             precipitação total variaram ano a ano. Procure os anos de extremos e pense: o que mudou
                             nesses períodos?</p>
 
-                        <div class="alert alert-warning d-flex align-items-center my-4" role="alert" style="font-size: 1.15rem;">
+                        <p class="">
+                            Essa visualização nos ajuda a perceber como esses dois elementos variam ao longo do tempo —
+                            e
+                            como, muitas vezes,
+                            parecem se comportar como uma verdadeira gangorra climática.
+                        </p>
+
+
+                        <div class="alert alert-warning d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.15rem;">
                             <i class="fas fa-sun fa-lg mr-3 text-warning"></i>
                             <div>
                                 <strong>Mas o clima não muda só por causa dos oceanos.</strong><br>
@@ -1398,14 +1426,14 @@
                 style="background-color: #f8f9fa;">
 
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 Gráfico de Precipitação x Temperatura</h4>
+                    <h4>📊 Gráfico de Precipitação x Temperatura (2000 - 2024)</h4>
                     <hr>
-                    <p class="text-muted mb-2 ">Este gráfico mostra, para cada ano, a soma total de chuva (barras azuis)
-                        e a temperatura média anual (linha vermelha) em Porto Alegre.<br>
-                        <br>
-                        Passe o mouse sobre as barras e a linha para ver os valores exatos de cada ano.
-                    </p>
-                    <br>
+                    <p class="text-muted mb-2">
+                        O gráfico abaixo mostra a precipitação total anual (barras azuis) e a temperatura média anual
+                        (linha laranja) de Porto Alegre de 2000 a 2024, junto das médias históricas de precipitação e temperatura.
+                        <br><br>
+                        Passe o mouse sobre os pontos para ver os valores e as datas dos extremos.
+                    <br><br>
                     <center>
                         <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
                     </center>
@@ -1414,69 +1442,128 @@
 
             </div>
 
-
             <script>
                 async function carregarDados() {
                     const resposta = await fetch("./data/resumo_visualizacoes.json");
                     const dados = await resposta.json();
 
-                    const anos = Object.keys(dados).sort();
-                    const estacao = Object.values(dados[anos[0]])[0];
+                    const anos = Object.keys(dados)
+                        .filter(ano => !isNaN(ano) && ano !== "2025")
+                        .sort((a, b) => parseInt(a) - parseInt(b));
 
-                    const precipitacao = anos.map(ano => {
-                        const est = Object.values(dados[ano])[0];
-                        return est.precipitacao?.soma || null;
-                    });
+                    const precipitacao = [];
+                    const temperatura = [];
 
-                    const temperatura = anos.map(ano => {
+                    for (const ano of anos) {
                         const est = Object.values(dados[ano])[0];
-                        return est.temperatura?.media || null;
-                    });
+                        precipitacao.push(est.precipitacao?.soma || null);
+                        temperatura.push(est.temperatura?.media || null);
+                    }
+
+                    const valoresValidosPrecipitacao = precipitacao.filter(v => v !== null && v > 0);
+                    const mediaPrecipitacao = valoresValidosPrecipitacao.reduce((a, b) => a + b, 0) / valoresValidosPrecipitacao.length;
+
+                    const valoresValidosTemperatura = temperatura.filter(v => v !== null && v > 0);
+                    const mediaTemperatura = valoresValidosTemperatura.reduce((a, b) => a + b, 0) / valoresValidosTemperatura.length;
+
+                    const coresPrecipitacao = precipitacao.map(valor =>
+                        valor !== null && valor > mediaPrecipitacao
+                            ? 'rgba(0, 86, 179, 0.9)'  // azul escuro
+                            : 'rgba(0, 123, 255, 0.5)' // azul claro
+                    );
+
+                    const linhaMediaPrecipitacao = new Array(anos.length).fill(mediaPrecipitacao);
+                    const linhaMediaTemperatura = new Array(anos.length).fill(mediaTemperatura);
 
                     const ctx = document.getElementById('gangorraChart').getContext('2d');
+
                     new Chart(ctx, {
                         type: 'bar',
                         data: {
                             labels: anos,
                             datasets: [
                                 {
-                                    label: 'Precipitação Total (mm)',
-                                    data: precipitacao,
-                                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                                    yAxisID: 'y',
-                                    borderRadius: 5
-                                },
-                                {
                                     label: 'Temperatura Média (°C)',
                                     data: temperatura,
                                     type: 'line',
-                                    borderColor: 'red',
-                                    backgroundColor: 'red',
+                                    borderColor: '#FF8C00',
+                                    backgroundColor: '#FF8C00',
                                     yAxisID: 'y1',
-                                    tension: 0.3,
+                                    tension: 0.4,
                                     pointRadius: 4,
-                                    pointHoverRadius: 6
-                                }
+                                    pointHoverRadius: 6,
+                                    fill: false
+                                },
+                                {
+                                    label: 'Precipitação Total (mm)',
+                                    data: precipitacao,
+                                    backgroundColor: coresPrecipitacao,
+                                    yAxisID: 'y',
+                                    borderRadius: 6,
+                                    borderSkipped: false
+                                },
+
+                                {
+                                    label: 'Média Temperatura',
+                                    data: linhaMediaTemperatura,
+                                    type: 'line',
+                                    borderColor: 'rgba(255,140,0,0.5)',
+                                    borderDash: [6, 6],
+                                    pointRadius: 0,
+                                    yAxisID: 'y1',
+                                    fill: false,
+                                    borderWidth: 1.5
+                                },
+                                {
+                                    label: 'Média Precipitação',
+                                    data: linhaMediaPrecipitacao,
+                                    type: 'line',
+                                    borderColor: 'rgba(0,123,255,0.5)',
+                                    borderDash: [6, 6],
+                                    pointRadius: 0,
+                                    yAxisID: 'y',
+                                    fill: false,
+                                    borderWidth: 1.5
+                                },
                             ]
                         },
                         options: {
                             responsive: true,
                             interaction: {
                                 mode: 'index',
-                                intersect: false,
+                                intersect: false
                             },
                             stacked: false,
                             plugins: {
                                 tooltip: {
                                     mode: 'index',
-                                    intersect: false
+                                    intersect: false,
+                                    callbacks: {
+                                        label: function (context) {
+                                            const label = context.dataset.label || '';
+                                            const valor = context.parsed.y;
+                                            const index = context.dataIndex;
+
+                                            if (label.includes('Precipitação') && !label.includes('Média')) {
+                                                let extra = '';
+                                                if (valor > mediaPrecipitacao) {
+                                                    extra = ' ⚠️ Acima da média histórica!';
+                                                }
+                                                return `${label}: ${valor} mm${extra}`;
+                                            } else if (label.includes('Temperatura') && !label.includes('Média Temperatura')) {
+                                                let extra = '';
+                                                if (valor > mediaTemperatura) {
+                                                    extra = ' ⚠️ Acima da média histórica!';
+                                                }
+                                                return `${label}: ${valor} °C${extra}`;
+                                            } else {
+                                                return `${label}: ${valor}`;
+                                            }
+                                        }
+                                    }
                                 },
                                 legend: {
                                     position: 'top'
-                                },
-                                title: {
-                                    display: false,
-                                    text: 'Gangorra Climática: Precipitação x Temperatura ao Longo dos Anos'
                                 }
                             },
                             scales: {
@@ -1487,6 +1574,9 @@
                                     title: {
                                         display: true,
                                         text: 'Precipitação (mm)'
+                                    },
+                                    grid: {
+                                        drawOnChartArea: true
                                     }
                                 },
                                 y1: {
@@ -1498,7 +1588,7 @@
                                     },
                                     title: {
                                         display: true,
-                                        text: 'Temperatura (°C)'
+                                        text: 'Temperatura Média (°C)'
                                     }
                                 }
                             }
@@ -1508,6 +1598,7 @@
 
                 carregarDados();
             </script>
+
 
         </div>
     </div>
@@ -1543,10 +1634,12 @@
                         <p class="font-weight-bold">🎯 No gráfico ao lado, veja como a radiação solar anual tem crescido
                             e compare com a média histórica. Anos acima da média estão sinalizados com ⚠️.</p>
 
-                        <div class="alert alert-primary d-flex align-items-center my-4" role="alert" style="font-size: 1.15rem;">
+                        <div class="alert alert-primary d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.15rem;">
                             <i class="fas fa-wind fa-lg mr-3 text-primary"></i>
                             <div>
-                                <strong>Mas será que conseguimos prever quando um evento extremo está se aproximando?</strong><br>
+                                <strong>Mas será que conseguimos prever quando um evento extremo está se
+                                    aproximando?</strong><br>
                                 Às vezes, a resposta está no ar — literalmente.
                             </div>
                         </div>
@@ -1663,67 +1756,8 @@
                             });
                     </script>
 
-                    <canvas id="graficoPrecipitacaoEstacoes"></canvas>
+                    
 
-                    <script>
-                        const coresEstacoes = {
-                            "Verão": "#4FC3F7",
-                            "Outono": "#81C784",
-                            "Inverno": "#9575CD",
-                            "Primavera": "#FFB74D"
-                        };
-
-                        fetch('./data/precipitacao_estacoes.json') // novo JSON com dados processados
-                            .then(res => res.json())
-                            .then(dados => {
-                                const estacao = "A801";
-                                const anos = Object.keys(dados).filter(ano => !isNaN(ano)).sort();
-
-                                const estacoes = ["Verão", "Outono", "Inverno", "Primavera"];
-
-                                const datasets = estacoes.map(est => ({
-                                    label: est,
-                                    data: anos.map(ano => dados[ano]?.[estacao]?.precipitacao_estacoes?.[est] ?? 0),
-                                    backgroundColor: coresEstacoes[est],
-                                    stack: 'precipitacao'
-                                }));
-
-                                new Chart(document.getElementById('graficoPrecipitacaoEstacoes'), {
-                                    type: 'bar',
-                                    data: {
-                                        labels: anos,
-                                        datasets: datasets
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Distribuição Sazonal da Precipitação (2000–2024)'
-                                            },
-                                            tooltip: {
-                                                mode: 'index',
-                                                intersect: false
-                                            }
-                                        },
-                                        interaction: {
-                                            mode: 'index',
-                                            intersect: false
-                                        },
-                                        scales: {
-                                            x: {
-                                                stacked: true,
-                                                title: { display: true, text: 'Ano' }
-                                            },
-                                            y: {
-                                                stacked: true,
-                                                title: { display: true, text: 'Precipitação (mm)' }
-                                            }
-                                        }
-                                    }
-                                });
-                            });
-                    </script>
 
                     <!--<canvas id="graficoRadiacaoArea"></canvas>
 
@@ -1916,10 +1950,12 @@
                             variou nos dias que antecederam a enchente. Procure por padrões e mudanças que possam
                             indicar eventos extremos.</p>
 
-                        <div class="alert alert-secondary d-flex align-items-center my-4" role="alert" style="font-size: 1.1rem;">
+                        <div class="alert alert-secondary d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.1rem;">
                             <i class="fas fa-arrow-down fa-lg mr-3 text-primary"></i>
                             <div>
-                                <strong>Mas a pressão não age sozinha.</strong> O comportamento dos ventos também influencia — e muito — o que acontece com a umidade no ar.
+                                <strong>Mas a pressão não age sozinha.</strong> O comportamento dos ventos também
+                                influencia — e muito — o que acontece com a umidade no ar.
                             </div>
                         </div>
 
@@ -1970,8 +2006,18 @@
                         <p class="font-weight-bold">🎯 Interaja com o gráfico e veja como os ventos mudaram — ou
                             deixaram de mudar.</p>
 
-                        <p>E quando a umidade sobe e o ar já não consegue mais absorver, surge um sinal claro: o ponto
-                            de orvalho.</p>
+                        <div class="alert alert-info d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.1rem;">
+                            <i class="fas fa-tint fa-lg mr-3 text-info"></i>
+                            <div>
+                                <strong>E quando a umidade sobe e o ar já não consegue mais absorver, surge um sinal
+                                    claro:</strong>
+                                <br>
+                                <span class="font-weight-bold">o ponto de orvalho.</span>
+                            </div>
+                        </div>
+
+
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
@@ -2267,6 +2313,9 @@
                             indicadores para prever eventos intensos.</p>
 
 
+                        <!-- Preciso fazer um fechamento aqui -->
+
+
                         <hr>
 
                         <div class="end-content w-100 text-center mt-4">
@@ -2303,6 +2352,7 @@
                 Os gráficos, os mapas e as séries temporais contaram uma história real. <br>Mas essa história continua —
                 e está sendo escrita todos os dias.
             </p>
+
 
             <br><br>
 
@@ -2499,6 +2549,7 @@
                         }
                     }
                 });
+
                 if (marcadores.length > 0) {
                     const popupContent = marcadores[0].getPopup().getContent();
                     const instrucoes = `<hr><p class='text-center'><strong> 📍 ESTE MAPA É INTERATIVO</strong><p class='text-muted'>Clique nas estações para ver mais detalhes.</p></p>`;
