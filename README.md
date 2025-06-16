@@ -3,14 +3,14 @@
 **Visualize, explore e compreenda as mudanças climáticas em Porto Alegre e no sul do Brasil.**  
 Este projeto apresenta dados meteorológicos reais de forma interativa, acessível e envolvente, combinando storytelling, gráficos dinâmicos e mapas.
 
-
+---
 
 ## ✨ Visão Geral
 
 O **Climate Data Storytelling** é uma plataforma web que transforma dados climáticos históricos em narrativas visuais.  
 Navegue por uma história interativa sobre o clima de Porto Alegre, explore tendências, compare cidades e analise eventos extremos como enchentes e ondas de calor.
 
-
+---
 
 ## 🚀 Funcionalidades
 
@@ -30,7 +30,7 @@ Navegue por uma história interativa sobre o clima de Porto Alegre, explore tend
 - **Acessibilidade e Design Responsivo:**  
     Interface adaptada para desktop e mobile, com navegação acessível.
 
-
+---
 
 ## 📊 Dados Utilizados
 
@@ -48,14 +48,24 @@ Os dados incluem:
 
 Os dados são provenientes do [INMET](https://portal.inmet.gov.br/) e processados por scripts Python em `/scripts`.
 
+---
 
-
-## 🔗 Fontes de Dados
+## 📂 Fontes de Dados
 
 - [INMET: Instituto Nacional de Meteorologia](https://portal.inmet.gov.br/dadoshistoricos)
 - [Banco de imagens de Porto Alegre (RS)](https://bancodeimagens.portoalegre.rs.gov.br/)
 - [SECOM - Secretaria Estadual de Comunicação](https://www.flickr.com/people/governo_rs/)
 
+---
 
+## 🖥️ Tecnologias Utilizadas
 
-Descubra, questione, compartilhe. O futuro do clima começa com informação.
+- **[Bootstrap](https://getbootstrap.com/):** Layout responsivo e componentes de interface.
+- **[Chart.js](https://www.chartjs.org/):** Gráficos interativos para visualização de dados.
+- **[Leaflet](https://leafletjs.com/):** Mapas interativos para localização das estações meteorológicas.
+- **[D3.js](https://d3js.org/):** Manipulação e transformação de dados para visualizações avançadas.
+- **[Python](https://www.python.org/):** Processamento, limpeza e preparação dos dados meteorológicos.
+
+---
+
+**🌱 Descubra, questione, compartilhe. O futuro do clima começa com informação.**
