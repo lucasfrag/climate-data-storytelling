@@ -4,21 +4,35 @@ const charts = [[], []];
 fetch("manifest.json")
   .then(res => res.json())
   .then(arquivos => {
+    const arquivosPorAno = {};
+
+    arquivos.forEach(({ arquivo, cidade, estado, estacao, periodo }) => {
+      const ano = periodo.split(" ")[0].split("/")[2]; // pega o ano inicial
+      if (!arquivosPorAno[ano]) arquivosPorAno[ano] = [];
+      arquivosPorAno[ano].push({ arquivo, cidade, estado, estacao, periodo });
+    });
+
     selects.forEach(sel => {
       sel.innerHTML = '<option value="">Selecione</option>';
-      arquivos.forEach(({ arquivo, cidade, estado, estacao, periodo }) => {
-        const opt = document.createElement("option");
-        const url = "https://lucasfrag.github.io/climate-data-storytelling/" + arquivo.replaceAll("\\\\", "/").replace("../", "");;
-        console.log(arquivo)
-        //const url = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2)).replaceAll("%5C", "/");
+      Object.keys(arquivosPorAno).sort().forEach(ano => {
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = ano;
 
-        opt.value = url;
-        opt.textContent = `📍 ${cidade} (${estado}) – ${periodo} [${estacao}]`;
-        opt.dataset.nomeArquivo = arquivo;
-        sel.appendChild(opt.cloneNode(true));
+        arquivosPorAno[ano].forEach(({ arquivo, cidade, estado, estacao, periodo }) => {
+          const opt = document.createElement("option");
+          const url = "https://lucasfrag.github.io/climate-data-storytelling/" + arquivo.replaceAll("\\\\", "/").replace("../", "");;
+
+          opt.value = url;
+          opt.textContent = `${estado} - ${cidade} [${estacao}] • ${periodo}`;
+          opt.dataset.nomeArquivo = arquivo;
+          optgroup.appendChild(opt);
+        });
+
+        sel.appendChild(optgroup);
       });
     });
   });
+
 
 function formatarTitulo(nomeArquivo) {
   const regex = /INMET_([A-Z])_([A-Z]{2})_(A\d+)_([^_]+)_(\d{2}-\d{2}-\d{4})_A_(\d{2}-\d{2}-\d{4})/;
@@ -63,7 +77,7 @@ function agruparPorMes(dataArray, valorArray) {
     const date = new Date(d);
     const mes = date.getMonth() + 1;
     const val = valorArray[i];
-    if (!isNaN(val)) meses[mes].push(val);
+    if (val != null && !isNaN(val)) meses[mes].push(val);
   });
   return meses;
 }
@@ -106,7 +120,7 @@ function processarCSV(csv, nomeArquivo) {
   const datas = [], temp = [], umi = [], rad = [], prec = [], press = [], vento = [], raj = [];
 
   for (let i = 9; i < linhas.length; i++) {
-    const col = linhas[i].split(";");
+    const col = linhas[i].split(";").slice(0, cabecalho.length);
     if (col.length < cabecalho.length) continue;
 
     const dataHora = `${col[dataIdx]} ${col[horaIdx].replace(" UTC", "")}`;
@@ -177,27 +191,38 @@ function criarGraficos(dataset, idx) {
         font: { size: 18 }
       },
       tooltip: {
-        enabled: true,
-        backgroundColor: '#ffffff',
-        titleColor: '#000',
-        bodyColor: '#333',
-        borderColor: '#ddd',
-        borderWidth: 1,
-        padding: 10,
-        cornerRadius: 6,
-        callbacks: {
-          label: ctx => {
-            const unidade = {
-              "Temperatura Mensal (°C)": "°C",
-              "Umidade Relativa Média (%)": "%",
-              "Precipitação Total por Mês (mm)": "mm",
-              "Radiação Solar Acumulada (kJ/m²)": "kJ/m²",
-              "Vento Médio e Rajada Máxima (m/s)": "m/s"
-            }[ctx.chart.options.plugins.title.text] || "";
-            return `${ctx.dataset.label}: ${ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "N/A"} ${unidade}`;
-          }
-        }
-      },
+  enabled: true,
+  backgroundColor: "#fff",
+  titleColor: "#111",
+  bodyColor: "#333",
+  borderColor: "#ddd",
+  borderWidth: 1,
+  padding: 10,
+  cornerRadius: 6,
+  displayColors: true,
+  boxPadding: 6,
+  bodySpacing: 6,
+  callbacks: {
+    title: (tooltipItems) => {
+      const label = tooltipItems[0].label;
+      return `📅 Mês: ${label}`;
+    },
+    label: (ctx) => {
+      const valor = ctx.parsed.y;
+      if (valor == null || isNaN(valor)) return null;
+
+      const tit = ctx.chart.options.plugins.title.text;
+      const unidade = tit.includes("Temperatura") ? "°C"
+                   : tit.includes("Umidade") ? "%"
+                   : tit.includes("Precipitação") ? "mm"
+                   : tit.includes("Radiação") ? "kJ/m²"
+                   : tit.includes("Vento") ? "m/s"
+                   : "";
+
+      return `${ctx.dataset.label}: ${valor.toFixed(1)} ${unidade}`;
+    }
+  }
+},
       legend: {
         display: true,
         position: 'bottom',
