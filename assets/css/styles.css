@@ -4,15 +4,14 @@ button {
 
 .scroll-content {
     overflow-y: scroll;
-    height: 800px;
-
+    min-height: 800px;
     overflow-y: scroll;
     /* or overflow-y: auto for vertical only */
     scrollbar-width: none;
     /* For Firefox */
     -ms-overflow-style: none;
     /* For IE and Edge */
-
+    height: 100vh;
 }
 
 
