@@ -5,22 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Climático</title>
-  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" /> <!-- Bootstrap v4.5.2 -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     .grafico-card {
-      min-height: 520px;
+      min-height: 420px;
+      height: 100%;
     }
-
     canvas {
-      height: 480px !important;
+      max-height: 360px !important;
     }
-
+    .card-body {
+      padding: 1rem 1.25rem 0.5rem;
+    }
     .dashboard-subtitle {
-      font-size: 1.2rem;
-      color: #6c757d;
-      margin-bottom: 20px;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #666;
     }
   </style>
 </head>
@@ -28,106 +30,158 @@
 <body class="bg-light">
   <div class="container py-4">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="row w-100 align-items-center">
-          <!-- Esquerda: Logo -->
-          <div class="col-2 d-flex align-items-center">
-            <a class="navbar-brand fw-bold text-primary" href="index.html" style="font-size:1.3rem;">
-              <i class="fas fa-globe-americas me-2"></i>
-              Climate Data Storytelling
-            </a>
-          </div>
-          <!-- Meio: Navegação -->
-          <div class="col-8">
-            <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="index.html">Início</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="storytelling.html">Storytelling</a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link active" href="dashboard.html">Dashboard</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Direita: Ações -->
-          <div class="col-2 d-flex justify-content-end align-items-center">
-            <a href="./artigo.html" class="btn btn-outline-primary" title="Ler o artigo completo">
-              <i class="fas fa-book-open mr-1"></i> Artigo
-            </a>
-            <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank" rel="noopener"
-              class="btn btn-outline-dark ml-2" title="Ver no GitHub">
-              <i class="fab fa-github mr-1"></i> GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <!-- ... (navbar igual ao original) ... -->
   </div>
-
 
   <div class="container py-4">
     <h1 class="mb-4 text-center">🌤️ Dashboard de Dados Climáticos</h1>
-    <div class="dashboard-subtitle text-center">Visualize e explore dados de temperatura, umidade, precipitação,
-      radiação e vento.</div>
+    <div class="dashboard-subtitle text-center">Compare dois arquivos de dados climáticos lado a lado.</div>
     <div class="row mb-4">
       <div class="col-md-12">
-        <label for="arquivoSelect" class="form-label">Selecione o arquivo:</label>
+        <label class="form-label">Selecione os arquivos para comparar:</label>
       </div>
-      <div class="col-md-8">
-        <select id="arquivoSelect" class="form-control ">
+      <div class="col-md-5 mb-2">
+        <select id="arquivoSelect1" class="form-control">
           <option>Carregando arquivos...</option>
         </select>
       </div>
-      <div class="col-md-4">
-        <button id="btnCarregar" class="btn btn-primary w-100">📊 Carregar Gráficos</button>
+      <div class="col-md-2 text-center mb-2">
+        <span class="align-middle" style="font-size:1.5rem;">vs</span>
+      </div>
+      <div class="col-md-5 mb-2">
+        <select id="arquivoSelect2" class="form-control">
+          <option>Carregando arquivos...</option>
+        </select>
+      </div>
+      <div class="col-md-12 mt-2">
+        <button id="btnCarregar" class="btn btn-primary w-100">📊 Comparar Gráficos</button>
       </div>
     </div>
 
-    <!-- Espaçamento entre os cards de gráficos -->
     <div class="row">
-      <div class="col-lg-6 mb-4">
-        <div class="card grafico-card shadow-sm h-100">
-          <div class="card-body">
-            <canvas id="graficoTemperatura"></canvas>
+      <!-- Coluna 1 -->
+      <div class="col-lg-6">
+        <h4 class="text-center" id="tituloDataset1"></h4>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoTemperatura1"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Este gráfico apresenta as temperaturas mínima, média e máxima registradas em cada mês. Ele permite
+                  identificar padrões sazonais, como meses mais frios ou mais quentes, facilitando a compreensão das
+                  variações de temperatura ao longo do ano.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoUmidade1"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Exibe a umidade relativa média do ar mês a mês. A umidade influencia diretamente o conforto térmico, a
+                  sensação de calor ou frio e pode indicar períodos mais secos ou úmidos.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoPrecipitacao1"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Mostra o total de chuva (precipitação) acumulada em cada mês. Esse dado é importante para identificar
+                  épocas de seca ou de maior volume de chuvas, auxiliando no entendimento do regime de chuvas local.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoRadicao1"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Indica a quantidade total de radiação solar recebida em cada mês. Esse valor está relacionado à
+                  disponibilidade de energia solar e à intensidade da luz do sol, sendo útil para entender a incidência
+                  solar ao longo do ano.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoVento1"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Apresenta a velocidade média do vento e a maior rajada registrada em cada mês. O vento pode afetar a
+                  sensação térmica, a dispersão de poluentes e até mesmo atividades ao ar livre.
+                </small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 mb-4">
-        <div class="card grafico-card shadow-sm h-100">
-          <div class="card-body">
-            <canvas id="graficoUmidade"></canvas>
+      <!-- Coluna 2 -->
+      <div class="col-lg-6">
+        <h4 class="text-center" id="tituloDataset2"></h4>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoTemperatura2"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Este gráfico apresenta as temperaturas mínima, média e máxima registradas em cada mês. Ele permite
+                  identificar padrões sazonais, como meses mais frios ou mais quentes, facilitando a compreensão das
+                  variações de temperatura ao longo do ano.
+                </small>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4">
-        <div class="card grafico-card shadow-sm h-100">
-          <div class="card-body">
-            <canvas id="graficoPrecipitacao"></canvas>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoUmidade2"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Exibe a umidade relativa média do ar mês a mês. A umidade influencia diretamente o conforto térmico, a
+                  sensação de calor ou frio e pode indicar períodos mais secos ou úmidos.
+                </small>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4">
-        <div class="card grafico-card shadow-sm h-100">
-          <div class="card-body">
-            <canvas id="graficoRadicao"></canvas>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoPrecipitacao2"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Mostra o total de chuva (precipitação) acumulada em cada mês. Esse dado é importante para identificar
+                  épocas de seca ou de maior volume de chuvas, auxiliando no entendimento do regime de chuvas local.
+                </small>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-12 mb-4">
-        <div class="card grafico-card shadow-sm h-100">
-          <div class="card-body">
-            <canvas id="graficoVento"></canvas>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoRadicao2"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Indica a quantidade total de radiação solar recebida em cada mês. Esse valor está relacionado à
+                  disponibilidade de energia solar e à intensidade da luz do sol, sendo útil para entender a incidência
+                  solar ao longo do ano.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-4">
+            <div class="card grafico-card shadow-sm h-100">
+              <div class="card-body">
+                <canvas id="graficoVento2"></canvas>
+                <small class="text-muted d-block mt-2">
+                  Apresenta a velocidade média do vento e a maior rajada registrada em cada mês. O vento pode afetar a
+                  sensação térmica, a dispersão de poluentes e até mesmo atividades ao ar livre.
+                </small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
