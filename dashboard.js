@@ -191,38 +191,38 @@ function criarGraficos(dataset, idx) {
         font: { size: 18 }
       },
       tooltip: {
-  enabled: true,
-  backgroundColor: "#fff",
-  titleColor: "#111",
-  bodyColor: "#333",
-  borderColor: "#ddd",
-  borderWidth: 1,
-  padding: 10,
-  cornerRadius: 6,
-  displayColors: true,
-  boxPadding: 6,
-  bodySpacing: 6,
-  callbacks: {
-    title: (tooltipItems) => {
-      const label = tooltipItems[0].label;
-      return `📅 Mês: ${label}`;
-    },
-    label: (ctx) => {
-      const valor = ctx.parsed.y;
-      if (valor == null || isNaN(valor)) return null;
+        enabled: true,
+        backgroundColor: "#fff",
+        titleColor: "#111",
+        bodyColor: "#333",
+        borderColor: "#ddd",
+        borderWidth: 1,
+        padding: 10,
+        cornerRadius: 6,
+        displayColors: true,
+        boxPadding: 6,
+        bodySpacing: 6,
+        callbacks: {
+          title: (tooltipItems) => {
+            const label = tooltipItems[0].label;
+            return `📅 Mês: ${label}`;
+          },
+          label: (ctx) => {
+            const valor = ctx.parsed.y;
+            if (valor == null || isNaN(valor)) return null;
 
-      const tit = ctx.chart.options.plugins.title.text;
-      const unidade = tit.includes("Temperatura") ? "°C"
-                   : tit.includes("Umidade") ? "%"
-                   : tit.includes("Precipitação") ? "mm"
-                   : tit.includes("Radiação") ? "kJ/m²"
-                   : tit.includes("Vento") ? "m/s"
-                   : "";
+            const tit = ctx.chart.options.plugins.title.text;
+            const unidade = tit.includes("Temperatura") ? "°C"
+              : tit.includes("Umidade") ? "%"
+                : tit.includes("Precipitação") ? "mm"
+                  : tit.includes("Radiação") ? "kJ/m²"
+                    : tit.includes("Vento") ? "m/s"
+                      : "";
 
-      return `${ctx.dataset.label}: ${valor.toFixed(1)} ${unidade}`;
-    }
-  }
-},
+            return `${ctx.dataset.label}: ${valor.toFixed(1)} ${unidade}`;
+          }
+        }
+      },
       legend: {
         display: true,
         position: 'bottom',
@@ -325,18 +325,23 @@ document.getElementById("btnCarregar").addEventListener("click", async () => {
     const csv1 = await fetch(select1.value).then(r => r.text());
     const dados1 = processarCSV(csv1, nome1);
     criarGraficos(dados1, 0);
+    document.getElementById("colunaGraficos1").classList.remove("d-none");
   } else {
     charts[0].forEach(c => c.destroy());
     charts[0] = [];
+    document.getElementById("colunaGraficos1").classList.add("d-none");
   }
 
+  // Mostra a coluna 2 se o dataset foi carregado
   if (select2.value) {
     const csv2 = await fetch(select2.value).then(r => r.text());
     const dados2 = processarCSV(csv2, nome2);
     criarGraficos(dados2, 1);
+    document.getElementById("colunaGraficos2").classList.remove("d-none");
   } else {
     charts[1].forEach(c => c.destroy());
     charts[1] = [];
+    document.getElementById("colunaGraficos2").classList.add("d-none");
   }
 });
 
