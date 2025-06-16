@@ -1,10 +1,24 @@
 [
   {
+    "arquivo": "../dataset/2000/INMET_N_AM_A101_MANAUS_09-05-2000_A_31-12-2000.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "09/05/2000 a 31/12/2000"
+  },
+  {
     "arquivo": "../dataset/2000/INMET_S_RS_A801_PORTO ALEGRE_22-09-2000_A_31-12-2000.CSV",
     "estado": "RS",
     "cidade": "Porto Alegre",
     "estacao": "A801",
     "periodo": "22/09/2000 a 31/12/2000"
+  },
+  {
+    "arquivo": "../dataset/2001/INMET_N_AM_A101_MANAUS_01-01-2001_A_31-12-2001.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2001 a 31/12/2001"
   },
   {
     "arquivo": "../dataset/2001/INMET_S_RS_A801_PORTO ALEGRE_01-01-2001_A_31-12-2001.CSV",
@@ -42,6 +56,13 @@
     "periodo": "05/12/2001 a 31/12/2001"
   },
   {
+    "arquivo": "../dataset/2002/INMET_N_AM_A101_MANAUS_01-01-2002_A_31-12-2002.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2002 a 31/12/2002"
+  },
+  {
     "arquivo": "../dataset/2002/INMET_S_RS_A801_PORTO ALEGRE_01-01-2002_A_31-12-2002.CSV",
     "estado": "RS",
     "cidade": "Porto Alegre",
@@ -75,6 +96,27 @@
     "cidade": "Santo Augusto",
     "estacao": "A805",
     "periodo": "01/01/2002 a 31/12/2002"
+  },
+  {
+    "arquivo": "../dataset/2003/INMET_N_AM_A101_MANAUS_01-01-2003_A_31-12-2003.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2003 a 31/12/2003"
+  },
+  {
+    "arquivo": "../dataset/2003/INMET_N_PA_A201_BELEM_20-01-2003_A_31-12-2003.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "20/01/2003 a 31/12/2003"
+  },
+  {
+    "arquivo": "../dataset/2003/INMET_N_PA_A202_CASTANHAL_24-01-2003_A_31-12-2003.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "24/01/2003 a 31/12/2003"
   },
   {
     "arquivo": "../dataset/2003/INMET_S_PR_A807_CURITIBA_28-01-2003_A_31-12-2003.CSV",
@@ -124,6 +166,34 @@
     "cidade": "Florianopolis",
     "estacao": "A806",
     "periodo": "22/01/2003 a 31/12/2003"
+  },
+  {
+    "arquivo": "../dataset/2004/INMET_N_AM_A101_MANAUS_01-01-2004_A_31-12-2004.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2004 a 31/12/2004"
+  },
+  {
+    "arquivo": "../dataset/2004/INMET_N_PA_A201_BELEM_01-01-2004_A_31-12-2004.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2004 a 31/12/2004"
+  },
+  {
+    "arquivo": "../dataset/2004/INMET_N_PA_A202_CASTANHAL_01-01-2004_A_31-12-2004.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2004 a 31/12/2004"
+  },
+  {
+    "arquivo": "../dataset/2004/INMET_N_TO_A009_PALMAS_17-12-2004_A_31-12-2004.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "17/12/2004 a 31/12/2004"
   },
   {
     "arquivo": "../dataset/2004/INMET_S_PR_A807_CURITIBA_01-01-2004_A_31-12-2004.CSV",

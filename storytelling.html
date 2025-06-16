@@ -1272,6 +1272,7 @@
                     </h1>
 
                     <div class="col-12 justify-content-center align-items-center">
+                        <br><br>
                         <p>
                             <!-- Explique o que é o El Niño-->
                             El Niño é um fenômeno climático que ocorre quando as águas do Oceano Pacífico equatorial se
@@ -1635,12 +1636,20 @@
                     <div class="col-12 justify-content-center align-items-center">
                         <p>Dias mais quentes não vêm só do ar, mas também da radiação solar.</p>
 
-                        <p>Porto Alegre tem registrado, ano após ano, uma elevação nos níveis de radiação. Céus mais
-                            limpos e calor acumulado se combinam para aquecer ainda mais a cidade — especialmente as
-                            áreas urbanas, que já sofrem com ilhas de calor.</p>
+                        <p>A <strong>radiação solar</strong> representa a quantidade de energia que o Sol emite e que
+                            chega à superfície da Terra. Em Porto Alegre, os níveis dessa radiação têm aumentado de
+                            forma consistente nos últimos anos.</p>
 
-                        <p>Esse aumento afeta diretamente a qualidade de vida e agrava os efeitos de fenômenos como o El
-                            Niño.</p>
+
+                        <p>Esse crescimento está ligado a fatores como o céu mais limpo, a redução da cobertura vegetal
+                            e o acúmulo de calor nas áreas urbanas. Isso contribui para o agravamento das chamadas
+                            <em>ilhas de calor</em>, tornando a cidade ainda mais quente, especialmente durante o verão.
+                        </p>
+
+
+                        <p>Além do desconforto térmico, o aumento da radiação solar intensifica os efeitos de fenômenos
+                            climáticos como o El Niño, impactando diretamente a saúde, o bem-estar e o cotidiano da
+                            população.</p>
 
                         <p class="font-weight-bold">🎯 No gráfico ao lado, veja como a radiação solar anual tem crescido
                             e compare com a média histórica.</p>
@@ -1887,11 +1896,20 @@
 
 
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 ...</h4>
+                    <h4>📊 Gráfico de Pressão Média Anual em Porto Alegre</h4>
                     <hr>
-                    <p class="text-muted mb-2 ">O que é?
+                    <p class="text-muted mb-2 ">
+                        A pressão atmosférica é a força que o ar exerce sobre a superfície da Terra. Ela varia conforme
+                        a temperatura,
+                        altitude e a presença de sistemas climáticos como frentes frias ou ciclones. Em locais de menor
+                        pressão, o ar
+                        tende a subir, favorecendo a formação de chuvas e tempestades.
                         <br><br>
-                        Como usar?
+                        Cada ponto da linha azul representa a média anual da pressão registrada em Porto Alegre desde o
+                        ano 2000.
+                        A linha tracejada vermelha indica a média histórica do período. Valores abaixo dessa linha podem
+                        apontar para
+                        anos mais instáveis, com maior propensão a chuvas intensas ou tempestades.
                     </p>
                     <br>
 
@@ -1905,39 +1923,80 @@
                                 const estacao = "A801";
 
                                 const pressaoMedia = anos.map(ano => dados[ano]?.[estacao]?.pressao?.media ?? null);
+                                const valoresValidos = pressaoMedia.filter(v => v !== null);
+                                const mediaPressao = valoresValidos.reduce((a, b) => a + b, 0) / valoresValidos.length;
+
+                                const linhaMedia = anos.map(() => mediaPressao); // mesmo valor para todos os anos
 
                                 const ctx = document.getElementById('graficoPressaoAnual').getContext('2d');
                                 new Chart(ctx, {
                                     type: 'line',
                                     data: {
                                         labels: anos,
-                                        datasets: [{
-                                            label: 'Pressão Média Anual (mb)',
-                                            data: pressaoMedia,
-                                            borderWidth: 2,
-                                            tension: 0.3,
-                                            pointRadius: 4
-                                        }]
+                                        datasets: [
+                                            {
+                                                label: 'Pressão Média Anual (mb)',
+                                                data: pressaoMedia,
+                                                borderWidth: 2,
+                                                borderColor: '#2980b9',
+                                                backgroundColor: 'rgba(41, 128, 185, 0.1)',
+                                                pointBackgroundColor: '#2980b9',
+                                                pointBorderColor: '#fff',
+                                                pointRadius: 5,
+                                                tension: 0.3,
+                                                fill: true
+                                            },
+                                            {
+                                                label: `Média Histórica (${mediaPressao.toFixed(1)} mb)`,
+                                                data: linhaMedia,
+                                                borderWidth: 1.5,
+                                                borderColor: '#e74c3c',
+                                                borderDash: [5, 5],
+                                                pointRadius: 0,
+                                                fill: false
+                                            }
+                                        ]
                                     },
                                     options: {
                                         responsive: true,
                                         plugins: {
                                             title: {
-                                                display: true,
-                                                text: 'Pressão Média Anual em Porto Alegre (2000–2024)'
+                                                display: false,
+                                                text: '📉 Pressão Média Anual em Porto Alegre (2000–2024)',
+                                                font: { size: 18 }
                                             },
                                             tooltip: {
+                                                backgroundColor: '#fff',
+                                                titleColor: '#000',
+                                                bodyColor: '#333',
+                                                borderColor: '#ccc',
+                                                borderWidth: 1,
+                                                padding: 10,
+                                                cornerRadius: 6,
                                                 callbacks: {
-                                                    label: ctx => `${ctx.dataset.label}: ${ctx.raw} mb`
+                                                    label: ctx => {
+                                                        const v = ctx.raw;
+                                                        return `${ctx.dataset.label}: ${v != null ? v.toFixed(1) + " mb" : "N/A"}`;
+                                                    }
+                                                }
+                                            },
+                                            legend: {
+                                                display: true,
+                                                position: 'bottom',
+                                                labels: {
+                                                    boxWidth: 12,
+                                                    font: { size: 12 }
                                                 }
                                             }
                                         },
                                         scales: {
                                             y: {
-                                                title: { display: true, text: 'Pressão (mb)' }
+                                                title: { display: true, text: 'Pressão (mb)', font: { size: 14 } },
+                                                ticks: { font: { size: 12 } }
                                             },
                                             x: {
-                                                title: { display: true, text: 'Ano' }
+                                                title: { display: true, text: 'Ano', font: { size: 14 } },
+                                                ticks: { font: { size: 12 } }
                                             }
                                         }
                                     }
@@ -1964,6 +2023,13 @@
 
                     <div class="col-12 justify-content-center align-items-center">
                         <p>A pressão atmosférica é um dos primeiros sinais de que o tempo vai mudar.</p>
+
+                        <p> Mudanças sutis na pressão ao longo dos anos indicam transformações nos padrões climáticos.
+                            Tendências de baixa
+                            pressão podem estar associadas ao aumento de eventos extremos e à instabilidade atmosférica,
+                            afetando diretamente
+                            a vida nas cidades.</p>
+
                         <p>Antes da grande enchente de 2024, as estações registraram sucessivas quedas na pressão — um
                             alerta silencioso de que algo grande estava por vir.</p>
                         <p>Monitorar esses dados com atenção pode ser a diferença entre prevenção e tragédia.</p>
@@ -2031,7 +2097,9 @@
                         <p>Correntes de vento mais fracas e mal distribuídas impediram a dissipação das nuvens sobre
                             Porto Alegre, fazendo com que a umidade se acumulasse.</p>
                         <p>O resultado? Céu carregado, dias abafados, chuvas persistentes.</p>
-
+                        <p> Ventos mais fortes podem indicar maior instabilidade atmosférica e influenciar diretamente a sensação térmica, a
+  dispersão de poluentes e até a propagação de queimadas. Já anos com ventos fracos podem favorecer a formação de
+  ilhas de calor e aumentar a sensação de abafamento.</p>
                         <p class="font-weight-bold">🎯 Interaja com o gráfico e veja como os ventos mudaram — ou
                             deixaram de mudar.</p>
 
@@ -2077,14 +2145,18 @@
 
 
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 ...</h4>
+                    <h4>📊 Gráfico de Velocidade Média dos Ventos (2000–2024)</h4>
                     <hr>
                     <p class="text-muted mb-2 ">
-                        Este gráfico mostra uma comparação entre a <strong>umidade do ar</strong> e a <strong>velocidade
-                            do vento</strong> em Porto Alegre ao longo dos anos.
-                        Os valores foram ajustados para uma escala comum de 0 a 100 para facilitar a comparação.
+                        Este gráfico apresenta a variação da <strong>velocidade média dos ventos</strong> ao longo dos
+                        anos em Porto Alegre.
+                        Os dados mostram como o comportamento dos ventos pode mudar ano após ano, influenciado por
+                        padrões climáticos
+                        regionais e globais.
                         <br><br>
-                        ➕ Quanto maior o valor, maior a média anual daquele fator climático.
+                        Use o controle deslizante para selecionar um intervalo de anos. O gráfico se ajustará automaticamente,
+  destacando em <strong class="text-success">verde</strong> o ano mais ventoso e em <strong class="text-danger">vermelho</strong> o mais calmo no período selecionado.
+  Passe o mouse sobre os pontos para ver detalhes específicos de cada ano.
                     </p>
                     <br>
 
@@ -2136,7 +2208,7 @@
                                         responsive: true,
                                         plugins: {
                                             title: {
-                                                display: true,
+                                                display: false,
                                                 text: "Velocidade Média dos Ventos em Porto Alegre (2000–2024)"
                                             },
                                             tooltip: {
