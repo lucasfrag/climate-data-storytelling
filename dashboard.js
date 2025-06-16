@@ -131,39 +131,56 @@ function criarGraficos(dataset, idx) {
   charts[idx].forEach(c => c.destroy());
   charts[idx] = [];
 
-  const opcoes = titulo => ({
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: { mode: 'index', intersect: false },
-    plugins: {
-      title: {
-        display: true,
-        text: titulo,
-        font: { size: 18 }
-      },
-      tooltip: {
-        enabled: true,
-        backgroundColor: '#222',
-        titleFont: { size: 14 },
-        bodyFont: { size: 13 },
-        padding: 10,
-        cornerRadius: 6,
-        callbacks: {
-          label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "N/A"}`
+const opcoes = titulo => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  interaction: { mode: 'index', intersect: false },
+  plugins: {
+    title: {
+      display: true,
+      text: titulo,
+      font: { size: 18 }
+    },
+    tooltip: {
+      enabled: true,
+      backgroundColor: '#ffffff',
+      titleColor: '#000',
+      bodyColor: '#333',
+      borderColor: '#ddd',
+      borderWidth: 1,
+      padding: 10,
+      cornerRadius: 6,
+      callbacks: {
+        label: ctx => {
+          const unidade = {
+            "Temperatura Mensal (°C)": "°C",
+            "Umidade Relativa Média (%)": "%",
+            "Precipitação Total por Mês (mm)": "mm",
+            "Radiação Solar Acumulada (kJ/m²)": "kJ/m²",
+            "Vento Médio e Rajada Máxima (m/s)": "m/s"
+          }[ctx.chart.options.plugins.title.text] || "";
+          return `${ctx.dataset.label}: ${ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "N/A"} ${unidade}`;
         }
-      },
-      legend: {
-        display: false
       }
     },
-    layout: { padding: 20 },
-    scales: {
-      x: { ticks: { font: { size: 12 } }, grid: { display: false } },
-      y: { beginAtZero: true, ticks: { font: { size: 12 } }, grid: { color: "rgba(0,0,0,0.05)" } }
-    },
-    hover: { mode: 'nearest', intersect: false },
-    animation: { duration: 600, easing: "easeOutQuart" }
-  });
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        boxWidth: 12,
+        padding: 10,
+        font: { size: 12 }
+      }
+    }
+  },
+  layout: { padding: 20 },
+  scales: {
+    x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+    y: { beginAtZero: true, ticks: { font: { size: 12 } }, grid: { color: "rgba(0, 0, 0, 0.04)" } }
+  },
+  hover: { mode: 'nearest', intersect: false },
+  animation: { duration: 1000, easing: "easeInOutCubic" }
+});
 
   const estilos = cor => ({
     borderWidth: 2,
@@ -187,7 +204,7 @@ function criarGraficos(dataset, idx) {
         { label: "Máxima", data: dataset.tempMax, ...estilos("red") }
       ]
     },
-    options: opcoes("Temperatura Mensal (°C)")
+    options: opcoes("🌡️ Temperatura Mensal (°C)")
   }));
 
   // Umidade
@@ -197,7 +214,7 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Umidade Média", data: dataset.umiMedia, backgroundColor: "skyblue" }]
     },
-    options: opcoes("Umidade Relativa Média (%)")
+    options: opcoes("💧 Umidade Relativa Média (%)")
   }));
 
   // Precipitação
@@ -207,7 +224,7 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Precipitação", data: dataset.precTotal, backgroundColor: "#3498db" }]
     },
-    options: opcoes("Precipitação Total por Mês (mm)")
+    options: opcoes("🌧️ Precipitação Total por Mês (mm)")
   }));
 
   // Radiação
@@ -217,7 +234,7 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Radiação Global", data: dataset.radTotal, ...estilos("green") }]
     },
-    options: opcoes("Radiação Solar Acumulada (kJ/m²)")
+    options: opcoes("☀️ Radiação Solar Acumulada (kJ/m²)")
   }));
 
   // Vento
@@ -230,7 +247,7 @@ function criarGraficos(dataset, idx) {
         { label: "Rajada Máxima", data: dataset.rajMax, ...estilos("black") }
       ]
     },
-    options: opcoes("Vento Médio e Rajada Máxima (m/s)")
+    options: opcoes("💨 Vento Médio e Rajada Máxima (m/s)")
   }));
 }
 
@@ -263,3 +280,4 @@ document.getElementById("btnCarregar").addEventListener("click", async () => {
     charts[1] = [];
   }
 });
+
