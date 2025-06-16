@@ -14,6 +14,11 @@
       height: 100%;
     }
 
+    .info-estacao {
+      background-color: #fff;
+      color: #333;
+    }
+
     canvas {
       max-height: 360px !important;
     }
@@ -64,7 +69,12 @@
     <div class="row">
       <!-- Coluna 1 -->
       <div class="col-lg-6">
-        <h4 class="text-center" id="tituloDataset1"></h4>
+
+        <div class="info-estacao bg-white rounded shadow-sm p-3 mb-3 text-center border" id="infoEstacao1">
+          <div class="fw-bold fs-5" id="tituloEstacao1"></div>
+          <div class="text-muted" id="subtituloEstacao1"></div>
+        </div>
+
         <div class="row">
           <div class="col-12 mb-4">
             <div class="card grafico-card shadow-sm h-100">
@@ -126,7 +136,10 @@
       </div>
       <!-- Coluna 2 -->
       <div class="col-lg-6">
-        <h4 class="text-center" id="tituloDataset2"></h4>
+        <div class="info-estacao bg-white rounded shadow-sm p-3 mb-3 text-center border" id="infoEstacao2">
+          <div class="fw-bold fs-5" id="tituloEstacao2"></div>
+          <div class="text-muted" id="subtituloEstacao2"></div>
+        </div>
         <div class="row">
           <div class="col-12 mb-4">
             <div class="card grafico-card shadow-sm h-100">

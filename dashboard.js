@@ -15,6 +15,24 @@ fetch("manifest.json")
     });
   });
 
+function formatarTitulo(nomeArquivo) {
+  const regex = /INMET_([A-Z])_([A-Z]{2})_(A\d+)_([^_]+)_(\d{2}-\d{2}-\d{4})_A_(\d{2}-\d{2}-\d{4})/;
+  const match = nomeArquivo.match(regex);
+
+  if (!match) return nomeArquivo;
+
+  const [, regiao, estado, estacao, cidade, dataInicio, dataFim] = match;
+
+  const cidadeFormatada = cidade
+    .toLowerCase()
+    .replace(/(?:^|\s|-)\S/g, l => l.toUpperCase()); // Capitaliza nome da cidade
+
+  return `
+    📍 ${cidadeFormatada} (${estado}) – Estação ${estacao}<br>
+    🗓️ Período: ${dataInicio.replace(/-/g, "/")} a ${dataFim.replace(/-/g, "/")}
+  `;
+}
+
 function parseFloatPt(val) {
   if (!val || val.trim() === "" || val.trim() === "-9999") return null;
   const fix = val.trim().replace(",", ".");
@@ -131,56 +149,56 @@ function criarGraficos(dataset, idx) {
   charts[idx].forEach(c => c.destroy());
   charts[idx] = [];
 
-const opcoes = titulo => ({
-  responsive: true,
-  maintainAspectRatio: false,
-  interaction: { mode: 'index', intersect: false },
-  plugins: {
-    title: {
-      display: true,
-      text: titulo,
-      font: { size: 18 }
-    },
-    tooltip: {
-      enabled: true,
-      backgroundColor: '#ffffff',
-      titleColor: '#000',
-      bodyColor: '#333',
-      borderColor: '#ddd',
-      borderWidth: 1,
-      padding: 10,
-      cornerRadius: 6,
-      callbacks: {
-        label: ctx => {
-          const unidade = {
-            "Temperatura Mensal (°C)": "°C",
-            "Umidade Relativa Média (%)": "%",
-            "Precipitação Total por Mês (mm)": "mm",
-            "Radiação Solar Acumulada (kJ/m²)": "kJ/m²",
-            "Vento Médio e Rajada Máxima (m/s)": "m/s"
-          }[ctx.chart.options.plugins.title.text] || "";
-          return `${ctx.dataset.label}: ${ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "N/A"} ${unidade}`;
+  const opcoes = titulo => ({
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      title: {
+        display: true,
+        text: titulo,
+        font: { size: 18 }
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: '#ffffff',
+        titleColor: '#000',
+        bodyColor: '#333',
+        borderColor: '#ddd',
+        borderWidth: 1,
+        padding: 10,
+        cornerRadius: 6,
+        callbacks: {
+          label: ctx => {
+            const unidade = {
+              "Temperatura Mensal (°C)": "°C",
+              "Umidade Relativa Média (%)": "%",
+              "Precipitação Total por Mês (mm)": "mm",
+              "Radiação Solar Acumulada (kJ/m²)": "kJ/m²",
+              "Vento Médio e Rajada Máxima (m/s)": "m/s"
+            }[ctx.chart.options.plugins.title.text] || "";
+            return `${ctx.dataset.label}: ${ctx.parsed.y != null ? ctx.parsed.y.toFixed(1) : "N/A"} ${unidade}`;
+          }
+        }
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          boxWidth: 12,
+          padding: 10,
+          font: { size: 12 }
         }
       }
     },
-    legend: {
-      display: true,
-      position: 'bottom',
-      labels: {
-        boxWidth: 12,
-        padding: 10,
-        font: { size: 12 }
-      }
-    }
-  },
-  layout: { padding: 20 },
-  scales: {
-    x: { ticks: { font: { size: 12 } }, grid: { display: false } },
-    y: { beginAtZero: true, ticks: { font: { size: 12 } }, grid: { color: "rgba(0, 0, 0, 0.04)" } }
-  },
-  hover: { mode: 'nearest', intersect: false },
-  animation: { duration: 1000, easing: "easeInOutCubic" }
-});
+    layout: { padding: 20 },
+    scales: {
+      x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+      y: { beginAtZero: true, ticks: { font: { size: 12 } }, grid: { color: "rgba(0, 0, 0, 0.04)" } }
+    },
+    hover: { mode: 'nearest', intersect: false },
+    animation: { duration: 1000, easing: "easeInOutCubic" }
+  });
 
   const estilos = cor => ({
     borderWidth: 2,
@@ -251,14 +269,15 @@ const opcoes = titulo => ({
   }));
 }
 
+
 document.getElementById("btnCarregar").addEventListener("click", async () => {
   const select1 = document.getElementById("arquivoSelect1");
   const select2 = document.getElementById("arquivoSelect2");
   const nome1 = select1.options[select1.selectedIndex].text;
   const nome2 = select2.options[select2.selectedIndex].text;
 
-  document.getElementById("tituloDataset1").textContent = nome1 !== "Selecione" ? nome1 : "";
-  document.getElementById("tituloDataset2").textContent = nome2 !== "Selecione" ? nome2 : "";
+if (nome1 !== "Selecione") atualizarTituloEstacao(1, nome1);
+if (nome2 !== "Selecione") atualizarTituloEstacao(2, nome2);
 
   // Carrega e plota dataset 1
   if (select1.value) {
@@ -281,3 +300,22 @@ document.getElementById("btnCarregar").addEventListener("click", async () => {
   }
 });
 
+function atualizarTituloEstacao(id, nomeArquivo) {
+  const regex = /INMET_([A-Z])_([A-Z]{2})_(A\d+)_([^_]+)_(\d{2}-\d{2}-\d{4})_A_(\d{2}-\d{2}-\d{4})/;
+  const match = nomeArquivo.match(regex);
+
+  if (!match) {
+    document.getElementById(`tituloEstacao${id}`).textContent = nomeArquivo;
+    document.getElementById(`subtituloEstacao${id}`).textContent = "";
+    return;
+  }
+
+  const [, , estado, estacao, cidadeRaw, dataInicio, dataFim] = match;
+  const cidade = cidadeRaw
+    .toLowerCase()
+    .replace(/(?:^|\s|-)\S/g, l => l.toUpperCase())
+    .replace(/_/g, " ");
+
+  document.getElementById(`tituloEstacao${id}`).textContent = `📍 ${cidade} (${estado}) - Estação ${estacao}`;
+  document.getElementById(`subtituloEstacao${id}`).textContent = `Dados coletados de ${dataInicio.replace(/-/g, "/")} a ${dataFim.replace(/-/g, "/")}`;
+}
