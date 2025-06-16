@@ -1,14 +1,25 @@
 import json
 from pathlib import Path
+import re
 
-# Caminho para a pasta datasets
 BASE_DIR = Path("../dataset")
+padrao = re.compile(r"INMET_([A-Z])_([A-Z]{2})_(A\d+)_([^_]+)_(\d{2}-\d{2}-\d{4})_A_(\d{2}-\d{2}-\d{4})", re.I)
 
-# Lista todos os arquivos .csv recursivamente
-csv_files = [str(p.relative_to(Path("."))) for p in BASE_DIR.rglob("*.csv")]
+dados = []
+for csv_path in BASE_DIR.rglob("*.csv"):
+    nome = csv_path.name
+    match = padrao.match(nome)
+    if match:
+        _, estado, estacao, cidade, ini, fim = match.groups()
+        dados.append({
+            "arquivo": str(csv_path).replace("\\", "/"),
+            "estado": estado,
+            "cidade": cidade.title().replace("_", " "),
+            "estacao": estacao,
+            "periodo": f"{ini.replace('-', '/')} a {fim.replace('-', '/')}"
+        })
 
-# Salva no manifest.json
 with open("../manifest.json", "w", encoding="utf-8") as f:
-    json.dump(csv_files, f, indent=2, ensure_ascii=False)
+    json.dump(dados, f, indent=2, ensure_ascii=False)
 
-print(f"{len(csv_files)} arquivos CSV encontrados e salvos em manifest.json.")
+print(f"{len(dados)} arquivos processados e salvos.")

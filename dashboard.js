@@ -6,10 +6,15 @@ fetch("manifest.json")
   .then(arquivos => {
     selects.forEach(sel => {
       sel.innerHTML = '<option value="">Selecione</option>';
-      arquivos.forEach(arquivo => {
+      arquivos.forEach(({ arquivo, cidade, estado, estacao, periodo }) => {
         const opt = document.createElement("option");
-        opt.value = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2)).replaceAll("%5C", "/");
-        opt.textContent = arquivo;
+        const url = "https://lucasfrag.github.io/climate-data-storytelling/" + arquivo.replaceAll("\\\\", "/").replace("../", "");;
+        console.log(arquivo)
+        //const url = "https://lucasfrag.github.io/climate-data-storytelling" + encodeURIComponent(arquivo.slice(2)).replaceAll("%5C", "/");
+
+        opt.value = url;
+        opt.textContent = `📍 ${cidade} (${estado}) – ${periodo} [${estacao}]`;
+        opt.dataset.nomeArquivo = arquivo;
         sel.appendChild(opt.cloneNode(true));
       });
     });
@@ -67,7 +72,7 @@ const calcularSoma = m => Object.values(m).map(v => v.length ? v.reduce((a, b) =
 const calcularMinimo = m => Object.values(m).map(v => v.length ? Math.min(...v) : null);
 const calcularMaximo = m => Object.values(m).map(v => v.length ? Math.max(...v) : null);
 
-function processarCSV(csv) {
+function processarCSV(csv, nomeArquivo) {
   const linhas = csv.split("\n").map(l => l.trim()).filter(l => l.length > 0);
   const cabecalhoOriginal = linhas[8].split(";");
   const cabecalho = cabecalhoOriginal.map(padronizar);
@@ -131,6 +136,18 @@ function processarCSV(csv) {
   const ventoMedio = calcularMedia(agruparPorMes(datas, vento));
   const rajMax = calcularMaximo(agruparPorMes(datas, raj));
 
+  // Extrai metadados do nome do arquivo
+  const regex = /INMET_([A-Z])_([A-Z]{2})_(A\d+)_([^_]+)_(\d{2}-\d{2}-\d{4})_A_(\d{2}-\d{2}-\d{4})/;
+  const match = nomeArquivo.match(regex);
+  const meta = match ? {
+    regiao: match[1],
+    estado: match[2],
+    estacao: match[3],
+    cidade: match[4].toLowerCase().replace(/(?:^|\s|-)\S/g, l => l.toUpperCase()),
+    inicio: match[5].replace(/-/g, "/"),
+    fim: match[6].replace(/-/g, "/")
+  } : null;
+
   return {
     labels,
     tempMin,
@@ -140,10 +157,10 @@ function processarCSV(csv) {
     precTotal,
     radTotal,
     ventoMedio,
-    rajMax
+    rajMax,
+    meta // <-- agora contém cidade, estado, estacao, inicio, fim
   };
 }
-
 function criarGraficos(dataset, idx) {
   // Limpa gráficos antigos
   charts[idx].forEach(c => c.destroy());
@@ -273,26 +290,24 @@ function criarGraficos(dataset, idx) {
 document.getElementById("btnCarregar").addEventListener("click", async () => {
   const select1 = document.getElementById("arquivoSelect1");
   const select2 = document.getElementById("arquivoSelect2");
-  const nome1 = select1.options[select1.selectedIndex].text;
-  const nome2 = select2.options[select2.selectedIndex].text;
+  const nome1 = select1.selectedOptions[0]?.dataset?.nomeArquivo || "";
+  const nome2 = select2.selectedOptions[0]?.dataset?.nomeArquivo || "";
 
-if (nome1 !== "Selecione") atualizarTituloEstacao(1, nome1);
-if (nome2 !== "Selecione") atualizarTituloEstacao(2, nome2);
+  if (nome1) atualizarTituloEstacao(1, nome1);
+  if (nome2) atualizarTituloEstacao(2, nome2);
 
-  // Carrega e plota dataset 1
   if (select1.value) {
     const csv1 = await fetch(select1.value).then(r => r.text());
-    const dados1 = processarCSV(csv1);
+    const dados1 = processarCSV(csv1, nome1);
     criarGraficos(dados1, 0);
   } else {
     charts[0].forEach(c => c.destroy());
     charts[0] = [];
   }
 
-  // Carrega e plota dataset 2
   if (select2.value) {
     const csv2 = await fetch(select2.value).then(r => r.text());
-    const dados2 = processarCSV(csv2);
+    const dados2 = processarCSV(csv2, nome2);
     criarGraficos(dados2, 1);
   } else {
     charts[1].forEach(c => c.destroy());
