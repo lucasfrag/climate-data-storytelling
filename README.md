@@ -46,7 +46,7 @@ Os dados incluem:
 - Direção e velocidade do vento (m/s)
 - Localização da estação (nome, código, UF, latitude, longitude, altitude)
 
-Os dados são provenientes do INMET e processados por scripts Python em `/scripts`.
+Os dados são provenientes do [INMET](https://portal.inmet.gov.br/) e processados por scripts Python em `/scripts`.
 
 
 
