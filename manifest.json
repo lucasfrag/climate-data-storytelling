@@ -245,6 +245,41 @@
     "periodo": "01/01/2004 a 31/12/2004"
   },
   {
+    "arquivo": "../dataset/2005/INMET_N_AM_A101_MANAUS_01-01-2005_A_31-12-2005.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2005 a 31/12/2005"
+  },
+  {
+    "arquivo": "../dataset/2005/INMET_N_PA_A201_BELEM_01-01-2005_A_31-12-2005.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2005 a 31/12/2005"
+  },
+  {
+    "arquivo": "../dataset/2005/INMET_N_PA_A202_CASTANHAL_01-01-2005_A_31-12-2005.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2005 a 31/12/2005"
+  },
+  {
+    "arquivo": "../dataset/2005/INMET_N_TO_A009_PALMAS_01-01-2005_A_31-12-2005.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2005 a 31/12/2005"
+  },
+  {
+    "arquivo": "../dataset/2005/INMET_N_TO_A010_PARANA_04-03-2005_A_31-12-2005.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "04/03/2005 a 31/12/2005"
+  },
+  {
     "arquivo": "../dataset/2005/INMET_S_PR_A807_CURITIBA_01-01-2005_A_31-12-2005.CSV",
     "estado": "PR",
     "cidade": "Curitiba",
@@ -292,6 +327,55 @@
     "cidade": "Florianopolis",
     "estacao": "A806",
     "periodo": "01/01/2005 a 31/12/2005"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_AM_A101_MANAUS_01-01-2006_A_31-12-2006.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_PA_A201_BELEM_01-01-2006_A_31-12-2006.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_PA_A202_CASTANHAL_01-01-2006_A_31-12-2006.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_TO_A009_PALMAS_01-01-2006_A_31-12-2006.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_TO_A010_PARANA_01-01-2006_A_31-12-2006.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_TO_A018_PEIXE_01-12-2006_A_31-12-2006.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/12/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2006/INMET_N_TO_A019_GURUPI_20-12-2006_A_31-12-2006.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "20/12/2006 a 31/12/2006"
   },
   {
     "arquivo": "../dataset/2006/INMET_S_PR_A807_CURITIBA_01-01-2006_A_31-12-2006.CSV",
@@ -481,6 +565,90 @@
     "cidade": "Indaial",
     "estacao": "A817",
     "periodo": "02/07/2006 a 31/12/2006"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_AM_A101_MANAUS_01-01-2007_A_31-12-2007.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_PA_A201_BELEM_01-01-2007_A_31-12-2007.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_PA_A202_CASTANHAL_01-01-2007_A_31-12-2007.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_PA_A212_PARAGOMINAS_18-10-2007_A_31-12-2007.CSV",
+    "estado": "PA",
+    "cidade": "Paragominas",
+    "estacao": "A212",
+    "periodo": "18/10/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_PA_A213_TOME ACU_14-10-2007_A_31-12-2007.CSV",
+    "estado": "PA",
+    "cidade": "Tome Acu",
+    "estacao": "A213",
+    "periodo": "14/10/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_RO_A925_PORTO VELHO_11-07-2007_A_31-12-2007.CSV",
+    "estado": "RO",
+    "cidade": "Porto Velho",
+    "estacao": "A925",
+    "periodo": "11/07/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A009_PALMAS_01-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A010_PARANA_01-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A018_PEIXE_01-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A019_GURUPI_01-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "01/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A020_PEDRO AFONSO_23-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Pedro Afonso",
+    "estacao": "A020",
+    "periodo": "23/01/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2007/INMET_N_TO_A021_ARAGUAINA_26-01-2007_A_31-12-2007.CSV",
+    "estado": "TO",
+    "cidade": "Araguaina",
+    "estacao": "A021",
+    "periodo": "26/01/2007 a 31/12/2007"
   },
   {
     "arquivo": "../dataset/2007/INMET_S_PR_A807_CURITIBA_01-01-2007_A_31-12-2007.CSV",
@@ -789,6 +957,349 @@
     "cidade": "Itapoa",
     "estacao": "A851",
     "periodo": "06/06/2007 a 31/12/2007"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_05-08-2008_A_31-12-2008.CSV",
+    "estado": "AC",
+    "cidade": "Parque Estadual Chandless",
+    "estacao": "A102",
+    "periodo": "05/08/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AC_A104_RIO BRANCO_11-07-2008_A_31-12-2008.CSV",
+    "estado": "AC",
+    "cidade": "Rio Branco",
+    "estacao": "A104",
+    "periodo": "11/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A101_MANAUS_01-01-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A110_BOCA DO ACRE_15-07-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Boca Do Acre",
+    "estacao": "A110",
+    "periodo": "15/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A111_LABREA_27-07-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Labrea",
+    "estacao": "A111",
+    "periodo": "27/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A112_HUMAITA_25-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Humaita",
+    "estacao": "A112",
+    "periodo": "25/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A113_APUI_19-07-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Apui",
+    "estacao": "A113",
+    "periodo": "19/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A117_COARI_12-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Coari",
+    "estacao": "A117",
+    "periodo": "12/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A119_MANACAPURU_10-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Manacapuru",
+    "estacao": "A119",
+    "periodo": "10/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A120_AUTAZES_17-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Autazes",
+    "estacao": "A120",
+    "periodo": "17/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A121_ITACOATIARA_17-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Itacoatiara",
+    "estacao": "A121",
+    "periodo": "17/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A122_MAUES_22-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Maues",
+    "estacao": "A122",
+    "periodo": "22/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A123_PARINTINS_11-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Parintins",
+    "estacao": "A123",
+    "periodo": "11/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A124_URUCARA_17-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Urucara",
+    "estacao": "A124",
+    "periodo": "17/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A125_RIO URUBU_26-06-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Rio Urubu",
+    "estacao": "A125",
+    "periodo": "26/06/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_19-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Presidente Figueiredo",
+    "estacao": "A126",
+    "periodo": "19/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AM_A128_BARCELOS_19-04-2008_A_31-12-2008.CSV",
+    "estado": "AM",
+    "cidade": "Barcelos",
+    "estacao": "A128",
+    "periodo": "19/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_AP_A242_OIAPOQUE_11-09-2008_A_31-12-2008.CSV",
+    "estado": "AP",
+    "cidade": "Oiapoque",
+    "estacao": "A242",
+    "periodo": "11/09/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A201_BELEM_01-01-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A202_CASTANHAL_01-01-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A209_MEDICILANDIA_17-02-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Medicilandia",
+    "estacao": "A209",
+    "periodo": "17/02/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A210_PACAJA_27-02-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Pacaja",
+    "estacao": "A210",
+    "periodo": "27/02/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A211_PLACAS_14-02-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Placas",
+    "estacao": "A211",
+    "periodo": "14/02/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A212_PARAGOMINAS_01-01-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Paragominas",
+    "estacao": "A212",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A213_TOME ACU_01-01-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Tome Acu",
+    "estacao": "A213",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A214_RONDON DO PARA_17-04-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Rondon Do Para",
+    "estacao": "A214",
+    "periodo": "17/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A215_SALINOPOLIS_14-06-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Salinopolis",
+    "estacao": "A215",
+    "periodo": "14/06/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A226_BRAGANCA_11-03-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Braganca",
+    "estacao": "A226",
+    "periodo": "11/03/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A227_SOURE_27-04-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Soure",
+    "estacao": "A227",
+    "periodo": "27/04/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A229_TUCURUI_01-03-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Tucurui",
+    "estacao": "A229",
+    "periodo": "01/03/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A230_SERRA DOS CARAJAS_03-09-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Serra Dos Carajas",
+    "estacao": "A230",
+    "periodo": "03/09/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A231_ITAITUBA_17-02-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Itaituba",
+    "estacao": "A231",
+    "periodo": "17/02/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A233_SANTANA DO ARAGUAIA_30-05-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Santana Do Araguaia",
+    "estacao": "A233",
+    "periodo": "30/05/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A234_TUCUMA_18-07-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Tucuma",
+    "estacao": "A234",
+    "periodo": "18/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A235_NOVO REPARTIMENTO_23-07-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Novo Repartimento",
+    "estacao": "A235",
+    "periodo": "23/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A236_CAMETA_20-06-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Cameta",
+    "estacao": "A236",
+    "periodo": "20/06/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_PA_A241_CONCEICAO DO ARAGUAIA_04-09-2008_A_31-12-2008.CSV",
+    "estado": "PA",
+    "cidade": "Conceicao Do Araguaia",
+    "estacao": "A241",
+    "periodo": "04/09/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_RO_A925_PORTO VELHO_01-01-2008_A_31-12-2008.CSV",
+    "estado": "RO",
+    "cidade": "Porto Velho",
+    "estacao": "A925",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_RO_A938_VILHENA_26-08-2008_A_31-12-2008.CSV",
+    "estado": "RO",
+    "cidade": "Vilhena",
+    "estacao": "A938",
+    "periodo": "26/08/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_RO_A939_CACOAL_20-07-2008_A_31-12-2008.CSV",
+    "estado": "RO",
+    "cidade": "Cacoal",
+    "estacao": "A939",
+    "periodo": "20/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_RO_A940_ARIQUEMES_18-07-2008_A_31-12-2008.CSV",
+    "estado": "RO",
+    "cidade": "Ariquemes",
+    "estacao": "A940",
+    "periodo": "18/07/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A009_PALMAS_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A010_PARANA_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A018_PEIXE_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A019_GURUPI_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A020_PEDRO AFONSO_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Pedro Afonso",
+    "estacao": "A020",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A021_ARAGUAINA_01-01-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Araguaina",
+    "estacao": "A021",
+    "periodo": "01/01/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A038_DIANOPOLIS_30-08-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Dianopolis",
+    "estacao": "A038",
+    "periodo": "30/08/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2008/INMET_N_TO_A039_FORMOSO DO ARAGUAIA_27-04-2008_A_31-12-2008.CSV",
+    "estado": "TO",
+    "cidade": "Formoso Do Araguaia",
+    "estacao": "A039",
+    "periodo": "27/04/2008 a 31/12/2008"
   },
   {
     "arquivo": "../dataset/2008/INMET_S_PR_A807_CURITIBA_01-01-2008_A_31-12-2008.CSV",
@@ -1293,6 +1804,391 @@
     "cidade": "Ararangua",
     "estacao": "A867",
     "periodo": "28/09/2008 a 31/12/2008"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Parque Estadual Chandless",
+    "estacao": "A102",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A104_RIO BRANCO_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Rio Branco",
+    "estacao": "A104",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A136_PORTO WALTER_29-10-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Porto Walter",
+    "estacao": "A136",
+    "periodo": "29/10/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A137_MARECHAL THAUMATURGO_27-10-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Marechal Thaumaturgo",
+    "estacao": "A137",
+    "periodo": "27/10/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A138_FEIJO_24-09-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Feijo",
+    "estacao": "A138",
+    "periodo": "24/09/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AC_A140_EPITACIOLANDIA_25-09-2009_A_31-12-2009.CSV",
+    "estado": "AC",
+    "cidade": "Epitaciolandia",
+    "estacao": "A140",
+    "periodo": "25/09/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A101_MANAUS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A110_BOCA DO ACRE_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Boca Do Acre",
+    "estacao": "A110",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A111_LABREA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Labrea",
+    "estacao": "A111",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A112_HUMAITA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Humaita",
+    "estacao": "A112",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A113_APUI_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Apui",
+    "estacao": "A113",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A117_COARI_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Coari",
+    "estacao": "A117",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A119_MANACAPURU_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Manacapuru",
+    "estacao": "A119",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A120_AUTAZES_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Autazes",
+    "estacao": "A120",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A121_ITACOATIARA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Itacoatiara",
+    "estacao": "A121",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A122_MAUES_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Maues",
+    "estacao": "A122",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A123_PARINTINS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Parintins",
+    "estacao": "A123",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A124_URUCARA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Urucara",
+    "estacao": "A124",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A125_RIO URUBU_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Rio Urubu",
+    "estacao": "A125",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Presidente Figueiredo",
+    "estacao": "A126",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AM_A128_BARCELOS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AM",
+    "cidade": "Barcelos",
+    "estacao": "A128",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_AP_A242_OIAPOQUE_01-01-2009_A_31-12-2009.CSV",
+    "estado": "AP",
+    "cidade": "Oiapoque",
+    "estacao": "A242",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A201_BELEM_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A202_CASTANHAL_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A209_MEDICILANDIA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Medicilandia",
+    "estacao": "A209",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A210_PACAJA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Pacaja",
+    "estacao": "A210",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A211_PLACAS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Placas",
+    "estacao": "A211",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A212_PARAGOMINAS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Paragominas",
+    "estacao": "A212",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A213_TOME ACU_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Tome Acu",
+    "estacao": "A213",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A214_RONDON DO PARA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Rondon Do Para",
+    "estacao": "A214",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A215_SALINOPOLIS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Salinopolis",
+    "estacao": "A215",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A226_BRAGANCA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Braganca",
+    "estacao": "A226",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A227_SOURE_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Soure",
+    "estacao": "A227",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A229_TUCURUI_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Tucurui",
+    "estacao": "A229",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A230_SERRA DOS CARAJAS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Serra Dos Carajas",
+    "estacao": "A230",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A231_ITAITUBA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Itaituba",
+    "estacao": "A231",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A233_SANTANA DO ARAGUAIA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Santana Do Araguaia",
+    "estacao": "A233",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A234_TUCUMA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Tucuma",
+    "estacao": "A234",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A235_NOVO REPARTIMENTO_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Novo Repartimento",
+    "estacao": "A235",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A236_CAMETA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Cameta",
+    "estacao": "A236",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A240_MARABA_25-06-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Maraba",
+    "estacao": "A240",
+    "periodo": "25/06/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_PA_A241_CONCEICAO DO ARAGUAIA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "PA",
+    "cidade": "Conceicao Do Araguaia",
+    "estacao": "A241",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_RO_A925_PORTO VELHO_01-01-2009_A_31-12-2009.CSV",
+    "estado": "RO",
+    "cidade": "Porto Velho",
+    "estacao": "A925",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_RO_A938_VILHENA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "RO",
+    "cidade": "Vilhena",
+    "estacao": "A938",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_RO_A939_CACOAL_01-01-2009_A_31-12-2009.CSV",
+    "estado": "RO",
+    "cidade": "Cacoal",
+    "estacao": "A939",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_RO_A940_ARIQUEMES_01-01-2009_A_31-12-2009.CSV",
+    "estado": "RO",
+    "cidade": "Ariquemes",
+    "estacao": "A940",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A009_PALMAS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A010_PARANA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A018_PEIXE_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A019_GURUPI_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A020_PEDRO AFONSO_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Pedro Afonso",
+    "estacao": "A020",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A021_ARAGUAINA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Araguaina",
+    "estacao": "A021",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A038_DIANOPOLIS_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Dianopolis",
+    "estacao": "A038",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A039_FORMOSO DO ARAGUAIA_01-01-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Formoso Do Araguaia",
+    "estacao": "A039",
+    "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2009/INMET_N_TO_A044_ARAGUATINS_12-03-2009_A_31-12-2009.CSV",
+    "estado": "TO",
+    "cidade": "Araguatins",
+    "estacao": "A044",
+    "periodo": "12/03/2009 a 31/12/2009"
   },
   {
     "arquivo": "../dataset/2009/INMET_S_PR_A807_CURITIBA_01-01-2009_A_31-12-2009.CSV",
@@ -1811,6 +2707,405 @@
     "cidade": "Ararangua",
     "estacao": "A867",
     "periodo": "01/01/2009 a 31/12/2009"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Parque Estadual Chandless",
+    "estacao": "A102",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A104_RIO BRANCO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Rio Branco",
+    "estacao": "A104",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A136_PORTO WALTER_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Porto Walter",
+    "estacao": "A136",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A137_MARECHAL THAUMATURGO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Marechal Thaumaturgo",
+    "estacao": "A137",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A138_FEIJO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Feijo",
+    "estacao": "A138",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AC_A140_EPITACIOLANDIA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AC",
+    "cidade": "Epitaciolandia",
+    "estacao": "A140",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A101_MANAUS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A110_BOCA DO ACRE_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Boca Do Acre",
+    "estacao": "A110",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A111_LABREA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Labrea",
+    "estacao": "A111",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A112_HUMAITA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Humaita",
+    "estacao": "A112",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A113_APUI_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Apui",
+    "estacao": "A113",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A117_COARI_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Coari",
+    "estacao": "A117",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A119_MANACAPURU_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Manacapuru",
+    "estacao": "A119",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A120_AUTAZES_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Autazes",
+    "estacao": "A120",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A121_ITACOATIARA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Itacoatiara",
+    "estacao": "A121",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A122_MAUES_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Maues",
+    "estacao": "A122",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A123_PARINTINS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Parintins",
+    "estacao": "A123",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A124_URUCARA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Urucara",
+    "estacao": "A124",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A125_RIO URUBU_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Rio Urubu",
+    "estacao": "A125",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Presidente Figueiredo",
+    "estacao": "A126",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AM_A128_BARCELOS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AM",
+    "cidade": "Barcelos",
+    "estacao": "A128",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_AP_A242_OIAPOQUE_01-01-2010_A_31-12-2010.CSV",
+    "estado": "AP",
+    "cidade": "Oiapoque",
+    "estacao": "A242",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A201_BELEM_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A202_CASTANHAL_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A209_MEDICILANDIA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Medicilandia",
+    "estacao": "A209",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A210_PACAJA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Pacaja",
+    "estacao": "A210",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A211_PLACAS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Placas",
+    "estacao": "A211",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A212_PARAGOMINAS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Paragominas",
+    "estacao": "A212",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A213_TOME ACU_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Tome Acu",
+    "estacao": "A213",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A214_RONDON DO PARA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Rondon Do Para",
+    "estacao": "A214",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A215_SALINOPOLIS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Salinopolis",
+    "estacao": "A215",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A226_BRAGANCA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Braganca",
+    "estacao": "A226",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A227_SOURE_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Soure",
+    "estacao": "A227",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A229_TUCURUI_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Tucurui",
+    "estacao": "A229",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A230_SERRA DOS CARAJAS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Serra Dos Carajas",
+    "estacao": "A230",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A231_ITAITUBA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Itaituba",
+    "estacao": "A231",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A233_SANTANA DO ARAGUAIA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Santana Do Araguaia",
+    "estacao": "A233",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A234_TUCUMA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Tucuma",
+    "estacao": "A234",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A235_NOVO REPARTIMENTO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Novo Repartimento",
+    "estacao": "A235",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A236_CAMETA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Cameta",
+    "estacao": "A236",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A240_MARABA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Maraba",
+    "estacao": "A240",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A241_CONCEICAO DO ARAGUAIA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Conceicao Do Araguaia",
+    "estacao": "A241",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_PA_A246_MINA DO PALITO_28-09-2010_A_31-12-2010.CSV",
+    "estado": "PA",
+    "cidade": "Mina Do Palito",
+    "estacao": "A246",
+    "periodo": "28/09/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_RO_A925_PORTO VELHO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "RO",
+    "cidade": "Porto Velho",
+    "estacao": "A925",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_RO_A938_VILHENA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "RO",
+    "cidade": "Vilhena",
+    "estacao": "A938",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_RO_A939_CACOAL_01-01-2010_A_31-12-2010.CSV",
+    "estado": "RO",
+    "cidade": "Cacoal",
+    "estacao": "A939",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_RO_A940_ARIQUEMES_01-01-2010_A_31-12-2010.CSV",
+    "estado": "RO",
+    "cidade": "Ariquemes",
+    "estacao": "A940",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_RR_A135_BOA VISTA_26-08-2010_A_31-12-2010.CSV",
+    "estado": "RR",
+    "cidade": "Boa Vista",
+    "estacao": "A135",
+    "periodo": "26/08/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A009_PALMAS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A010_PARANA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A018_PEIXE_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A019_GURUPI_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A020_PEDRO AFONSO_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Pedro Afonso",
+    "estacao": "A020",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A021_ARAGUAINA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Araguaina",
+    "estacao": "A021",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A038_DIANOPOLIS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Dianopolis",
+    "estacao": "A038",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A039_FORMOSO DO ARAGUAIA_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Formoso Do Araguaia",
+    "estacao": "A039",
+    "periodo": "01/01/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2010/INMET_N_TO_A044_ARAGUATINS_01-01-2010_A_31-12-2010.CSV",
+    "estado": "TO",
+    "cidade": "Araguatins",
+    "estacao": "A044",
+    "periodo": "01/01/2010 a 31/12/2010"
   },
   {
     "arquivo": "../dataset/2010/INMET_S_PR_A807_CURITIBA_01-01-2010_A_31-12-2010.CSV",
@@ -2343,6 +3638,426 @@
     "cidade": "Itajai",
     "estacao": "A868",
     "periodo": "24/06/2010 a 31/12/2010"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A102_PARQUE ESTADUAL CHANDLESS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Parque Estadual Chandless",
+    "estacao": "A102",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A104_RIO BRANCO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Rio Branco",
+    "estacao": "A104",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A136_PORTO WALTER_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Porto Walter",
+    "estacao": "A136",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A137_MARECHAL THAUMATURGO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Marechal Thaumaturgo",
+    "estacao": "A137",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A138_FEIJO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Feijo",
+    "estacao": "A138",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AC_A140_EPITACIOLANDIA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AC",
+    "cidade": "Epitaciolandia",
+    "estacao": "A140",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A101_MANAUS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Manaus",
+    "estacao": "A101",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A110_BOCA DO ACRE_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Boca Do Acre",
+    "estacao": "A110",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A111_LABREA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Labrea",
+    "estacao": "A111",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A112_HUMAITA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Humaita",
+    "estacao": "A112",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A113_APUI_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Apui",
+    "estacao": "A113",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A117_COARI_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Coari",
+    "estacao": "A117",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A119_MANACAPURU_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Manacapuru",
+    "estacao": "A119",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A120_AUTAZES_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Autazes",
+    "estacao": "A120",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A121_ITACOATIARA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Itacoatiara",
+    "estacao": "A121",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A122_MAUES_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Maues",
+    "estacao": "A122",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A123_PARINTINS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Parintins",
+    "estacao": "A123",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A124_URUCARA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Urucara",
+    "estacao": "A124",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A125_RIO URUBU_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Rio Urubu",
+    "estacao": "A125",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A126_PRESIDENTE FIGUEIREDO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Presidente Figueiredo",
+    "estacao": "A126",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A128_BARCELOS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Barcelos",
+    "estacao": "A128",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A133_MANICORE_12-12-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "Manicore",
+    "estacao": "A133",
+    "periodo": "12/12/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AM_A134_S. G. DA CACHOEIRA_31-08-2011_A_31-12-2011.CSV",
+    "estado": "AM",
+    "cidade": "S. G. Da Cachoeira",
+    "estacao": "A134",
+    "periodo": "31/08/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_AP_A242_OIAPOQUE_01-01-2011_A_31-12-2011.CSV",
+    "estado": "AP",
+    "cidade": "Oiapoque",
+    "estacao": "A242",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A201_BELEM_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Belem",
+    "estacao": "A201",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A202_CASTANHAL_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Castanhal",
+    "estacao": "A202",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A209_MEDICILANDIA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Medicilandia",
+    "estacao": "A209",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A210_PACAJA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Pacaja",
+    "estacao": "A210",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A211_PLACAS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Placas",
+    "estacao": "A211",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A212_PARAGOMINAS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Paragominas",
+    "estacao": "A212",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A213_TOME ACU_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Tome Acu",
+    "estacao": "A213",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A214_RONDON DO PARA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Rondon Do Para",
+    "estacao": "A214",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A215_SALINOPOLIS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Salinopolis",
+    "estacao": "A215",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A226_BRAGANCA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Braganca",
+    "estacao": "A226",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A227_SOURE_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Soure",
+    "estacao": "A227",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A229_TUCURUI_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Tucurui",
+    "estacao": "A229",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A230_SERRA DOS CARAJAS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Serra Dos Carajas",
+    "estacao": "A230",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A231_ITAITUBA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Itaituba",
+    "estacao": "A231",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A233_SANTANA DO ARAGUAIA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Santana Do Araguaia",
+    "estacao": "A233",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A234_TUCUMA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Tucuma",
+    "estacao": "A234",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A235_NOVO REPARTIMENTO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Novo Repartimento",
+    "estacao": "A235",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A236_CAMETA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Cameta",
+    "estacao": "A236",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A240_MARABA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Maraba",
+    "estacao": "A240",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A241_CONCEICAO DO ARAGUAIA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Conceicao Do Araguaia",
+    "estacao": "A241",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A246_MINA DO PALITO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Mina Do Palito",
+    "estacao": "A246",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_PA_A248_CAPITAO POCO_18-04-2011_A_31-12-2011.CSV",
+    "estado": "PA",
+    "cidade": "Capitao Poco",
+    "estacao": "A248",
+    "periodo": "18/04/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_RO_A925_PORTO VELHO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "RO",
+    "cidade": "Porto Velho",
+    "estacao": "A925",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_RO_A938_VILHENA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "RO",
+    "cidade": "Vilhena",
+    "estacao": "A938",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_RO_A939_CACOAL_01-01-2011_A_31-12-2011.CSV",
+    "estado": "RO",
+    "cidade": "Cacoal",
+    "estacao": "A939",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_RO_A940_ARIQUEMES_01-01-2011_A_31-12-2011.CSV",
+    "estado": "RO",
+    "cidade": "Ariquemes",
+    "estacao": "A940",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_RR_A135_BOA VISTA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "RR",
+    "cidade": "Boa Vista",
+    "estacao": "A135",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A009_PALMAS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Palmas",
+    "estacao": "A009",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A010_PARANA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Parana",
+    "estacao": "A010",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A018_PEIXE_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Peixe",
+    "estacao": "A018",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A019_GURUPI_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Gurupi",
+    "estacao": "A019",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A020_PEDRO AFONSO_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Pedro Afonso",
+    "estacao": "A020",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A021_ARAGUAINA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Araguaina",
+    "estacao": "A021",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A038_DIANOPOLIS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Dianopolis",
+    "estacao": "A038",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A039_FORMOSO DO ARAGUAIA_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Formoso Do Araguaia",
+    "estacao": "A039",
+    "periodo": "01/01/2011 a 31/12/2011"
+  },
+  {
+    "arquivo": "../dataset/2011/INMET_N_TO_A044_ARAGUATINS_01-01-2011_A_31-12-2011.CSV",
+    "estado": "TO",
+    "cidade": "Araguatins",
+    "estacao": "A044",
+    "periodo": "01/01/2011 a 31/12/2011"
   },
   {
     "arquivo": "../dataset/2011/INMET_S_PR_A807_CURITIBA_01-01-2011_A_31-12-2011.CSV",
