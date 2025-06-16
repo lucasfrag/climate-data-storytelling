@@ -1,39 +1,61 @@
-## Dataset
+# 🌎 Climate Data Storytelling
 
-- Date (YYYY-MM-DD)
-- Time (HH:00)
-- Amount of precipitation in millimetres (last hour)
-- Atmospheric pressure at station level (mb)
-- Maximum air pressure for the last hour (mb)
-- Minimum air pressure for the last hour (mb)
-- Solar radiation (KJ/m2)
-- Air temperature (instant) (°c)
-- Dew point temperature (instant) (°c)
-- Maximum temperature for the last hour (°c)
-- Minimum temperature for the last hour (°c)
-- Maximum dew point temperature for the last hour (°c)
-- Minimum dew point temperature for the last hour (°c)
-- Maximum relative humid temperature for the last hour (%)
-- Minimum relative humid temperature for the last hour (%)
-- Relative humid (% instant)
-- Wind direction (radius degrees (0-360))
-- Wind gust in metres per second
-- Wind speed in metres per second
-- Brazilian geopolitical regions
-- State (Province)
-- Station Name (usually city location or nickname)
-- Station code (INMET number)
-- Latitude
-- Longitude
-- Elevation
+**Visualize, explore e compreenda as mudanças climáticas em Porto Alegre e no sul do Brasil.**  
+Este projeto apresenta dados meteorológicos reais de forma interativa, acessível e envolvente, combinando storytelling, gráficos dinâmicos e mapas.
 
-## Source data
+
+
+## ✨ Visão Geral
+
+O **Climate Data Storytelling** é uma plataforma web que transforma dados climáticos históricos em narrativas visuais.  
+Navegue por uma história interativa sobre o clima de Porto Alegre, explore tendências, compare cidades e analise eventos extremos como enchentes e ondas de calor.
+
+
+
+## 🚀 Funcionalidades
+
+- **Storytelling Interativo:**  
+    Jornada visual com textos, imagens, gráficos e mapas explicando as transformações do clima.
+
+- **Dashboard Comparativo:**  
+    Compare dados de diferentes estações, cidades ou períodos.  
+    Visualize temperaturas, precipitação, radiação solar, vento, umidade e mais.
+
+- **Gráficos Dinâmicos:**  
+    Visualizações com [Chart.js](https://www.chartjs.org/) e controles interativos (sliders, filtros, tooltips).
+
+- **Mapa das Estações:**  
+    Acompanhe a evolução das estações meteorológicas no RS ao longo dos anos com [Leaflet](https://leafletjs.com/).
+
+- **Acessibilidade e Design Responsivo:**  
+    Interface adaptada para desktop e mobile, com navegação acessível.
+
+
+
+## 📊 Dados Utilizados
+
+Os dados incluem:
+
+- Data e hora da medição
+- Precipitação (mm)
+- Pressão atmosférica (mb)
+- Radiação solar (kJ/m²)
+- Temperatura do ar (°C)
+- Ponto de orvalho (°C)
+- Umidade relativa (%)
+- Direção e velocidade do vento (m/s)
+- Localização da estação (nome, código, UF, latitude, longitude, altitude)
+
+Os dados são provenientes do INMET e processados por scripts Python em `/scripts`.
+
+
+
+## 🔗 Fontes de Dados
+
 - [INMET: Instituto Nacional de Meteorologia](https://portal.inmet.gov.br/dadoshistoricos)
 - [Banco de imagens de Porto Alegre (RS)](https://bancodeimagens.portoalegre.rs.gov.br/)
 - [SECOM - Secretaria Estadual de Comunicação](https://www.flickr.com/people/governo_rs/)
-<!-- https://www.flickr.com/photos/governo_rs/albums/72177720316727998/ -->
 
-## Build with
-- [Bootstrap](https://getbootstrap.com/)
-- [Chart.js](https://www.chartjs.org/)
-- [Leaflet](https://leafletjs.com/)
+
+
+Descubra, questione, compartilhe. O futuro do clima começa com informação.
