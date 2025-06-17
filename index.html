@@ -19,6 +19,29 @@
 
 </head>
 
+<style>
+    .transition-link {
+        transition: transform 0.35s cubic-bezier(.4, 0, .2, 1), box-shadow 0.35s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .transition-link:hover,
+    .transition-link:focus {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(33, 150, 243, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+    }
+
+    .transition-link .card-body {
+        transition: background 0.2s;
+        border-radius: 16px;
+        /* Use o mesmo valor do card */
+    }
+
+    .card-body {
+        border-radius: 16px;
+    }
+</style>
+
 <body class="bg-light">
     <div class="container py-4">
         <!-- Navbar -->
@@ -45,8 +68,7 @@
                                     <a class="nav-link active" aria-current="page" href="index.html">Início</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page"
-                                        href="storytelling.html">Storytelling</a>
+                                    <a class="nav-link" aria-current="page" href="storytelling.html">Storytelling</a>
                                 </li>
 
                                 <li class="nav-item">
@@ -70,93 +92,501 @@
         </nav>
     </div>
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center justify-content-center text-center vh-100"
         style="min-height: 100vh; width: 100%; padding: 0; background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%); color: #fff;">
         <div class="container h-100 d-flex flex-column justify-content-center">
             <div class="row justify-content-center align-items-center flex-grow-1">
                 <div class="col-lg-10 col-md-12">
-                    <h1 class="display-3 fw-bold mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.15);">
+                    <h1 class="display-3 fw-bold mb-4 hero-reveal"
+                        style="text-shadow: 2px 2px 8px rgba(0,0,0,0.15); opacity:0; transform:translateY(40px);">
                         <i class="fas fa-globe-americas me-2"></i>
                         Climate Data Storytelling
                     </h1>
-                    <p class="lead mb-5" style="font-size: 1.5rem;">
+                    <p class="lead mb-5 hero-reveal" style="font-size: 1.5rem; opacity:0; transform:translateY(40px);">
                         Descubra como o clima está mudando em Porto Alegre e no região sul do Brasil.<br>
                         Visualize dados meteorológicos, tendências e impactos de forma interativa e envolvente.
                     </p>
-
-
-                    <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
-                        <i class="fas fa-book-open me-2"></i> Ler o artigo completo
-                    </a>
-                    <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank"
-                        class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
-                        <i class="fab fa-github me-2"></i> Ver no GitHub
-                    </a>
-
-
-                    <div class="d-flex flex-column align-items-center mt-5">
+                    <div class="hero-reveal" style="opacity:0; transform:translateY(40px);">
+                        <a href="./artigo.html" class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                            <i class="fas fa-book-open me-2"></i> Ler o artigo completo
+                        </a>
+                        <a href="https://github.com/lucasfrag/climate-data-storytelling" target="_blank"
+                            class="btn btn-lg btn-outline-light px-5 py-3 mb-2">
+                            <i class="fab fa-github me-2"></i> Ver no GitHub
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-5 hero-reveal"
+                        style="opacity:0; transform:translateY(40px);">
                         <p class="mb-2" style="font-size: 1.15rem;">
                             <strong>Clique no botão abaixo para começar a explorar os dados.</strong>
                         </p>
                         <br><br>
-                        <button id="explorarBtn"
+                        <button onclick="scrollToNextSection(this)"
                             class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
                             style="width: 64px; height: 64px; font-size: 2rem; color: #1976d2;">
                             <i class="fas fa-arrow-down"></i>
                         </button>
                     </div>
                     <script>
-                        document.getElementById('explorarBtn').addEventListener('click', function (e) {
-                            e.preventDefault();
-                            const target = document.querySelector('#porto-alegre');
-                            if (target) {
-                                target.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        });                     
+
+                        // Animação de revelação lenta
+                        window.addEventListener('DOMContentLoaded', function () {
+                            const items = document.querySelectorAll('.hero-reveal');
+                            items.forEach((el, idx) => {
+                                setTimeout(() => {
+                                    el.style.transition = 'opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1)';
+                                    el.style.opacity = 1;
+                                    el.style.transform = 'translateY(0)';
+                                }, 350 * idx);
+                            });
+                        });
                     </script>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="tooltip" id="tooltip"></div>
-
 
     <!--------------------------------------------------------------------------------------------------------------------------->
 
-
-
-
-    <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center ">
-        <div class="col-12 text-center mt-5">
-            <h2 class="fw-bold mb-3" style="font-size:2.2rem;">🚀 Pronto para ir além? 🌎</h2>
-            <p class="lead mb-4" style="font-size:1.3rem;"><br>
-                Você já viu como o clima está mudando em Porto Alegre. Mas essa história não para aqui.<br><br>
-                No nosso dashboard interativo, você pode <br>comparar anos, gerar insights e encontrar padrões que talvez ainda não tenham sido contados.
+    <!-- Slide 2 - Objetivo do Projeto -->
+    <section class="vh-100 d-flex align-items-center bg-light reveal-item" id="objetivo">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4 text-primary">
+                <i class="fas fa-globe-americas me-2"></i> Sobre o Projeto
+            </h2>
+            <p class="lead text-muted mb-4">
+                Você já se perguntou
+                <span class="font-weight-bold" style="font-size: 1.25rem;">
+                    como as mudanças climáticas têm afetado a sua casa, sua rua, sua cidade e sua região? <br><br>
+                </span>
+                Este projeto convida você a explorar, de forma interativa e visual, dados reais sobre temperatura,
+                chuvas, umidade, vento e eventos extremos.
             </p>
-            <br>
-            <a href="dashboard.html" class="btn  btn-primary px-5 py-3 shadow" style="font-size:1.3rem;">
-                <i class="fas fa-chart-line me-2"></i> Explorar o Dashboard <i class="fas fa-arrow-right ms-2"></i>
-            </a>
 
-            <br><br><br>
-            <p class="mb-4" style="font-size:1.1rem;">
-                Clique no botão acima e mergulhe em uma experiência interativa no nosso <b>Dashboard de Dados
-                    Climáticos</b>!<br>
-                <span class="text-primary fw-semibold">Descubra tendências, faça suas próprias análises e compartilhe
-                    descobertas.</span>
+            <p class="lead text-muted mb-4">
+                O foco está na nossa casa, a cidade de <strong>Porto Alegre</strong>, uma região que vivenciou eventos
+                extremos recentes.
             </p>
+
+            <p class="lead text-muted mb-4">
+                Ao reunir dados de estações meteorológicas, gráficos simples e comparações entre cidades, buscamos
+                promover <strong>consciência ambiental</strong>,
+                apoiar <strong>políticas de adaptação climática</strong> e fortalecer o engajamento da sociedade diante
+                da crise climática atual.
+            </p>
+            <br><br>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button
+                    class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                    style="width: 56px; height: 56px; font-size: 1.5rem; color: #1976d2;"
+                    onclick="scrollToNextSection(this)">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
 
         </div>
-    </div>
+    </section>
+
+
+    <section class="vh-100 d-flex align-items-center bg-light reveal-item" id="objetivo">
+        <div class="container text-center px-4">
+            <h2 class="display-5 fw-bold mb-4 text-primary">
+                <i class="fas fa-bullseye me-2" style="color:#f44336;"></i>
+                <span style="color:#1976d2;">Nosso Objetivo</span>
+            </h2>
+            <p class="lead text-muted mb-4">
+                O <strong>Climate Data Storytelling</strong> foi criado para tornar dados climáticos históricos mais
+                compreensíveis, relevantes e acessíveis para a população.
+            </p>
+            <p class="lead text-muted mb-4">
+                A proposta é usar uma combinação de <strong>visualizações interativas</strong> e <strong>narrativas
+                    baseadas em dados</strong> para apresentar fenômenos meteorológicos complexos
+                de forma clara — especialmente em contextos locais como o de Porto Alegre, que sofreu com eventos
+                extremos como as enchentes de 2024.
+            </p>
+
+            <p class="lead text-muted mb-4">
+                Aqui você encontrará:
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#1976d2;">
+                                📖
+                            </div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#1976d2;">Storytelling</h5>
+                            <p class="card-text text-muted">
+                                Gráficos explicativos e eventos históricos para entender as mudanças climáticas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0  text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#388e3c;">
+                                📊
+                            </div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#388e3c;">Dashboard Comparativo</h5>
+                            <p class="card-text text-muted">
+                                Compare cidades, anos e variáveis meteorológicas de forma interativa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#0288d1;">
+                                🗺️
+                            </div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#0288d1;">Mapa Interativo</h5>
+                            <p class="card-text text-muted">
+                                Visualize a expansão temporal das estações meteorológicas no mapa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#fbc02d;">
+                                💡
+                            </div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#fbc02d;">Design Acessível</h5>
+                            <p class="card-text text-muted">
+                                Interface pensada para públicos não técnicos, fácil de usar e responsiva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center mt-4">
+                <button
+                    class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                    style="width: 56px; height: 56px; font-size: 1.5rem; color: #1976d2;"
+                    onclick="scrollToNextSection(this)">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="vh-100 d-flex align-items-center reveal-item" id="objetivo">
+        <div class="container text-center px-4">
+            <h2 class="display-5 fw-bold mb-4 text-primary">
+                <i class="fas fa-city me-2 text-info"></i>
+                <span style="color:#1976d2;">Por que Porto Alegre?</span>
+            </h2>
+
+            <p class="lead text-muted mb-4">
+                Porto Alegre foi escolhida por ser uma das cidades brasileiras mais impactadas por eventos climáticos
+                extremos nos últimos anos.
+                Além disso, esta é a casa dos autores deste projeto, que vivem aqui e acompanharam de perto essas
+                transformações.
+            </p>
+
+            <p class="lead text-muted">
+                Ao analisar dados meteorológicos de Porto Alegre, buscamos oferecer informações
+                relevantes para a população, promovendo a <strong>conscientização</strong> e o <strong>engajamento da
+                    sociedade </strong> frente aos desafios climáticos.
+            </p>
+
+            <p class="lead text-muted mb-5">
+                A seguir, alguns marcos recentes que evidenciam a urgência de entender e comunicar as mudanças no clima
+                local:
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#f44336;">🌊</div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#0288d1;"">Enchentes de 2024</h5>
+            <p class=" card-text text-muted">
+                                Nível do Guaíba superou 5,3 metros — maior registro desde 1941. Evento associado ao El
+                                Niño e aquecimento global.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#ffa000;">🔥</div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#ffa000;">Ondas de Calor</h5>
+                            <p class="card-text text-muted">
+                                Temperaturas acima de 40°C foram registradas em diversos bairros, quebrando recordes
+                                históricos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0  text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#1976d2;">💨</div>
+                            <h5 class="card-title fw-bold mb-2" style="color:#1976d2;">Ciclone Bomba (2023)</h5>
+                            <p class="card-text text-muted">
+                                Ventos superiores a 100 km/h causaram destruição, queda de árvores e alagamentos
+                                generalizados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <br>
+                <button
+                    class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                    style="width: 56px; height: 56px; font-size: 1.5rem; color: #1976d2;"
+                    onclick="scrollToNextSection(this)">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="vh-100 d-flex align-items-center bg-white reveal-item" id="objetivo">
+        <div class="container text-center px-4">
+            <h2 class="display-5 fw-bold mb-4 text-primary">
+                <i class="fas fa-database me-2 text-warning"></i>
+                <span style="color:#1976d2;">O que estamos medindo?</span>
+            </h2>
+
+            <p class="lead text-muted mb-4">
+                Todos os dados utilizados foram coletados de estações meteorológicas oficiais do
+                <a href="https://portal.inmet.gov.br" target="_blank"><strong>INMET</strong></a>, entre os anos
+                <strong>2000 e 2025</strong>.
+            </p>
+
+            <p class="lead text-muted mb-5">
+                Esses dados foram tratados, agregados e visualizados para revelar tendências, padrões sazonais e
+                extremos climáticos que afetam diretamente a vida das pessoas.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0  text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#f44336;">🌡️</div>
+                            <h5 class="fw-bold mb-2" style="color:#f44336;">Temperatura</h5>
+                            <p class="text-muted mb-0">Mínima, máxima e média diária, mensal e anual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#0288d1;">☁️</div>
+                            <h5 class="fw-bold mb-2" style="color:#0288d1;">Umidade & Ponto de Orvalho</h5>
+                            <p class="text-muted mb-0">Medições de saturação do ar e conforto térmico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#4caf50;">🌧️</div>
+                            <h5 class="fw-bold mb-2" style="color:#4caf50;">Precipitação</h5>
+                            <p class="text-muted mb-0">Volume de chuva acumulada por período e eventos extremos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2.2rem; color:#ff9800;">🌬️</div>
+                            <h5 class="fw-bold mb-2" style="color:#ff9800;">Vento & Radiação Solar</h5>
+                            <p class="text-muted mb-0">Velocidade dos ventos e incidência solar anual.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p class="lead text-muted mb-3"><br><br>
+                    Para enriquecer a narrativa visual, o projeto utiliza imagens públicas disponibilizadas pela SECOM
+                    (Secretaria Municipal de Comunicação) no <a href="https://www.flickr.com/people/governo_rs/"
+                        target="_blank">Flickr</a> e fotos do <a href="https://bancodeimagens.portoalegre.rs.gov.br/"
+                        target="_blank">Banco de Imagens da Prefeitura de Porto Alegre</a>, sempre respeitando os
+                    direitos
+                    de uso.
+                </p>
+                <p class="lead text-muted">
+                    <strong>Todos os dados e imagens utilizados são de acesso público e citados conforme as licenças
+                        originais.</strong>
+                </p>
+
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <br>
+                <button
+                    class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                    style="width: 56px; height: 56px; font-size: 1.5rem; color: #1976d2;"
+                    onclick="scrollToNextSection(this)">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="vh-100 d-flex align-items-center bg-light reveal-item" id="objetivo">
+        <div class="container text-center px-4">
+            <h2 class="display-5 fw-bold mb-4 text-primary">
+                <i class="fas fa-laptop-code me-2 text-dark"></i>
+                <span style="color:#1976d2;">Como estamos medindo?</span>
+            </h2>
+
+            <p class="lead text-muted mb-4">
+                Para transformar dados brutos em experiências visuais informativas, utilizamos uma combinação de
+                <strong>tecnologias modernas</strong> de desenvolvimento web e visualização de dados.
+            </p>
+
+            <p class="lead text-muted mb-5">
+                Cada etapa — da coleta ao processamento e à exibição — foi pensada para garantir clareza, desempenho e
+                interatividade.
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2rem; color:#43a047;">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#43a047;">Python</h5>
+                            <p class="text-muted mb-0">Usado para limpar, transformar e agregar os dados meteorológicos
+                                do INMET.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2rem; color:#f57c00;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#f57c00;">D3.js & Chart.js</h5>
+                            <p class="text-muted mb-0">Visualizações dinâmicas e responsivas para representar padrões e
+                                extremos climáticos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2rem; color:#0d47a1;">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#0d47a1;">Leaflet.js</h5>
+                            <p class="text-muted mb-0">Renderização de mapas interativos com dados geoespaciais das
+                                estações meteorológicas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card h-100 shadow border-0 text-center bg-white transition-link">
+                        <div class="card-body">
+                            <div class="mb-3" style="font-size:2rem; color: purple;">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color: purple;">Bootstrap</h5>
+                            <p class="text-muted mb-0">Layout responsivo, limpo e acessível para todos os dispositivos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <br>
+                <button
+                    class="btn btn-light rounded-circle shadow d-flex align-items-center justify-content-center animate-bounce"
+                    style="width: 56px; height: 56px; font-size: 1.5rem; color: #1976d2;"
+                    onclick="scrollToNextSection(this)">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
 
 
 
 
 
+    <section class="vh-100 d-flex align-items-center bg-light reveal-item" id="objetivo">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4">💡 Conscientizar é o primeiro passo</h2>
+            <p class="lead text-muted">
+                Este projeto surgiu da necessidade de comunicar essas mudanças de forma clara, acessível e baseada em
+                dados, promovendo a conscientização e o engajamento da sociedade.
+            </p>
+            <p class="lead text-muted mb-4">
+                <b>Começe a explorar os dados agora mesmo - clique em uma das opções abaixo:</b>
+            </p>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="./storytelling.html" class="card h-100 shadow-lg border-0 text-center transition-link"
+                        style="text-decoration: none; border-radius: 1.2rem; transition: transform 0.2s, box-shadow 0.2s;">
+                        <div class="card-body py-5">
+                            <div class="mb-3" style="font-size:3rem; color:#1976d2;">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#1976d2;">Storytelling</h5>
+                            <p class="text-muted mb-0">Explore gráficos e narrativas visuais sobre o clima.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="./dashboard.html" class="card h-100 shadow-lg border-0 text-center transition-link"
+                        style="text-decoration: none; border-radius: 1.2rem; transition: transform 0.2s, box-shadow 0.2s;">
+                        <div class="card-body py-5">
+                            <div class="mb-3" style="font-size:3rem; color:#f57c00;">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#f57c00;">Dashboard</h5>
+                            <p class="text-muted mb-0">Compare cidades, anos e variáveis meteorológicas.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
 
+            <p class="lead text-muted mb-4"><br>
+                Compartilhe, explore e ajude a informar. O clima está mudando — e os dados mostram isso.
+            </p>
 
+
+            <a href="#inicio" class="btn btn-primary btn-lg mt-3"
+                onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">
+                <i class="fas fa-arrow-up me-2"></i> Voltar ao Início
+
+            </a>
+
+
+        </div>
+    </section>
 
 
 
@@ -176,6 +606,33 @@
         <script src="./assets/js/popper.min.js"></script>
         <script src="./assets/js/bootstrap.min.js"></script>
         <script src="./assets/js/papaparse.min.js"></script>
+
+        <script>
+            function scrollToNextSection(button) {
+                const nextSection = button.closest("section").nextElementSibling;
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll(".reveal-item");
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        } else {
+                            entry.target.classList.remove("visible");
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });           
+        </script>
+
 </body>
 
 </html>
