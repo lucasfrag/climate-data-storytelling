@@ -526,19 +526,25 @@
 
                 <section id="transformacoes-climaticas" class="container my-5">
                     <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                        <h4>📊 Gráfico de Transformações Climáticas</h4>
-                        <hr>
-                        <p class="text-muted mb-2 ">O gráfico abaixo mostra a evolução das temperaturas em Porto Alegre
-                            entre 2000 e 2025.
+                        <p class="text-muted mb-3">
+                            <strong>📊 O que mostra?</strong><br>
+                            Este gráfico apresenta a evolução das <strong>temperaturas médias</strong> em Porto Alegre
+                            ao longo dos últimos 25 anos. Ele permite identificar tendências de aquecimento, períodos de
+                            resfriamento e variações significativas ao longo do tempo.
                             <br><br>
-                            Passe o mouse sobre os pontos para ver os valores e as datas dos
-                            extremos.
+                            <strong>🔍 Como interagir?</strong><br>
+                            Utilize o controle deslizante abaixo para definir um intervalo de anos personalizado. O
+                            gráfico será atualizado automaticamente, permitindo uma análise mais precisa por período.
+                            <br><br>
+                            Passe o mouse sobre os pontos da linha para visualizar os valores exatos e detectar os anos
+                            com temperaturas extremas.
                         </p>
-                        <br>
 
                         <div class="mb-4">
                             <label class="form-label">
-                                Intervalo de Anos: <span id="range-inicio"></span> – <span id="range-fim"></span></span>
+                                📅 Selecione o intervalo de anos: <span id="range-inicio"
+                                    class="text-primary fw-semibold"></span> – <span id="range-fim"
+                                    class="text-primary fw-semibold"></span>
                             </label>
                             <div id="range-anos"></div>
                         </div>
@@ -547,7 +553,7 @@
                             <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
                         </center>
 
-                        <canvas id="grafico-transformacoes" height="170"></canvas>
+                        <canvas id="grafico-transformacoes" height="160"></canvas>
                     </div>
                 </section>
 
@@ -1134,20 +1140,24 @@
 
                 <section class="container my-5 reveal-item">
                     <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                        <h4>📊 Gráfico de chuva acumulada</h4>
+                        <h4 class="fw-bold mb-3">🌧️ Chuva Acumulada ao Longo do Ano</h4>
                         <hr>
-                        <p class="text-muted mb-2">
-                            O gráfico abaixo mostra a soma acumulada de chuva ao longo dos meses do ano em Porto Alegre.
+                        <p class="text-muted mb-3">
+                            <strong>📊 O que mostra?</strong><br>
+                            Este gráfico apresenta a <strong>precipitação acumulada mês a mês</strong> em Porto Alegre,
+                            permitindo observar a distribuição das chuvas ao longo do ano. A curva revela padrões
+                            sazonais e ajuda a identificar períodos mais secos ou mais chuvosos.
                             <br><br>
-                            Passe o mouse sobre os pontos para ver os valores e as datas dos extremos.
+                            <strong>📅 Como comparar?</strong><br>
+                            Você pode selecionar um ano específico para destacar sua curva de precipitação e compará-lo
+                            com os demais. É possível remover a seleção clicando em <strong>“Limpar seleção”</strong>.
                         </p>
-                        <br>
-                        <center>
-                            <label for="ano-comparacao" class="form-label mb-0">📅 Escolha um ano para
-                                comparar:</label><br><br>
 
-                            <div class="d-flex align-items-center justify-content-center flex-nowrap mb-3"
-                                style="gap: 0.2rem; margin-bottom: 1rem;">
+                        <div class="text-center my-3">
+                            <label for="ano-comparacao" class="form-label mb-2">📌 Escolha um ano para destacar:</label>
+
+                            <div class="d-flex justify-content-center align-items-center flex-nowrap mb-3"
+                                style="gap: 0.4rem;">
                                 <div style="width: 120px;">
                                     <select id="ano-comparacao" class="form-control form-select py-2"
                                         style="max-width: 100px; height: 38px;"></select>
@@ -1157,10 +1167,11 @@
                                 </button>
                             </div>
 
-                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
-                        </center>
+                            <small class="text-muted d-block">💡 Clique nos itens da legenda para ativar ou ocultar
+                                curvas específicas.</small>
+                        </div>
 
-                        <canvas id="grafico-el-nino" height="180"></canvas>
+                        <canvas id="grafico-el-nino" height="150"></canvas>
                     </div>
                 </section>
 
@@ -1348,7 +1359,7 @@
 
                         <div class="alert alert-info mt-4" role="alert">
                             <strong>Dica:</strong> Selecione outros anos e compare como 2024 se comportou em relação aos
-                            anos anteriores.
+                            anos anteriores e passe o mouse sobre os pontos para visualizar os valores.
                         </div>
 
 
@@ -1487,22 +1498,28 @@
                 style="background-color: #f8f9fa;">
 
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 Gráfico de Precipitação x Temperatura (2000 - 2024)</h4>
+                    <h4>📊 Precipitação vs. Temperatura Média Anual (2000–2024)</h4>
                     <hr>
-                    <p class="text-muted mb-2">
-                        A visualização abaixo apresenta a <strong>precipitação total anual</strong> (em milímetros) como
-                        barras azuis e a <strong>temperatura média anual</strong> (em graus Celsius) como uma linha
-                        laranja. Os dados referem-se a Porto Alegre entre os anos de 2000 e 2024.
-                        <br><br>
-                        As linhas tracejadas indicam as médias históricas de cada variável, permitindo identificar
-                        facilmente os anos com valores acima ou abaixo do esperado.
+                    <p class="text-muted mb-3">
+                        <strong>📊 O que mostra?</strong><br>
+                        Esta visualização conjunta apresenta duas variáveis climáticas essenciais observadas em Porto
+                        Alegre: a <strong>precipitação total</strong> acumulada por ano (em mm) e a <strong>temperatura
+                            média</strong>
+                        anual (em °C)
                         <br><br>
 
+                        <strong>📈 Interpretação:</strong><br>
+                        As <u>linhas tracejadas</u> correspondem às médias históricas de cada variável no período de
+                        <strong>2000 a 2024</strong>. Elas servem como referência visual para identificar anos com
+                        precipitação ou temperatura acima ou abaixo do esperado, facilitando a percepção de padrões
+                        climáticos.
+                        <br><br>
 
-                        <center>
-                            <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
-                        </center>
-                        <canvas id="gangorraChart"></canvas>
+                        <small class="text-muted d-block text-center mt-2">💡 Clique sobre os itens da legenda para
+                            mostrar ou ocultar as variáveis.</small>
+                    </p>
+
+                    <canvas id="gangorraChart"></canvas>
                 </div>
 
             </div>
@@ -1678,6 +1695,171 @@
     <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="radiacao">
         <div class="row">
 
+            <!-- Gráficos / Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center reveal-item"
+                style="background-color: #f8f9fa;">
+
+
+
+
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
+                    <h4 class="fw-bold mb-3">📊 Radiação Solar Anual em Porto Alegre</h4>
+                    <hr>
+                    <p class="text-muted mb-3">
+                        <strong>🔆 O que representa?</strong><br>
+                        A radiação solar é a principal fonte de energia térmica na Terra. Ela influencia diretamente o
+                        clima, a agricultura e a sensação térmica, e sua variação ao longo dos anos pode sinalizar
+                        mudanças nos padrões atmosféricos e na cobertura de nuvens.
+                        <br><br>
+                        Este gráfico mostra a <strong>radiação solar acumulada anualmente</strong> em Porto Alegre com
+                        base em dados da estação meteorológica A801, cobrindo o período de <strong>2000 a 2024</strong>.
+                        <br><br>
+
+                    </p>
+
+                    <div class="mb-4">
+                        <label class="form-label">
+                            📅 Selecione o intervalo de anos:
+                            <span id="anoInicio" class="text-primary fw-semibold"></span> –
+                            <span id="anoFim" class="text-primary fw-semibold"></span>
+                        </label>
+                        <div id="rangeSlider"></div>
+                    </div>
+
+                    <canvas id="graficoRadiacaoArea" height=""></canvas>
+
+                    <script>
+                        fetch('./data/resumo_visualizacoes.json')
+                            .then(res => res.json())
+                            .then(dados => {
+                                const estacao = "A801";
+                                const anos = [];
+                                const radiacao = [];
+
+                                for (const ano in dados) {
+                                    if (!isNaN(ano) && ano !== "2025" && dados[ano][estacao]?.radiacao_anual) {
+                                        anos.push(ano);
+                                        radiacao.push(dados[ano][estacao].radiacao_anual);
+                                    }
+                                }
+
+                                const media = radiacao.reduce((a, b) => a + b, 0) / radiacao.length;
+
+                                const canvas = document.getElementById("graficoRadiacaoArea");
+                                const ctx = canvas.getContext("2d");
+
+                                const chart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: [...anos],
+                                        datasets: [
+                                            {
+                                                label: "Radiação Solar Anual (kJ/m²)",
+                                                data: [...radiacao],
+                                                borderColor: "rgba(255, 165, 0, 0.9)",
+                                                backgroundColor: "rgba(255, 165, 0, 0.1)",
+                                                tension: 0.3,
+                                                pointRadius: 5,
+                                                pointHoverRadius: 7,
+                                                pointBackgroundColor: [...radiacao].map(() => "rgba(255, 165, 0, 1)")
+                                            },
+                                            {
+                                                label: "Média Histórica (2000–2024)",
+                                                data: Array(anos.length).fill(media),
+                                                borderColor: "rgba(255, 99, 132, 0.7)",
+                                                borderDash: [5, 5],
+                                                pointRadius: 0,
+                                                fill: false
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        interaction: {
+                                            mode: 'nearest',
+                                            intersect: false
+                                        },
+                                        responsive: true,
+                                        plugins: {
+                                            legend: {
+                                                display: true,
+                                                position: 'top'
+                                            },
+                                            tooltip: {
+                                                callbacks: {
+                                                    label: function (ctx) {
+                                                        const valor = ctx.raw.toFixed(0);
+                                                        const ano = ctx.label;
+                                                        const valoresVisiveis = chart.data.datasets[0].data;
+                                                        const max = Math.max(...valoresVisiveis);
+                                                        const min = Math.min(...valoresVisiveis);
+                                                        let comentario = "";
+                                                        if (ctx.raw === max) comentario = " — maior valor do período";
+                                                        if (ctx.raw === min) comentario = " — menor valor do período";
+                                                        if (ctx.datasetIndex === 1) return `${ctx.dataset.label}: ${valor} kJ/m²`;
+                                                        return `Radiação em ${ano}: ${valor} kJ/m²${comentario}`;
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        scales: {
+                                            y: {
+                                                title: {
+                                                    display: true,
+                                                    text: "Energia acumulada (kJ/m²)"
+                                                }
+                                            },
+                                            x: {
+                                                title: {
+                                                    display: true,
+                                                    text: "Ano"
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+
+                                // === Slider (estilo compatível com transformações climáticas) ===
+                                const slider = document.getElementById("rangeSlider");
+                                const spanInicio = document.getElementById("anoInicio");
+                                const spanFim = document.getElementById("anoFim");
+
+                                noUiSlider.create(slider, {
+                                    start: [2000, 2024],
+                                    connect: true,
+                                    step: 1,
+                                    range: {
+                                        min: 2000,
+                                        max: 2024
+                                    },
+                                    format: {
+                                        to: v => parseInt(v),
+                                        from: v => parseInt(v)
+                                    }
+                                });
+
+                                slider.noUiSlider.on("update", valores => {
+                                    const [inicio, fim] = valores.map(v => parseInt(v));
+                                    if (fim - inicio < 1) return;
+
+                                    spanInicio.textContent = `${inicio}`;
+                                    spanFim.textContent = `${fim}`;
+
+                                    const iInicio = anos.indexOf(inicio.toString());
+                                    const iFim = anos.indexOf(fim.toString()) + 1;
+
+                                    chart.data.labels = anos.slice(iInicio, iFim);
+                                    chart.data.datasets[0].data = radiacao.slice(iInicio, iFim);
+                                    chart.data.datasets[1].data = Array(iFim - iInicio).fill(media);
+                                    chart.update();
+                                });
+                            });
+                    </script>
+                </div>
+            </div>
+
+
+
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
                 <div class="col-12 d-flex flex-column reveal-item">
@@ -1706,6 +1888,12 @@
 
                         <p class="font-weight-bold">🎯 No gráfico ao lado, veja como a radiação solar anual tem crescido
                             e compare com a média histórica.</p>
+
+                        <div class="alert alert-info mt-4" role="alert">
+                            <strong>Dica:</strong> Use o controle deslizante para escolher um intervalo de anos e veja
+                            como a radiação solar variou em diferentes períodos. Experimente selecionar anos extremos
+                            para comparar com a média histórica.
+                        </div>
 
                         <div class="alert alert-primary d-flex align-items-center my-4" role="alert"
                             style="font-size: 1.15rem;">
@@ -1742,198 +1930,6 @@
 
                 </div>
             </div>
-            <!-- Gráficos / Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center reveal-item"
-                style="background-color: #f8f9fa;">
-
-
-
-
-
-                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 Gráfico de Radiação Solar Anual</h4>
-                    <hr>
-                    <p class="text-muted mb-2 ">
-                        Este gráfico mostra a evolução da radiação solar ao longo dos anos em Porto Alegre.
-                        <br><br>
-                        A linha azul representa a radiação anual medida em kJ/m², enquanto a linha vermelha indica a
-                        média histórica de radiação anual (de 2000 até 2024).
-                    </p>
-                    <br>
-                    <center>
-                        <small class="text-muted">💡 Clique nas legendas para filtrar a visualização:</small>
-                    </center>
-
-                    <canvas id="graficoRadiacaoSolar"></canvas>
-
-                    <script>
-                        fetch('./data/resumo_visualizacoes.json')
-                            .then(res => res.json())
-                            .then(dados => {
-                                const estacao = "A801";
-                                const anos = Object.keys(dados).filter(ano => !isNaN(ano) && ano !== "2025").sort();
-
-                                const valores = anos.map(ano => dados[ano]?.[estacao]?.radiacao_anual ?? null);
-                                const valoresValidos = valores.filter(v => v !== null && v !== 0);
-                                const mediaHistorica = valoresValidos.reduce((a, b) => a + b, 0) / valoresValidos.length;
-
-                                const cores = valores.map(v =>
-                                    v === null ? 'gray' :
-                                        v > mediaHistorica ? 'rgba(255, 206, 86, 0.8)' : 'rgba(99, 132, 255, 0.6)'
-                                );
-
-                                new Chart(document.getElementById('graficoRadiacaoSolar'), {
-                                    type: 'bar',
-                                    data: {
-                                        labels: anos,
-                                        datasets: [
-                                            {
-                                                label: 'Radiação Solar Anual (kWh/m²)',
-                                                data: valores,
-                                                backgroundColor: cores,
-                                                borderRadius: 4
-                                            },
-                                            {
-                                                label: 'Média Histórica',
-                                                type: 'line',
-                                                data: new Array(anos.length).fill(mediaHistorica),
-                                                borderColor: 'rgba(54, 162, 235, 0.8)',
-                                                borderDash: [5, 5],
-                                                pointRadius: 0,
-                                                tension: 0
-                                            }
-                                        ]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: true,
-                                                text: 'Radiação Solar Acumulada por Ano (2000–2024)'
-                                            },
-                                            tooltip: {
-                                                callbacks: {
-                                                    label: ctx =>
-                                                        ctx.dataset.type === 'line'
-                                                            ? `Média Histórica: ${ctx.raw.toFixed(1)}`
-                                                            : `${ctx.raw.toFixed(1)} kWh/m²`
-                                                }
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                title: {
-                                                    display: true,
-                                                    text: 'kWh/m² por ano'
-                                                }
-                                            },
-                                            x: {
-                                                title: {
-                                                    display: true,
-                                                    text: 'Ano'
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
-                            });
-                    </script>
-
-
-
-
-                    <!--<canvas id="graficoRadiacaoArea"></canvas>
-
-
-                    <script>
-                        fetch('./data/resumo_visualizacoes.json')
-                            .then(res => res.json())
-                            .then(dados => {
-                                const anos = Object.keys(dados)
-                                    //.filter(ano => !isNaN(ano))
-                                    .filter(ano => !isNaN(ano) && ano !== "2025") // ← exclui o ano de 2025
-                                    .sort((a, b) => a - b);
-
-                                const valoresRadiacao = anos.map(ano => {
-                                    const dadosAno = dados[ano];
-                                    const a801 = dadosAno["A801"];
-                                    return a801?.radiacao_anual ?? null;
-                                });
-
-                                const valoresValidos = valoresRadiacao.filter(v => v !== null && v !== 0);
-                                const mediaHistorica = valoresValidos.reduce((a, b) => a + b, 0) / valoresValidos.length;
-
-                                const anosAcimaMedia = anos.filter((ano, i) =>
-                                    valoresRadiacao[i] !== null && valoresRadiacao[i] > mediaHistorica
-                                );
-
-                                const ctx = document.getElementById("graficoRadiacaoArea").getContext("2d");
-
-                                new Chart(ctx, {
-                                    type: "line",
-                                    data: {
-                                        labels: anos,
-                                        datasets: [
-                                            {
-                                                label: "Radiação Anual (kJ/m²)",
-                                                data: valoresRadiacao,
-                                                fill: false,
-                                                backgroundColor: "rgba(54, 162, 235, 0.2)",
-                                                borderColor: "rgba(54, 162, 235, 1)",
-                                                tension: 0.4,
-                                                pointRadius: 3
-                                            },
-                                            {
-                                                label: "Média Histórica (2000–2023)",
-                                                data: Array(anos.length).fill(mediaHistorica),
-                                                borderColor: "rgba(255, 99, 132, 1)",
-                                                borderDash: [6, 6],
-                                                pointRadius: 0,
-                                                fill: false,
-                                                tension: 0
-                                            }
-                                        ]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            legend: { position: "top" },
-                                            tooltip: {
-                                                callbacks: {
-                                                    label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} kJ/m²`,
-                                                    afterBody: context => {
-                                                        const ano = context[0].label;
-                                                        return anosAcimaMedia.includes(ano)
-                                                            ? '⚠️ Acima da média histórica'
-                                                            : '✅ Dentro da média histórica';
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                title: {
-                                                    display: true,
-                                                    text: "kJ/m² acumulados no ano"
-                                                }
-                                            },
-                                            x: {
-                                                title: {
-                                                    display: true,
-                                                    text: "Ano"
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
-                            });
-                    </script>-->
-
-
-
-                </div>
-            </div>
-
         </div>
     </div>
 
@@ -1942,129 +1938,6 @@
 
     <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center" id="pressao">
         <div class="row">
-
-            <!-- Gráficos / Mapa -->
-            <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center reveal-item"
-                style="background-color: #f8f9fa;">
-
-
-                <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 Gráfico de Pressão Média Anual em Porto Alegre</h4>
-                    <hr>
-                    <p class="text-muted mb-2 ">
-                        A pressão atmosférica é a força que o ar exerce sobre a superfície da Terra. Ela varia conforme
-                        a temperatura,
-                        altitude e a presença de sistemas climáticos como frentes frias ou ciclones. Em locais de menor
-                        pressão, o ar
-                        tende a subir, favorecendo a formação de chuvas e tempestades.
-                        <br><br>
-                        Cada ponto da linha azul representa a média anual da pressão registrada em Porto Alegre desde o
-                        ano 2000.
-                        A linha tracejada vermelha indica a média histórica do período. Valores abaixo dessa linha podem
-                        apontar para
-                        anos mais instáveis, com maior propensão a chuvas intensas ou tempestades.
-                    </p>
-                    <br>
-
-                    <canvas id="graficoPressaoAnual"></canvas>
-
-                    <script>
-                        fetch('./data/resumo_visualizacoes.json')
-                            .then(res => res.json())
-                            .then(dados => {
-                                const anos = Object.keys(dados).filter(ano => !isNaN(ano)).sort();
-                                const estacao = "A801";
-
-                                const pressaoMedia = anos.map(ano => dados[ano]?.[estacao]?.pressao?.media ?? null);
-                                const valoresValidos = pressaoMedia.filter(v => v !== null);
-                                const mediaPressao = valoresValidos.reduce((a, b) => a + b, 0) / valoresValidos.length;
-
-                                const linhaMedia = anos.map(() => mediaPressao); // mesmo valor para todos os anos
-
-                                const ctx = document.getElementById('graficoPressaoAnual').getContext('2d');
-                                new Chart(ctx, {
-                                    type: 'line',
-                                    data: {
-                                        labels: anos,
-                                        datasets: [
-                                            {
-                                                label: 'Pressão Média Anual (mb)',
-                                                data: pressaoMedia,
-                                                borderWidth: 2,
-                                                borderColor: '#2980b9',
-                                                backgroundColor: 'rgba(41, 128, 185, 0.1)',
-                                                pointBackgroundColor: '#2980b9',
-                                                pointBorderColor: '#fff',
-                                                pointRadius: 5,
-                                                tension: 0.3,
-                                                fill: true
-                                            },
-                                            {
-                                                label: `Média Histórica (${mediaPressao.toFixed(1)} mb)`,
-                                                data: linhaMedia,
-                                                borderWidth: 1.5,
-                                                borderColor: '#e74c3c',
-                                                borderDash: [5, 5],
-                                                pointRadius: 0,
-                                                fill: false
-                                            }
-                                        ]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        plugins: {
-                                            title: {
-                                                display: false,
-                                                text: '📉 Pressão Média Anual em Porto Alegre (2000–2024)',
-                                                font: { size: 18 }
-                                            },
-                                            tooltip: {
-                                                backgroundColor: '#fff',
-                                                titleColor: '#000',
-                                                bodyColor: '#333',
-                                                borderColor: '#ccc',
-                                                borderWidth: 1,
-                                                padding: 10,
-                                                cornerRadius: 6,
-                                                callbacks: {
-                                                    label: ctx => {
-                                                        const v = ctx.raw;
-                                                        return `${ctx.dataset.label}: ${v != null ? v.toFixed(1) + " mb" : "N/A"}`;
-                                                    }
-                                                }
-                                            },
-                                            legend: {
-                                                display: true,
-                                                position: 'bottom',
-                                                labels: {
-                                                    boxWidth: 12,
-                                                    font: { size: 12 }
-                                                }
-                                            }
-                                        },
-                                        scales: {
-                                            y: {
-                                                title: { display: true, text: 'Pressão (mb)', font: { size: 14 } },
-                                                ticks: { font: { size: 12 } }
-                                            },
-                                            x: {
-                                                title: { display: true, text: 'Ano', font: { size: 14 } },
-                                                ticks: { font: { size: 12 } }
-                                            }
-                                        }
-                                    }
-                                });
-                            });
-                    </script>
-
-
-
-
-
-                </div>
-            </div>
-
-
 
             <!-- Storytelling -->
             <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
@@ -2125,6 +1998,177 @@
                 </div>
             </div>
 
+            <!-- Gráficos / Mapa -->
+            <!-- Gráficos / Mapa -->
+            <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center reveal-item"
+                style="background-color: #f8f9fa;">
+
+                <div class="mb-4 p-4 rounded shadow-sm bg-white border w-100" id="charts">
+                    <h4 class="fw-bold mb-3">📊 Pressão Atmosférica Média Anual em Porto Alegre</h4>
+                    <hr>
+                    <p class="text-muted mb-3">
+                        <strong>🧭 O que representa?</strong><br>
+                        A pressão atmosférica é a força que o ar exerce sobre a superfície da Terra. Ela é influenciada
+                        por fatores como temperatura, altitude e sistemas meteorológicos — incluindo frentes frias,
+                        ciclones e zonas de alta pressão.
+                        <br><br>
+                        Esse indicador é essencial para entender a estabilidade do clima: <strong>valores mais
+                            baixos</strong> tendem a indicar instabilidade, favorecendo a formação de chuvas e
+                        tempestades, enquanto <strong>valores mais altos</strong> estão associados a períodos de tempo
+                        firme e seco.
+                        <br><br>
+                    <div class="mb-4">
+                        <label class="form-label">
+                            📅 Selecione o intervalo de anos:
+                            <span id="range-inicio-pressao" class="text-primary fw-semibold"></span> –
+                            <span id="range-fim-pressao" class="text-primary fw-semibold"></span>
+                        </label>
+                        <div id="range-anos-pressao"></div>
+                    </div>
+
+                    <center>
+                        <small class="text-muted">💡 Ajuste o período para analisar tendências específicas.</small>
+                    </center>
+
+                    </p>
+                    <canvas id="graficoPressaoAnual" height=""></canvas>
+
+                    <script>
+                        fetch('./data/resumo_visualizacoes.json')
+                            .then(res => res.json())
+                            .then(dados => {
+                                const anos = Object.keys(dados).filter(ano => !isNaN(ano)).sort();
+                                const estacao = "A801";
+
+                                const pressaoMediaOriginal = anos.map(ano => dados[ano]?.[estacao]?.pressao?.media ?? null);
+                                const valoresValidos = pressaoMediaOriginal.filter(v => v !== null);
+                                const mediaTotal = valoresValidos.reduce((a, b) => a + b, 0) / valoresValidos.length;
+
+                                const canvas = document.getElementById('graficoPressaoAnual');
+                                const ctx = canvas.getContext('2d');
+
+                                const chart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: [...anos],
+                                        datasets: [
+                                            {
+                                                label: 'Pressão Média Anual (mb)',
+                                                data: [...pressaoMediaOriginal],
+                                                borderWidth: 2,
+                                                borderColor: '#2980b9',
+                                                backgroundColor: 'rgba(41, 128, 185, 0.1)',
+                                                pointBackgroundColor: '#2980b9',
+                                                pointBorderColor: '#fff',
+                                                pointRadius: 4,
+                                                tension: 0.3,
+                                                fill: true
+                                            },
+                                            {
+                                                label: `Média Histórica (2000–2024)`,
+                                                data: Array(anos.length).fill(mediaTotal),
+                                                borderWidth: 1.5,
+                                                borderColor: '#e74c3c',
+                                                borderDash: [6, 4],
+                                                pointRadius: 0,
+                                                fill: false
+                                            }
+                                        ]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        interaction: {
+                                            mode: 'nearest',
+                                            intersect: false
+                                        },
+                                        plugins: {
+                                            tooltip: {
+                                                backgroundColor: '#fff',
+                                                titleColor: '#000',
+                                                bodyColor: '#333',
+                                                borderColor: '#ccc',
+                                                borderWidth: 1,
+                                                padding: 10,
+                                                cornerRadius: 6,
+                                                callbacks: {
+                                                    label: ctx => {
+                                                        const v = ctx.raw;
+                                                        return `${ctx.dataset.label}: ${v != null ? v.toFixed(1) + " mb" : "N/A"}`;
+                                                    }
+                                                }
+                                            },
+                                            legend: {
+                                                display: true,
+                                                position: 'top',
+                                                labels: {
+                                                    boxWidth: 12,
+                                                    font: { size: 12 }
+                                                }
+                                            }
+                                        },
+                                        scales: {
+                                            y: {
+                                                title: {
+                                                    display: true,
+                                                    text: 'Pressão (mb)',
+                                                    font: { size: 12 }
+                                                },
+                                                ticks: { font: { size: 12 } }
+                                            },
+                                            x: {
+                                                title: {
+                                                    display: true,
+                                                    text: 'Ano',
+                                                    font: { size: 12 }
+                                                },
+                                                ticks: { font: { size: 12 } }
+                                            }
+                                        }
+                                    }
+                                });
+
+                                // === Range Slider ===
+                                const slider = document.getElementById("range-anos-pressao");
+                                const spanInicio = document.getElementById("range-inicio-pressao");
+                                const spanFim = document.getElementById("range-fim-pressao");
+
+                                noUiSlider.create(slider, {
+                                    start: [2000, 2024],
+                                    connect: true,
+                                    step: 1,
+                                    range: {
+                                        min: 2000,
+                                        max: 2024
+                                    },
+                                    format: {
+                                        to: value => parseInt(value),
+                                        from: value => parseInt(value)
+                                    }
+                                });
+
+                                slider.noUiSlider.on("update", valores => {
+                                    const [inicio, fim] = valores.map(v => parseInt(v));
+                                    spanInicio.textContent = `${inicio}`;
+                                    spanFim.textContent = `${fim}`;
+
+                                    const iInicio = anos.indexOf(inicio.toString());
+                                    const iFim = anos.indexOf(fim.toString()) + 1;
+
+                                    const anosFiltrados = anos.slice(iInicio, iFim);
+                                    const dadosFiltrados = pressaoMediaOriginal.slice(iInicio, iFim);
+                                    const mediaLocal = dadosFiltrados.filter(v => v !== null).reduce((a, b) => a + b, 0) / dadosFiltrados.filter(v => v !== null).length;
+
+                                    chart.data.labels = anosFiltrados;
+                                    chart.data.datasets[0].data = dadosFiltrados;
+                                    chart.data.datasets[1].data = Array(anosFiltrados.length).fill(mediaLocal);
+                                    chart.update();
+                                });
+                            });
+                    </script>
+
+                </div>
+            </div>
+
 
         </div>
     </div>
@@ -2136,64 +2180,6 @@
     <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center " id="ventos">
         <div class="row">
 
-
-            <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
-                <div class="col-12 d-flex flex-column reveal-item">
-                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
-                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        Ventos e Umidade
-                    </h1>
-
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p>Em 2024, os ventos não sopraram a favor. Literalmente.</p>
-                        <p>Correntes de vento mais fracas e mal distribuídas impediram a dissipação das nuvens sobre
-                            Porto Alegre, fazendo com que a umidade se acumulasse.</p>
-                        <p>O resultado? Céu carregado, dias abafados, chuvas persistentes.</p>
-                        <p> Ventos mais fortes podem indicar maior instabilidade atmosférica e influenciar diretamente a
-                            sensação térmica, a
-                            dispersão de poluentes e até a propagação de queimadas. Já anos com ventos fracos podem
-                            favorecer a formação de
-                            ilhas de calor e aumentar a sensação de abafamento.</p>
-                        <p class="font-weight-bold">🎯 Interaja com o gráfico e veja como os ventos mudaram — ou
-                            deixaram de mudar.</p>
-
-                        <div class="alert alert-info d-flex align-items-center my-4" role="alert"
-                            style="font-size: 1.1rem;">
-                            <i class="fas fa-tint fa-lg mr-3 text-info"></i>
-                            <div>
-                                <strong>E quando a umidade sobe e o ar já não consegue mais absorver, surge um sinal
-                                    claro:</strong>
-                                <br>
-                                <span class="font-weight-bold">o ponto de orvalho.</span>
-                            </div>
-                        </div>
-
-
-                        <hr>
-
-                        <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
-                                seção.</p>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
-                                aria-label="Ir para a próxima seção" id="explorarPontoOrvalho">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
-                        </div>
-                        <script>
-                            document.getElementById('explorarPontoOrvalho').addEventListener('click', function (e) {
-                                e.preventDefault();
-                                const target = document.querySelector('#pontoOrvalho');
-                                if (target) {
-                                    target.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            });                                   
-                        </script>
-                    </div>
-                </div>
-            </div>
-
             <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center reveal-item"
                 style="background-color: #f8f9fa;">
@@ -2202,29 +2188,27 @@
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
                     <h4>📊 Gráfico de Velocidade Média dos Ventos (2000–2024)</h4>
                     <hr>
-                    <p class="text-muted mb-2 ">
-                        Este gráfico apresenta a variação da <strong>velocidade média dos ventos</strong> ao longo dos
-                        anos em Porto Alegre.
-                        Os dados mostram como o comportamento dos ventos pode mudar ano após ano, influenciado por
-                        padrões climáticos
-                        regionais e globais.
+                    <p class="text-muted mb-3">
+                        <strong>📊 O que mostra?</strong><br>
+                        Este gráfico exibe a <strong>velocidade média anual dos ventos</strong> em Porto Alegre, com
+                        base nos dados da estação A801. Os ventos desempenham papel importante no equilíbrio climático,
+                        na sensação térmica e na formação de frentes frias e tempestades.
                         <br><br>
-                        Use o controle deslizante para selecionar um intervalo de anos. O gráfico se ajustará
-                        automaticamente,
-                        destacando em <strong class="text-success">verde</strong> o ano mais ventoso e em <strong
-                            class="text-danger">vermelho</strong> o mais calmo no período selecionado.
-                        Passe o mouse sobre os pontos para ver detalhes específicos de cada ano.
+                        <strong>🔍 Como interagir?</strong><br>
+                        Utilize o controle deslizante abaixo para selecionar um intervalo de anos. O gráfico se ajustará
+                        automaticamente e destacará o <strong class="text-success">ano mais ventoso</strong> e o <strong
+                            class="text-danger">ano mais calmo</strong>.
+                        <br><br>
+                        Passe o mouse sobre os pontos para visualizar os valores detalhados.
                     </p>
-                    <br>
-
 
                     <div class="mb-4">
                         <label class="form-label">
-                            Intervalo de Anos: <span id="rangeAnosTexto">2000 – 2024</span>
+                            📅 Intervalo Selecionado: <span id="rangeAnosTexto" class="text-primary fw-semibold">2000 –
+                                2024</span>
                         </label>
                         <div id="sliderIntervaloVento"></div>
                     </div>
-
                     <div class="d-flex justify-content-center align-items-center my-4">
                         <canvas id="graficoLinhaVento" height="160"></canvas>
                     </div>
@@ -2262,6 +2246,10 @@
                                         }]
                                     },
                                     options: {
+                                        interaction: {
+                                            mode: 'nearest',
+                                            intersect: false
+                                        },
                                         responsive: true,
                                         plugins: {
                                             title: {
@@ -2360,6 +2348,92 @@
 
             </div>
 
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
+                <div class="col-12 d-flex flex-column reveal-item">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        Ventos e Umidade
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p><strong>Em 2024, os ventos não sopraram a favor.</strong> Literalmente.</p>
+
+                        <p>
+                            Correntes de ar mais fracas e mal distribuídas impediram a dissipação das nuvens sobre Porto
+                            Alegre,
+                            criando as condições ideais para o acúmulo de umidade na atmosfera.
+                        </p>
+
+                        <p>
+                            O resultado? <strong>Céu carregado, sensação térmica elevada e chuvas persistentes.</strong>
+                        </p>
+
+                        <p>
+                            Ventos mais intensos normalmente ajudam a estabilizar o clima, dispersar poluentes e reduzir
+                            o calor acumulado. Já a ausência de movimento no ar favorece a formação de <em>ilhas de
+                                calor</em>,
+                            aumenta o desconforto térmico e dificulta o equilíbrio atmosférico — especialmente em
+                            centros urbanos densos como a capital gaúcha.
+                        </p>
+
+                        <p>
+                            Além disso, a falta de circulação compromete a qualidade do ar e retarda a dissipação da
+                            umidade,
+                            criando um ambiente propício para tempestades longas e abafamento extremo. O clima fica
+                            estagnado,
+                            e qualquer variação térmica pode desencadear eventos severos.
+                        </p>
+
+                        <p>
+                            Foi o que vimos em 2024: um ciclo de estagnação atmosférica, saturação hídrica e recorrência
+                            de chuvas intensas,
+                            que deixou a cidade em estado de alerta por semanas.
+                        </p>
+
+                        <strong>
+                            🎯 Interaja com o gráfico para descobrir quais foram os anos mais ventosos e os mais calmos entre 2000 e 2024.
+                        </strong>
+
+                        <div class="alert alert-info d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.1rem;">
+                            <i class="fas fa-tint fa-lg mr-3 text-info"></i>
+                            <div>
+                                <strong>E quando a umidade sobe e o ar já não consegue mais absorver, surge um sinal
+                                    claro:</strong>
+                                <br>
+                                <span class="font-weight-bold">o ponto de orvalho.</span>
+                            </div>
+                        </div>
+
+
+                        <hr>
+
+                        <div class="end-content w-100 text-center mt-4">
+                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                                seção.</p>
+                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
+                                aria-label="Ir para a próxima seção" id="explorarPontoOrvalho">
+                                <span style="font-size: 1.7em; vertical-align: middle;"
+                                    aria-hidden="true">&#8595;</span>
+                            </button>
+                        </div>
+                        <script>
+                            document.getElementById('explorarPontoOrvalho').addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector('#pontoOrvalho');
+                                if (target) {
+                                    target.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            });                                   
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 
@@ -2370,17 +2444,99 @@
     <div class="container-fluid reveal-section  vh-100 d-flex align-items-center justify-content-center "
         id="pontoOrvalho">
         <div class="row">
+
+            <!-- Storytelling -->
+            <div class="col-sm-12 col-md-12 col-lg-6" style="background-color: #f8f9fa;">
+                <div class="col-12 d-flex flex-column reveal-item">
+                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
+                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
+                        O Ponto de Orvalho
+                    </h1>
+
+                    <div class="col-12 justify-content-center align-items-center">
+                        <p>O <strong>ponto de orvalho</strong> indica o momento em que o ar atinge sua capacidade máxima
+                            de reter vapor de água. Quando esse limite é ultrapassado, o excesso se transforma em
+                            neblina, orvalho, nuvens ou tempestade.</p>
+
+                        <p>Durante episódios de <strong>El Niño</strong>, é comum que esse ponto suba — sinal de um ar
+                            saturado, onde qualquer leve resfriamento pode gerar <em>condensação repentina</em> e,
+                            principalmente, <strong>chuvas intensas</strong>.</p>
+
+                        <p>Em 2024, os registros apontaram pontos de orvalho elevados com frequência. Foi um aviso
+                            sutil, mas constante: a atmosfera estava carregada e pronta para extremos.</p>
+
+                        <p>
+                            Ignorado por muitos, esse dado meteorológico funciona como um sensor climático natural. Ele
+                            antecipa mudanças, denuncia desequilíbrios e oferece pistas valiosas para quem sabe
+                            observá-lo.
+                        </p>
+
+                        <strong class="font-weight-semibold">🎯 Acompanhar esse dado quase invisível pode ser a chave
+                            para antecipar eventos severos antes que eles aconteçam.</strong>
+
+                        <hr class="my-4">
+
+                        <div class="alert alert-info d-flex align-items-center my-4" role="alert"
+                            style="font-size: 1.1rem;">
+                            <i class="fas fa-tint fa-lg mr-3 text-info"></i>
+                            <div>
+                                Compreender o clima vai além de analisar gráficos: é <strong>interpretar sinais,
+                                    antecipar extremos</strong> e transformar dados em ação.<br>
+                                O futuro — que já começou — pede escolhas informadas, baseadas em evidências e não
+                                apenas em intuição.
+                            </div>
+                        </div>
+
+                        <p class="text-muted font-italic mt-3">
+                            Nem sempre o perigo se anuncia com trovões. Às vezes, ele está escondido na umidade
+                            silenciosa do ar.
+                        </p>
+                    </div>
+
+
+                    <hr>
+
+                    <div class="end-content w-100 text-center mt-4">
+                        <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
+                            seção.</p>
+                        <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
+                            id="explorarAgora" aria-label="Ir para a próxima seção">
+                            <span style="font-size: 1.7em; vertical-align: middle;" aria-hidden="true">&#8595;</span>
+                        </button>
+                    </div>
+
+                    <script>
+                        document.getElementById('explorarAgora').addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const target = document.querySelector('#agora');
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        });                                   
+                    </script>
+
+                </div>
+
+            </div>
+
             <!-- Gráficos / Mapa -->
             <div class="col-sm-12 col-md-12 col-lg-6 justify-content-center align-items-center reveal-item"
                 style="background-color: #f8f9fa;">
 
 
                 <div class="mb-4 p-4 rounded shadow-sm bg-white border" id="charts">
-                    <h4>📊 ...</h4>
+                    <h4>📊 Evolução do Ponto de Orvalho em Porto Alegre</h4>
                     <hr>
-                    <p class="text-muted mb-2 ">O que é?
+                    <p class="text-muted mb-3">
+                        <strong>🌡️ O que é?</strong><br>
+                        O ponto de orvalho é a temperatura na qual o ar precisa ser resfriado para que o vapor de água
+                        se condense, formando gotículas — ou seja, é um indicador direto da umidade do ar. Quanto maior
+                        o ponto de orvalho, mais úmido está o ambiente.
                         <br><br>
-                        Como usar?
+                        <strong>📊 Como interpretar?</strong><br>
+                        Este gráfico mostra a média anual do ponto de orvalho em Porto Alegre desde o ano 2000. As
+                        barras são coloridas em gradiente: quanto mais quente a cor, maior o valor. Valores elevados
+                        podem indicar sensação de abafamento e maior desconforto térmico.
                     </p>
                     <br>
 
@@ -2419,6 +2575,10 @@
                                         }]
                                     },
                                     options: {
+                                        interaction: {
+                                            mode: 'nearest',
+                                            intersect: false
+                                        },
                                         responsive: true,
                                         plugins: {
                                             title: {
@@ -2459,55 +2619,7 @@
                 </div>
             </div>
 
-            <!-- Storytelling -->
-            <div class="col-sm-12 col-md-12 col-lg-6 " style="background-color: #f8f9fa; ">
-                <div class="col-12 d-flex flex-column reveal-item">
-                    <h1 class="bg-light h1 mb-3 sticky-top" id="estacoes-title"
-                        style="padding: 50px 0px 30px 0px; background-color: #f8f9fa;" tabindex="0">
-                        O Ponto de Orvalho
-                    </h1>
 
-                    <div class="col-12 justify-content-center align-items-center">
-                        <p>O ponto de orvalho mostra quando o ar atinge sua capacidade máxima de retenção de umidade.
-                        </p>
-                        <p>Em períodos de El Niño, os valores de orvalho aumentam. Isso significa que o ar está tão
-                            saturado que qualquer resfriamento pode gerar condensação, neblina e, principalmente, chuva
-                            forte.</p>
-                        <p>Em 2024, os dados mostraram pontos de orvalho altos com frequência — mais um sinal de que o
-                            ambiente estava pronto para extremos.</p>
-
-                        <p class="font-weight-bold">🎯 Veja como esse dado silencioso pode ser um dos melhores
-                            indicadores para prever eventos intensos.</p>
-
-
-                        <!-- Preciso fazer um fechamento aqui -->
-
-
-                        <hr>
-
-                        <div class="end-content w-100 text-center mt-4">
-                            <p class="mb-2 text-muted">Clique no botão abaixo para seguir para a próxima
-                                seção.</p>
-                            <button class="btn btn-primary rounded-circle shadow" style="width: 55px; height: 55px;"
-                                id="explorarAgora" aria-label="Ir para a próxima seção">
-                                <span style="font-size: 1.7em; vertical-align: middle;"
-                                    aria-hidden="true">&#8595;</span>
-                            </button>
-                        </div>
-
-                        <script>
-                            document.getElementById('explorarAgora').addEventListener('click', function (e) {
-                                e.preventDefault();
-                                const target = document.querySelector('#agora');
-                                if (target) {
-                                    target.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            });                                   
-                        </script>
-
-                    </div>
-                </div>
-            </div>
 
 
         </div>
