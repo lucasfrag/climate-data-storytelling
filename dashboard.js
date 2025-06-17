@@ -1,6 +1,33 @@
 const selects = [document.getElementById("arquivoSelect1"), document.getElementById("arquivoSelect2")];
 const charts = [[], []];
 
+// ADICIONE no topo do script:
+const escalasGlobais = {
+  temperatura: [Infinity, -Infinity],
+  umidade: [Infinity, -Infinity],
+  precipitacao: [Infinity, -Infinity],
+  radiacao: [Infinity, -Infinity],
+  vento: [Infinity, -Infinity]
+};
+
+function atualizarEscalasGlobais(dados) {
+  const atualizar = (chave, valores) => {
+    const validos = valores.filter(v => v != null && !isNaN(v));
+    if (validos.length) {
+      const min = Math.min(...validos);
+      const max = Math.max(...validos);
+      escalasGlobais[chave][0] = Math.min(escalasGlobais[chave][0], min);
+      escalasGlobais[chave][1] = Math.max(escalasGlobais[chave][1], max);
+    }
+  };
+
+  atualizar("temperatura", [...dados.tempMin, ...dados.tempMax]);
+  atualizar("umidade", dados.umiMedia);
+  atualizar("precipitacao", dados.precTotal);
+  atualizar("radiacao", dados.radTotal);
+  atualizar("vento", [...dados.ventoMedio, ...dados.rajMax]);
+}
+
 fetch("manifest.json")
   .then(res => res.json())
   .then(arquivos => {
@@ -175,7 +202,19 @@ function processarCSV(csv, nomeArquivo) {
     meta // <-- agora contém cidade, estado, estacao, inicio, fim
   };
 }
+
+function escalaPersonalizada(tipo) {
+  const [min, max] = escalasGlobais[tipo];
+  return {
+    suggestedMin: Math.floor(min - (max - min) * 0.1),
+    suggestedMax: Math.ceil(max + (max - min) * 0.1),
+    ticks: { font: { size: 12 } },
+    grid: { color: "rgba(0, 0, 0, 0.04)" }
+  };
+}
+
 function criarGraficos(dataset, idx) {
+
   // Limpa gráficos antigos
   charts[idx].forEach(c => c.destroy());
   charts[idx] = [];
@@ -264,7 +303,20 @@ function criarGraficos(dataset, idx) {
         { label: "Máxima", data: dataset.tempMax, ...estilos("red") }
       ]
     },
-    options: opcoes("🌡️ Temperatura Mensal (°C)")
+    options: {
+      ...opcoes("🌡️ Temperatura Mensal (°C)"),
+      scales: {
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+        y: escalaPersonalizada("temperatura")
+      },
+      plugins: {
+        ...opcoes("🌡️ Temperatura Mensal (°C)").plugins,
+        tooltip: {
+          ...opcoes("🌡️ Temperatura Mensal (°C)").plugins.tooltip,
+          itemSort: (a, b) => b.datasetIndex - a.datasetIndex
+        }
+      }
+    }
   }));
 
   // Umidade
@@ -274,7 +326,13 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Umidade Média", data: dataset.umiMedia, backgroundColor: "skyblue" }]
     },
-    options: opcoes("💧 Umidade Relativa Média (%)")
+    options: {
+      ...opcoes("💧 Umidade Relativa Média (%)"),
+      scales: {
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+        y: escalaPersonalizada("umidade")
+      }
+    }
   }));
 
   // Precipitação
@@ -284,7 +342,13 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Precipitação", data: dataset.precTotal, backgroundColor: "#3498db" }]
     },
-    options: opcoes("🌧️ Precipitação Total por Mês (mm)")
+    options: {
+      ...opcoes("🌧️ Precipitação Total por Mês (mm)"),
+      scales: {
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+        y: escalaPersonalizada("precipitacao")
+      }
+    }
   }));
 
   // Radiação
@@ -294,7 +358,13 @@ function criarGraficos(dataset, idx) {
       labels: dataset.labels,
       datasets: [{ label: "Radiação Global", data: dataset.radTotal, ...estilos("green") }]
     },
-    options: opcoes("☀️ Radiação Solar Acumulada (kJ/m²)")
+    options: {
+      ...opcoes("☀️ Radiação Solar Acumulada (kJ/m²)"),
+      scales: {
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+        y: escalaPersonalizada("radiacao")
+      }
+    }
   }));
 
   // Vento
@@ -307,7 +377,13 @@ function criarGraficos(dataset, idx) {
         { label: "Rajada Máxima", data: dataset.rajMax, ...estilos("black") }
       ]
     },
-    options: opcoes("💨 Vento Médio e Rajada Máxima (m/s)")
+    options: {
+      ...opcoes("💨 Vento Médio e Rajada Máxima (m/s)"),
+      scales: {
+        x: { ticks: { font: { size: 12 } }, grid: { display: false } },
+        y: escalaPersonalizada("vento")
+      }
+    }
   }));
 }
 
@@ -321,9 +397,29 @@ document.getElementById("btnCarregar").addEventListener("click", async () => {
   if (nome1) atualizarTituloEstacao(1, nome1);
   if (nome2) atualizarTituloEstacao(2, nome2);
 
+  // Reinicializa as escalas
+  escalasGlobais.temperatura = [Infinity, -Infinity];
+  escalasGlobais.umidade = [Infinity, -Infinity];
+  escalasGlobais.precipitacao = [Infinity, -Infinity];
+  escalasGlobais.radiacao = [Infinity, -Infinity];
+  escalasGlobais.vento = [Infinity, -Infinity];
+
+  let dados1 = null, dados2 = null;
+
   if (select1.value) {
     const csv1 = await fetch(select1.value).then(r => r.text());
-    const dados1 = processarCSV(csv1, nome1);
+    dados1 = processarCSV(csv1, nome1);
+    atualizarEscalasGlobais(dados1);
+  }
+
+  if (select2.value) {
+    const csv2 = await fetch(select2.value).then(r => r.text());
+    dados2 = processarCSV(csv2, nome2);
+    atualizarEscalasGlobais(dados2);
+  }
+
+  // Agora sim, crie os gráficos com as escalas globais já atualizadas
+  if (dados1) {
     criarGraficos(dados1, 0);
     document.getElementById("colunaGraficos1").classList.remove("d-none");
   } else {
@@ -332,10 +428,7 @@ document.getElementById("btnCarregar").addEventListener("click", async () => {
     document.getElementById("colunaGraficos1").classList.add("d-none");
   }
 
-  // Mostra a coluna 2 se o dataset foi carregado
-  if (select2.value) {
-    const csv2 = await fetch(select2.value).then(r => r.text());
-    const dados2 = processarCSV(csv2, nome2);
+  if (dados2) {
     criarGraficos(dados2, 1);
     document.getElementById("colunaGraficos2").classList.remove("d-none");
   } else {
