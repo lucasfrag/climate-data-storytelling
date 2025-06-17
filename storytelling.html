@@ -2393,7 +2393,8 @@
                         </p>
 
                         <strong>
-                            🎯 Interaja com o gráfico para descobrir quais foram os anos mais ventosos e os mais calmos entre 2000 e 2024.
+                            🎯 Interaja com o gráfico para descobrir quais foram os anos mais ventosos e os mais calmos
+                            entre 2000 e 2024.
                         </strong>
 
                         <div class="alert alert-info d-flex align-items-center my-4" role="alert"
@@ -2541,6 +2542,15 @@
                     <br>
 
                     <canvas id="graficoPontoOrvalho"></canvas>
+                    <canvas id="graficoPontoOrvalho"></canvas>
+                    <p class="text-muted mt-3">
+                        O <strong>ponto de orvalho</strong> representa a temperatura na qual o ar se torna saturado e a
+                        umidade se condensa. Valores mais baixos indicam ar seco; valores altos representam umidade
+                        excessiva e sensação térmica elevada.
+                        <br>
+                        A linha pontilhada indica a <strong>média histórica (2000–2024)</strong> para facilitar
+                        comparações.
+                    </p>
 
                     <script>
                         fetch('./data/resumo_visualizacoes.json')
@@ -2563,22 +2573,44 @@
                                     return `rgba(${r}, ${g}, 100, 0.8)`;
                                 });
 
+                                const mediaGeral = (
+                                    valores.reduce((acc, val) => val !== null ? acc + val : acc, 0) /
+                                    valores.filter(v => v !== null).length
+                                );
+
+                                const interpretarPontoOrvalho = v => {
+                                    if (v < 10) return 'Ar seco';
+                                    if (v < 16) return 'Confortável';
+                                    if (v < 20) return 'Moderadamente úmido';
+                                    return 'Muito úmido';
+                                };
+
                                 new Chart(document.getElementById('graficoPontoOrvalho'), {
                                     type: 'bar',
                                     data: {
                                         labels: anos,
-                                        datasets: [{
-                                            label: 'Ponto de Orvalho Médio (°C)',
-                                            data: valores,
-                                            backgroundColor: cores,
-                                            borderWidth: 1
-                                        }]
+                                        datasets: [
+                                            {
+                                                label: 'Ponto de Orvalho Médio (°C)',
+                                                data: valores,
+                                                backgroundColor: cores,
+                                                borderWidth: 1,
+                                                order: 2
+                                            },
+                                            {
+                                                type: 'line',
+                                                label: 'Média histórica',
+                                                data: Array(valores.length).fill(mediaGeral),
+                                                borderColor: 'black',
+                                                borderDash: [5, 5],
+                                                pointRadius: 0,
+                                                borderWidth: 1.5,
+                                                order: 1
+                                            }
+                                        ]
                                     },
                                     options: {
-                                        interaction: {
-                                            mode: 'nearest',
-                                            intersect: false
-                                        },
+                                        
                                         responsive: true,
                                         plugins: {
                                             title: {
@@ -2587,11 +2619,20 @@
                                             },
                                             tooltip: {
                                                 callbacks: {
-                                                    label: ctx => `${ctx.raw?.toFixed(1)} °C`
+                                                    label: ctx => {
+                                                        if (ctx.dataset.type === 'line') {
+                                                            return `Média histórica: ${mediaGeral.toFixed(1)} °C`;
+                                                        }
+                                                        const valor = ctx.raw?.toFixed(1);
+                                                        const interpretacao = interpretarPontoOrvalho(ctx.raw);
+                                                        return `${valor} °C — ${interpretacao} (média: ${mediaGeral.toFixed(1)} °C)`;
+                                                    }
                                                 }
                                             },
                                             legend: {
-                                                display: false
+                                                labels: {
+                                                    filter: item => item.text !== 'Média histórica' || item.datasetIndex === 1
+                                                }
                                             }
                                         },
                                         scales: {
@@ -2830,7 +2871,20 @@
                         responsive: true,
                         plugins: {
                             legend: { display: false },
-                            tooltip: { mode: 'index', intersect: false }
+                            tooltip: {
+                                mode: 'index',   // Mostra todos os datasets no índice
+                                intersect: false,
+                                callbacks: {
+                                    label: ctx => {
+                                        const valor = ctx.raw?.toFixed(1);
+                                        if (ctx.dataset.type === 'line') {
+                                            return `Média histórica: ${valor} °C`;
+                                        }
+                                        const interpretacao = interpretarPontoOrvalho(ctx.raw);
+                                        return `${valor} °C — ${interpretacao} (média: ${mediaGeral.toFixed(1)} °C)`;
+                                    }
+                                }
+                            }
                         },
                         scales: {
                             x: { title: { display: true, text: 'Ano' } },
