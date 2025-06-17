@@ -772,7 +772,7 @@
                             style="font-size: 1.15rem;">
                             <i class="fas fa-exclamation-circle fa-lg mr-3 text-danger"></i>
                             <div>
-                                <strong>Em 2024, essa mudança deixou de ser apenas número.</strong><br>
+                                <strong>Em 2024, essa mudança deixou de ser apenas números.</strong><br>
                                 Vamos ver o que aconteceu quando a cidade enfrentou sua maior enchente em mais de 80
                                 anos.
                             </div>
@@ -853,30 +853,73 @@
                             <tbody>
                                 <tr>
                                     <td><i class="fas fa-cloud-showers-heavy me-2 text-primary"></i> Chuvas</td>
-                                    <td>300–700 mm em poucos dias</td>
+                                    <td>
+                                        300–700 mm em poucos dias<br>
+                                        <small class="text-muted">
+                                            Fonte:
+                                            <a href="https://www.inmet.gov.br/portal/index.php?r=home/page&page=boletins"
+                                                target="_blank" rel="noopener noreferrer">INMET</a> e
+                                            <a href="https://tempo.cptec.inpe.br/" target="_blank"
+                                                rel="noopener noreferrer">CPTEC/INPE</a>
+                                        </small>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-water me-2 text-info"></i> Nível do Guaíba</td>
-                                    <td>5,3 m — maior em 83 anos</td>
+                                    <td>
+                                        5,3 m — maior em 83 anos<br>
+                                        <small class="text-muted">
+                                            Fonte:
+                                            <a href="https://agenciabrasil.ebc.com.br/geral/noticia/2024-05/cheia-do-guaiba-em-porto-alegre-supera-recorde-de-1941"
+                                                target="_blank" rel="noopener noreferrer">Agência Brasil</a>
+                                        </small>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-users me-2 text-danger"></i> Pessoas afetadas</td>
-                                    <td>2,4 milhões no RS</td>
+                                    <td>
+                                        2,4 milhões no RS<br>
+                                        <small class="text-muted">
+                                            Fonte:
+                                            <a href="https://defesacivil.rs.gov.br/inicial" target="_blank"
+                                                rel="noopener noreferrer">Defesa Civil RS</a>
+                                        </small>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-chart-bar me-2 text-dark"></i> Mortes</td>
-                                    <td>183 confirmadas</td>
+                                    <td>
+                                        183 confirmadas<br>
+                                        <small class="text-muted">
+                                            Fonte:
+                                            <a href="https://www.cnnbrasil.com.br/nacional/numero-de-mortes-no-rs-sobe-para-183-diz-defesa-civil/"
+                                                target="_blank" rel="noopener noreferrer">CNN Brasil</a>
+                                        </small>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-tractor me-2 text-warning"></i> Danos</td>
-                                    <td>Moradia, agricultura, infraestrutura</td>
+                                    <td>
+                                        Moradia, agricultura, infraestrutura<br>
+                                        <small class="text-muted">
+                                            Fonte:
+                                            <a href="https://g1.globo.com/rs/rio-grande-do-sul/noticia/2024/05/14/rs-ja-tem-mais-de-2-milhoes-de-pessoas-afetadas-e-danos-bilionarios.ghtml"
+                                                target="_blank" rel="noopener noreferrer">G1</a>
+                                        </small>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <canvas id="graficoEnchentesHistoricas" style="height: 180px;"></canvas>
 
+
+                    <canvas id="graficoEnchentesHistoricas" style="height: 180px;"></canvas>
+                    <small class="text-muted text-center">💡 Passe o mouse sobre as barras para ver mais
+                        detalhes.</small>
+                    <small class="text-center">Fonte: <a
+                            href="https://www.gov.br/ana/pt-br/assuntos/noticias-e-eventos/noticias/ana-publica-dados-em-tempo-real-de-monitoramento-do-nivel-do-lago-guaiba-em-porto-alegre-rs"
+                            target="_blank">Agência Nacional de Águas e Saneamento Básico (ANA).</a></small>
                     <script>
                         const niveisNormais = [
                             2.98, 3.12, 2.85, 3.10, 3.05, 2.90, 3.00, 2.95, 3.08, 3.01, 3.02,
@@ -2471,7 +2514,8 @@
     </div>
 
     <div class="container-fluid reveal-section vh-100 d-flex align-items-center justify-content-center" id="agora">
-        <section class="col-sm-12 col-md-12 col-lg-10 mx-auto reveal-item" style="padding: 60px 15px; background-color: #f8f9fa;">
+        <section class="col-sm-12 col-md-12 col-lg-10 mx-auto reveal-item"
+            style="padding: 60px 15px; background-color: #f8f9fa;">
             <div class="text-center">
                 <h2 class="fw-bold mb-3" style="font-size:2.2rem;">E agora? 🤔</h2>
                 <br>
