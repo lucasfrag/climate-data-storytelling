@@ -32,6 +32,16 @@ Navegue por uma história interativa sobre o clima de Porto Alegre, explore tend
 
 ---
 
+## 📸 Screenshots
+<img src="screenshots/01.png">
+<img src="screenshots/02.png">
+<img src="screenshots/03.png">
+<img src="screenshots/04.png">
+<img src="screenshots/05.png">
+<img src="screenshots/06.png">
+
+---
+
 ## 📊 Dados Utilizados
 
 Os dados incluem:
