@@ -1,7 +1,27 @@
 # 🌎 Climate Data Storytelling
-
 **Visualize, explore e compreenda as mudanças climáticas em Porto Alegre e no sul do Brasil.**  
 Este projeto apresenta dados meteorológicos reais de forma interativa, acessível e envolvente, combinando storytelling, gráficos dinâmicos e mapas.
+
+---
+## 📖 Citação
+
+[![DOI](https://zenodo.org/badge/994431545.svg)](https://doi.org/10.5281/zenodo.17298785)
+
+Se você usar este repositório em sua pesquisa, cite-o da seguinte forma:
+
+- BibTeX:
+```
+@software{climate-data-storytelling_2025,
+author = {Fraga, Lucas},
+doi = {10.5281/zenodo.17298786},
+month = oct,
+title = {Climate Data Storytelling},
+url = {https://github.com/lucasfrag/climate-data-storytelling},
+version = {1.0.0},
+year = {2025}
+license = {MIT}
+}
+```
 
 ---
 
