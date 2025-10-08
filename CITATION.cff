@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Fraga"
+  given-names: "Lucas"
+  orcid: "https://orcid.org/0009-0004-5936-5482"
+title: "Climate Data Storytelling"
+version: 1.0.0
+doi: 10.5281/zenodo.17298786
+date-released: 2025-10-08
+url: "https://github.com/lucasfrag/climate-data-storytelling"
