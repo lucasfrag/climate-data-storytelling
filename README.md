@@ -3,7 +3,7 @@
 Este projeto apresenta dados meteorológicos reais de forma interativa, acessível e envolvente, combinando storytelling, gráficos dinâmicos e mapas.
 
 ---
-## 📖 Citação
+## 🧩 Citação
 
 [![DOI](https://zenodo.org/badge/994431545.svg)](https://doi.org/10.5281/zenodo.17298785)
 
